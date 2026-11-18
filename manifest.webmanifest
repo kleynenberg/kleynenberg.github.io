@@ -1,0 +1,100 @@
+{
+  "_integrity": "Project UnLinked W3C Web Application Manifest v1.0.0 — Zero-Tracker Sovereign PWA",
+  "name": "Steven Kleynenberg — Project UnLinked | Sovereign R&D & Architecture Portal",
+  "short_name": "UnLinked",
+  "description": "Architecting sovereign AI systems, patented NLP retrieval engines (WO2014003543A1), and massively parallel software — without platform lock-in or algorithmic noise.",
+  "id": "/",
+  "start_url": "./index.html?source=pwa",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": [
+    "window-controls-overlay",
+    "standalone",
+    "minimal-ui"
+  ],
+  "orientation": "any",
+  "background_color": "#f4f2ee",
+  "theme_color": "#0a66c2",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": [
+    "technology",
+    "science",
+    "education",
+    "developer"
+  ],
+  "icons": [
+    {
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./google_logo_image_of_steven_klenenberg_at_gmail_dot_com.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Pillar #1: 1985–2020 Foundation",
+      "short_name": "Timeline",
+      "description": "Chronological academic, defence and enterprise R&D timeline",
+      "url": "./index.html#pillar-1-timeline",
+      "icons": [
+        {
+          "src": "./icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Scientific Publications Archive",
+      "short_name": "Papers",
+      "description": "Peer-reviewed proceedings, abstracts, PDFs and BibTeX",
+      "url": "./index.html#scientific-papers",
+      "icons": [
+        {
+          "src": "./icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Public GitHub Repositories",
+      "short_name": "GitHub",
+      "description": "Live public repositories under github.com/kleynenberg",
+      "url": "./index.html#github-repositories",
+      "icons": [
+        {
+          "src": "./icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Pillar #2: Living R&D Sandbox",
+      "short_name": "R&D Sandbox",
+      "description": "Active AI systems and the 20 KSA architectural codenames",
+      "url": "./index.html#pillar-2-sandbox",
+      "icons": [
+        {
+          "src": "./icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    }
+  ]
+}
