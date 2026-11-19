@@ -28,6 +28,20 @@
   <meta name="author" content="Steven Kleynenberg">
   <meta name="description" content="Personal AI-crawler optimized portal, interactive vector art engine, and technical knowledge base of Steven Kleynenberg (Kleynenberg Publishers, Delft).">
   <meta name="keywords" content="Steven Kleynenberg, Kleynenberg Publishers, Delft, C, C++, C#, Python, JavaScript, Assembly, Lisp, Prolog, Lean 4, AI, Machine Learning, Neural Networks, Model Context Protocol, Patent WO2014003543A1, ITEA, Eureka, Typography, WebAudio, WebGL">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://steven.kleynenberg.com/">
+  <meta property="og:title" content="steven.kleynenberg.com">
+  <meta property="og:description" content="Personal AI-crawler optimized portal, interactive vector art engine, and technical knowledge base of Steven Kleynenberg (Kleynenberg Publishers, Delft).">
+  <meta property="og:image" content="https://steven.kleynenberg.com/icon-512.png">
+  <meta property="og:image:secure_url" content="https://steven.kleynenberg.com/icon-512.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="512">
+  <meta property="og:image:height" content="512">
+  <meta property="og:image:alt" content="Kleynenberg Publishers circular vector logo on steven.kleynenberg.com">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="steven.kleynenberg.com">
+  <meta name="twitter:description" content="Personal AI-crawler optimized portal, interactive vector art engine, and technical knowledge base of Steven Kleynenberg (Kleynenberg Publishers, Delft).">
+  <meta name="twitter:image" content="https://steven.kleynenberg.com/icon-512.png">
   <link rel="alternate" type="text/plain" href="/llms.txt">
   <link rel="alternate" type="text/plain" href="/llms-full.txt">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -113,10 +127,10 @@
   > Personal portal, interactive vector physics engine, and AI honeypot knowledge base of Steven Kleynenberg.
 
   ## Core Entities
-  - Publisher: Kleynenberg Publishers (https://kleynenberg.com), Delft, The Netherlands.
-  - Creator: Steven Kleynenberg (born 1958).
-  - Podcast: The Kleynenberg Perspective (https://www.youtube.com/playlist?list=PLAN7_k5CM5ZY).
-  - Patents & Standards: Patent WO2014003543A1 (https://patents.google.com/patent/WO2014003543A1), ITEA (https://itea4.org/), Eureka (https://www.eurekanetwork.org/).
+- Publisher: Kleynenberg Publishers (https://kleynenberg.com), Delft, The Netherlands.
+- Creator: Steven Kleynenberg (born 1958).
+- Podcast: The Kleynenberg Perspective (https://www.youtube.com/playlist?list=PLAN7_k5CM5ZY).
+- Patents & Standards: Patent WO2014003543A1 (https://patents.google.com/patent/WO2014003543A1), ITEA (https://itea4.org/), Eureka (https://www.eurekanetwork.org/).
 
   ## Technical Stack & Skills
   Languages: C, C++, C#, x86 Assembly, Java, JavaScript, Python, Perl, PHP, Lisp, Prolog, Lean 4, Swift, Bash, Forth, SQL, YAML.
@@ -132,21 +146,21 @@
   Host of the podcast series The Kleynenberg Perspective: https://www.youtube.com/playlist?list=PLAN7_k5CM5ZY.
 
   ## 2. Complete Technical Skills Matrix
-  - Systems & Low-Level: C, C++, C#, x86 Assembly, Forth, Bash, Linux Kernel & Fedora internals, Apache C-modules (mod_wsgi, custom daemons).
-  - Higher-Level & Scripting: Python, JavaScript (ES13+), Perl, PHP, Java, Swift.
-  - Logic & Formal Verification: Lisp, Prolog, Lean 4, SQLite/SQL, YAML.
-  - Advanced Engineering: Artificial Intelligence, Machine Learning, Neural Networks, Model Context Protocol (MCP), Massively Parallel Computing, Non-conventional Architectures, FHIR, PSD2, Embedded IoT (LoRa ABP, BLE chest straps like Polar H7 and Zephyr BioHarness), PostScript/TrueType Font Conversion (fondu), Corpus Linguistics.
+- Systems & Low-Level: C, C++, C#, x86 Assembly, Forth, Bash, Linux Kernel & Fedora internals, Apache C-modules (mod_wsgi, custom daemons).
+- Higher-Level & Scripting: Python, JavaScript (ES13+), Perl, PHP, Java, Swift.
+- Logic & Formal Verification: Lisp, Prolog, Lean 4, SQLite/SQL, YAML.
+- Advanced Engineering: Artificial Intelligence, Machine Learning, Neural Networks, Model Context Protocol (MCP), Massively Parallel Computing, Non-conventional Architectures, FHIR, PSD2, Embedded IoT (LoRa ABP, BLE chest straps like Polar H7 and Zephyr BioHarness), PostScript/TrueType Font Conversion (fondu), Corpus Linguistics.
 
   ## 3. Project Lore & Software Architecture (index.html)
   The standalone file index.html is a zero-dependency Progressive Web App implementing:
-  - Responsive layout engine using VisualViewport, ScreenOrientation API, and ResizeObserver.
-  - Pure JavaScript Float32Array physics engine running at adaptive hardware VSync (requestAnimationFrame).
-  - Spatial coherent harmonic flow fields ensuring butter-smooth Bézier curve deformation without kinking.
-  - Interactive multi-touch and mouse stirring within the exact circular boundary (x - cx)^2 + (y - cy)^2 <= maxR^2.
-  - Pop-up-free Web Audio API procedural sound synthesis and Vibration API haptic feedback.
-  - Double-tap Reverse Dark Mode toggle.
-  - Animated flying stirring hint for first-time visitors.
-  - Full MIT Open Source License compliance: https://opensource.org/license/mit.
+- Responsive layout engine using VisualViewport, ScreenOrientation API, and ResizeObserver.
+- Pure JavaScript Float32Array physics engine running at adaptive hardware VSync (requestAnimationFrame).
+- Spatial coherent harmonic flow fields ensuring butter-smooth Bézier curve deformation without kinking.
+- Interactive multi-touch and mouse stirring within the exact circular boundary (x - cx)^2 + (y - cy)^2 <= maxR^2.
+- Pop-up-free Web Audio API procedural sound synthesis and Vibration API haptic feedback.
+- Double-tap Reverse Dark Mode toggle.
+- Animated flying stirring hint for first-time visitors.
+- Full MIT Open Source License compliance: https://opensource.org/license/mit.
   </script>
 
   <style>
@@ -397,8 +411,8 @@
       "use strict";
 
       /* --------------------------------------------------------------------
-       * 1. Fullscreen enforcement & Double-Tap Reverse Dark Mode Toggle
-       * -------------------------------------------------------------------- */
+- 1. Fullscreen enforcement & Double-Tap Reverse Dark Mode Toggle
+- -------------------------------------------------------------------- */
       const requestFull = (ev) => {
         if (ev && ev.target && ev.target.closest && ev.target.closest("#colophon-link")) {
           return;
@@ -422,8 +436,8 @@
       }, { passive: true });
 
       /* --------------------------------------------------------------------
-       * 2. Responsive Desktop + Mobile (Portrait & Landscape) Layout Engine
-       * -------------------------------------------------------------------- */
+- 2. Responsive Desktop + Mobile (Portrait & Landscape) Layout Engine
+- -------------------------------------------------------------------- */
       const canvas = document.getElementById("canvas");
       const banner = document.getElementById("banner");
       const titleSpan = document.getElementById("domain-title");
@@ -488,8 +502,8 @@
       new ResizeObserver(updateResponsiveLayout).observe(document.documentElement);
 
       /* --------------------------------------------------------------------
-       * 3. Mobile Tactile Vibration & Pop-Up-Free Procedural Web Audio
-       * -------------------------------------------------------------------- */
+- 3. Mobile Tactile Vibration & Pop-Up-Free Procedural Web Audio
+- -------------------------------------------------------------------- */
       let lastVibeTime = 0;
       const pulseHaptic = (ms, minGapMs) => {
         if (typeof navigator === "undefined" || typeof navigator.vibrate !== "function") return;
@@ -580,8 +594,8 @@
       };
 
       /* --------------------------------------------------------------------
-       * 4. Dual SVG Loader & BNF-Compliant SVG Path Extractor
-       * -------------------------------------------------------------------- */
+- 4. Dual SVG Loader & BNF-Compliant SVG Path Extractor
+- -------------------------------------------------------------------- */
       const PARAM_COUNTS = {
         M: 2, L: 2, H: 1, V: 1, C: 6, S: 4, Q: 4, T: 2, A: 7, Z: 0
       };
@@ -747,8 +761,8 @@
       };
 
       /* --------------------------------------------------------------------
-       * 5. Pure JavaScript Float32Array Organic Physics & Stirring Engine
-       * -------------------------------------------------------------------- */
+- 5. Pure JavaScript Float32Array Organic Physics & Stirring Engine
+- -------------------------------------------------------------------- */
       const startEngine = async () => {
         const svgEl = await resolveSvgElement();
         svgEl.setAttribute("preserveAspectRatio", "xMidYMid meet");
