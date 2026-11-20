@@ -17,9 +17,9 @@
       "role_summary": "Principal enterprise and AI architect, parallel computing researcher and independent publisher"
     },
     "branding": {
-      "primary_svg_icon": "google_logo_image_of_steven_klenenberg_at_gmail_dot_com.svg",
-      "pwa_icon_192": "icon-192.png",
-      "pwa_icon_512": "icon-512.png",
+      "primary_svg_icon": "google_logo_image_of_steven_kleynenberg_at_gmail_dot_com.svg",
+      "pwa_icon_192": "icons/icon-192.png",
+      "pwa_icon_512": "icons/icon-512.png",
       "status_ring_badge": "#UNLINKED",
       "telemetry_badges": [
         "0 trackers",
@@ -258,14 +258,14 @@
           "Published and presented findings at INNC-90-Paris (1990) and ICANN-91 in Espoo / Helsinki, Finland (1991)."
         ],
         "code_artifact": {
-          "language": "ISO C",
-          "caption": "Authentic CALM_TYPE module specification excerpt from the MetaNet Network Environment (1990)",
-          "snippet": "typedef MODULE (int size) CALM_TYPE;\n\nsyntax module {\n    self, MODULE_size;\n    self, CALM_TYPE;\n    text, MODULE_label;\n};\n"
+          "language": "MetaNet / ISO C",
+          "caption": "Authentic CALM_TYPE module specification from the MetaNet Network Environment (INNC-90-Paris, 1990, p. 720)",
+          "snippet": "typedef MODULE (int size)            /* define a new MODULE (sub)type      */\n{\n  GROUP\n    R[size],                        /* R(epresentation) nodes             */\n    V[size],                        /* V(eto) nodes                       */\n    A[1],                           /* A(rousal) node                     */\n    E[1];                           /* E(xternal) node                    */\n\n  PARAMETER mu: .005;               /* learning parameter                 */\n  EXTERN -> R: LEARN;               /* learning intermodular connection   */\n  R -+ V: 1.0;                      /* R-nodes feed V-nodes (one-to-one)  */\n  V -| V: -1.0;                     /* V-nodes inhibit each other         */\n  V -\\ R: -10.0;                    /* V-nodes inhibit neighboring R-nodes*/\n  V -+ R: -1.0;                     /* V-nodes inhibit R-nodes            */\n  V -> A: -.6;                      /* V-nodes inhibit A-node             */\n  R -> A: .4;                       /* R-nodes excite A-node              */\n  A -+ E: 1.0;                      /* A-node feeds E-node                */\n  E -> R: RANDOM(0.0,1.0);          /* random activations to R-nodes      */\n} CALM_TYPE;                        /* name of new MODULE (sub)type       */\n\nGROUP input[5];                     /* create GROUP                       */\nCALM_TYPE little[10];               /* create MODULE of CALM_TYPE         */\ninput -> little: .6;                /* connect with initial weight .6     */\n"
         },
         "external_links": [
           {
-            "label": "IEEE Xplore",
-            "url": "https://ieeexplore.ieee.org"
+            "label": "Springer DOI 10.1007/978-94-009-0643-3_59",
+            "url": "https://doi.org/10.1007/978-94-009-0643-3_59"
           },
           {
             "label": "Aalto University (ICANN-91 Host)",
@@ -507,24 +507,24 @@
         "enabled": true,
         "archive_id": "KLP-1990-INNC",
         "year": 1990,
-        "title": "The MetaNet network environment for the development of modular neural networks",
+        "title": "The MetaNet Network Environment for the Development of Modular Neural Networks",
         "authors": [
-          "Steven E. Kleynenberg",
-          "Jacob M. J. Murre"
+          "Jacob M. J. Murre",
+          "Steven E. Kleynenberg"
         ],
-        "venue": "Proceedings of the International Neural Network Conference (INNC-90-Paris), Paris, France",
-        "doi": "",
-        "pdf_path": "papers/kleynenberg-murre-1990-metanet-innc.pdf",
-        "pdf_available": false,
-        "external_url": "https://ieeexplore.ieee.org",
-        "abstract": "Presents the MetaNet network environment, a modular specification language, graphical topology editor, and hardware-independent compiler designed for constructing and simulating complex modular neural networks such as CALM architectures.",
+        "venue": "Proceedings of the International Neural Network Conference (INNC-90-Paris), Paris, France, Springer Science+Business Media Dordrecht, pp. 717–720",
+        "doi": "10.1007/978-94-009-0643-3_59",
+        "pdf_path": "papers/murre-kleynenberg-1990-metanet-innc.pdf",
+        "pdf_available": true,
+        "external_url": "https://doi.org/10.1007/978-94-009-0643-3_59",
+        "abstract": "The MetaNet network environment allows users to build and examine modular neural networks, and to specify and run complex simulations. It consists of a graphical editor, a network compiler and a graphical (de)compiler, a network specification language (MetaNet), and hardware drivers. Its requirements are based on experiences with the text-based CALM development system in use since early 1988, and supports converting MetaNet code into ANSI C for direct compilation to stand-alone applications.",
         "keywords": [
           "MetaNet",
           "Modular neural networks",
           "CALM architecture",
           "Neural network compiler"
         ],
-        "bibtex": "@inproceedings{kleynenberg1990metanet,\n  author    = {Kleynenberg, Steven E. and Murre, Jacob M. J.},\n  title     = {The MetaNet network environment for the development of modular neural networks},\n  booktitle = {Proceedings of the International Neural Network Conference (INNC-90-Paris)},\n  year      = {1990},\n  address   = {Paris, France}\n}\n"
+        "bibtex": "@inproceedings{murre1990metanet,\n  author    = {Murre, Jacob M. J. and Kleynenberg, Steven E.},\n  title     = {The MetaNet Network Environment for the Development of Modular Neural Networks},\n  booktitle = {Proceedings of the International Neural Network Conference (INNC-90-Paris)},\n  pages     = {717--720},\n  publisher = {Springer Science+Business Media Dordrecht},\n  year      = {1990},\n  address   = {Paris, France},\n  doi       = {10.1007/978-94-009-0643-3_59}\n}\n"
       },
       {
         "id": "paper_icann_1991",
@@ -533,46 +533,48 @@
         "year": 1991,
         "title": "Extending the MetaNet Network Environment: process control and machine independence",
         "authors": [
-          "Steven E. Kleynenberg",
-          "Jacob M. J. Murre"
+          "Jacob M. J. Murre",
+          "Steven E. Kleynenberg"
         ],
-        "venue": "Proceedings of the International Conference on Artificial Neural Networks (ICANN-91), Espoo / Helsinki, Finland",
+        "venue": "Proceedings of the International Conference on Artificial Neural Networks (ICANN-91), Espoo / Helsinki, Finland, pp. 545–550",
         "doi": "",
-        "pdf_path": "papers/kleynenberg-murre-1991-metanet-icann.pdf",
-        "pdf_available": false,
+        "pdf_path": "papers/murre-kleynenberg-1991-extending-metanet-icann.pdf",
+        "pdf_available": true,
         "external_url": "https://www.aalto.fi",
-        "abstract": "Introduces explicit process-control primitives and a four-layer hardware abstraction pipeline (POINTs, dataflow, DEL, and DCA) enabling identical MetaNet neural network specifications to execute across sequential workstations, Transputer arrays, and vector processors.",
+        "abstract": "Reports on a general, parallel neurosimulator (GPN) consistently extensible with novel network paradigms and parallel hardware. Discusses four core obstacles—object representation, object interdependencies, concurrent process control, and machine independence—and introduces a four-level architecture spanning Problem Oriented Interaction Tools (POINTs), high-level concurrent process descriptions, Directly Executed Language (DEL) intermediate code, and hardware drivers.",
         "keywords": [
           "Process control",
           "Machine independence",
           "Transputer",
           "MetaNet"
         ],
-        "bibtex": "@inproceedings{kleynenberg1991extending,\n  author    = {Kleynenberg, Steven E. and Murre, Jacob M. J.},\n  title     = {Extending the MetaNet Network Environment: process control and machine independence},\n  booktitle = {Proceedings of the International Conference on Artificial Neural Networks (ICANN-91)},\n  year      = {1991},\n  address   = {Espoo, Finland}\n}\n"
+        "bibtex": "@inproceedings{murre1991extending,\n  author    = {Murre, Jacob M. J. and Kleynenberg, Steven E.},\n  title     = {Extending the MetaNet Network Environment: process control and machine independence},\n  booktitle = {Proceedings of the International Conference on Artificial Neural Networks (ICANN-91)},\n  pages     = {545--550},\n  year      = {1991},\n  address   = {Espoo / Helsinki, Finland}\n}\n"
       },
       {
         "id": "paper_ijcnn_1991",
         "enabled": true,
         "archive_id": "KLP-1991-IJCNN",
         "year": 1991,
-        "title": "Integrating the BSP400 neurocomputer with the MetaNet network environment",
+        "title": "Integrating the BSP400 neurocomputer with the MetaNet Network Environment",
         "authors": [
+          "Jacob M. J. Murre",
+          "Jan N. H. Heemskerk",
           "Steven E. Kleynenberg",
-          "Jacob M. J. Murre"
+          "Patrick T. W. Hudson"
         ],
-        "venue": "Proceedings of the IEEE International Joint Conference on Neural Networks (IJCNN 1991)",
+        "venue": "Proceedings of the 1991 IEEE International Joint Conference on Neural Networks (IJCNN 1991), Singapore (18–21 Nov. 1991), pp. 1476–1480 (IEEE Cat. No. CH 3065-0/91/0000-1476)",
         "doi": "",
-        "pdf_path": "papers/kleynenberg-murre-1991-bsp400-ijcnn.pdf",
-        "pdf_available": false,
+        "pdf_path": "papers/murre-et-al-1991-bsp400-metanet-ijcnn.pdf",
+        "pdf_available": true,
         "external_url": "https://www.researchgate.net/profile/Steven-Kleynenberg",
-        "abstract": "Details the compiler backend and runtime bridge connecting the high-level MetaNet specification environment with the massively parallel 400-processor BSP400 neurocomputer.",
+        "abstract": "Describes the integration of the Brain Style Processor (BSP400), a massively parallel 400-processor neurocomputer, with the MetaNet Network Environment via modular interrupt-driven device drivers that translate high-level network definitions onto Local Processing Units (LPUs) while preserving hardware independence.",
         "keywords": [
           "BSP400",
           "Neurocomputer",
           "Massively parallel computing",
           "MetaNet"
         ],
-        "bibtex": "@inproceedings{kleynenberg1991bsp400,\n  author    = {Kleynenberg, Steven E. and Murre, Jacob M. J.},\n  title     = {Integrating the BSP400 neurocomputer with the MetaNet network environment},\n  booktitle = {Proceedings of the IEEE International Joint Conference on Neural Networks (IJCNN)},\n  year      = {1991}\n}\n"
+        "bibtex": "@inproceedings{murre1991bsp400,\n  author    = {Murre, Jacob M. J. and Heemskerk, Jan N. H. and Kleynenberg, Steven E. and Hudson, Patrick T. W.},\n  title     = {Integrating the BSP400 neurocomputer with the MetaNet Network Environment},\n  booktitle = {Proceedings of the 1991 IEEE International Joint Conference on Neural Networks (IJCNN)},\n  pages     = {1476--1480},\n  year      = {1991},\n  address   = {Singapore},\n  note      = {IEEE Cat. No. CH 3065-0/91/0000-1476}\n}\n"
       },
       {
         "id": "paper_esocc_2015",
@@ -595,10 +597,10 @@
         ],
         "venue": "European Conference on Service-Oriented and Cloud Computing (ESOCC 2015), Springer LNCS 9306, pp. 214–225",
         "doi": "10.1007/978-3-319-24072-5_15",
-        "pdf_path": "papers/medusa-2015-acute-stroke-esocc.pdf",
-        "pdf_available": false,
+        "pdf_path": "papers/sales-barros-et-al-2015-medusa-acute-stroke-esocc.pdf",
+        "pdf_available": true,
         "external_url": "https://pure.amsterdamumc.nl/en/publications/remote-collaboration-decision-support-and-on-demand-medical-image/",
-        "abstract": "Presents the cloud-based Medical Distributed Utilization of Services & Applications (MEDUSA) platform and Acute Stroke Prototype (MSP), combining GPU-accelerated medical image processing, Sopheon's Node.js rule-based Decision Support System (DSS), and a browser-native WebGL 3D Segmentation Renderer.",
+        "abstract": "Presents the cloud-based Medical Distributed Utilization of Services & Applications (MEDUSA) platform and Acute Stroke Prototype (MSP), combining GPU-accelerated medical image processing, Sopheon's Node.js rule-based Decision Support System (DSS) deployed on Fedora Linux, and a browser-native WebGL 3D Segmentation Renderer.",
         "keywords": [
           "MEDUSA",
           "High performance computing",

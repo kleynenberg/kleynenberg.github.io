@@ -1,15 +1,15 @@
 /* ==============================================================================
- * INTEGRITY & METADATA HEADER
- * File:          sw.js
- * Project:       Project UnLinked — Offline-First Service Worker
- * Host Target:   https://kleynenberg.github.io (GitHub Pages)
- * Build Hash:    583016a9d6a9
- * Standard:      W3C Service Workers / MDN Service Worker & Cache API
- * Integrity Rule: Zero tracking, deterministic offline shell, runtime PDF/API cache.
- * ============================================================================== */
+- INTEGRITY & METADATA HEADER
+- File:           sw.js
+- Project:        Project UnLinked — Offline-First Service Worker
+- Host Target:    https://steven.kleynenberg.com (GitHub Pages)
+- Build Hash:     583016a9d6a9-v2
+- Standard:       W3C Service Workers / MDN Service Worker & Cache API
+- Integrity Rule: Zero tracking, deterministic offline shell, runtime PDF/API cache.
+- ============================================================================== */
 
-const CACHE_VERSION = "unlinked-sovereign-v1-583016a9d6a9";
-const RUNTIME_CACHE = "unlinked-runtime-v1-583016a9d6a9";
+const CACHE_VERSION = "unlinked-sovereign-v2-583016a9d6a9";
+const RUNTIME_CACHE = "unlinked-runtime-v2-583016a9d6a9";
 
 const PRECACHE_URLS = [
   "./",
@@ -19,9 +19,14 @@ const PRECACHE_URLS = [
   "./portal.json",
   "./manifest.webmanifest",
   "./llms.txt",
-  "./google_logo_image_of_steven_klenenberg_at_gmail_dot_com.svg",
-  "./icon-192.png",
-  "./icon-512.png"
+  "./favicon.ico",
+  "./apple-touch-icon.png",
+  "./google_logo_image_of_steven_kleynenberg_at_gmail_dot_com.svg",
+  "./icons/icon.svg",
+  "./icons/icon-192.png",
+  "./icons/icon-512.png",
+  "./icons/icon-192-maskable.png",
+  "./icons/icon-512-maskable.png"
 ];
 
 self.addEventListener("install", (event) => {

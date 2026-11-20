@@ -32,8 +32,8 @@
   <meta property="og:url" content="https://steven.kleynenberg.com/">
   <meta property="og:title" content="steven.kleynenberg.com">
   <meta property="og:description" content="Personal AI-crawler optimized portal, interactive vector art engine, and technical knowledge base of Steven Kleynenberg (Kleynenberg Publishers, Delft).">
-  <meta property="og:image" content="https://steven.kleynenberg.com/icon-512.png">
-  <meta property="og:image:secure_url" content="https://steven.kleynenberg.com/icon-512.png">
+  <meta property="og:image" content="https://steven.kleynenberg.com/icons/icon-512.png">
+  <meta property="og:image:secure_url" content="https://steven.kleynenberg.com/icons/icon-512.png">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="512">
   <meta property="og:image:height" content="512">
@@ -41,8 +41,18 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="steven.kleynenberg.com">
   <meta name="twitter:description" content="Personal AI-crawler optimized portal, interactive vector art engine, and technical knowledge base of Steven Kleynenberg (Kleynenberg Publishers, Delft).">
-  <meta name="twitter:image" content="https://steven.kleynenberg.com/icon-512.png">
-  <link rel="alternate" type="text/plain" href="/llms.txt">
+  <meta name="twitter:image" content="https://steven.kleynenberg.com/icons/icon-512.png">  
+  <!-- PWA Manifest, Favicons & Apple Touch Icons -->
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="icons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="icons/apple-touch-icon-167x167.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon-180x180.png">
+<link rel="alternate" type="text/plain" href="/llms.txt">
   <link rel="alternate" type="text/plain" href="/llms-full.txt">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1233,6 +1243,14 @@
 
         requestAnimationFrame(frame);
       };
+
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("./sw.js", { scope: "./" }).catch((err) => {
+            console.warn("Service Worker registratie overgeslagen:", err);
+          });
+        });
+      }
 
       startEngine().catch((err) => {
         stage.dataset.engineStatus = "error: " + err.message;
