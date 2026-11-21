@@ -1,179 +1,52 @@
-# ==============================================================================
-# INTEGRITY & METADATA HEADER
-# File:          llms.txt
-# Project:       Project UnLinked — Sovereign Static PWA Portal
-# Canonical URL: https://kleynenberg.github.io/
-# Specification: https://llmstxt.org/
-# ==============================================================================
+# Steven Kleynenberg — Corpus & Publications
+> Generated in vertex-ai mode from local sources and /papers/.
+- Canonical URL: https://steven.kleynenberg.com/
+- Mirror URL: https://kleynenberg.github.io/
+- llms.txt specification: https://llmstxt.org/
 
-# Steven Kleynenberg — UnLinked
+## Published Papers (/papers/)
+- Geen gepubliceerde bestanden gevonden in /papers/.
 
-> Architecting sovereign AI systems, patented NLP retrieval engines (WO2014003543A1), and massively parallel software — without platform lock-in or algorithmic noise.
+## Source Entries
+- Pijler #1 & Pijler #2: Strategisch Fundament en Levende R&D-Zandbak [2026]: This document outlines the academic, industrial, and architectural foundations of Steven Kleynenberg from 1985 to 2020, alongside his active R&D projects and strategic roadmap from 2020 onward. It highlights key achievements in neural networks, enterprise software, and browser-native AI technologies.
+- Zephyr BioHarness Reverse Engineered [Unknown]: This text contains a directory listing of various software projects, backups, and tools. A notable entry includes a project focused on reverse engineering the Zephyr BioHarness.
+- Zakelijk sterke cv-formuleringen — Steven Kleynenberg [2026]: This document provides verified CV formulations and professional guidelines for Steven Kleynenberg, highlighting his contributions to neural networks, document retrieval, and medical decision support. It outlines direct, evidence-based claims and publication references to ensure accurate and strong professional positioning.
+- WO 2014/003543 A1 en hedendaagse enterprise-RAG [2014]: This technical analysis evaluates patent WO 2014/003543 A1, which details a linguistic query construction method using POS patterns, and compares it to modern enterprise RAG. It also proposes a rigorous benchmark protocol using the FiQA-2018 dataset to test the value of this method in modern retrieval pipelines.
+- Pijler #1 & Pijler #2: Strategisch Fundament en Levende R&D-Zandbak [2024]: This document details the professional and academic career of Steven Kleynenberg, spanning from 1985 to the present. It highlights his foundational work in neural networks and enterprise software, alongside his current R&D projects in browser-native AI and edge computing.
+- Steven Kleynenberg: Principal IT Architect & AI Lead [2014]: This document outlines the professional profile of Steven Kleynenberg, a Principal IT Architect and AI Lead with expertise in artificial intelligence, NLP, and enterprise architecture. It details his key achievements, including a patented document retrieval system and leadership in major European consortia.
+- Bewijsdossier — Steven Kleynenberg [2026]: This verification dossier assesses the professional claims of Steven Kleynenberg regarding his IT architecture, AI leadership, and patent history. It confirms several co-authorships and project participations while highlighting areas requiring personal confirmation.
+- Steven Kleynenberg - Principal IT Architect & AI Lead [2014]: Steven Kleynenberg is an experienced Principal IT Architect and AI Lead specializing in artificial intelligence, neural networks, and natural language processing. He has a proven track record of leading large-scale European projects and holds a patent for an advanced document retrieval system.
+- Steven Kleynenberg — Project UnLinked | Sovereign R&D & Architecture Portal [2024]: This document outlines the professional portfolio, research projects, and software applications of Steven Kleynenberg, a Principal Enterprise and AI Architect. It highlights his contributions to modular neural networks, medical decision support systems, and patent intelligence platforms.
+- Steven Kleynenberg — Project UnLinked | Sovereign R&D & Architecture Portal [2026]: Project UnLinked is a sovereign, zero-tracker Progressive Web App showcasing Steven Kleynenberg's 40 years of R&D, patents, and AI systems. It serves as an independent, machine-readable knowledge graph replacing centralized platform dependency.
+- Steven Kleynenberg [2012]: Steven Kleynenberg is a highly skilled software engineer and researcher specializing in systems programming, database technologies, and neural networks. His academic and professional career includes developing modular neural network environments and contributing to advanced simulation projects.
+- Steven (S.E.) Kleynenberg — Sovereign R&D & Architecture Portal [2026]: This portal unifies forty years of Steven Kleynenberg's engineering artifacts across modular neural networks, linguistic information retrieval, and edge-AI systems. It details his academic publications, patents, and strategic R&D roadmap spanning from 1985 to 2026.
+- Steven Kleynenberg - Professional Profile and Publications [1999]: This document outlines the technical skills, academic projects, and publications of Steven Kleynenberg. It highlights expertise in systems programming, database technologies, and neural network research.
+- Steven Kleynenberg — Project UnLinked | Sovereign R&D & Architecture Portal [2021]: This portfolio details the research, publications, and software projects of Steven Kleynenberg, a Principal Enterprise and AI Architect. His work spans modular neural networks, medical decision support systems, and AI-driven applications.
+- Principal Enterprise & AI Architect Portfolio [2014]: A professional profile of a Principal Enterprise & AI Architect with over 25 years of experience in NLP, distributed software, and clinical decision-support systems. The architect has a strong track record in European R&D consortia and holds a patent in linguistic text mining.
+- KSO — Organisation Description / Profile (ITEA4) [2024]: Kleynenberg Software Ontwikkeling (KSO) is a Dutch R&D SME specializing in sovereign, privacy-by-design AI, hybrid Enterprise-RAG, and edge-AI architectures. The organization leverages over 25 years of experience in EU consortia to deliver browser-native AI acceleration and real-time telemetry solutions.
+- Kleynenberg Software Ontwikkeling R&D Profile [2024]: Kleynenberg Software Ontwikkeling (KSO) specializes in Sovereign AI, hybrid enterprise-RAG, browser-native AI, and real-time sensor telemetry. The organization seeks to collaborate on ITEA4 consortia focusing on trustworthy AI, edge intelligence, and clinical decision support systems.
+- Steven Kleynenberg — Project UnLinked | Sovereign R&D & Architecture Portal [2026]: Project UnLinked is a sovereign Progressive Web App and professional identity portal authored by Steven Kleynenberg. It compiles 40 years of parallel neurocomputing, international patents, and live AI systems into a zero-tracker static site.
+- ingest_trawled_corpus.py [2026]: This Python script automates selective OCR and corpus ingestion for various document formats like PDF, XML, JSON, and YAML. It extracts metadata, DOIs, patents, and grant signals to generate a chronological timeline manifest.
+- Steven Kleynenberg: Curriculum Vitae and Selected Publications [1991]: This document outlines the technical skills, academic projects, and publications of Steven Kleynenberg. It highlights his expertise in systems programming, database technologies, and neural network simulations.
+- Pijler #1 & Pijler #2: Strategisch Fundament en Levende R&D-Zandbak [2024]: This document outlines the academic and professional career of Steven Kleynenberg from 1985 to 2020, alongside his ongoing research and development projects. It details his work in neural networks, enterprise software architecture, and browser-native AI technologies.
+- Method and system of generating a query representation of an electronic query document [2014]: This patent describes a method and system for generating a query representation of an electronic document by identifying words, sentences, and part-of-speech (POS) categories. The system uses these identified sequences to query document retrieval systems and cluster similar documents based on similarity values.
+- Steven Kleynenberg: Principal IT Architect & AI Lead [2014]: Steven Kleynenberg is an IT architect and AI pioneer specializing in natural language processing, neural networks, and enterprise architecture. He has led major international projects and co-invented a patented linguistic document-retrieval system.
+- Method, system and computer program for generating a query representation of a document, and querying a document retrieval system using said query representation [2014]: A method and system generate a query representation of an electronic document by identifying word sequences that match predetermined part-of-speech (POS) categories. These stored word sequences are then used to query a document retrieval system or cluster similar documents.
+- SPA/PWA Paper Normalization and Metadata Synchronization [2026]: This document outlines the process of organizing, renaming, and synchronizing scientific papers and metadata for Steven Kleynenberg's personal website and PWA. It details steps for renaming PDFs to POSIX-compliant names, updating portal configurations, and preparing AI-readable text sidecars.
+- Project UnLinked [2026]: Project UnLinked is a sovereign, zero-tracker Progressive Web App showcasing 40 years of parallel neurocomputing, patents, and live AI systems. It replaces centralized platform dependency with a self-contained static knowledge graph.
+- Integrating the BSP400 neurocomputer with the MetaNet Network Environment [1991]: This article describes the integration of the BSP400 massively parallel neurocomputer with the MetaNet neural network design tool. The integration is achieved using device drivers that map neural network definitions onto parallel hardware processors.
+- Remote Collaboration, Decision Support, and On-Demand Medical Image Analysis for Acute Stroke Care [2015]: This paper presents MEDUSA, a cloud-based platform designed to support acute stroke care through fast medical data exchange, advanced image processing, automated decision support, and remote collaboration. Initial evaluations of the prototype demonstrate its potential to significantly improve care management and reduce processing times for stroke patients.
+- Curriculum Vitae of Steven Kleynenberg [2014]: Steven Kleynenberg is a Principal IT Architect and AI Lead specializing in artificial intelligence, natural language processing, and enterprise architecture. He has led large-scale projects for Sopheon, Philips Healthcare, and the Dutch Ministry of Defence, and holds a patent in linguistic document retrieval.
+- Extending the MetaNet Network Environment: Process Control and Machine Independence [1991]: This paper presents the MetaNet Network Environment, a general parallel neurosimulator designed to support various neural network paradigms and parallel hardware. It addresses key challenges in simulator design, including object representation, concurrent process control, and machine independence.
+- Pijler #1 & Pijler #2: Strategisch Fundament en Levende R&D-Zandbak [2020]: This document details the academic, professional, and R&D foundations of Steven Kleynenberg from 1985 to the present. It highlights his work in neural networks, enterprise software, medical consortia, and browser-native AI architectures.
+- THE MetaNet NETWORK ENVIRONMENT FOR THE DEVELOPMENT OF MODULAR NEURAL NETWORKS [1990]: The MetaNet network environment is designed to help users build, examine, and simulate modular neural networks with minimal programming experience. It features a graphical editor, a network compiler, the MetaNet specification language, and hardware drivers for multi-machine processing.
+- Steven Kleynenberg - Curriculum Vitae [1991]: This document outlines the technical skills, academic projects, and publications of Steven Kleynenberg. His work primarily focuses on neural networks, parallel computing, and software engineering.
 
-- **Canonical Portal**: https://kleynenberg.github.io/
-- **Location**: Delft, South Holland, The Netherlands
-- **Role**: Principal enterprise and AI architect, parallel computing researcher and independent publisher
-- **Active Flagship**: Project UnLinked — who needs walled-garden platforms when we have AI? (https://kleynenberg.github.io/)
-
-## Core Ecosystem Links
-
-- [taksie.ai](https://taksie.ai): AI fiscal pre-processor
-- [innopheon](https://innopheon.com): Enterprise intelligence and patent analytics
-- [Kleynenberg Publishers](https://kleynenberg.com): Independent publishing house
-- [naaap.io](https://naaap.io): Autonomous audiovisual network
-- [GitHub](https://github.com/kleynenberg): Public source repositories
-
-## Flagship Initiative: Project UnLinked
-
-An experimental demonstration of post-platform professional identity: raw primary sources—academic proceedings, WIPO patent records, ISO C syntax artifacts, and active software inventories—distilled with AI assistance into a deterministic, zero-dependency HTML5/CSS3/JS Progressive Web App with full Schema.org JSON-LD and llms.txt semantic indexing.
-
-## Pillar #1 — Chronological Academic, Defence & Enterprise Foundation (1985–2020)
-
-### 1985 – 1993 — Co-founder and software developer — Kleynenberg & Kleynenberg
-- **Organization**: Kleynenberg & Kleynenberg (Naarden, The Netherlands)
-- **Summary**: Co-founded and operated a commercial custom software consultancy alongside his father at the outset of his university studies.
-  - Engineered mission-critical bespoke business applications and relational database systems for SME clients.
-  - Built low-level performance-critical routines in ANSI C, dBase, and 80x86 assembly environments.
-
-### 1986 – 1991 — Academic specialization — computer science, AI and complex systems
-- **Organization**: Leiden University and Delft University of Technology
-- **Summary**: Specialized in computer science, artificial intelligence, theoretical psychology, and complex dynamical systems.
-  - Focused on connectionist neural architectures, modular cognitive modeling, and parallel execution topologies.
-  - Reference: [Leiden University](https://www.universiteitleiden.nl)
-  - Reference: [Delft University of Technology](https://www.tudelft.nl)
-
-### 1988 – 1991 — Architect — CALM development system and MetaNet network environment
-- **Organization**: Leiden University (in collaboration with Jacob M. J. Murre)
-- **Summary**: Designed and implemented a machine-independent, modular software environment for specifying, compiling, and simulating neural networks.
-  - Authored the MetaNet specification language, graphical topology editor, network compiler, and hardware abstraction layer.
-  - Implemented a 4-layer execution architecture (POINTs, dataflow, DEL, and DCA) supporting T800 Transputers and vector hardware.
-  - Published and presented findings at INNC-90-Paris (1990) and ICANN-91 in Espoo / Helsinki, Finland (1991).
-  - Reference: [IEEE Xplore](https://ieeexplore.ieee.org)
-  - Reference: [Aalto University (ICANN-91 Host)](https://www.aalto.fi)
-
-### 1991 — Hardware-software integration — BSP400 400-processor neurocomputer
-- **Organization**: Leiden University / IEEE IJCNN 1991
-- **Summary**: Integrated the MetaNet network environment with the massively parallel 400-processor BSP400 neurocomputer architecture.
-  - Bridged high-level modular neural network definitions directly onto dedicated parallel neurocomputer hardware.
-  - Published in the IEEE International Joint Conference on Neural Networks (IJCNN 1991) proceedings.
-  - Reference: [ResearchGate profile](https://www.researchgate.net/profile/Steven-Kleynenberg)
-  - Reference: [IEEE Xplore](https://ieeexplore.ieee.org)
-
-### 1991 – 1993 — Visiting researcher — massively parallel Connection Machine supercomputing
-- **Organization**: Mathematical Institute, Rheinische Friedrich-Wilhelms-Universität Bonn (Germany)
-- **Summary**: Developed an object-oriented neural network simulation framework executing on the Connection Machine supercomputer.
-  - Engineered fine-grained data-parallel abstractions for large-scale connectionist simulations at the Mathematical Institute Bonn.
-  - Reference: [University of Bonn](https://www.uni-bonn.de)
-
-### 1991 – 1994 — Lead systems architect — Abrams Main Battle Tank (MBT) diagnostic expert system
-- **Organization**: Netherlands Ministry of Defence and Leiden University
-- **Summary**: Designed and delivered a Model-Based Reasoning (MBR) diagnostic expert system for the Abrams Main Battle Tank.
-  - Built deterministic fault-isolation models meeting stringent military security, reliability, and zero-defect operational standards.
-  - Reference: [Netherlands Ministry of Defence](https://www.defensie.nl)
-
-### 1991 – 1994 — Real-time software architect — TCAS air traffic collision avoidance system
-- **Organization**: Civil Aviation Authority and Leiden University
-- **Summary**: Developed real-time conflict-detection algorithms and radar operator interface architectures for national air traffic control.
-  - Engineered low-latency trajectory evaluation routines and high-clarity radar situational displays.
-
-### 1992 – 1995 — Chief architect — distributed cellular automata traffic infrastructure simulation
-- **Organization**: TU Delft, Leiden University and Ministry of Transport, Public Works and Water Management
-- **Summary**: Architected a distributed, agent-based cellular automata simulation platform for next-generation national traffic management.
-  - Modeled emergent macroscopic traffic flow dynamics from local microscopic vehicle rules across distributed compute nodes.
-  - Reference: [Delft University of Technology](https://www.tudelft.nl)
-
-### 1993 – 1996 — Systems software developer — C/C++ enterprise architecture
-- **Organization**: Rijnhaave Automatisering (Zoetermeer, The Netherlands)
-- **Summary**: Specialized in C and C++ systems engineering and mission-critical enterprise software architecture.
-  - Delivered high-throughput transactional modules and cross-platform C/C++ middleware components.
-
-### October 1996 – December 2020 — Principal architect and AI/NLP lead
-- **Organization**: Sopheon N.V.
-- **Summary**: Led long-term technological vision, software architecture, and AI/NLP retrieval engines for Enterprise Innovation Management over a 24-year tenure.
-  - Architected large-scale linguistic indexing, automated knowledge discovery, and enterprise decision-support platforms.
-  - Established core text-mining pipelines powering Sopheon Monitor Express and patent intelligence workflows.
-  - Reference: [Sopheon](https://www.sopheon.com)
-
-### 2014 — Co-inventor — international patent WO2014003543A1 (POS-tagging document retrieval)
-- **Organization**: WIPO / Sopheon N.V. (with Elsemiek ten Pas and Huub Rutten)
-- **Summary**: Co-invented international patent WO2014003543A1 automating large-scale document retrieval and linguistic text mining via Part-of-Speech tagging.
-  - Provides the foundational algorithmic architecture for automated technical concept extraction and patent landscape analysis.
-  - Reference: [Google Patents WO2014003543A1](https://patents.google.com/patent/WO2014003543A1/en)
-
-### 2000 – 2020 — Technical lead and cross-border architect — European Commission and ITEA consortia
-- **Organization**: EU FP5 / ITEA2 / ITEA3 Consortia (Sopheon N.V., AMC, Philips Healthcare, Technolution)
-- **Summary**: Directed distributed systems architecture across five multi-year European research and medical HPC programs.
-  - LORE (IST-1999-12645, 2000–2002): Leveraging Operational Resource Expertise — EU-funded knowledge retrieval and team coordination.
-  - Edafmis (2008–2012): Embedded Decision and Data Fusion for Medical Intervention Support.
-  - MEDUSA (2013–2015, ITEA2 10004): Medical Distributed Utilization of Services & Applications — cloud-based acute stroke care decision support (Node.js DSS and WebGL 3D Segmentation Renderer) with AMC, Philips Healthcare, Prologue, Bull, Telecom SudParis, and Technolution (ESOCC 2015, LNCS 9306).
-  - Medolution (2015–2019): Connected medical infrastructure, real-time telemetry, and clinical decision support.
-  - PARTNER (2017–2020): Large-scale collaborative data integration and decision-support platform.
-  - Reference: [EU CORDIS](https://cordis.europa.eu)
-  - Reference: [ITEA4 Sopheon N.V. Dossier](https://itea4.org/organisation/2051-sopheon-n-v.html)
-  - Reference: [MEDUSA ESOCC 2015 Publication](https://pure.amsterdamumc.nl/en/publications/remote-collaboration-decision-support-and-on-demand-medical-image/)
-
-## Scientific Publications Archive
-
-- **KLP-1990-INNC (1990)**: *The MetaNet network environment for the development of modular neural networks* — Steven E. Kleynenberg, Jacob M. J. Murre. Proceedings of the International Neural Network Conference (INNC-90-Paris), Paris, France.
-  - Archive URL: https://ieeexplore.ieee.org
-  - Abstract: Presents the MetaNet network environment, a modular specification language, graphical topology editor, and hardware-independent compiler designed for constructing and simulating complex modular neural networks such as CALM architectures.
-- **KLP-1991-ICANN (1991)**: *Extending the MetaNet Network Environment: process control and machine independence* — Steven E. Kleynenberg, Jacob M. J. Murre. Proceedings of the International Conference on Artificial Neural Networks (ICANN-91), Espoo / Helsinki, Finland.
-  - Archive URL: https://www.aalto.fi
-  - Abstract: Introduces explicit process-control primitives and a four-layer hardware abstraction pipeline (POINTs, dataflow, DEL, and DCA) enabling identical MetaNet neural network specifications to execute across sequential workstations, Transputer arrays, and vector processors.
-- **KLP-1991-IJCNN (1991)**: *Integrating the BSP400 neurocomputer with the MetaNet network environment* — Steven E. Kleynenberg, Jacob M. J. Murre. Proceedings of the IEEE International Joint Conference on Neural Networks (IJCNN 1991).
-  - Archive URL: https://www.researchgate.net/profile/Steven-Kleynenberg
-  - Abstract: Details the compiler backend and runtime bridge connecting the high-level MetaNet specification environment with the massively parallel 400-processor BSP400 neurocomputer.
-- **KLP-2015-ESOCC (2015)**: *Remote Collaboration, Decision Support, and On-Demand Medical Image Analysis for Acute Stroke Care* — Renan Sales Barros, Jordi Borst, Steven Kleynenberg, Céline Badr, Rama-Rao Ganji, Hubrecht de Bliek, Landry-Stéphane Zeng-Eyindanga, Henk van den Brink, Charles Majoie, Henk Marquering, Sílvia Delgado Olabarriaga. European Conference on Service-Oriented and Cloud Computing (ESOCC 2015), Springer LNCS 9306, pp. 214–225.
-  - DOI: https://doi.org/10.1007/978-3-319-24072-5_15
-  - Archive URL: https://pure.amsterdamumc.nl/en/publications/remote-collaboration-decision-support-and-on-demand-medical-image/
-  - Abstract: Presents the cloud-based Medical Distributed Utilization of Services & Applications (MEDUSA) platform and Acute Stroke Prototype (MSP), combining GPU-accelerated medical image processing, Sopheon's Node.js rule-based Decision Support System (DSS), and a browser-native WebGL 3D Segmentation Renderer.
-
-## Pillar #2 — Living R&D Sandbox (2020–Present)
-
-- **taksie.ai** (https://taksie.ai) [Active]: AI-driven fiscal pre-processor and structured tax optimization engine engineered for Dutch income tax workflows.
-- **innopheon & Innopheon2 (Phoenix / Fenix & Monitor Express)** (https://innopheon.com) [Active]: Next-generation patent intelligence, POS-tagging natural language query workspace (Solr/SumoBrain), and innovation monitoring platform.
-- **4D Scatter (4D-scatter)** [R&D]: Interactive multidimensional visual analytics engine for exploring high-dimensional scientific and telemetry datasets.
-- **Parallel fractal and mathematical compute engines** [R&D]: Real-time GPU-accelerated mathematical rendering and parallel compute kernels built on WebGL and WebGPU.
-- **gpuspeech** [Open-source R&D]: Open-source Chrome extension leveraging WebGPU and offscreen documents for hardware-accelerated browser-native text-to-speech synthesis.
-- **Offline AR star-mapping PWA** [R&D]: Zero-dependency astronomical Augmented Reality PWA computing Local Sidereal Time, Julian dates, and quaternion sensor fusion offline.
-- **Synaptix Studio (formerly MetaNet PWA)** [R&D]: Spartan browser-native visual neural network topology editor and forward-propagation simulator inspired by MetaNet.
-- **MetroMoo** (https://moo.demetro.nl) [Live]: Cloud-native re-engineering of classic LambdaMOO into a serverless WebSocket/JSON architecture with BigQuery event sourcing and WebGL cartography.
-- **AudioTap and Linux guitar DSP pipeline** [Active]: Real-time low-latency audio capture, PipeWire signal routing, REAPER integration, and Roland G-303 synthesizer guitar emulation on Fedora Linux.
-- **AutoIngest** [Active]: Automated multimedia and textual ingestion, transcription, and semantic enrichment pipeline.
-- **Zephyr2026 biometric telemetry** [R&D]: Real-time physiological sensor ingestion and telemetry analysis for Zephyr BioHarness and Polar H7 heart-rate hardware.
-- **Hardware flashing orchestration (make.py & Arduino TUI-flasher)** [Active]: Terminal-first build and firmware flashing orchestration for microcontrollers, LoRa Marvin boards, and Coolsand hardware.
-- **SteveOS (32-bit x86 operating system kernel)** [Active]: Custom bare-metal 32-bit x86 kernel authored from scratch in NASM assembly and C featuring a deterministic flat filesystem.
-- **Security forensics and sovereign infrastructure automation** [Active]: Deep system forensics, automated Apache/SSL virtual-host provisioning (make_vhosts_domain on Fedora), and crypto network telemetry (cryptosum.pay).
-
-## Strategic R&D Roadmap — The 20 KSA Codenames
-
-- **KSA-01 — Sentinel-DeltaAI**: Enterprise AI and continuous monitoring
-- **KSA-02 — Granite-VectorAI**: High-density vector search and semantic indexing
-- **KSA-03 — Valkyrie-QuantumAI**: Advanced predictive and multi-factor analytics
-- **KSA-04 — Falcon-DeltaAI**: Tactical workflow and pipeline automation
-- **KSA-05 — Phalanx-Neural**: Neural security and resilient architectures
-- **KSA-06 — Spectre-AI-Line**: Forensic AI inspection and anomaly attribution
-- **KSA-07 — Atlas-SentryAI**: Sovereign infrastructure orchestration
-- **KSA-08 — Nova-DirectiveAI**: Executive decision-support systems
-- **KSA-09 — Ironclad-CommandAI**: Mission-critical deterministic control
-- **KSA-10 — Bastion-CortexAI**: Centralized multi-agent coordination network
-- **KSA-11 — NeonQuark**: High-performance browser acceleration
-- **KSA-12 — HyperNova**: Massively parallel compute scheduling
-- **KSA-13 — SynapseFlux**: Real-time signal and telemetry streaming
-- **KSA-14 — CelestialNode**: Spatial and astronomical computing
-- **KSA-15 — QuantumVortex**: Multidimensional data rendering
-- **KSA-16 — NeuralNova**: Edge-native neural network execution
-- **KSA-17 — AeroMind**: Autonomous agent-based simulations
-- **KSA-18 — OrionPulse**: Biometric and sensor telemetry fusion
-- **KSA-19 — VectraAI**: Algorithmic pipeline optimization
-- **KSA-20 — HyperlightQuanta**: Next-generation WebGPU computation engines
-
-## Pillar #3 — Sovereign Publishing & Audiovisual Media
-
-- **Kleynenberg Publishers** (https://kleynenberg.com): Independent publishing and conservation house producing art monographs, historical archival editions, and reproducible Markdown/WeasyPrint publication pipelines.
-- **naaap — autonomous audiovisual and media network** (https://naaap.io): Sovereign multi-channel media network distributing original books, films, podcasts, and instrumental fusion music.
-
-## Legal & Colophon
-
-Project UnLinked (https://kleynenberg.github.io) is an independent, non-commercial, tracker-free sovereign Progressive Web App authored and maintained by Steven Kleynenberg. It is not affiliated with, endorsed by, or connected to LinkedIn Corporation or Microsoft. Its interface homage operates under the parody exception of Article 18b of the Dutch Copyright Act (Auteurswet) and Article 5(3)(k) of EU Directive 2001/29/EC.
-© MMXXVI Kleynenberg Publishers (https://kleynenberg.com). All rights reserved.
+## DOIs
+- https://doi.org/10.1007/978-94-009-0643-3_59
+- https://doi.org/10.1109/IJCNN.1991.170608
+- https://doi.org/10.1007/978-3-319-24072-5_15
+- https://doi.org/10.1561/1500000019
+- https://doi.org/10.18653/v1/2020.emnlp-main.550
+- https://doi.org/10.3115/974557.974603
+- https://doi.org/10.18653/v1/W16-5615
