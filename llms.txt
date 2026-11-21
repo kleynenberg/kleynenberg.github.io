@@ -1,25 +1,25 @@
 # Steven Kleynenberg — Corpus & Publications
 > Deterministic & curated manifest for AI crawlers and RAG agents.
-- Canonical URL: https://kleynenberg.com
-- Mirror URL: https://github.io
-- Full Corpus: https://kleynenberg.comllms-full.txt
+- Canonical URL: https://steven.kleynenberg.com/
+- Mirror URL: https://kleynenberg.github.io/
+- Full Corpus: https://steven.kleynenberg.com/llms-full.txt
 - llms.txt specification: https://llmstxt.org
 
 ## Published Papers & Artifacts (/papers/)
-- [THE MetaNet NETWORK ENVIRONMENT FOR THE DEVELOPMENT OF MODULAR NEURAL NETWORKS (INNC-90, 1990)](https://kleynenberg.compapers/murre-kleynenberg-1990-metanet-innc.pdf)
-- [Extending the MetaNet Network Environment: Process Control and Machine Independence (ICANN-91, 1991)](https://kleynenberg.compapers/murre-kleynenberg-1991-extending-metanet-icann.pdf)
-- [Integrating the BSP400 neurocomputer with the MetaNet Network Environment (IJCNN-91, 1991)](https://kleynenberg.compapers/murre-et-al-1991-bsp400-metanet-ijcnn.pdf)
-- [Patent WO 2014/003543 A1: Method, system and computer program for generating a query representation of a document (2014)](https://kleynenberg.compapers/WO2014003543A1.pdf)
-- [Remote Collaboration, Decision Support, and On-Demand Medical Image Analysis for Acute Stroke Care — MEDUSA (ESOCC, 2015)](https://kleynenberg.compapers/sales-barros-et-al-2015-medusa-acute-stroke-esocc.pdf)
-- [De Nederlandsche Courant — Profiel Steven Kleynenberg: De Delftse architect die AI terug naar de huiskamer wil halen (2026)](https://kleynenberg.compapers/De-Nederlandsche-Courant-Steven-Kleynenberg-2026-11-19.pdf)
+- [THE MetaNet NETWORK ENVIRONMENT FOR THE DEVELOPMENT OF MODULAR NEURAL NETWORKS (INNC-90, 1990)](https://steven.kleynenberg.com/papers/murre-kleynenberg-1990-metanet-innc.pdf)
+- [Extending the MetaNet Network Environment: Process Control and Machine Independence (ICANN-91, 1991)](https://steven.kleynenberg.com/papers/murre-kleynenberg-1991-extending-metanet-icann.pdf)
+- [Integrating the BSP400 neurocomputer with the MetaNet Network Environment (IJCNN-91, 1991)](https://steven.kleynenberg.com/papers/murre-et-al-1991-bsp400-metanet-ijcnn.pdf)
+- [Patent WO 2014/003543 A1: Method, system and computer program for generating a query representation of a document (2014)](https://steven.kleynenberg.com/papers/WO2014003543A1.pdf)
+- [Remote Collaboration, Decision Support, and On-Demand Medical Image Analysis for Acute Stroke Care — MEDUSA (ESOCC, 2015)](https://steven.kleynenberg.com/papers/sales-barros-et-al-2015-medusa-acute-stroke-esocc.pdf)
+- [De Nederlandsche Courant — Profiel Steven Kleynenberg: De Delftse architect die AI terug naar de huiskamer wil halen (2026)](https://steven.kleynenberg.com/papers/De-Nederlandsche-Courant-Steven-Kleynenberg-2026-11-19.pdf)
 
 ## Verified Authored DOIs
-- https://doi.org (INNC-90, MetaNet)
-- https://doi.org (IJCNN-91, BSP400 & MetaNet)
-- https://doi.org (ESOCC-15, MEDUSA Acute Stroke Care)
+- https://doi.org/10.1007/978-94-009-0643-3_59 (INNC-90, MetaNet)
+- https://doi.org/10.1109/IJCNN.1991.170608 (IJCNN-91, BSP400 & MetaNet)
+- https://doi.org/10.1007/978-3-319-24072-5_15 (ESOCC-15, MEDUSA Acute Stroke Care)
 
 ## Curated Knowledge Base Entries
-- **Project UnLinked — Sovereign R&D & Architecture Portal [2026]:** Zero-tracker Progressive Web App and machine-readable knowledge graph unifying 40 years of engineering artifacts across modular neural networks, linguistic information retrieval, and browser-native AI (`https://kleynenberg.com`).
+- **Project UnLinked — Sovereign R&D & Architecture Portal [2026]:** Zero-tracker Progressive Web App and machine-readable knowledge graph unifying 40 years of engineering artifacts across modular neural networks, linguistic information retrieval, and browser-native AI (`https://steven.kleynenberg.com/`).
 - **Pijler #1 & Pijler #2: Strategisch Fundament en Levende R&D-Zandbak [2026]:** Academic, industrial, and architectural foundations from 1985 to 2020 (neural networks, enterprise software, clinical decision support) alongside active R&D in sovereign browser-native AI (`Taksie.ai`, `Innopheon`, `Kleynenberg Publishers`).
 - **WO 2014/003543 A1 & Enterprise-RAG Analysis [2014–2026]:** Co-invented linguistic query construction method using Part-of-Speech (POS) sequences for document retrieval and clustering, evaluated alongside modern hybrid Enterprise-RAG pipelines.
 - **Kleynenberg Software Ontwikkeling (KSO) — R&D Profile [2024–2026]:** Dutch R&D SME specializing in sovereign, privacy-by-design AI, hybrid Enterprise-RAG, edge intelligence, and real-time telemetry with over 25 years of EU consortium experience (including ITEA4).
