@@ -50,7 +50,8 @@ const PRECACHE_URLS = [
   "./tkp/tkp_logo.svg",
   './papers/font_taxonomy.pdf',
   './papers/font_taxonomy.tex',
-  './CITATION.cff'
+  './CITATION.cff',
+  './kp/google-play-books.svg'
 ];
 
 self.addEventListener("install", (event) => {

@@ -174,6 +174,17 @@
         footer.colophon a:hover { text-decoration: underline; }
 
     </style>
+
+    <style id="kp-play-books-style">
+      .kp-play-section { max-width: 980px; margin: 1.5rem auto; padding: 1.25rem; border: 1px solid #dcdcdc; background: #f8f9fa; }
+      .kp-play-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; }
+      .kp-play-icon { width: 32px; height: 32px; flex: 0 0 32px; display: block; }
+      .kp-play-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.85rem; margin-top: 0.75rem; }
+      .kp-play-card { background: #ffffff; border: 1px solid #dcdcdc; padding: 0.9rem; }
+      .kp-play-card h3 { margin: 0 0 0.35rem; font-size: 1rem; }
+      .kp-play-meta { font-size: 0.85rem; color: #555555; margin: 0 0 0.5rem; }
+      .kp-play-link { display: inline-block; font-weight: 600; color: #111111; text-decoration: none; border-bottom: 1px solid #111111; }
+    </style>
 </head>
 <body>
     <nav class="top-bar" aria-label="Primary portal navigation">
@@ -293,7 +304,40 @@
                 </div>
             </article>
         </div>
-    </main>
+    <!-- PLAY_BOOKS_SECTION_START -->
+<section class="kp-play-section" id="google-play-books" aria-labelledby="kp-play-books-title">
+  <div class="kp-play-header">
+    <img src="./google-play-books.svg" alt="Google Play Books" class="kp-play-icon" width="32" height="32">
+    <h2 id="kp-play-books-title" style="margin:0;font-size:1.3rem;">Google Play Books — Kleynenberg Publishers</h2>
+  </div>
+  <p style="margin:0 0 0.5rem;">
+    Uitgaven van <strong>Kleynenberg Publishers</strong> (met <strong>Steven Kleynenberg</strong> &amp; <strong>Gemini v3.5</strong>) op Google Play Books:
+  </p>
+  <div class="kp-play-grid">
+    <article class="kp-play-card">
+      <h3>Niet van Hergé - De Grappigste, Scherpste en Vreemdste Kuifje-Parodieën</h3>
+      <p class="kp-play-meta">GGKEY:4WNCBGYBW23 &middot; Nederlands &middot; 20 aug 2026</p>
+      <a class="kp-play-link" href="https://play.google.com/store/books/details?id=bqgDEgAAQBAJ" rel="noopener">Bekijk op Google Play Books</a>
+    </article>
+    <article class="kp-play-card">
+      <h3>Bernardus Arps - Meester van de Veluwezoom</h3>
+      <p class="kp-play-meta">GGKEY:60F4ZPYKJ6Y &middot; Nederlands &middot; 20 aug 2026</p>
+      <a class="kp-play-link" href="https://play.google.com/store/books/details?id=V5gDEgAAQBAJ" rel="noopener">Bekijk op Google Play Books</a>
+    </article>
+    <article class="kp-play-card">
+      <h3>Kleynenberg System Font Atlas (Gemini v3.5 Edition)</h3>
+      <p class="kp-play-meta">GGKEY:CF7T9528FY3 &middot; English &middot; 16 aug 2026</p>
+      <a class="kp-play-link" href="https://play.google.com/store/books/details?id=w5oBEgAAQBAJ" rel="noopener">Bekijk op Google Play Books</a>
+    </article>
+    <article class="kp-play-card">
+      <h3>Arps Fotoalbum: Een reis door de familiegeschiedenis (Editie Gemini v3.5)</h3>
+      <p class="kp-play-meta">GGKEY:QWGA3U8UNPK &middot; Nederlands &middot; 14 jul 2026</p>
+      <a class="kp-play-link" href="https://play.google.com/store/books/details?id=gdf0EQAAQBAJ" rel="noopener">Bekijk op Google Play Books</a>
+    </article>
+  </div>
+</section>
+<!-- PLAY_BOOKS_SECTION_END -->
+</main>
 
     <footer class="colophon">
         <div>&copy; mmxxvi kleynenberg publishers &mdash; <a href="https://kleynenberg.com">https://kleynenberg.com</a></div>
