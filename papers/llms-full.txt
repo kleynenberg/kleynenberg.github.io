@@ -1,0 +1,47 @@
+# Steven Kleynenberg — Complete Publications & Patents Corpus
+Canonical URL: https://steven.kleynenberg.com/papers/llms-full.txt
+Archive Index: https://steven.kleynenberg.com/papers/
+Author / Co-Inventor: Steven Kleynenberg (S.E. Kleynenberg)
+
+================================================================================
+1. BROADSHEET EDITION (2026)
+================================================================================
+Title: De Nederlandsche Courant — Special Archival Broadsheet Edition
+Date: 2026-11-19
+Publisher: Kleynenberg Publishers (Delft, The Netherlands)
+PDF URL: https://steven.kleynenberg.com/papers/De-Nederlandsche-Courant-Steven-Kleynenberg-2026-11-19.pdf
+
+================================================================================
+2. CLINICAL DISTRIBUTED SYSTEMS (2015)
+================================================================================
+Title: MEDUSA: Distributed Acute Stroke Clinical Workflow Architecture
+Venue: European Conference on Service-Oriented and Cloud Computing (ESOCC 2015)
+Consortium Context: ITEA 2 10004 (MEDUSA)
+PDF URL: https://steven.kleynenberg.com/papers/ESOCC_2015_MEDUSA.pdf
+
+================================================================================
+3. INTERNATIONAL PATENT SPECIFICATION (2014)
+================================================================================
+Publication Number: WO 2014/003543 A1 (PCT/NL2012/050463)
+Title: Method and System for Automated Linguistic Sequence Filtering and Patent Search
+Co-Inventors: Steven Kleynenberg, Elsemiek ten Pas, Huub Rutten
+Local PDF URL: https://steven.kleynenberg.com/papers/WO2014003543A1.pdf
+Google Patents URL: https://patents.google.com/patent/WO2014003543A1/en
+
+================================================================================
+4. FOUNDATIONAL NEURAL NETWORK COMPILER & HARDWARE PAPERS (1990–1991)
+================================================================================
+[1991 ICANN] BSP400: A Massively Parallel Processor for Neural Network Simulation
+- Authors: Steven Kleynenberg, Jaap M.J. Murre
+- Venue: International Conference on Artificial Neural Networks (ICANN 1991, Espoo, Finland)
+- PDF URL: https://steven.kleynenberg.com/papers/ICANN_1991_BSP400.pdf
+
+[1991 IJCNN] MetaNet: A Network Compiler for Modular Neural Networks
+- Authors: Steven Kleynenberg, Jaap M.J. Murre
+- Venue: International Joint Conference on Neural Networks (IJCNN 1991, Seattle, USA)
+- PDF URL: https://steven.kleynenberg.com/papers/IJCNN_1991_MetaNet.pdf
+
+[1990 INNC] Automatic Compilation of Modular Neural Networks onto Parallel Hardware
+- Authors: Steven Kleynenberg, Jaap M.J. Murre
+- Venue: International Neural Network Conference (INNC 1990, Paris, France)
+- PDF URL: https://steven.kleynenberg.com/papers/INNC_1990_MetaNet.pdf

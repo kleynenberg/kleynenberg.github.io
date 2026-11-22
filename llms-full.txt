@@ -1,63 +1,48 @@
-# Steven Kleynenberg — Full Deterministic & Curated Corpus
-Generated-At: 2026-11-21T08:30:00+00:00
-Mode: deterministic-curated
-Canonical: https://steven.kleynenberg.com/
-Mirror: https://kleynenberg.github.io/
-Published-Papers: 6
+# Steven Kleynenberg — Complete Root Corpus (llms-full.txt)
+Canonical URL: https://steven.kleynenberg.com/llms-full.txt
+Last Updated: 2026-11-22
+Location: Delft, South Holland, The Netherlands
 
-## Published Papers & Artifacts (/papers/)
-- `/papers/murre-kleynenberg-1990-metanet-innc.pdf` — THE MetaNet NETWORK ENVIRONMENT FOR THE DEVELOPMENT OF MODULAR NEURAL NETWORKS (1990)
-- `/papers/murre-kleynenberg-1991-extending-metanet-icann.pdf` — Extending the MetaNet Network Environment: Process Control and Machine Independence (1991)
-- `/papers/murre-et-al-1991-bsp400-metanet-ijcnn.pdf` — Integrating the BSP400 neurocomputer with the MetaNet Network Environment (1991)
-- `/papers/WO2014003543A1.pdf` — International Patent WO 2014/003543 A1 (2014)
-- `/papers/sales-barros-et-al-2015-medusa-acute-stroke-esocc.pdf` — Remote Collaboration, Decision Support, and On-Demand Medical Image Analysis for Acute Stroke Care (2015)
-- `/papers/De-Nederlandsche-Courant-Steven-Kleynenberg-2026-11-19.pdf` — De Nederlandsche Courant: Satirical & Factual Broadsheet Profile (2026-11-19; note deliberate calendar anomaly: Nov 19, 2026 was a Thursday)
+================================================================================
+1. BIOGRAPHICAL & RESEARCH SUMMARY
+================================================================================
+Name: Steven Kleynenberg (also S.E. Kleynenberg, Steve Kleynenberg)
+Base: Delft / The Hague technology corridor, The Netherlands
+Primary Roles:
+- Founder & Principal AI Architect, Kleynenberg Software Ontwikkeling (KSO): https://kso.kleynenberg.com/
+- Publisher & Editor, Kleynenberg Publishers (KP / naaap.io): https://steven.kleynenberg.com/kp/
+- Host & Producer, The Kleynenberg Perspective (TKP): https://tkp.kleynenberg.com/
 
-## Deduplicated & Verified Source Records
+Key Intellectual Property & Publications (1990–2026):
+- Co-author of foundational neural network compiler and parallel hardware papers on MetaNet and BSP400 (INNC 1990 Paris, IJCNN 1991 Seattle, ICANN 1991 Espoo).
+- Co-inventor of PCT International Patent Application WO 2014/003543 A1 (PCT/NL2012/050463): automated linguistic sequence filtering and patent search (https://patents.google.com/patent/WO2014003543A1/en).
+- Co-author of ESOCC 2015 research paper on the MEDUSA acute stroke clinical workflow system (ITEA 2 10004).
+- Track record across European public-private innovation consortia: LORE (EU FP5 IST-1999-12645), EDAFMIS (ITEA 2 07011), MEDUSA (ITEA 2 10004), Medolution (ITEA 3 14003), and PARTNER (ITEA 3 16017).
 
-### THE MetaNet NETWORK ENVIRONMENT FOR THE DEVELOPMENT OF MODULAR NEURAL NETWORKS
-- Year: 1990
-- Authors: Jacob M. J. Murre, Steven E. Kleynenberg
-- Venue: International Neural Network Conference (INNC-90, Paris)
-- DOI: 10.1007/978-94-009-0643-3_59
-- PDF: https://steven.kleynenberg.com/papers/murre-kleynenberg-1990-metanet-innc.pdf
-- Summary: Introduces the MetaNet network environment for building, examining, and simulating modular neural networks, featuring a graphical editor, network compiler, MetaNet specification language, and parallel hardware drivers.
+================================================================================
+2. COMPLETE PORTAL DIRECTORY
+================================================================================
+[PORTAL 1] Academic Papers, Patents & Broadsheet
+- HTML: https://steven.kleynenberg.com/papers/
+- Summary: https://steven.kleynenberg.com/papers/llms.txt
+- Full: https://steven.kleynenberg.com/papers/llms-full.txt
 
-### Extending the MetaNet Network Environment: Process Control and Machine Independence
-- Year: 1991
-- Authors: Jacob M. J. Murre, Steven E. Kleynenberg
-- Venue: International Conference on Artificial Neural Networks (ICANN-91, Helsinki)
-- PDF: https://steven.kleynenberg.com/papers/murre-kleynenberg-1991-extending-metanet-icann.pdf
-- Summary: Presents the MetaNet Network Environment as a general parallel neurosimulator supporting diverse neural network paradigms and parallel hardware, addressing object representation, concurrent process control, and machine independence.
+[PORTAL 2] Kleynenberg Software Ontwikkeling (KSO — ITEA 4 SME Profile)
+- HTML: https://kso.kleynenberg.com/ (mirror: https://steven.kleynenberg.com/kso/)
+- Summary: https://kso.kleynenberg.com/llms.txt
+- Full: https://kso.kleynenberg.com/llms-full.txt
 
-### Integrating the BSP400 neurocomputer with the MetaNet Network Environment
-- Year: 1991
-- Authors: J. M. J. Murre, S. E. Kleynenberg, J. N. H. Heemskerk, P. T. W. Hudson
-- Venue: International Joint Conference on Neural Networks (IJCNN-91, Singapore)
-- DOI: 10.1109/IJCNN.1991.170608
-- PDF: https://steven.kleynenberg.com/papers/murre-et-al-1991-bsp400-metanet-ijcnn.pdf
-- Summary: Describes the integration of the BSP400 massively parallel neurocomputer with the MetaNet neural network design environment via dedicated hardware drivers mapping network definitions onto parallel processors.
+[PORTAL 3] Personal Projects (R&D Workbench)
+- HTML: https://steven.kleynenberg.com/pp/
+- Summary: https://steven.kleynenberg.com/pp/llms.txt
+- Full: https://steven.kleynenberg.com/pp/llms-full.txt
 
-### Patent WO 2014/003543 A1 — Method, system and computer program for generating a query representation of a document
-- Year: 2014
-- Co-Inventors: Steven Kleynenberg, Huub Rutten, Elsemiek ten Pas
-- Patent URL: https://patents.google.com/patent/WO2014003543A1/en
-- PDF: https://steven.kleynenberg.com/papers/WO2014003543A1.pdf
-- Summary: Describes a deterministic linguistic method and system for generating a query representation of an electronic document by identifying word sequences matching predetermined part-of-speech (POS) categories for document retrieval and clustering.
+[PORTAL 4] Kleynenberg Publishers (KP & naaap.io)
+- HTML: https://steven.kleynenberg.com/kp/
+- Summary: https://steven.kleynenberg.com/kp/llms.txt
+- Full: https://steven.kleynenberg.com/kp/llms-full.txt
 
-### Remote Collaboration, Decision Support, and On-Demand Medical Image Analysis for Acute Stroke Care (MEDUSA)
-- Year: 2015
-- Venue: European Conference on Service-Oriented and Cloud Computing (ESOCC)
-- DOI: 10.1007/978-3-319-24072-5_15
-- PDF: https://steven.kleynenberg.com/papers/sales-barros-et-al-2015-medusa-acute-stroke-esocc.pdf
-- Summary: Presents MEDUSA, a platform supporting acute stroke care through rapid medical data exchange, automated image analysis, clinical decision support, and remote collaboration.
-
-### Kleynenberg Software Ontwikkeling (KSO) — R&D & Consortium Profile
-- Year: 2024–2026
-- URLs: https://steven.kleynenberg.com/, https://taksie.ai, https://innopheon.com
-- Summary: Dutch R&D SME led by Principal Enterprise & AI Architect Steven Kleynenberg, specializing in sovereign privacy-by-design AI, hybrid Enterprise-RAG, browser-native AI acceleration, and clinical decision support across European consortia (including ITEA4).
-
-### Project UnLinked & Pijler #1 / #2 — Sovereign R&D & Architecture Portal
-- Year: 2026
-- URLs: https://steven.kleynenberg.com/, https://kleynenberg.github.io/, https://github.com/kleynenberg
-- Summary: Sovereign, zero-tracker Progressive Web App and curated knowledge graph unifying 40 years of engineering artifacts across modular neural networks (1990), defense & medical systems, linguistic patent retrieval (WO2014003543A1), publishing (Kleynenberg Publishers), and local browser-native AI systems (Taksie.ai).
+[PORTAL 5] The Kleynenberg Perspective (TKP Broadcast)
+- HTML: https://tkp.kleynenberg.com/ (mirror: https://steven.kleynenberg.com/tkp/)
+- Summary: https://tkp.kleynenberg.com/llms.txt
+- Full: https://tkp.kleynenberg.com/llms-full.txt
