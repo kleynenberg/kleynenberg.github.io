@@ -1,0 +1,256 @@
+# Steven Kleynenberg — Complete Bibliographic & BibTeX SSOT Corpus
+
+SSOT Canonical Root: https://steven.kleynenberg.com/papers/
+ResearchGate Author Profile: https://www.researchgate.net/profile/Steven-Kleynenberg
+Academia.edu Author Profile: https://independent.academia.edu/StevenKleynenberg
+
+==============================================================================
+TITLE: Algorithmic versus Neural Typographic Taxonomy: A Comprehensive Comparative Evaluation of Deterministic Heuristics and Unsupervised Latent Space Clustering for Automated Font Hierarchy Classification
+YEAR: 2026 (2026-08)
+AUTHORS: Steven Kleynenberg, Google Gemini v3.5
+VENUE: Kleynenberg Publishers Preprint Series, Delft, The Netherlands
+PRIMARY SSOT OPEN-ACCESS PDF: https://steven.kleynenberg.com/papers/font_taxonomy.pdf
+PRIMARY SSOT SOURCE ARTIFACT: https://steven.kleynenberg.com/papers/font_taxonomy.tex
+ABSTRACT: Exhaustive methodological critique and comparative framework analyzing deterministic binary sfnt metadata/geometric vector heuristics versus deep CNN/ViT optical glyph rendering and UMAP/t-SNE latent space manifold clustering for automated font hierarchy classification across TTF, OTF, TTC, variable fonts, and CJK multi-byte repositories.
+
+BIBTEX:
+@unpublished{Kleynenberg2026FontTaxonomy,
+  author    = {Steven Kleynenberg and Google Gemini v3.5},
+  title     = {{Algorithmic versus Neural Typographic Taxonomy: A Comprehensive Comparative Evaluation of Deterministic Heuristics and Unsupervised Latent Space Clustering for Automated Font Hierarchy Classification}},
+  note      = {Kleynenberg Publishers Preprint Series, Delft, The Netherlands},
+  year      = {2026},
+  publisher = {Kleynenberg Publishers},
+  url       = {https://steven.kleynenberg.com/papers/font_taxonomy.pdf}
+}
+
+RIS:
+TY  - UNPB
+AU  - Steven Kleynenberg
+AU  - Google Gemini v3.5
+TI  - Algorithmic versus Neural Typographic Taxonomy: A Comprehensive Comparative Evaluation of Deterministic Heuristics and Unsupervised Latent Space Clustering for Automated Font Hierarchy Classification
+T2  - Kleynenberg Publishers Preprint Series, Delft, The Netherlands
+PY  - 2026
+PB  - Kleynenberg Publishers
+UR  - https://steven.kleynenberg.com/papers/font_taxonomy.pdf
+ER  -
+
+==============================================================================
+TITLE: De Nederlandsche Courant — Sovereign Systems, Patent WO 2014/003543 A1 & Four Decades of Computational Engineering
+YEAR: 2026 (2026-11-19)
+AUTHORS: Steven Kleynenberg
+VENUE: De Nederlandsche Courant (Special Edition, Delft)
+PRIMARY SSOT OPEN-ACCESS PDF: https://steven.kleynenberg.com/papers/De-Nederlandsche-Courant-Steven-Kleynenberg-2026-11-19.pdf
+ABSTRACT: Broadsheet retrospective chronicling four decades of neural network architecture research (MetaNet, BSP400), patented computational linguistics (WO 2014/003543 A1), acute stroke workflow orchestration (MEDUSA), and local-first sovereign AI systems.
+
+BIBTEX:
+@article{Kleynenberg2026NederlandscheCourant,
+  author    = {Steven Kleynenberg},
+  title     = {{De Nederlandsche Courant — Sovereign Systems, Patent WO 2014/003543 A1 & Four Decades of Computational Engineering}},
+  journal   = {De Nederlandsche Courant (Special Edition, Delft)},
+  year      = {2026},
+  publisher = {Kleynenberg Publishers},
+  url       = {https://steven.kleynenberg.com/papers/De-Nederlandsche-Courant-Steven-Kleynenberg-2026-11-19.pdf}
+}
+
+RIS:
+TY  - NEWS
+AU  - Steven Kleynenberg
+TI  - De Nederlandsche Courant — Sovereign Systems, Patent WO 2014/003543 A1 & Four Decades of Computational Engineering
+T2  - De Nederlandsche Courant (Special Edition, Delft)
+PY  - 2026
+PB  - Kleynenberg Publishers
+UR  - https://steven.kleynenberg.com/papers/De-Nederlandsche-Courant-Steven-Kleynenberg-2026-11-19.pdf
+ER  -
+
+==============================================================================
+TITLE: Remote Collaboration, Decision Support, and On-Demand Medical Image Analysis for Acute Stroke Care
+YEAR: 2015 (2015-09)
+AUTHORS: Renan Sales Barros, Jordi Borst, Steven Kleynenberg, Henk A. Marquering, Charles B. L. M. Majoie, Silvia D. Olabarriaga
+VENUE: Service Oriented and Cloud Computing (ESOCC 2015), Lecture Notes in Computer Science, Vol. 9306
+PRIMARY SSOT OPEN-ACCESS PDF: https://steven.kleynenberg.com/papers/ESOCC_2015_MEDUSA.pdf
+SECONDARY PUBLISHER DOI (PAYWALLED REFERENCE): 10.1007/978-3-319-24072-5_15 (https://doi.org/10.1007/978-3-319-24072-5_15)
+SECONDARY RESEARCHGATE MIRROR: https://www.researchgate.net/publication/281965955_Remote_Collaboration_Decision_Support_and_On-Demand_Medical_Image_Analysis_for_Acute_Stroke_Care
+SECONDARY ACADEMIA.EDU PROFILE: https://independent.academia.edu/StevenKleynenberg
+ABSTRACT: Clinical cloud-orchestrated workflow architecture (MEDUSA) enabling real-time remote collaboration, automated CT/CTA neuroimaging analysis, and distributed decision support for acute ischemic stroke intervention.
+
+BIBTEX:
+@inproceedings{SalesBarros2015MEDUSA,
+  author    = {Renan Sales Barros and Jordi Borst and Steven Kleynenberg and Henk A. Marquering and Charles B. L. M. Majoie and Silvia D. Olabarriaga},
+  title     = {{Remote Collaboration, Decision Support, and On-Demand Medical Image Analysis for Acute Stroke Care}},
+  booktitle = {Service Oriented and Cloud Computing (ESOCC 2015), Lecture Notes in Computer Science, Vol. 9306},
+  year      = {2015},
+  pages     = {273-287},
+  publisher = {Springer International Publishing},
+  isbn      = {978-3-319-24071-8},
+  doi       = {10.1007/978-3-319-24072-5_15},
+  url       = {https://steven.kleynenberg.com/papers/ESOCC_2015_MEDUSA.pdf}
+}
+
+RIS:
+TY  - CONF
+AU  - Renan Sales Barros
+AU  - Jordi Borst
+AU  - Steven Kleynenberg
+AU  - Henk A. Marquering
+AU  - Charles B. L. M. Majoie
+AU  - Silvia D. Olabarriaga
+TI  - Remote Collaboration, Decision Support, and On-Demand Medical Image Analysis for Acute Stroke Care
+T2  - Service Oriented and Cloud Computing (ESOCC 2015), Lecture Notes in Computer Science, Vol. 9306
+PY  - 2015
+PB  - Springer International Publishing
+SP  - 273
+EP  - 287
+SN  - 978-3-319-24071-8
+DO  - 10.1007/978-3-319-24072-5_15
+UR  - https://steven.kleynenberg.com/papers/ESOCC_2015_MEDUSA.pdf
+ER  -
+
+==============================================================================
+TITLE: Method and System for Automated Linguistic Sequence Filtering and Patent Whitespace Search (WO 2014/003543 A1 / PCT/NL2012/050463)
+YEAR: 2014 (2014-01-03)
+AUTHORS: Steven Kleynenberg, Huub Rutten, Elsemiek ten Pas
+VENUE: World Intellectual Property Organization (WIPO) — International Patent Publication WO 2014/003543 A1
+PRIMARY SSOT OPEN-ACCESS PDF: https://steven.kleynenberg.com/papers/WO2014003543A1.pdf
+PRIMARY SSOT SOURCE ARTIFACT: https://steven.kleynenberg.com/papers/WO2014003543A1.xml
+SECONDARY RESEARCHGATE MIRROR: https://www.researchgate.net/profile/Steven-Kleynenberg
+SECONDARY ACADEMIA.EDU PROFILE: https://independent.academia.edu/StevenKleynenberg
+ABSTRACT: International PCT patent covering part-of-speech morphological sequence filtering, multi-word technical term extraction, and semantic whitespace discovery across large-scale patent and scientific corpora.
+
+BIBTEX:
+@patent{Kleynenberg2014WO2014003543A1,
+  author    = {Steven Kleynenberg and Huub Rutten and Elsemiek ten Pas},
+  title     = {{Method and System for Automated Linguistic Sequence Filtering and Patent Whitespace Search (WO 2014/003543 A1 / PCT/NL2012/050463)}},
+  number    = {WO2014003543A1},
+  holder    = {WIPO (PCT/NL2012/050463)},
+  year      = {2014},
+  url       = {https://steven.kleynenberg.com/papers/WO2014003543A1.pdf}
+}
+
+RIS:
+TY  - PAT
+AU  - Steven Kleynenberg
+AU  - Huub Rutten
+AU  - Elsemiek ten Pas
+TI  - Method and System for Automated Linguistic Sequence Filtering and Patent Whitespace Search (WO 2014/003543 A1 / PCT/NL2012/050463)
+T2  - World Intellectual Property Organization (WIPO) — International Patent Publication WO 2014/003543 A1
+PY  - 2014
+PB  - WIPO (PCT/NL2012/050463)
+UR  - https://steven.kleynenberg.com/papers/WO2014003543A1.pdf
+ER  -
+
+==============================================================================
+TITLE: Extending the MetaNet Network Environment: Process Control and Machine Independence
+YEAR: 1991 (1991-06)
+AUTHORS: Jacob M. J. Murre, Steven Kleynenberg
+VENUE: Artificial Neural Networks (ICANN 1991), Espoo, Finland
+PRIMARY SSOT OPEN-ACCESS PDF: https://steven.kleynenberg.com/papers/ICANN_1991_BSP400.pdf
+SECONDARY RESEARCHGATE MIRROR: https://www.researchgate.net/profile/Steven-Kleynenberg
+SECONDARY ACADEMIA.EDU PROFILE: https://independent.academia.edu/StevenKleynenberg
+ABSTRACT: Architectural extension of the MetaNet modular neural network simulation environment introducing distributed process control and hardware-independent execution across heterogeneous workstations and transputer arrays.
+
+BIBTEX:
+@inproceedings{Murre1991ExtendingMetaNet,
+  author    = {Jacob M. J. Murre and Steven Kleynenberg},
+  title     = {{Extending the MetaNet Network Environment: Process Control and Machine Independence}},
+  booktitle = {Artificial Neural Networks (ICANN 1991), Espoo, Finland},
+  year      = {1991},
+  pages     = {1531-1534},
+  publisher = {Elsevier / North-Holland},
+  isbn      = {978-0-444-89178-5},
+  url       = {https://steven.kleynenberg.com/papers/ICANN_1991_BSP400.pdf}
+}
+
+RIS:
+TY  - CONF
+AU  - Jacob M. J. Murre
+AU  - Steven Kleynenberg
+TI  - Extending the MetaNet Network Environment: Process Control and Machine Independence
+T2  - Artificial Neural Networks (ICANN 1991), Espoo, Finland
+PY  - 1991
+PB  - Elsevier / North-Holland
+SP  - 1531
+EP  - 1534
+SN  - 978-0-444-89178-5
+UR  - https://steven.kleynenberg.com/papers/ICANN_1991_BSP400.pdf
+ER  -
+
+==============================================================================
+TITLE: Integrating the BSP400 Neurocomputer with the MetaNet Network Environment
+YEAR: 1991 (1991-11)
+AUTHORS: Jacob M. J. Murre, Jan N. H. Heemskerk, Steven Kleynenberg, Patrick Thomas William Hudson
+VENUE: IEEE International Joint Conference on Neural Networks (IJCNN 1991), Singapore
+PRIMARY SSOT OPEN-ACCESS PDF: https://steven.kleynenberg.com/papers/IJCNN_1991_MetaNet.pdf
+SECONDARY PUBLISHER DOI (PAYWALLED REFERENCE): 10.1109/IJCNN.1991.170608 (https://doi.org/10.1109/IJCNN.1991.170608)
+SECONDARY RESEARCHGATE MIRROR: https://www.researchgate.net/profile/Steven-Kleynenberg
+SECONDARY ACADEMIA.EDU PROFILE: https://independent.academia.edu/StevenKleynenberg
+ABSTRACT: Hardware-software co-design integrating the massively parallel 400-processor BSP400 neurocomputer directly into the MetaNet graphical neural network environment.
+
+BIBTEX:
+@inproceedings{Murre1991IntegratingBSP400,
+  author    = {Jacob M. J. Murre and Jan N. H. Heemskerk and Steven Kleynenberg and Patrick Thomas William Hudson},
+  title     = {{Integrating the BSP400 Neurocomputer with the MetaNet Network Environment}},
+  booktitle = {IEEE International Joint Conference on Neural Networks (IJCNN 1991), Singapore},
+  year      = {1991},
+  pages     = {1480-1485},
+  publisher = {IEEE},
+  isbn      = {0-7803-0227-3},
+  doi       = {10.1109/IJCNN.1991.170608},
+  url       = {https://steven.kleynenberg.com/papers/IJCNN_1991_MetaNet.pdf}
+}
+
+RIS:
+TY  - CONF
+AU  - Jacob M. J. Murre
+AU  - Jan N. H. Heemskerk
+AU  - Steven Kleynenberg
+AU  - Patrick Thomas William Hudson
+TI  - Integrating the BSP400 Neurocomputer with the MetaNet Network Environment
+T2  - IEEE International Joint Conference on Neural Networks (IJCNN 1991), Singapore
+PY  - 1991
+PB  - IEEE
+SP  - 1480
+EP  - 1485
+SN  - 0-7803-0227-3
+DO  - 10.1109/IJCNN.1991.170608
+UR  - https://steven.kleynenberg.com/papers/IJCNN_1991_MetaNet.pdf
+ER  -
+
+==============================================================================
+TITLE: The MetaNet Network Environment for the Development of Modular Neural Networks
+YEAR: 1990 (1990-07)
+AUTHORS: Jacob M. J. Murre, Steven Kleynenberg
+VENUE: International Neural Network Conference (INNC 1990), Paris, France
+PRIMARY SSOT OPEN-ACCESS PDF: https://steven.kleynenberg.com/papers/INNC_1990_MetaNet.pdf
+SECONDARY PUBLISHER DOI (PAYWALLED REFERENCE): 10.1007/978-94-009-0643-3_59 (https://doi.org/10.1007/978-94-009-0643-3_59)
+SECONDARY RESEARCHGATE MIRROR: https://www.researchgate.net/profile/Steven-Kleynenberg
+SECONDARY ACADEMIA.EDU PROFILE: https://independent.academia.edu/StevenKleynenberg
+ABSTRACT: Foundational specification of the MetaNet environment for constructing, visualizing, and simulating modular and biologically inspired neural network architectures.
+
+BIBTEX:
+@inproceedings{Murre1990MetaNetINNC,
+  author    = {Jacob M. J. Murre and Steven Kleynenberg},
+  title     = {{The MetaNet Network Environment for the Development of Modular Neural Networks}},
+  booktitle = {International Neural Network Conference (INNC 1990), Paris, France},
+  year      = {1990},
+  pages     = {717-720},
+  publisher = {Kluwer Academic Publishers / Springer},
+  isbn      = {978-94-009-0643-3},
+  doi       = {10.1007/978-94-009-0643-3_59},
+  url       = {https://steven.kleynenberg.com/papers/INNC_1990_MetaNet.pdf}
+}
+
+RIS:
+TY  - CONF
+AU  - Jacob M. J. Murre
+AU  - Steven Kleynenberg
+TI  - The MetaNet Network Environment for the Development of Modular Neural Networks
+T2  - International Neural Network Conference (INNC 1990), Paris, France
+PY  - 1990
+PB  - Kluwer Academic Publishers / Springer
+SP  - 717
+EP  - 720
+SN  - 978-94-009-0643-3
+DO  - 10.1007/978-94-009-0643-3_59
+UR  - https://steven.kleynenberg.com/papers/INNC_1990_MetaNet.pdf
+ER  -
+

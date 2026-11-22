@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you cite publications, patents, or software from this sovereign archive, please use the canonical open-access SSOT URLs at https://steven.kleynenberg.com/papers/."
+title: "Steven Kleynenberg — Sovereign Open-Access Papers, Patents & Preprints (SSOT)"
+type: dataset
+authors:
+  - family-names: "Kleynenberg"
+    given-names: "Steven"
+    website: "https://steven.kleynenberg.com/"
+url: "https://steven.kleynenberg.com/papers/"
+repository-code: "https://github.com/kleynenberg/kleynenberg.github.io"
+identifiers:
+  - type: url
+    value: "https://steven.kleynenberg.com/papers/"
+    description: "Canonical Single Source of Truth (SSOT) Open-Access Archive"
+  - type: url
+    value: "https://www.researchgate.net/profile/Steven-Kleynenberg"
+    description: "ResearchGate Author Profile"
+  - type: url
+    value: "https://independent.academia.edu/StevenKleynenberg"
+    description: "Academia.edu Author Profile"

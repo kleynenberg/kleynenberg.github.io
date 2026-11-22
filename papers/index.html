@@ -1,351 +1,918 @@
-<!-- ============================================================================ -->
-<!-- INTEGRITY HEADER - GEMINI AI                                                 -->
-<!-- File: papers/index.html                                                      -->
-<!-- Application: Steven Kleynenberg Curated Academic, Patent & Broadsheet Index  -->
-<!-- ============================================================================ -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Papers, Patents &amp; Broadsheet — Steven Kleynenberg (1990–2026)</title>
-    <meta name="description" content="Curated archive of peer-reviewed neural network papers (MetaNet, BSP400, MEDUSA), international PCT patent WO 2014/003543 A1, and De Nederlandsche Courant broadsheet by Steven Kleynenberg.">
-    <link rel="canonical" href="https://steven.kleynenberg.com/papers/">
-    <link rel="alternate" type="text/plain" title="Papers LLM Summary" href="https://steven.kleynenberg.com/papers/llms.txt">
-    <link rel="alternate" type="text/plain" title="Papers LLM Full Corpus" href="https://steven.kleynenberg.com/papers/llms-full.txt">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;700&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <script type="application/ld+json">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Steven Kleynenberg — Sovereign Open-Access Papers, Patents &amp; Preprints (SSOT)</title>
+  <meta name="description" content="Authoritative Single Source of Truth (SSOT) open-access archive for Steven Kleynenberg's peer-reviewed neural network papers (1990–2015), patent WO 2014/003543 A1, preprints, and broadsheet publications.">
+  <link rel="canonical" href="https://steven.kleynenberg.com/papers/">
+  <link rel="alternate" type="text/plain" title="LLMs Manifest" href="https://steven.kleynenberg.com/papers/llms.txt">
+  <link rel="alternate" type="text/plain" title="LLMs Full Corpus" href="https://steven.kleynenberg.com/papers/llms-full.txt">
+    <meta name="DC.title" content="Steven Kleynenberg — Sovereign Open-Access Papers, Patents &amp; Preprints (SSOT)">
+  <meta name="DC.creator" content="Steven Kleynenberg">
+  <meta name="DC.publisher" content="Kleynenberg Publishers, Delft, The Netherlands">
+  <meta name="DC.rights" content="Open Access Author SSOT — https://steven.kleynenberg.com/papers/">
+  <meta name="citation_title" content="Algorithmic versus Neural Typographic Taxonomy: A Comprehensive Comparative Evaluation of Deterministic Heuristics and Unsupervised Latent Space Clustering for Automated Font Hierarchy Classification">
+  <meta name="citation_author" content="Steven Kleynenberg">
+  <meta name="citation_author" content="Google Gemini v3.5">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_pdf_url" content="https://steven.kleynenberg.com/papers/font_taxonomy.pdf">
+  <meta name="citation_title" content="De Nederlandsche Courant — Sovereign Systems, Patent WO 2014/003543 A1 & Four Decades of Computational Engineering">
+  <meta name="citation_author" content="Steven Kleynenberg">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_pdf_url" content="https://steven.kleynenberg.com/papers/De-Nederlandsche-Courant-Steven-Kleynenberg-2026-11-19.pdf">
+  <meta name="citation_title" content="Remote Collaboration, Decision Support, and On-Demand Medical Image Analysis for Acute Stroke Care">
+  <meta name="citation_author" content="Renan Sales Barros">
+  <meta name="citation_author" content="Jordi Borst">
+  <meta name="citation_author" content="Steven Kleynenberg">
+  <meta name="citation_author" content="Henk A. Marquering">
+  <meta name="citation_author" content="Charles B. L. M. Majoie">
+  <meta name="citation_author" content="Silvia D. Olabarriaga">
+  <meta name="citation_publication_date" content="2015">
+  <meta name="citation_pdf_url" content="https://steven.kleynenberg.com/papers/ESOCC_2015_MEDUSA.pdf">
+  <meta name="citation_doi" content="10.1007/978-3-319-24072-5_15">
+  <meta name="citation_title" content="Method and System for Automated Linguistic Sequence Filtering and Patent Whitespace Search (WO 2014/003543 A1 / PCT/NL2012/050463)">
+  <meta name="citation_author" content="Steven Kleynenberg">
+  <meta name="citation_author" content="Huub Rutten">
+  <meta name="citation_author" content="Elsemiek ten Pas">
+  <meta name="citation_publication_date" content="2014">
+  <meta name="citation_pdf_url" content="https://steven.kleynenberg.com/papers/WO2014003543A1.pdf">
+  <meta name="citation_title" content="Extending the MetaNet Network Environment: Process Control and Machine Independence">
+  <meta name="citation_author" content="Jacob M. J. Murre">
+  <meta name="citation_author" content="Steven Kleynenberg">
+  <meta name="citation_publication_date" content="1991">
+  <meta name="citation_pdf_url" content="https://steven.kleynenberg.com/papers/ICANN_1991_BSP400.pdf">
+  <meta name="citation_title" content="Integrating the BSP400 Neurocomputer with the MetaNet Network Environment">
+  <meta name="citation_author" content="Jacob M. J. Murre">
+  <meta name="citation_author" content="Jan N. H. Heemskerk">
+  <meta name="citation_author" content="Steven Kleynenberg">
+  <meta name="citation_author" content="Patrick Thomas William Hudson">
+  <meta name="citation_publication_date" content="1991">
+  <meta name="citation_pdf_url" content="https://steven.kleynenberg.com/papers/IJCNN_1991_MetaNet.pdf">
+  <meta name="citation_doi" content="10.1109/IJCNN.1991.170608">
+  <meta name="citation_title" content="The MetaNet Network Environment for the Development of Modular Neural Networks">
+  <meta name="citation_author" content="Jacob M. J. Murre">
+  <meta name="citation_author" content="Steven Kleynenberg">
+  <meta name="citation_publication_date" content="1990">
+  <meta name="citation_pdf_url" content="https://steven.kleynenberg.com/papers/INNC_1990_MetaNet.pdf">
+  <meta name="citation_doi" content="10.1007/978-94-009-0643-3_59">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://steven.kleynenberg.com/#person",
+      "name": "Steven Kleynenberg",
+      "givenName": "Steven",
+      "familyName": "Kleynenberg",
+      "url": "https://steven.kleynenberg.com/",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Kleynenberg Publishers",
+        "url": "https://steven.kleynenberg.com/kp/"
+      },
+      "sameAs": [
+        "https://steven.kleynenberg.com/",
+        "https://github.com/kleynenberg",
+        "https://www.researchgate.net/profile/Steven-Kleynenberg",
+        "https://independent.academia.edu/StevenKleynenberg",
+        "https://patents.google.com/?inventor=Steven+Kleynenberg"
+      ]
+    },
+    {
       "@type": "CollectionPage",
       "@id": "https://steven.kleynenberg.com/papers/#collection",
-      "name": "Steven Kleynenberg — Academic Papers, Patents & Broadsheet Archive",
       "url": "https://steven.kleynenberg.com/papers/",
+      "name": "Steven Kleynenberg — Sovereign Open-Access Papers, Patents & Preprints (SSOT)",
+      "description": "Authoritative Single Source of Truth (SSOT) open-access repository for Steven Kleynenberg's peer-reviewed papers (1990–2015), international patent WO 2014/003543 A1, preprints, and broadsheet publications.",
       "author": {
-        "@type": "Person",
-        "name": "Steven Kleynenberg",
-        "url": "https://steven.kleynenberg.com/"
+        "@id": "https://steven.kleynenberg.com/#person"
+      },
+      "isAccessibleForFree": true
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://steven.kleynenberg.com/papers/#font-taxonomy-2026",
+      "name": "Algorithmic versus Neural Typographic Taxonomy: A Comprehensive Comparative Evaluation of Deterministic Heuristics and Unsupervised Latent Space Clustering for Automated Font Hierarchy Classification",
+      "headline": "Algorithmic versus Neural Typographic Taxonomy: A Comprehensive Comparative Evaluation of Deterministic Heuristics and Unsupervised Latent Space Clustering for Automated Font Hierarchy Classification",
+      "datePublished": "2026-08",
+      "url": "https://steven.kleynenberg.com/papers/font_taxonomy.pdf",
+      "mainEntityOfPage": "https://steven.kleynenberg.com/papers/font_taxonomy.pdf",
+      "isAccessibleForFree": true,
+      "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "author": [
+        {
+          "@id": "https://steven.kleynenberg.com/#person"
+        },
+        {
+          "@type": "Person",
+          "name": "Google Gemini v3.5"
+        }
+      ],
+      "publisher": {
+        "@type": "Organization",
+        "name": "Kleynenberg Publishers"
+      },
+      "encoding": {
+        "@type": "MediaObject",
+        "contentUrl": "https://steven.kleynenberg.com/papers/font_taxonomy.pdf",
+        "encodingFormat": "application/pdf"
       }
+    },
+    {
+      "@type": "Newspaper",
+      "@id": "https://steven.kleynenberg.com/papers/#dnc-2026",
+      "name": "De Nederlandsche Courant — Sovereign Systems, Patent WO 2014/003543 A1 & Four Decades of Computational Engineering",
+      "headline": "De Nederlandsche Courant — Sovereign Systems, Patent WO 2014/003543 A1 & Four Decades of Computational Engineering",
+      "datePublished": "2026-11-19",
+      "url": "https://steven.kleynenberg.com/papers/De-Nederlandsche-Courant-Steven-Kleynenberg-2026-11-19.pdf",
+      "mainEntityOfPage": "https://steven.kleynenberg.com/papers/De-Nederlandsche-Courant-Steven-Kleynenberg-2026-11-19.pdf",
+      "isAccessibleForFree": true,
+      "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "author": [
+        {
+          "@id": "https://steven.kleynenberg.com/#person"
+        }
+      ],
+      "publisher": {
+        "@type": "Organization",
+        "name": "Kleynenberg Publishers"
+      },
+      "encoding": {
+        "@type": "MediaObject",
+        "contentUrl": "https://steven.kleynenberg.com/papers/De-Nederlandsche-Courant-Steven-Kleynenberg-2026-11-19.pdf",
+        "encodingFormat": "application/pdf"
+      }
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://steven.kleynenberg.com/papers/#esocc-2015-medusa",
+      "name": "Remote Collaboration, Decision Support, and On-Demand Medical Image Analysis for Acute Stroke Care",
+      "headline": "Remote Collaboration, Decision Support, and On-Demand Medical Image Analysis for Acute Stroke Care",
+      "datePublished": "2015-09",
+      "url": "https://steven.kleynenberg.com/papers/ESOCC_2015_MEDUSA.pdf",
+      "mainEntityOfPage": "https://steven.kleynenberg.com/papers/ESOCC_2015_MEDUSA.pdf",
+      "isAccessibleForFree": true,
+      "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Renan Sales Barros"
+        },
+        {
+          "@type": "Person",
+          "name": "Jordi Borst"
+        },
+        {
+          "@id": "https://steven.kleynenberg.com/#person"
+        },
+        {
+          "@type": "Person",
+          "name": "Henk A. Marquering"
+        },
+        {
+          "@type": "Person",
+          "name": "Charles B. L. M. Majoie"
+        },
+        {
+          "@type": "Person",
+          "name": "Silvia D. Olabarriaga"
+        }
+      ],
+      "publisher": {
+        "@type": "Organization",
+        "name": "Springer International Publishing"
+      },
+      "encoding": {
+        "@type": "MediaObject",
+        "contentUrl": "https://steven.kleynenberg.com/papers/ESOCC_2015_MEDUSA.pdf",
+        "encodingFormat": "application/pdf"
+      },
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "DOI",
+        "value": "10.1007/978-3-319-24072-5_15"
+      },
+      "sameAs": [
+        "https://doi.org/10.1007/978-3-319-24072-5_15",
+        "https://www.researchgate.net/publication/281965955_Remote_Collaboration_Decision_Support_and_On-Demand_Medical_Image_Analysis_for_Acute_Stroke_Care",
+        "https://independent.academia.edu/StevenKleynenberg"
+      ]
+    },
+    {
+      "@type": "TechArticle",
+      "@id": "https://steven.kleynenberg.com/papers/#wo2014003543a1",
+      "name": "Method and System for Automated Linguistic Sequence Filtering and Patent Whitespace Search (WO 2014/003543 A1 / PCT/NL2012/050463)",
+      "headline": "Method and System for Automated Linguistic Sequence Filtering and Patent Whitespace Search (WO 2014/003543 A1 / PCT/NL2012/050463)",
+      "datePublished": "2014-01-03",
+      "url": "https://steven.kleynenberg.com/papers/WO2014003543A1.pdf",
+      "mainEntityOfPage": "https://steven.kleynenberg.com/papers/WO2014003543A1.pdf",
+      "isAccessibleForFree": true,
+      "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "author": [
+        {
+          "@id": "https://steven.kleynenberg.com/#person"
+        },
+        {
+          "@type": "Person",
+          "name": "Huub Rutten"
+        },
+        {
+          "@type": "Person",
+          "name": "Elsemiek ten Pas"
+        }
+      ],
+      "publisher": {
+        "@type": "Organization",
+        "name": "WIPO (PCT/NL2012/050463)"
+      },
+      "encoding": {
+        "@type": "MediaObject",
+        "contentUrl": "https://steven.kleynenberg.com/papers/WO2014003543A1.pdf",
+        "encodingFormat": "application/pdf"
+      },
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "PatentNumber",
+        "value": "WO2014003543A1"
+      },
+      "sameAs": [
+        "https://patents.google.com/patent/WO2014003543A1/en",
+        "https://www.researchgate.net/profile/Steven-Kleynenberg",
+        "https://independent.academia.edu/StevenKleynenberg"
+      ]
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://steven.kleynenberg.com/papers/#icann-1991-metanet",
+      "name": "Extending the MetaNet Network Environment: Process Control and Machine Independence",
+      "headline": "Extending the MetaNet Network Environment: Process Control and Machine Independence",
+      "datePublished": "1991-06",
+      "url": "https://steven.kleynenberg.com/papers/ICANN_1991_BSP400.pdf",
+      "mainEntityOfPage": "https://steven.kleynenberg.com/papers/ICANN_1991_BSP400.pdf",
+      "isAccessibleForFree": true,
+      "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Jacob M. J. Murre"
+        },
+        {
+          "@id": "https://steven.kleynenberg.com/#person"
+        }
+      ],
+      "publisher": {
+        "@type": "Organization",
+        "name": "Elsevier / North-Holland"
+      },
+      "encoding": {
+        "@type": "MediaObject",
+        "contentUrl": "https://steven.kleynenberg.com/papers/ICANN_1991_BSP400.pdf",
+        "encodingFormat": "application/pdf"
+      },
+      "sameAs": [
+        "https://www.researchgate.net/profile/Steven-Kleynenberg",
+        "https://independent.academia.edu/StevenKleynenberg"
+      ]
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://steven.kleynenberg.com/papers/#ijcnn-1991-bsp400",
+      "name": "Integrating the BSP400 Neurocomputer with the MetaNet Network Environment",
+      "headline": "Integrating the BSP400 Neurocomputer with the MetaNet Network Environment",
+      "datePublished": "1991-11",
+      "url": "https://steven.kleynenberg.com/papers/IJCNN_1991_MetaNet.pdf",
+      "mainEntityOfPage": "https://steven.kleynenberg.com/papers/IJCNN_1991_MetaNet.pdf",
+      "isAccessibleForFree": true,
+      "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Jacob M. J. Murre"
+        },
+        {
+          "@type": "Person",
+          "name": "Jan N. H. Heemskerk"
+        },
+        {
+          "@id": "https://steven.kleynenberg.com/#person"
+        },
+        {
+          "@type": "Person",
+          "name": "Patrick Thomas William Hudson"
+        }
+      ],
+      "publisher": {
+        "@type": "Organization",
+        "name": "IEEE"
+      },
+      "encoding": {
+        "@type": "MediaObject",
+        "contentUrl": "https://steven.kleynenberg.com/papers/IJCNN_1991_MetaNet.pdf",
+        "encodingFormat": "application/pdf"
+      },
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "DOI",
+        "value": "10.1109/IJCNN.1991.170608"
+      },
+      "sameAs": [
+        "https://doi.org/10.1109/IJCNN.1991.170608",
+        "https://www.researchgate.net/profile/Steven-Kleynenberg",
+        "https://independent.academia.edu/StevenKleynenberg"
+      ]
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://steven.kleynenberg.com/papers/#innc-1990-metanet",
+      "name": "The MetaNet Network Environment for the Development of Modular Neural Networks",
+      "headline": "The MetaNet Network Environment for the Development of Modular Neural Networks",
+      "datePublished": "1990-07",
+      "url": "https://steven.kleynenberg.com/papers/INNC_1990_MetaNet.pdf",
+      "mainEntityOfPage": "https://steven.kleynenberg.com/papers/INNC_1990_MetaNet.pdf",
+      "isAccessibleForFree": true,
+      "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Jacob M. J. Murre"
+        },
+        {
+          "@id": "https://steven.kleynenberg.com/#person"
+        }
+      ],
+      "publisher": {
+        "@type": "Organization",
+        "name": "Kluwer Academic Publishers / Springer"
+      },
+      "encoding": {
+        "@type": "MediaObject",
+        "contentUrl": "https://steven.kleynenberg.com/papers/INNC_1990_MetaNet.pdf",
+        "encodingFormat": "application/pdf"
+      },
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "DOI",
+        "value": "10.1007/978-94-009-0643-3_59"
+      },
+      "sameAs": [
+        "https://doi.org/10.1007/978-94-009-0643-3_59",
+        "https://www.researchgate.net/profile/Steven-Kleynenberg",
+        "https://independent.academia.edu/StevenKleynenberg"
+      ]
     }
-    </script>
-    <style>
-        :root {
-            --bg-main: #ffffff;
-            --bg-surface: #fafafa;
-            --text-primary: #111111;
-            --text-secondary: #4a4a4a;
-            --text-muted: #767676;
-            --border-color: #e0e0e0;
-            --border-strong: #111111;
-            --accent: #0056b3;
-        }
-        html.reverse-mode {
-            --bg-main: #000000;
-            --bg-surface: #0a0a0a;
-            --text-primary: #f5f5f5;
-            --text-secondary: #c0c0c0;
-            --text-muted: #888888;
-            --border-color: #262626;
-            --border-strong: #f5f5f5;
-            --accent: #66b2ff;
-        }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            background-color: var(--bg-main);
-            color: var(--text-primary);
-            font-family: 'Atkinson Hyperlegible Next', -apple-system, BlinkMacSystemFont, sans-serif;
-            line-height: 1.65;
-            transition: background-color 0.2s ease, color 0.2s ease;
-            padding: 3rem 1.5rem 5rem;
-            max-width: 980px;
-            margin: 0 auto;
-        }
-        .top-bar {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-            gap: 1rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid var(--border-color);
-            margin-bottom: 2.5rem;
-            font-family: 'Atkinson Hyperlegible Mono', monospace;
-            font-size: 0.78rem;
-            letter-spacing: 0.04em;
-        }
-        .nav-group { display: flex; flex-wrap: wrap; gap: 0.85rem; align-items: center; }
-        .top-bar a { color: var(--text-primary); text-decoration: none; border-bottom: 1px solid transparent; }
-        .top-bar a:hover, .top-bar a.active { border-bottom-color: var(--border-strong); font-weight: 700; }
-        .mode-btn {
-            background: transparent;
-            border: 1px solid var(--border-color);
-            color: var(--text-secondary);
-            font-family: 'Atkinson Hyperlegible Mono', monospace;
-            font-size: 0.72rem;
-            padding: 0.25rem 0.6rem;
-            cursor: pointer;
-            text-transform: uppercase;
-        }
-        .mode-btn:hover { border-color: var(--border-strong); color: var(--text-primary); }
-        header.hero { margin-bottom: 3rem; }
-        .eyebrow {
-            font-family: 'Atkinson Hyperlegible Mono', monospace;
-            font-size: 0.78rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--text-muted);
-            margin-bottom: 0.5rem;
-        }
-        .hero-header-row {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-between;
-            gap: 1.5rem;
-        }
-        .brand-logo {
-            max-height: 64px;
-            width: auto;
-            display: block;
-            border: 1px solid var(--border-color);
-            padding: 4px;
-            background: #ffffff;
-        }
-        h1 { font-size: clamp(1.85rem, 3.8vw, 2.6rem); font-weight: 700; line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 0.75rem; }
-        .lead { font-size: 1.08rem; color: var(--text-secondary); max-width: 780px; }
-        .meta-strip {
-            display: flex; flex-wrap: wrap; gap: 1.5rem; margin-top: 1.25rem;
-            font-family: 'Atkinson Hyperlegible Mono', monospace; font-size: 0.78rem; color: var(--text-muted);
-        }
-        h2.section-title {
-            font-family: 'Atkinson Hyperlegible Mono', monospace;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: var(--text-primary);
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--border-strong);
-            margin: 2.75rem 0 1.25rem;
-        }
-        .grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; }
-        article.card {
-            border: 1px solid var(--border-color);
-            background: var(--bg-surface);
-            padding: 1.4rem 1.5rem;
-        }
-        .card-header { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 0.5rem; margin-bottom: 0.45rem; }
-        .card-tag { font-family: 'Atkinson Hyperlegible Mono', monospace; font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; }
-        article.card h3 { font-size: 1.22rem; font-weight: 700; margin-bottom: 0.45rem; }
-        article.card p { color: var(--text-secondary); font-size: 0.98rem; margin-bottom: 0.75rem; }
-        article.card ul { margin: 0.4rem 0 0.85rem 1.25rem; color: var(--text-secondary); font-size: 0.95rem; }
-        article.card li { margin-bottom: 0.3rem; }
-        .url-list {
-            font-family: 'Atkinson Hyperlegible Mono', monospace;
-            font-size: 0.78rem;
-            display: flex;
-            flex-direction: column;
-            gap: 0.3rem;
-            margin-top: 0.65rem;
-            padding-top: 0.65rem;
-            border-top: 1px dashed var(--border-color);
-        }
-        .url-list a { color: var(--accent); text-decoration: none; word-break: break-all; }
-        .url-list a:hover { text-decoration: underline; }
-        table.manifest-table {
-            width: 100%; border-collapse: collapse; font-family: 'Atkinson Hyperlegible Mono', monospace; font-size: 0.8rem; margin-top: 0.75rem;
-        }
-        table.manifest-table th, table.manifest-table td {
-            text-align: left; padding: 0.65rem 0.5rem; border-bottom: 1px solid var(--border-color); vertical-align: top;
-        }
-        table.manifest-table th { color: var(--text-muted); font-weight: 700; text-transform: uppercase; font-size: 0.72rem; }
-        table.manifest-table a { color: var(--accent); text-decoration: none; word-break: break-all; }
-        table.manifest-table a:hover { text-decoration: underline; }
-        footer.colophon {
-            margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color);
-            font-family: 'Atkinson Hyperlegible Mono', monospace; font-size: 0.76rem; color: var(--text-muted);
-            display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem;
-        }
-        footer.colophon a { color: var(--text-primary); text-decoration: none; }
-        footer.colophon a:hover { text-decoration: underline; }
-
-    </style>
+  ]
+}
+  </script>
+  <style>
+    :root { --bg: #ffffff; --fg: #111111; --muted: #555555; --border: #dcdcdc; --panel: #f8f9fa; --accent: #111111; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: var(--bg); color: var(--fg); line-height: 1.55; }
+    header, main, footer { max-width: 980px; margin: 0 auto; padding: 1.5rem; }
+    header { border-bottom: 2px solid var(--fg); }
+    nav a { color: var(--fg); text-decoration: none; font-weight: 600; margin-right: 1rem; }
+    nav a:hover { text-decoration: underline; }
+    h1 { font-size: 1.75rem; margin: 0.75rem 0 0.4rem; letter-spacing: -0.02em; }
+    .ssot-banner { background: var(--panel); border: 1px solid var(--border); border-left: 4px solid var(--fg); padding: 0.9rem 1.1rem; margin: 1rem 0; font-size: 0.94rem; }
+    .profiles { font-size: 0.9rem; color: var(--muted); margin-top: 0.5rem; }
+    .profiles a { color: var(--fg); }
+    .card { border: 1px solid var(--border); padding: 1.25rem; margin-bottom: 1.25rem; background: #ffffff; }
+    .meta-top { font-size: 0.85rem; color: var(--muted); margin-bottom: 0.35rem; }
+    .badge { display: inline-block; background: var(--fg); color: #ffffff; padding: 0.1rem 0.45rem; font-weight: 700; font-size: 0.8rem; }
+    h2 { font-size: 1.2rem; margin: 0.25rem 0 0.5rem; }
+    .authors { font-size: 0.92rem; margin: 0.25rem 0 0.6rem; }
+    .abstract { font-size: 0.94rem; color: #222222; margin: 0 0 0.9rem; }
+    .ssot-box { background: var(--panel); border: 1px solid var(--border); padding: 0.75rem 0.9rem; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.75rem; }
+    .ssot-box code { font-size: 0.84rem; word-break: break-all; }
+    .actions { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .btn-primary { background: var(--fg); color: #ffffff; text-decoration: none; padding: 0.45rem 0.85rem; font-weight: 600; font-size: 0.88rem; }
+    .btn-sec { background: #ffffff; color: var(--fg); border: 1px solid var(--fg); text-decoration: none; padding: 0.45rem 0.85rem; font-weight: 600; font-size: 0.88rem; }
+    .mirrors { margin-top: 0.75rem; font-size: 0.85rem; color: var(--muted); }
+    .mirrors ul { margin: 0.3rem 0 0 1.2rem; padding: 0; }
+    .mirrors a { color: var(--fg); word-break: break-all; }
+    .cite-row { margin-top: 0.85rem; display: grid; gap: 0.45rem; }
+    details { border: 1px solid var(--border); padding: 0.45rem 0.75rem; background: var(--panel); }
+    summary { cursor: pointer; font-weight: 600; font-size: 0.88rem; }
+    pre { margin: 0.5rem 0 0; overflow-x: auto; font-size: 0.8rem; background: #ffffff; border: 1px solid var(--border); padding: 0.65rem; }
+    footer { border-top: 1px solid var(--border); font-size: 0.85rem; color: var(--muted); }
+  </style>
 </head>
 <body>
-    <nav class="top-bar" aria-label="Primary portal navigation">
-        <div class="nav-group">
-            <a href="../index.html">steven.kleynenberg.com</a> <a href="../papers/index.html" class="active">/papers/</a> <a href="../kso/index.html">/kso/</a> <a href="../pp/index.html">/pp/</a> <a href="../kp/index.html">/kp/</a> <a href="../tkp/index.html">/tkp/</a>
-        </div>
-        <div class="nav-group">
-            <a href="./llms.txt">llms.txt</a>
-            <a href="./llms-full.txt">llms-full.txt</a>
-            <button type="button" class="mode-btn" id="theme-toggle" title="Double-tap page or click to toggle Reverse Dark Mode">Invert</button>
-        </div>
+  <header>
+    <nav>
+      <a href="../index.html">&larr; Home (steven.kleynenberg.com)</a>
+      <a href="../kso/index.html">KSO</a>
+      <a href="../pp/index.html">PP</a>
+      <a href="../kp/index.html">KP</a>
+      <a href="../tkp/index.html">TKP</a>
+      <a href="./llms.txt">llms.txt</a>
+      <a href="./llms-full.txt">llms-full.txt</a>
     </nav>
-
-    <header class="hero">
-        <div class="eyebrow">PRIMARY RESEARCH &amp; PATENT ARCHIVE // 1990 &ndash; 2026</div>
-        <h1>Papers, Patents &amp; Broadsheet</h1>
-        <p class="lead">Curated primary publications, patent specifications, and archival broadsheet editions authored or co-invented by <strong>Steven Kleynenberg</strong> (S.E. Kleynenberg). Hosted directly as open-access PDFs with full bibliographic provenance.</p>
-        <div class="meta-strip">
-            <span>CURATED WORKS: 6</span>
-            <span>DISK ARTEFACTS: 6 PDFS (20.2 MB)</span>
-            <span>CANONICAL: https://steven.kleynenberg.com/papers/</span>
+    <h1>Scientific Papers, International Patent &amp; Preprints</h1>
+    <div class="ssot-banner">
+      <strong>AUTHORITATIVE SINGLE SOURCE OF TRUTH (SSOT):</strong>
+      <code>https://steven.kleynenberg.com/papers/</code> is the canonical open-access author repository for all works below. Full-text PDFs and TeX/XML sources are hosted here directly without paywalls or login gates. External publisher DOIs, ResearchGate, and Academia.edu links are listed strictly as secondary bibliographic verifiers.
+    </div>
+    <div class="profiles">
+      <strong>Verified Author Indexing Profiles (sameAs):</strong>
+      ResearchGate: <a href="https://www.researchgate.net/profile/Steven-Kleynenberg" rel="me noopener">https://www.researchgate.net/profile/Steven-Kleynenberg</a> &middot;
+      Academia.edu: <a href="https://independent.academia.edu/StevenKleynenberg" rel="me noopener">https://independent.academia.edu/StevenKleynenberg</a> &middot;
+      GitHub: <a href="https://github.com/kleynenberg" rel="me noopener">https://github.com/kleynenberg</a>
+    </div>
+  </header>
+  <main>
+    
+    <article class="card" id="font-taxonomy-2026">
+      <div class="meta-top"><span class="badge">2026</span> &middot; <span>Kleynenberg Publishers Preprint Series, Delft, The Netherlands</span></div>
+      <h2>Algorithmic versus Neural Typographic Taxonomy: A Comprehensive Comparative Evaluation of Deterministic Heuristics and Unsupervised Latent Space Clustering for Automated Font Hierarchy Classification</h2>
+      <p class="authors"><strong>Authors:</strong> Steven Kleynenberg, Google Gemini v3.5</p>
+      <p class="abstract">Exhaustive methodological critique and comparative framework analyzing deterministic binary sfnt metadata/geometric vector heuristics versus deep CNN/ViT optical glyph rendering and UMAP/t-SNE latent space manifold clustering for automated font hierarchy classification across TTF, OTF, TTC, variable fonts, and CJK multi-byte repositories.</p>
+      <div class="ssot-box">
+        <div><strong>Primary Canonical SSOT Open-Access Full Text (Zero Paywall):</strong><br>
+        <code>https://steven.kleynenberg.com/papers/font_taxonomy.pdf</code></div>
+        <div class="actions">
+          <a class="btn-primary" href="./font_taxonomy.pdf">Download Open-Access PDF (221 KB)</a> <a class="btn-sec" href="./font_taxonomy.tex">LaTeX Source (.tex) (15 KB)</a>
         </div>
-    </header>
-
-    <main>
-        <h2 class="section-title">01 // Curated Publications &amp; Patent Specifications</h2>
-        <div class="grid">
-            <article class="card">
-                <div class="card-header">
-                    <span class="card-tag">Archival Broadsheet // November 19, 2026</span>
-                    <span class="card-tag">Kleynenberg Publishers</span>
-                </div>
-                <h3>De Nederlandsche Courant &mdash; Special Archival Edition</h3>
-                <p>Broadsheet newspaper edition synthesizing Steven Kleynenberg's four-decade trajectory across neural network hardware compilers, linguistic patent retrieval, clinical workflow architectures, and independent publishing.</p>
-                <div class="url-list">
-                    <a href="https://steven.kleynenberg.com/papers/De-Nederlandsche-Courant-Steven-Kleynenberg-2026-11-19.pdf">https://steven.kleynenberg.com/papers/De-Nederlandsche-Courant-Steven-Kleynenberg-2026-11-19.pdf</a>
-                </div>
-            </article>
-
-            <article class="card">
-                <div class="card-header">
-                    <span class="card-tag">Peer-Reviewed Conference Paper // ESOCC 2015</span>
-                    <span class="card-tag">ITEA 2 MEDUSA (10004)</span>
-                </div>
-                <h3>MEDUSA: Distributed Acute Stroke Clinical Workflow Architecture</h3>
-                <p>Architectural specification and clinical evaluation of the MEDUSA distributed service platform supporting time-critical acute stroke emergency care across ambulance and hospital teams.</p>
-                <div class="url-list">
-                    <a href="https://steven.kleynenberg.com/papers/ESOCC_2015_MEDUSA.pdf">https://steven.kleynenberg.com/papers/ESOCC_2015_MEDUSA.pdf</a>
-                </div>
-            </article>
-
-            <article class="card">
-                <div class="card-header">
-                    <span class="card-tag">International PCT Patent // Published 2014</span>
-                    <span class="card-tag">WO 2014/003543 A1</span>
-                </div>
-                <h3>Automated Linguistic Sequence Filtering &amp; Patent Search (PCT/NL2012/050463)</h3>
-                <p>Co-invented by Steven Kleynenberg, Elsemiek ten Pas, and Huub Rutten. Introduces deterministic Part-of-Speech sequence filtering and multi-word term extraction for high-precision prior-art discovery and patent landscaping.</p>
-                <div class="url-list">
-                    <a href="https://steven.kleynenberg.com/papers/WO2014003543A1.pdf">https://steven.kleynenberg.com/papers/WO2014003543A1.pdf</a>
-                    <a href="https://patents.google.com/patent/WO2014003543A1/en">https://patents.google.com/patent/WO2014003543A1/en</a>
-                </div>
-            </article>
-
-            <article class="card">
-                <div class="card-header">
-                    <span class="card-tag">Peer-Reviewed Paper // ICANN 1991 (Espoo)</span>
-                    <span class="card-tag">Neurocomputing Hardware</span>
-                </div>
-                <h3>BSP400: A Massively Parallel Processor for Neural Network Simulation</h3>
-                <p>Co-authored with Jaap M.J. Murre. Hardware architecture and parallel execution model of the 400-processor BSP400 neurocomputer for modular neural network workloads.</p>
-                <div class="url-list">
-                    <a href="https://steven.kleynenberg.com/papers/ICANN_1991_BSP400.pdf">https://steven.kleynenberg.com/papers/ICANN_1991_BSP400.pdf</a>
-                </div>
-            </article>
-
-            <article class="card">
-                <div class="card-header">
-                    <span class="card-tag">Peer-Reviewed Paper // IJCNN 1991 (Seattle)</span>
-                    <span class="card-tag">Neural Compilers</span>
-                </div>
-                <h3>MetaNet: A Network Compiler for Modular Neural Networks</h3>
-                <p>Co-authored with Jaap M.J. Murre. High-level specification language and compiler translating modular neural architectures onto parallel target hardware.</p>
-                <div class="url-list">
-                    <a href="https://steven.kleynenberg.com/papers/IJCNN_1991_MetaNet.pdf">https://steven.kleynenberg.com/papers/IJCNN_1991_MetaNet.pdf</a>
-                </div>
-            </article>
-
-            <article class="card">
-                <div class="card-header">
-                    <span class="card-tag">Peer-Reviewed Paper // INNC 1990 (Paris)</span>
-                    <span class="card-tag">Parallel Neural Systems</span>
-                </div>
-                <h3>Automatic Compilation of Modular Neural Networks onto Parallel Hardware</h3>
-                <p>Foundational 1990 International Neural Network Conference paper by Steven Kleynenberg and Jaap M.J. Murre establishing automated mapping of neural topologies to parallel execution architectures.</p>
-                <div class="url-list">
-                    <a href="https://steven.kleynenberg.com/papers/INNC_1990_MetaNet.pdf">https://steven.kleynenberg.com/papers/INNC_1990_MetaNet.pdf</a>
-                </div>
-            </article>
+      </div>
+      
+      <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.atitle=Algorithmic%20versus%20Neural%20Typographic%20Taxonomy%3A%20A%20Comprehensive%20Comparative%20Evaluation%20of%20Deterministic%20Heuristics%20and%20Unsupervised%20Latent%20Space%20Clustering%20for%20Automated%20Font%20Hierarchy%20Classification&amp;rft.jtitle=Kleynenberg%20Publishers%20Preprint%20Series%2C%20Delft%2C%20The%20Netherlands&amp;rft.date=2026&amp;rft_id=https%3A//steven.kleynenberg.com/papers/font_taxonomy.pdf&amp;rft.au=Steven%20Kleynenberg&amp;rft.au=Google%20Gemini%20v3.5"></span>
+      <div class="cite-row">
+        <details><summary>BibTeX</summary><pre><code>@unpublished{Kleynenberg2026FontTaxonomy,
+  author    = {Steven Kleynenberg and Google Gemini v3.5},
+  title     = {{Algorithmic versus Neural Typographic Taxonomy: A Comprehensive Comparative Evaluation of Deterministic Heuristics and Unsupervised Latent Space Clustering for Automated Font Hierarchy Classification}},
+  note      = {Kleynenberg Publishers Preprint Series, Delft, The Netherlands},
+  year      = {2026},
+  publisher = {Kleynenberg Publishers},
+  url       = {https://steven.kleynenberg.com/papers/font_taxonomy.pdf}
+}</code></pre></details>
+        <details><summary>CSL-JSON</summary><pre><code>{
+  "id": "Kleynenberg2026FontTaxonomy",
+  "type": "manuscript",
+  "title": "Algorithmic versus Neural Typographic Taxonomy: A Comprehensive Comparative Evaluation of Deterministic Heuristics and Unsupervised Latent Space Clustering for Automated Font Hierarchy Classification",
+  "author": [
+    {
+      "family": "Kleynenberg",
+      "given": "Steven"
+    },
+    {
+      "literal": "Google Gemini v3.5"
+    }
+  ],
+  "issued": {
+    "date-parts": [
+      [
+        2026
+      ]
+    ]
+  },
+  "container-title": "Kleynenberg Publishers Preprint Series, Delft, The Netherlands",
+  "publisher": "Kleynenberg Publishers",
+  "URL": "https://steven.kleynenberg.com/papers/font_taxonomy.pdf"
+}</code></pre></details>
+        <details><summary>RIS (EndNote / Zotero / Mendeley)</summary><pre><code>TY  - UNPB
+AU  - Steven Kleynenberg
+AU  - Google Gemini v3.5
+TI  - Algorithmic versus Neural Typographic Taxonomy: A Comprehensive Comparative Evaluation of Deterministic Heuristics and Unsupervised Latent Space Clustering for Automated Font Hierarchy Classification
+T2  - Kleynenberg Publishers Preprint Series, Delft, The Netherlands
+PY  - 2026
+PB  - Kleynenberg Publishers
+UR  - https://steven.kleynenberg.com/papers/font_taxonomy.pdf
+ER  -</code></pre></details>
+      </div>
+    </article>
+    
+    <article class="card" id="dnc-2026">
+      <div class="meta-top"><span class="badge">2026</span> &middot; <span>De Nederlandsche Courant (Special Edition, Delft)</span></div>
+      <h2>De Nederlandsche Courant — Sovereign Systems, Patent WO 2014/003543 A1 & Four Decades of Computational Engineering</h2>
+      <p class="authors"><strong>Authors:</strong> Steven Kleynenberg</p>
+      <p class="abstract">Broadsheet retrospective chronicling four decades of neural network architecture research (MetaNet, BSP400), patented computational linguistics (WO 2014/003543 A1), acute stroke workflow orchestration (MEDUSA), and local-first sovereign AI systems.</p>
+      <div class="ssot-box">
+        <div><strong>Primary Canonical SSOT Open-Access Full Text (Zero Paywall):</strong><br>
+        <code>https://steven.kleynenberg.com/papers/De-Nederlandsche-Courant-Steven-Kleynenberg-2026-11-19.pdf</code></div>
+        <div class="actions">
+          <a class="btn-primary" href="./De-Nederlandsche-Courant-Steven-Kleynenberg-2026-11-19.pdf">Download Open-Access PDF (2.5 MB)</a>
         </div>
-
-        <h2 class="section-title">02 // Direct Repository File Manifest</h2>
-        <table class="manifest-table">
-            <thead>
-                <tr>
-                    <th>Year</th>
-                    <th>Artefact / Venue</th>
-                    <th>Direct Open-Access URL</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>2026</td>
-                    <td>De Nederlandsche Courant (Broadsheet)</td>
-                    <td><a href="https://steven.kleynenberg.com/papers/De-Nederlandsche-Courant-Steven-Kleynenberg-2026-11-19.pdf">https://steven.kleynenberg.com/papers/De-Nederlandsche-Courant-Steven-Kleynenberg-2026-11-19.pdf</a></td>
-                </tr>
-                <tr>
-                    <td>2015</td>
-                    <td>MEDUSA Acute Stroke Workflow (ESOCC 2015)</td>
-                    <td><a href="https://steven.kleynenberg.com/papers/ESOCC_2015_MEDUSA.pdf">https://steven.kleynenberg.com/papers/ESOCC_2015_MEDUSA.pdf</a></td>
-                </tr>
-                <tr>
-                    <td>2014</td>
-                    <td>PCT Patent WO 2014/003543 A1</td>
-                    <td><a href="https://steven.kleynenberg.com/papers/WO2014003543A1.pdf">https://steven.kleynenberg.com/papers/WO2014003543A1.pdf</a></td>
-                </tr>
-                <tr>
-                    <td>1991</td>
-                    <td>BSP400 Neurocomputer (ICANN 1991)</td>
-                    <td><a href="https://steven.kleynenberg.com/papers/ICANN_1991_BSP400.pdf">https://steven.kleynenberg.com/papers/ICANN_1991_BSP400.pdf</a></td>
-                </tr>
-                <tr>
-                    <td>1991</td>
-                    <td>MetaNet Network Compiler (IJCNN 1991)</td>
-                    <td><a href="https://steven.kleynenberg.com/papers/IJCNN_1991_MetaNet.pdf">https://steven.kleynenberg.com/papers/IJCNN_1991_MetaNet.pdf</a></td>
-                </tr>
-                <tr>
-                    <td>1990</td>
-                    <td>Modular Neural Compilation (INNC 1990)</td>
-                    <td><a href="https://steven.kleynenberg.com/papers/INNC_1990_MetaNet.pdf">https://steven.kleynenberg.com/papers/INNC_1990_MetaNet.pdf</a></td>
-                </tr>
-            </tbody>
-        </table>
-    </main>
-
-    <footer class="colophon">
-        <div>&copy; mmxxvi kleynenberg publishers &mdash; <a href="https://kleynenberg.com">https://kleynenberg.com</a></div>
-        <div>
-            <a href="https://steven.kleynenberg.com/">https://steven.kleynenberg.com/</a> &middot;
-            <a href="./llms.txt">./llms.txt</a> &middot;
-            <a href="./llms-full.txt">./llms-full.txt</a>
+      </div>
+      
+      <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.atitle=De%20Nederlandsche%20Courant%20%E2%80%94%20Sovereign%20Systems%2C%20Patent%20WO%202014/003543%20A1%20%26%20Four%20Decades%20of%20Computational%20Engineering&amp;rft.jtitle=De%20Nederlandsche%20Courant%20%28Special%20Edition%2C%20Delft%29&amp;rft.date=2026&amp;rft_id=https%3A//steven.kleynenberg.com/papers/De-Nederlandsche-Courant-Steven-Kleynenberg-2026-11-19.pdf&amp;rft.au=Steven%20Kleynenberg"></span>
+      <div class="cite-row">
+        <details><summary>BibTeX</summary><pre><code>@article{Kleynenberg2026NederlandscheCourant,
+  author    = {Steven Kleynenberg},
+  title     = {{De Nederlandsche Courant — Sovereign Systems, Patent WO 2014/003543 A1 &amp; Four Decades of Computational Engineering}},
+  journal   = {De Nederlandsche Courant (Special Edition, Delft)},
+  year      = {2026},
+  publisher = {Kleynenberg Publishers},
+  url       = {https://steven.kleynenberg.com/papers/De-Nederlandsche-Courant-Steven-Kleynenberg-2026-11-19.pdf}
+}</code></pre></details>
+        <details><summary>CSL-JSON</summary><pre><code>{
+  "id": "Kleynenberg2026NederlandscheCourant",
+  "type": "article-newspaper",
+  "title": "De Nederlandsche Courant — Sovereign Systems, Patent WO 2014/003543 A1 &amp; Four Decades of Computational Engineering",
+  "author": [
+    {
+      "family": "Kleynenberg",
+      "given": "Steven"
+    }
+  ],
+  "issued": {
+    "date-parts": [
+      [
+        2026
+      ]
+    ]
+  },
+  "container-title": "De Nederlandsche Courant (Special Edition, Delft)",
+  "publisher": "Kleynenberg Publishers",
+  "URL": "https://steven.kleynenberg.com/papers/De-Nederlandsche-Courant-Steven-Kleynenberg-2026-11-19.pdf"
+}</code></pre></details>
+        <details><summary>RIS (EndNote / Zotero / Mendeley)</summary><pre><code>TY  - NEWS
+AU  - Steven Kleynenberg
+TI  - De Nederlandsche Courant — Sovereign Systems, Patent WO 2014/003543 A1 &amp; Four Decades of Computational Engineering
+T2  - De Nederlandsche Courant (Special Edition, Delft)
+PY  - 2026
+PB  - Kleynenberg Publishers
+UR  - https://steven.kleynenberg.com/papers/De-Nederlandsche-Courant-Steven-Kleynenberg-2026-11-19.pdf
+ER  -</code></pre></details>
+      </div>
+    </article>
+    
+    <article class="card" id="esocc-2015-medusa">
+      <div class="meta-top"><span class="badge">2015</span> &middot; <span>Service Oriented and Cloud Computing (ESOCC 2015), Lecture Notes in Computer Science, Vol. 9306</span></div>
+      <h2>Remote Collaboration, Decision Support, and On-Demand Medical Image Analysis for Acute Stroke Care</h2>
+      <p class="authors"><strong>Authors:</strong> Renan Sales Barros, Jordi Borst, Steven Kleynenberg, Henk A. Marquering, Charles B. L. M. Majoie, Silvia D. Olabarriaga</p>
+      <p class="abstract">Clinical cloud-orchestrated workflow architecture (MEDUSA) enabling real-time remote collaboration, automated CT/CTA neuroimaging analysis, and distributed decision support for acute ischemic stroke intervention.</p>
+      <div class="ssot-box">
+        <div><strong>Primary Canonical SSOT Open-Access Full Text (Zero Paywall):</strong><br>
+        <code>https://steven.kleynenberg.com/papers/ESOCC_2015_MEDUSA.pdf</code></div>
+        <div class="actions">
+          <a class="btn-primary" href="./ESOCC_2015_MEDUSA.pdf">Download Open-Access PDF (425 KB)</a>
         </div>
-    </footer>
-    <script>
-        (function() {
-            const root = document.documentElement;
-            const btn = document.getElementById('theme-toggle');
-            if (localStorage.getItem('sk_reverse_mode') === '1') {
-                root.classList.add('reverse-mode');
-            }
-            function toggleMode() {
-                root.classList.toggle('reverse-mode');
-                localStorage.setItem('sk_reverse_mode', root.classList.contains('reverse-mode') ? '1' : '0');
-            }
-            if (btn) btn.addEventListener('click', toggleMode);
-            let lastTap = 0;
-            document.addEventListener('dblclick', function(e) {
-                if (!e.target.closest('a, button, summary')) toggleMode();
-            });
-            document.addEventListener('touchend', function(e) {
-                const now = Date.now();
-                if (now - lastTap < 300 && !e.target.closest('a, button, summary')) toggleMode();
-                lastTap = now;
-            }, { passive: true });
-        })();
-    </script>
+      </div>
+      <div class="mirrors"><strong>External Bibliographic Verifiers &amp; Login-Gated Mirrors (Use SSOT PDF above for Direct Open Access):</strong><ul><li><strong>Publisher Bibliographic DOI (Paywalled Reference Only):</strong> <code>10.1007/978-3-319-24072-5_15</code> &mdash; <a href="https://doi.org/10.1007/978-3-319-24072-5_15" rel="nofollow noopener">https://doi.org/10.1007/978-3-319-24072-5_15</a></li><li><strong>ResearchGate Secondary Mirror (Login-Gated):</strong> <a href="https://www.researchgate.net/publication/281965955_Remote_Collaboration_Decision_Support_and_On-Demand_Medical_Image_Analysis_for_Acute_Stroke_Care" rel="nofollow noopener">https://www.researchgate.net/publication/281965955_Remote_Collaboration_Decision_Support_and_On-Demand_Medical_Image_Analysis_for_Acute_Stroke_Care</a></li><li><strong>Academia.edu Secondary Index (Login-Gated):</strong> <a href="https://independent.academia.edu/StevenKleynenberg" rel="nofollow noopener">https://independent.academia.edu/StevenKleynenberg</a></li></ul></div>
+      <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.atitle=Remote%20Collaboration%2C%20Decision%20Support%2C%20and%20On-Demand%20Medical%20Image%20Analysis%20for%20Acute%20Stroke%20Care&amp;rft.jtitle=Service%20Oriented%20and%20Cloud%20Computing%20%28ESOCC%202015%29%2C%20Lecture%20Notes%20in%20Computer%20Science%2C%20Vol.%209306&amp;rft.date=2015&amp;rft_id=https%3A//steven.kleynenberg.com/papers/ESOCC_2015_MEDUSA.pdf&amp;rft_id=info%3Adoi%2F10.1007/978-3-319-24072-5_15&amp;rft.au=Renan%20Sales%20Barros&amp;rft.au=Jordi%20Borst&amp;rft.au=Steven%20Kleynenberg&amp;rft.au=Henk%20A.%20Marquering&amp;rft.au=Charles%20B.%20L.%20M.%20Majoie&amp;rft.au=Silvia%20D.%20Olabarriaga"></span>
+      <div class="cite-row">
+        <details><summary>BibTeX</summary><pre><code>@inproceedings{SalesBarros2015MEDUSA,
+  author    = {Renan Sales Barros and Jordi Borst and Steven Kleynenberg and Henk A. Marquering and Charles B. L. M. Majoie and Silvia D. Olabarriaga},
+  title     = {{Remote Collaboration, Decision Support, and On-Demand Medical Image Analysis for Acute Stroke Care}},
+  booktitle = {Service Oriented and Cloud Computing (ESOCC 2015), Lecture Notes in Computer Science, Vol. 9306},
+  year      = {2015},
+  pages     = {273-287},
+  publisher = {Springer International Publishing},
+  isbn      = {978-3-319-24071-8},
+  doi       = {10.1007/978-3-319-24072-5_15},
+  url       = {https://steven.kleynenberg.com/papers/ESOCC_2015_MEDUSA.pdf}
+}</code></pre></details>
+        <details><summary>CSL-JSON</summary><pre><code>{
+  "id": "SalesBarros2015MEDUSA",
+  "type": "paper-conference",
+  "title": "Remote Collaboration, Decision Support, and On-Demand Medical Image Analysis for Acute Stroke Care",
+  "author": [
+    {
+      "family": "Barros",
+      "given": "Renan Sales"
+    },
+    {
+      "family": "Borst",
+      "given": "Jordi"
+    },
+    {
+      "family": "Kleynenberg",
+      "given": "Steven"
+    },
+    {
+      "family": "Marquering",
+      "given": "Henk A."
+    },
+    {
+      "family": "Majoie",
+      "given": "Charles B. L. M."
+    },
+    {
+      "family": "Olabarriaga",
+      "given": "Silvia D."
+    }
+  ],
+  "issued": {
+    "date-parts": [
+      [
+        2015
+      ]
+    ]
+  },
+  "container-title": "Service Oriented and Cloud Computing (ESOCC 2015), Lecture Notes in Computer Science, Vol. 9306",
+  "publisher": "Springer International Publishing",
+  "URL": "https://steven.kleynenberg.com/papers/ESOCC_2015_MEDUSA.pdf",
+  "DOI": "10.1007/978-3-319-24072-5_15",
+  "page": "273-287",
+  "ISBN": "978-3-319-24071-8"
+}</code></pre></details>
+        <details><summary>RIS (EndNote / Zotero / Mendeley)</summary><pre><code>TY  - CONF
+AU  - Renan Sales Barros
+AU  - Jordi Borst
+AU  - Steven Kleynenberg
+AU  - Henk A. Marquering
+AU  - Charles B. L. M. Majoie
+AU  - Silvia D. Olabarriaga
+TI  - Remote Collaboration, Decision Support, and On-Demand Medical Image Analysis for Acute Stroke Care
+T2  - Service Oriented and Cloud Computing (ESOCC 2015), Lecture Notes in Computer Science, Vol. 9306
+PY  - 2015
+PB  - Springer International Publishing
+SP  - 273
+EP  - 287
+SN  - 978-3-319-24071-8
+DO  - 10.1007/978-3-319-24072-5_15
+UR  - https://steven.kleynenberg.com/papers/ESOCC_2015_MEDUSA.pdf
+ER  -</code></pre></details>
+      </div>
+    </article>
+    
+    <article class="card" id="wo2014003543a1">
+      <div class="meta-top"><span class="badge">2014</span> &middot; <span>World Intellectual Property Organization (WIPO) — International Patent Publication WO 2014/003543 A1</span></div>
+      <h2>Method and System for Automated Linguistic Sequence Filtering and Patent Whitespace Search (WO 2014/003543 A1 / PCT/NL2012/050463)</h2>
+      <p class="authors"><strong>Authors:</strong> Steven Kleynenberg, Huub Rutten, Elsemiek ten Pas</p>
+      <p class="abstract">International PCT patent covering part-of-speech morphological sequence filtering, multi-word technical term extraction, and semantic whitespace discovery across large-scale patent and scientific corpora.</p>
+      <div class="ssot-box">
+        <div><strong>Primary Canonical SSOT Open-Access Full Text (Zero Paywall):</strong><br>
+        <code>https://steven.kleynenberg.com/papers/WO2014003543A1.pdf</code></div>
+        <div class="actions">
+          <a class="btn-primary" href="./WO2014003543A1.pdf">Download Open-Access PDF (1.1 MB)</a> <a class="btn-sec" href="./WO2014003543A1.xml">Full WIPO ST.36 XML Dossier (60 KB)</a>
+        </div>
+      </div>
+      <div class="mirrors"><strong>External Bibliographic Verifiers &amp; Login-Gated Mirrors (Use SSOT PDF above for Direct Open Access):</strong><ul><li><strong>WIPO / Google Patents Mirror:</strong> <a href="https://patents.google.com/patent/WO2014003543A1/en" rel="noopener">https://patents.google.com/patent/WO2014003543A1/en</a></li><li><strong>ResearchGate Secondary Mirror (Login-Gated):</strong> <a href="https://www.researchgate.net/profile/Steven-Kleynenberg" rel="nofollow noopener">https://www.researchgate.net/profile/Steven-Kleynenberg</a></li><li><strong>Academia.edu Secondary Index (Login-Gated):</strong> <a href="https://independent.academia.edu/StevenKleynenberg" rel="nofollow noopener">https://independent.academia.edu/StevenKleynenberg</a></li></ul></div>
+      <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.atitle=Method%20and%20System%20for%20Automated%20Linguistic%20Sequence%20Filtering%20and%20Patent%20Whitespace%20Search%20%28WO%202014/003543%20A1%20/%20PCT/NL2012/050463%29&amp;rft.jtitle=World%20Intellectual%20Property%20Organization%20%28WIPO%29%20%E2%80%94%20International%20Patent%20Publication%20WO%202014/003543%20A1&amp;rft.date=2014&amp;rft_id=https%3A//steven.kleynenberg.com/papers/WO2014003543A1.pdf&amp;rft.au=Steven%20Kleynenberg&amp;rft.au=Huub%20Rutten&amp;rft.au=Elsemiek%20ten%20Pas"></span>
+      <div class="cite-row">
+        <details><summary>BibTeX</summary><pre><code>@patent{Kleynenberg2014WO2014003543A1,
+  author    = {Steven Kleynenberg and Huub Rutten and Elsemiek ten Pas},
+  title     = {{Method and System for Automated Linguistic Sequence Filtering and Patent Whitespace Search (WO 2014/003543 A1 / PCT/NL2012/050463)}},
+  number    = {WO2014003543A1},
+  holder    = {WIPO (PCT/NL2012/050463)},
+  year      = {2014},
+  url       = {https://steven.kleynenberg.com/papers/WO2014003543A1.pdf}
+}</code></pre></details>
+        <details><summary>CSL-JSON</summary><pre><code>{
+  "id": "Kleynenberg2014WO2014003543A1",
+  "type": "patent",
+  "title": "Method and System for Automated Linguistic Sequence Filtering and Patent Whitespace Search (WO 2014/003543 A1 / PCT/NL2012/050463)",
+  "author": [
+    {
+      "family": "Kleynenberg",
+      "given": "Steven"
+    },
+    {
+      "family": "Rutten",
+      "given": "Huub"
+    },
+    {
+      "family": "Pas",
+      "given": "Elsemiek ten"
+    }
+  ],
+  "issued": {
+    "date-parts": [
+      [
+        2014
+      ]
+    ]
+  },
+  "container-title": "World Intellectual Property Organization (WIPO) — International Patent Publication WO 2014/003543 A1",
+  "publisher": "WIPO (PCT/NL2012/050463)",
+  "URL": "https://steven.kleynenberg.com/papers/WO2014003543A1.pdf",
+  "number": "WO2014003543A1"
+}</code></pre></details>
+        <details><summary>RIS (EndNote / Zotero / Mendeley)</summary><pre><code>TY  - PAT
+AU  - Steven Kleynenberg
+AU  - Huub Rutten
+AU  - Elsemiek ten Pas
+TI  - Method and System for Automated Linguistic Sequence Filtering and Patent Whitespace Search (WO 2014/003543 A1 / PCT/NL2012/050463)
+T2  - World Intellectual Property Organization (WIPO) — International Patent Publication WO 2014/003543 A1
+PY  - 2014
+PB  - WIPO (PCT/NL2012/050463)
+UR  - https://steven.kleynenberg.com/papers/WO2014003543A1.pdf
+ER  -</code></pre></details>
+      </div>
+    </article>
+    
+    <article class="card" id="icann-1991-metanet">
+      <div class="meta-top"><span class="badge">1991</span> &middot; <span>Artificial Neural Networks (ICANN 1991), Espoo, Finland</span></div>
+      <h2>Extending the MetaNet Network Environment: Process Control and Machine Independence</h2>
+      <p class="authors"><strong>Authors:</strong> Jacob M. J. Murre, Steven Kleynenberg</p>
+      <p class="abstract">Architectural extension of the MetaNet modular neural network simulation environment introducing distributed process control and hardware-independent execution across heterogeneous workstations and transputer arrays.</p>
+      <div class="ssot-box">
+        <div><strong>Primary Canonical SSOT Open-Access Full Text (Zero Paywall):</strong><br>
+        <code>https://steven.kleynenberg.com/papers/ICANN_1991_BSP400.pdf</code></div>
+        <div class="actions">
+          <a class="btn-primary" href="./ICANN_1991_BSP400.pdf">Download Open-Access PDF (14.5 MB)</a>
+        </div>
+      </div>
+      <div class="mirrors"><strong>External Bibliographic Verifiers &amp; Login-Gated Mirrors (Use SSOT PDF above for Direct Open Access):</strong><ul><li><strong>ResearchGate Secondary Mirror (Login-Gated):</strong> <a href="https://www.researchgate.net/profile/Steven-Kleynenberg" rel="nofollow noopener">https://www.researchgate.net/profile/Steven-Kleynenberg</a></li><li><strong>Academia.edu Secondary Index (Login-Gated):</strong> <a href="https://independent.academia.edu/StevenKleynenberg" rel="nofollow noopener">https://independent.academia.edu/StevenKleynenberg</a></li></ul></div>
+      <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.atitle=Extending%20the%20MetaNet%20Network%20Environment%3A%20Process%20Control%20and%20Machine%20Independence&amp;rft.jtitle=Artificial%20Neural%20Networks%20%28ICANN%201991%29%2C%20Espoo%2C%20Finland&amp;rft.date=1991&amp;rft_id=https%3A//steven.kleynenberg.com/papers/ICANN_1991_BSP400.pdf&amp;rft.au=Jacob%20M.%20J.%20Murre&amp;rft.au=Steven%20Kleynenberg"></span>
+      <div class="cite-row">
+        <details><summary>BibTeX</summary><pre><code>@inproceedings{Murre1991ExtendingMetaNet,
+  author    = {Jacob M. J. Murre and Steven Kleynenberg},
+  title     = {{Extending the MetaNet Network Environment: Process Control and Machine Independence}},
+  booktitle = {Artificial Neural Networks (ICANN 1991), Espoo, Finland},
+  year      = {1991},
+  pages     = {1531-1534},
+  publisher = {Elsevier / North-Holland},
+  isbn      = {978-0-444-89178-5},
+  url       = {https://steven.kleynenberg.com/papers/ICANN_1991_BSP400.pdf}
+}</code></pre></details>
+        <details><summary>CSL-JSON</summary><pre><code>{
+  "id": "Murre1991ExtendingMetaNet",
+  "type": "paper-conference",
+  "title": "Extending the MetaNet Network Environment: Process Control and Machine Independence",
+  "author": [
+    {
+      "family": "Murre",
+      "given": "Jacob M. J."
+    },
+    {
+      "family": "Kleynenberg",
+      "given": "Steven"
+    }
+  ],
+  "issued": {
+    "date-parts": [
+      [
+        1991
+      ]
+    ]
+  },
+  "container-title": "Artificial Neural Networks (ICANN 1991), Espoo, Finland",
+  "publisher": "Elsevier / North-Holland",
+  "URL": "https://steven.kleynenberg.com/papers/ICANN_1991_BSP400.pdf",
+  "page": "1531-1534",
+  "ISBN": "978-0-444-89178-5"
+}</code></pre></details>
+        <details><summary>RIS (EndNote / Zotero / Mendeley)</summary><pre><code>TY  - CONF
+AU  - Jacob M. J. Murre
+AU  - Steven Kleynenberg
+TI  - Extending the MetaNet Network Environment: Process Control and Machine Independence
+T2  - Artificial Neural Networks (ICANN 1991), Espoo, Finland
+PY  - 1991
+PB  - Elsevier / North-Holland
+SP  - 1531
+EP  - 1534
+SN  - 978-0-444-89178-5
+UR  - https://steven.kleynenberg.com/papers/ICANN_1991_BSP400.pdf
+ER  -</code></pre></details>
+      </div>
+    </article>
+    
+    <article class="card" id="ijcnn-1991-bsp400">
+      <div class="meta-top"><span class="badge">1991</span> &middot; <span>IEEE International Joint Conference on Neural Networks (IJCNN 1991), Singapore</span></div>
+      <h2>Integrating the BSP400 Neurocomputer with the MetaNet Network Environment</h2>
+      <p class="authors"><strong>Authors:</strong> Jacob M. J. Murre, Jan N. H. Heemskerk, Steven Kleynenberg, Patrick Thomas William Hudson</p>
+      <p class="abstract">Hardware-software co-design integrating the massively parallel 400-processor BSP400 neurocomputer directly into the MetaNet graphical neural network environment.</p>
+      <div class="ssot-box">
+        <div><strong>Primary Canonical SSOT Open-Access Full Text (Zero Paywall):</strong><br>
+        <code>https://steven.kleynenberg.com/papers/IJCNN_1991_MetaNet.pdf</code></div>
+        <div class="actions">
+          <a class="btn-primary" href="./IJCNN_1991_MetaNet.pdf">Download Open-Access PDF (373 KB)</a>
+        </div>
+      </div>
+      <div class="mirrors"><strong>External Bibliographic Verifiers &amp; Login-Gated Mirrors (Use SSOT PDF above for Direct Open Access):</strong><ul><li><strong>Publisher Bibliographic DOI (Paywalled Reference Only):</strong> <code>10.1109/IJCNN.1991.170608</code> &mdash; <a href="https://doi.org/10.1109/IJCNN.1991.170608" rel="nofollow noopener">https://doi.org/10.1109/IJCNN.1991.170608</a></li><li><strong>ResearchGate Secondary Mirror (Login-Gated):</strong> <a href="https://www.researchgate.net/profile/Steven-Kleynenberg" rel="nofollow noopener">https://www.researchgate.net/profile/Steven-Kleynenberg</a></li><li><strong>Academia.edu Secondary Index (Login-Gated):</strong> <a href="https://independent.academia.edu/StevenKleynenberg" rel="nofollow noopener">https://independent.academia.edu/StevenKleynenberg</a></li></ul></div>
+      <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.atitle=Integrating%20the%20BSP400%20Neurocomputer%20with%20the%20MetaNet%20Network%20Environment&amp;rft.jtitle=IEEE%20International%20Joint%20Conference%20on%20Neural%20Networks%20%28IJCNN%201991%29%2C%20Singapore&amp;rft.date=1991&amp;rft_id=https%3A//steven.kleynenberg.com/papers/IJCNN_1991_MetaNet.pdf&amp;rft_id=info%3Adoi%2F10.1109/IJCNN.1991.170608&amp;rft.au=Jacob%20M.%20J.%20Murre&amp;rft.au=Jan%20N.%20H.%20Heemskerk&amp;rft.au=Steven%20Kleynenberg&amp;rft.au=Patrick%20Thomas%20William%20Hudson"></span>
+      <div class="cite-row">
+        <details><summary>BibTeX</summary><pre><code>@inproceedings{Murre1991IntegratingBSP400,
+  author    = {Jacob M. J. Murre and Jan N. H. Heemskerk and Steven Kleynenberg and Patrick Thomas William Hudson},
+  title     = {{Integrating the BSP400 Neurocomputer with the MetaNet Network Environment}},
+  booktitle = {IEEE International Joint Conference on Neural Networks (IJCNN 1991), Singapore},
+  year      = {1991},
+  pages     = {1480-1485},
+  publisher = {IEEE},
+  isbn      = {0-7803-0227-3},
+  doi       = {10.1109/IJCNN.1991.170608},
+  url       = {https://steven.kleynenberg.com/papers/IJCNN_1991_MetaNet.pdf}
+}</code></pre></details>
+        <details><summary>CSL-JSON</summary><pre><code>{
+  "id": "Murre1991IntegratingBSP400",
+  "type": "paper-conference",
+  "title": "Integrating the BSP400 Neurocomputer with the MetaNet Network Environment",
+  "author": [
+    {
+      "family": "Murre",
+      "given": "Jacob M. J."
+    },
+    {
+      "family": "Heemskerk",
+      "given": "Jan N. H."
+    },
+    {
+      "family": "Kleynenberg",
+      "given": "Steven"
+    },
+    {
+      "family": "Hudson",
+      "given": "Patrick Thomas William"
+    }
+  ],
+  "issued": {
+    "date-parts": [
+      [
+        1991
+      ]
+    ]
+  },
+  "container-title": "IEEE International Joint Conference on Neural Networks (IJCNN 1991), Singapore",
+  "publisher": "IEEE",
+  "URL": "https://steven.kleynenberg.com/papers/IJCNN_1991_MetaNet.pdf",
+  "DOI": "10.1109/IJCNN.1991.170608",
+  "page": "1480-1485",
+  "ISBN": "0-7803-0227-3"
+}</code></pre></details>
+        <details><summary>RIS (EndNote / Zotero / Mendeley)</summary><pre><code>TY  - CONF
+AU  - Jacob M. J. Murre
+AU  - Jan N. H. Heemskerk
+AU  - Steven Kleynenberg
+AU  - Patrick Thomas William Hudson
+TI  - Integrating the BSP400 Neurocomputer with the MetaNet Network Environment
+T2  - IEEE International Joint Conference on Neural Networks (IJCNN 1991), Singapore
+PY  - 1991
+PB  - IEEE
+SP  - 1480
+EP  - 1485
+SN  - 0-7803-0227-3
+DO  - 10.1109/IJCNN.1991.170608
+UR  - https://steven.kleynenberg.com/papers/IJCNN_1991_MetaNet.pdf
+ER  -</code></pre></details>
+      </div>
+    </article>
+    
+    <article class="card" id="innc-1990-metanet">
+      <div class="meta-top"><span class="badge">1990</span> &middot; <span>International Neural Network Conference (INNC 1990), Paris, France</span></div>
+      <h2>The MetaNet Network Environment for the Development of Modular Neural Networks</h2>
+      <p class="authors"><strong>Authors:</strong> Jacob M. J. Murre, Steven Kleynenberg</p>
+      <p class="abstract">Foundational specification of the MetaNet environment for constructing, visualizing, and simulating modular and biologically inspired neural network architectures.</p>
+      <div class="ssot-box">
+        <div><strong>Primary Canonical SSOT Open-Access Full Text (Zero Paywall):</strong><br>
+        <code>https://steven.kleynenberg.com/papers/INNC_1990_MetaNet.pdf</code></div>
+        <div class="actions">
+          <a class="btn-primary" href="./INNC_1990_MetaNet.pdf">Download Open-Access PDF (635 KB)</a>
+        </div>
+      </div>
+      <div class="mirrors"><strong>External Bibliographic Verifiers &amp; Login-Gated Mirrors (Use SSOT PDF above for Direct Open Access):</strong><ul><li><strong>Publisher Bibliographic DOI (Paywalled Reference Only):</strong> <code>10.1007/978-94-009-0643-3_59</code> &mdash; <a href="https://doi.org/10.1007/978-94-009-0643-3_59" rel="nofollow noopener">https://doi.org/10.1007/978-94-009-0643-3_59</a></li><li><strong>ResearchGate Secondary Mirror (Login-Gated):</strong> <a href="https://www.researchgate.net/profile/Steven-Kleynenberg" rel="nofollow noopener">https://www.researchgate.net/profile/Steven-Kleynenberg</a></li><li><strong>Academia.edu Secondary Index (Login-Gated):</strong> <a href="https://independent.academia.edu/StevenKleynenberg" rel="nofollow noopener">https://independent.academia.edu/StevenKleynenberg</a></li></ul></div>
+      <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.atitle=The%20MetaNet%20Network%20Environment%20for%20the%20Development%20of%20Modular%20Neural%20Networks&amp;rft.jtitle=International%20Neural%20Network%20Conference%20%28INNC%201990%29%2C%20Paris%2C%20France&amp;rft.date=1990&amp;rft_id=https%3A//steven.kleynenberg.com/papers/INNC_1990_MetaNet.pdf&amp;rft_id=info%3Adoi%2F10.1007/978-94-009-0643-3_59&amp;rft.au=Jacob%20M.%20J.%20Murre&amp;rft.au=Steven%20Kleynenberg"></span>
+      <div class="cite-row">
+        <details><summary>BibTeX</summary><pre><code>@inproceedings{Murre1990MetaNetINNC,
+  author    = {Jacob M. J. Murre and Steven Kleynenberg},
+  title     = {{The MetaNet Network Environment for the Development of Modular Neural Networks}},
+  booktitle = {International Neural Network Conference (INNC 1990), Paris, France},
+  year      = {1990},
+  pages     = {717-720},
+  publisher = {Kluwer Academic Publishers / Springer},
+  isbn      = {978-94-009-0643-3},
+  doi       = {10.1007/978-94-009-0643-3_59},
+  url       = {https://steven.kleynenberg.com/papers/INNC_1990_MetaNet.pdf}
+}</code></pre></details>
+        <details><summary>CSL-JSON</summary><pre><code>{
+  "id": "Murre1990MetaNetINNC",
+  "type": "paper-conference",
+  "title": "The MetaNet Network Environment for the Development of Modular Neural Networks",
+  "author": [
+    {
+      "family": "Murre",
+      "given": "Jacob M. J."
+    },
+    {
+      "family": "Kleynenberg",
+      "given": "Steven"
+    }
+  ],
+  "issued": {
+    "date-parts": [
+      [
+        1990
+      ]
+    ]
+  },
+  "container-title": "International Neural Network Conference (INNC 1990), Paris, France",
+  "publisher": "Kluwer Academic Publishers / Springer",
+  "URL": "https://steven.kleynenberg.com/papers/INNC_1990_MetaNet.pdf",
+  "DOI": "10.1007/978-94-009-0643-3_59",
+  "page": "717-720",
+  "ISBN": "978-94-009-0643-3"
+}</code></pre></details>
+        <details><summary>RIS (EndNote / Zotero / Mendeley)</summary><pre><code>TY  - CONF
+AU  - Jacob M. J. Murre
+AU  - Steven Kleynenberg
+TI  - The MetaNet Network Environment for the Development of Modular Neural Networks
+T2  - International Neural Network Conference (INNC 1990), Paris, France
+PY  - 1990
+PB  - Kluwer Academic Publishers / Springer
+SP  - 717
+EP  - 720
+SN  - 978-94-009-0643-3
+DO  - 10.1007/978-94-009-0643-3_59
+UR  - https://steven.kleynenberg.com/papers/INNC_1990_MetaNet.pdf
+ER  -</code></pre></details>
+      </div>
+    </article>
+    
+  </main>
+  <footer>
+    <p>Canonical SSOT Host: <a href="https://steven.kleynenberg.com/papers/">https://steven.kleynenberg.com/papers/</a> &middot; Machine-Readable Manifests: <a href="https://steven.kleynenberg.com/papers/llms.txt">https://steven.kleynenberg.com/papers/llms.txt</a> &amp; <a href="https://steven.kleynenberg.com/papers/llms-full.txt">https://steven.kleynenberg.com/papers/llms-full.txt</a></p>
+  </footer>
 </body>
 </html>
