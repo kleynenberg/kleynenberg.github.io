@@ -33,3 +33,8 @@ WebAudio DSP & Cybernetic Homeostasis Engine (assets/www/index.html):
 ================================================================================
 - GemSide (gemside-mcp-bridge): Chrome Side Panel extension communicating with a local Python Native Messaging host for controlled shell execution and DOM extraction.
 - Biometric & RF Edge Prototypes: Cross-platform Python BLE readers for Zephyr BioHarness and Polar H7 RR-interval telemetry, plus Marvin LoRaWAN nodes on The Things Network.
+
+## 3D Fractal Multiverse PWA
+- Dossier & Inline Paper: https://steven.kleynenberg.com/pp/fract/
+- Live Google Cloud App: https://fract.kleynenberg.com/
+- Corpus: https://steven.kleynenberg.com/pp/fract/llms-full.txt

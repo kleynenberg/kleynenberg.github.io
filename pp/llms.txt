@@ -18,3 +18,6 @@ Personal Projects (PP) documents the experimental software, digital signal proce
 
 ## Full Technical Documentation
 - Full PP Dossier: https://steven.kleynenberg.com/pp/llms-full.txt
+
+- 3D Fractal Multiverse PWA (Dossier & Paper): https://steven.kleynenberg.com/pp/fract/
+- 3D Fractal Multiverse PWA (Live Cloud): https://fract.kleynenberg.com/
