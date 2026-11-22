@@ -1,0 +1,6 @@
+Principal Enterprise & AI Architect with over 25 years of experience in distributed software architecture, Natural Language Processing (NLP), information retrieval, and real-time clinical decision-support systems. Proven track record in European public-private R&D consortia (including ITEA projects EDAFMIS, MEDUSA, Medolution, and PARTNER, as well as EU FP5 LORE).
+Core Expertise:
+• AI, NLP & Hybrid Retrieval: Linguistic text mining, Part-of-Speech (POS) query generation (co-inventor of PCT application WO 2014/003543 A1), semantic indexing, and Retrieval-Augmented Generation (RAG).
+• High-Performance & Browser-Native Computing: Modular neural networks, massively parallel processing, WebGPU/WebGL compute shaders, and edge-native AI execution.
+• Clinical Decision Support & Sensor Telemetry: Cloud-based medical imaging workflows, rule-based decision support systems (DSS), and real-time physiological/biometric sensor integration (Bluetooth LE, Zephyr, Polar).
+• Mission-Critical & Sovereign Systems: Distributed simulation models, deterministic control architectures, Linux systems engineering, and forensic security.

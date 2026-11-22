@@ -1,0 +1,503 @@
+--- PAGINA 1 ---
+Remote Collaboration, Decision Support,
+and On-Demand Medical Image Analysis
+for Acute Stroke Care
+Renan Sales Barros1(), Jordi Borst1, Steven Kleynenberg2, Céline Badr3,
+Rama-Rao Ganji4, Hubrecht de Bliek5, Landry-Stéphane Zeng-Eyindanga6,
+Henk van den Brink7, Charles Majoie1, Henk Marquering1,
+and Sílvia Delgado Olabarriaga1
+1
+
+Academic Medical Center, University of Amsterdam, Amsterdam, The Netherlands
+r.salesbarros@amc.uva.nl
+2
+Sopheon, Maastricht, The Netherlands
+3
+Prologue, Les Ulis, France
+4
+ARTEMIS Department, Telecom SudParis, Evry, France
+5
+Philips Healthcare, Eindhoven, The Netherlands
+6
+Bull, Grenoble, France
+7
+Technolution, Gouda, The Netherlands
+
+Abstract. Acute stroke is the leading cause of disabilities and the fourth cause
+of death worldwide. The treatment of stroke patients often requires fast collaboration between medical experts and fast analysis and sharing of large amounts
+of medical data, especially image data. In this situation, cloud technologies provide a potentially cost-effective way to optimize management of stroke patients
+and, consequently, improve patient outcome. This paper presents a cloud-based
+platform for Medical Distributed Utilization of Services & Applications
+(MEDUSA). This platform aims at improving current acute care settings by allowing fast medical data exchange, advanced processing of medical image data,
+automated decision support, and remote collaboration between physicians in a
+secure and responsive virtual space. We describe a prototype implemented in
+the MEDUSA platform for supporting the treatment of acute stroke patients. As
+the initial evaluation illustrates, this prototype improves several aspects of current stroke care and has the potential to play an important role in the care management of acute stroke patients.
+Keywords: Acute care · Cloud computing · Decision support · High performance computing · Medical image analysis · Remote collaboration · Stroke ·
+Telemedicine
+
+1
+
+Introduction
+
+Acute ischemic stroke is the leading cause of disability and fourth cause of death [1].
+In acute ischemic stroke, a blood clot obstructs blood flow in the brain causing part of
+the brain to die due to the lack of blood supply. The amount of brain damage and the
+© IFIP International Federation for Information Processing 2015
+S. Dustdar et al. (Eds): ESOCC 2015, LNCS 9306, pp. 214–225, 2015.
+DOI: 10.1007/978-3-319-24072-5_15
+
+--- PAGINA 2 ---
+Remote Collaboration, Decision Support, and On-Demand Medical Image Analysis
+
+215
+
+patient outcome is highly related to the duration of the lack of blood flow (“time is
+brain”). Therefore, fast diagnosis, decision making, and treatment are crucial in acute
+stroke management.
+Medical data of a stroke patient is collected during the transport by ambulance to
+the hospital (e.g. vital signs, patient history, and medication). At arrival, various types
+of image data are acquired following protocols that involve opinions and decisions
+from various medical experts. Sometimes, a patient needs to be transferred to a specialized hospital and, in this case, it is important that all the data collected in the ambulance and at the referring hospital is available to the caregivers that will continue
+the treatment. Often, various medical specialists need to collaborate based on available information for determining the correct diagnosis and choosing the best treatment.
+Usually, this collaboration is based on tools that are not connected to each other and,
+because of that, they may not deliver the necessary information rapidly enough.
+In addition to these challenges, the amount of patient medical data is growing fast [2].
+This fast increase is especially observed in radiological image data, which is also a consequence of new medical imaging technologies [3, 4]. The management, sharing, and
+processing of medical image data is a great challenge for healthcare providers [3, 4] and
+they can be greatly improved by the usage of cloud technologies [5]. Cloud technologies
+also enable collaboration and data exchange between medical experts in a scalable, fast,
+and cost-effective way [5]. Mobile devices, remote collaboration tools, and on-demand
+computing models and data analysis tools supported by cloud technologies may play an
+important role to help in optimizing stroke treatment and, consequently, improve outcome
+of patients suffering from stroke.
+In this paper, we present a cloud-based platform for Medical Distributed Utilization of Services & Applications (MEDUSA). This platform aims at improving current
+acute care settings by allowing fast medical data exchange, advanced processing of
+medical image data, automated decision support, and remote collaboration between
+physicians through a secure responsive virtual space. We discuss a case study implemented using the MEDUSA platform for supporting the treatment of acute stroke
+patients, presenting the technical details of the prototype implementation and commenting on its initial evaluation.
+
+2
+
+Related Work
+
+The development of cloud-based platforms for collaboration and processing of medical data is a challenging task. Many authors [4, 5, 6, 7] put forward that these platforms hold the potential to define the future of healthcare services. Also, the analysis
+of medical data can be an important way to improve quality and efficiency in healthcare [8, 9].
+The work presented in [10, 11] focuses on the development of a cloud-based solution
+aimed at only the storage and sharing of medical data. In other words, they propose
+solutions based on cloud infrastructures to facilitate medical image data exchange between hospitals, imaging centers, and physicians. A similar solution is presented in [12],
+however focusing on medical data sharing during emergency situations. A cloud-based
+
+--- PAGINA 3 ---
+216
+
+R.S. Barros et al.
+
+system is presented in [13] for storage of medical data with an additional functionality
+that enables content-based retrieval of medical images. Still focusing on cloud-based
+data storage and sharing, [14] presents a solution to help managing medical resources
+for the prevention and treatment of chronic stroke patients.
+In addition to storage and sharing, some studies also include the possibility of using the cloud infrastructure for processing of medical data. A simple cloud-based
+application is presented in [15] to monitor oxygenated hemoglobin and deoxygenated
+hemoglobin concentration changes in different tissues. Cloud computing is also used
+in [16] not only to support data storage and sharing, but also to visualize and render
+medical image data. In [17] the authors also propose a cloud application for rendering
+of 3D medical imaging data. This application additionally manages the cloud deployment by considering scalability, operational cost, and network quality.
+Complete cloud-based systems for medical image analysis are presented in [18, 19, 20].
+However, in these systems, image upload and download is manually performed by the
+user, while the system focuses on the remote processing, storage, and sharing of medical
+image data. The MEDUSA platform not only provides cloud-based storage, sharing, and
+processing of medical image data, but also real-time communication between medical
+experts, real-time collaborative interaction of the medical experts with the medical data,
+and a real-time decision support system that continuously processes patient data and
+displays relevant notifications about the patient condition.
+The MEDUSA platform also includes a cloud management layer that coordinates
+the use of resources in the cloud infrastructure. Other studies also present some cloud
+management features. In [21] the authors propose a cloud architecture that reserves
+network and computing resources to avoid problems regarding load-balancing mechanisms of cloud infrastructures and to reduce the processing delays for the medical
+applications. Also, [2] proposes an algorithm to optimize the organization of medical
+image data and associated processing algorithms in cloud computing nodes to increase the computing performance. Finally, [3] presents a cloud-based multi-agent
+system for scalable management of large collections of medical image data.
+The project presented in [22] tries to speed up current stroke care by integrating
+and sharing data from stroke patients using mobile networks. In this scenario, a hospital can, for instance, be prepared with the right resources before the arrival of the
+patient. This project also includes decision support, which suggests a predefined path
+through the emergency procedures according to the structure of mandatory and other
+supplementary healthcare protocols. However, differently from MEDUSA, this
+project does not include any image processing based feature.
+
+3
+
+Acute Stroke Care
+
+Currently, treatment decision of stroke patients is increasingly driven by advanced
+imaging techniques. These imaging techniques consist of non-contrast computed tomography (ncCT), computed tomography angiography (CTA), and computed tomography perfusion (CTP). Because of the extensive usage of imaging techniques, it is
+common to produce gigabytes of image data per patient.
+
+--- PAGINA 4 ---
+Remote Collaboration, Decision Support, and On-Demand Medical Image Analysis
+
+217
+
+The primary treatment for patients with acute ischemic stroke is intravenous administration of alteplase (thrombolysis). Patients who are not eligible for treatment
+with alteplase or do not respond to the treatment can be treated by mechanical removal of the blood clot via the artery (thrombectomy). Thrombectomy is only available in
+specialized hospitals and often a patient must be transferred for treatment.
+This transfer is arranged via telephone and imaging data created in the initial hospital is not available for the caregivers in the specialized hospital until the patient and
+imaging data arrive via the ambulance. On a regular basis it happens that the imaging
+data was wrongly interpreted in the initial hospital and that the patient is not eligible
+for thrombectomy. Also, often new imaging acquisitions have to be redone due to
+broken DVDs, wrong data, or insufficient quality. These problems result in futile
+transfers and loss of valuable time.
+
+4
+
+MEDUSA Platform
+
+The MEDUSA platform was designed to support remote collaboration and high performance processing of medical data for multiple healthcare scenarios. The platform
+is accessible to final users through the MEDUSA Collaboration Framework (MCF),
+which is a web application that is compatible with any web browser that supports
+HTML5. The MCF is a special type of MEDUSA application that provides to the
+users an entry point to access other MEDUSA applications. A cloud management
+layer controls the deployment and execution of all MEDUSA applications in one or
+more cloud providers. Figure 1 illustrates the architectural design of the MEDUSA
+platform.
+MEDUSA Collaboration Framework
+MEDUSA Cloud Applications
+Audit Trail
+
+User Manager
+
+Video Call
+
+…
+
+Cloud Management Layer
+Cloud Provider
+Fig. 1. The MEDUSA platform architecture.
+
+4.1
+
+MEDUSA Cloud Applications
+
+The MEDUSA platform has a number of cloud applications that are available in all
+healthcare scenarios: Audit Trail, which reports the events generated by the other
+MEDUSA applications; User Manager, which allows assigning roles to users and
+
+--- PAGINA 5 ---
+218
+
+R.S. Barros et al.
+
+defining which MEDUSA applications they can use; and Video Call, which allows
+communication between users of the MEDUSA platform.
+The MEDUSA applications are started as part of a MEDUSA session. Multiple users in a session can interact with these applications, and these interactions are visible
+to all the users in the session. The handling of multiple user interactions is done by
+each MEDUSA application. The applications in the MEDUSA platform can be web
+applications or regular desktop applications. The desktop applications are integrated
+in the MEDUSA platform through a virtualization server that uses the technologies
+described in [23] and [24]. The multi-user interaction of the desktop applications is
+handled by the virtualization server.
+4.2
+
+Cloud Provider
+
+The MEDUSA applications can be deployed in different cloud providers. Currently,
+these applications are being deployed in the High Performance Real-time Cloud for
+Computing (HiPeRT-Cloud) of Bull. The HiPeRT-Cloud is mainly designed for realtime computationally-intensive workloads. This solution is fully compatible with the
+Cloud Computing Reference Architecture of the National Institute of Standards and
+Technology (NIST) and provides infrastructure services under any cloud broker solution. The HiPeRT-Cloud is used in the MEDUSA platform because it provides solutions for handling complex applications in the field of real-time computational and
+data-intensive tasks in the cloud.
+4.3
+
+Cloud Management Layer
+
+In order to take advantage of the on-demand, flexible, high-performance, and costeffective options that cloud providers can offer, the cloud management layer, implemented by Prologue, manages the cloud deployment in the MEDUSA platform. This
+layer orchestrates the allocation and release of resources on the cloud provider’s infrastructure. It also oversees the lifecycle of the deployed resources, ensures their
+availability and scalability, and links the desktop applications from the virtualization
+server back to the MCF. The cloud management layer is designed according to the
+Service-Oriented Architecture model and its functionalities are accessible through a
+Representational State Transfer Application Programming Interface (REST API). The
+cloud management layer also incorporates a monitoring service that operates by accessing directly the deployed virtual machines (VMs). The technology behind the
+cloud management layer is aligned with the NIST architecture and based on the Open
+Cloud Computing Interface specifications.
+In the MEDUSA context, technical requirements for computing, storage, network,
+and security resources have been identified for each MEDUSA application to be deployed. All requirements are then translated into machine-readable code that is used to
+provision the cloud resources.
+The components of the MEDUSA platform are hosted on the cloud through a security-aware, need-based provisioning process. By supporting on-demand hybrid and
+multi-cloud deployments, as well as monitoring, load balancing, and auto-scaling
+
+--- PAGINA 6 ---
+Remote Collaboration, Decision Support, and On-Demand Medical Image Analysis
+
+219
+
+services through an agent embedded in each VM, the cloud management layer thus
+ensures a high resilience of the MEDUSA platform.
+4.4
+
+Security
+
+The security of the MEDUSA platform is currently mainly based in the use of digital
+certificates, which are used to authenticate MEDUSA applications (VMs), to secure
+the data exchanges through the network, and to provide strong authentication of
+MEDUSA users.
+The VMs containing the applications are deployed dynamically, and thus server
+certificates need to be created dynamically, during the deployment. A web service
+was developed to provide dynamic generation of server certificates for the different
+VMs in the MEDUSA platform. These server certificates must be created during the
+deployment of the VMs and there must be one certificate per application and VM
+(identified by the IP address).
+Regarding the user authentication, an authentication module is called when a user
+opens a MEDUSA session. This module authenticates a user by checking the provided credentials against the user management component, which has access to a
+special internal directory containing the certificates used for strong authentication of
+MEDUSA users.
+The MEDUSA platform also uses robust image watermarking and fingerprinting
+methods to prevent and detect unauthorized modification and leaking of medical images by authorized users by. However, due to legal regulations, an important requirement when dealing with medical images is the capability reconstructing the original
+image data. Because of this, reversible or semantic-sensitive techniques for watermarking and fingerprinting can be used in the MEDUSA platform. These techniques
+enable to completely recover the original image data or at least the recovery of the
+regions of these images that are relevant for the user or application.
+
+5
+
+MEDUSA Stroke Prototype
+
+The MEDUSA platform was designed to support various medical scenarios. Here, we
+focus on a prototype for supporting acute stroke care. The MEDUSA Stroke Prototype
+(MSP) is built by combining the default MEDUSA applications with three applications
+specifically configured to support the treatment of stroke patients: Advanced Medical
+Image Processing, Decision Support System, and 3D Segmentation Renderer. All the
+applications of the MSP are executed in VMs running on the HiPeRT-Cloud. The cloud
+management layer is in charge of the deployment of these VMs.
+5.1
+
+Advanced Medical Image Processing
+
+For supporting the assessment of the severity of a stroke, several medical image
+processing algorithms (MIPAs) have been developed. These algorithms perform
+quantitative analysis of the medical image data and the result of these analyses can be
+
+--- PAGINA 7 ---
+220
+
+R.S. Barros et al.
+
+used to support the treatment decisions. The output of these algorithms are, for example, the segmentation of a hemorrhage in the brain [25], the segmentation of a blood
+clot [26], and the segmentation of the infarcted brain tissue [27]. The MIPAs are
+linked together into processing pipelines with well-defined input, output, and policies
+that control their execution. The execution of these pipelines is automatically orchestrated to deliver the lowest execution time based on a set of optimization strategies
+(e.g. task parallelism, data parallelism, and GPU computing).
+The MIPAs are implemented as plugins for the IntelliSpace Discovery (ISD) platform, an enterprise solution for research, developed by Philips Healthcare. Figure 2
+shows the output of the plugin for infarct volume calculation in the ISD. The collection of MIPAs specially developed to support acute stroke care that are included in
+the ISD constitutes the Advanced Medical Image Processing application of the MSP.
+
+Fig. 2. Plugin for automated measurement of the cerebral infarct volume in the ISD.
+
+The ISD is a Windows desktop application developed by using the .NET Framework. The development of the MIPAs is also based in the .NET Framework. For
+GPU-based computations, OpenCL 1.1 was used. OpenCL is a framework for the
+development and execution of programs across platforms consisting of different types
+of processors such as CPUs, GPUs, etc. OpenCL.NET was used to integrate OpenCL
+with the .NET. Framework.
+The data generated by the MIPAs are exported to the DSS by using JavaScript Object
+Notation (JSON) files through WebSockets. (Anonymized) Patient information is sent
+to the MIPAs by using the tags of the medical image data used as input. The information about the current session is directly sent to the ISD and forwarded to the MIPAs.
+
+--- PAGINA 8 ---
+Remote Collaboration, Decision Support, and On-Demand Medical Image Analysis
+
+5.2
+
+221
+
+Decision Support System
+
+The Decision Support System (DSS) by Sopheon provides real-time process support
+to medical professionals collaborating on the stroke case. The DSS is rule-based: the
+rules specify the conditions under which actions are to be advised (delivered as notifications). The Decision Support rules are part of a medical protocol and thus defined
+and approved by medical professionals.
+In the MSP, the DSS runs a set of rules specifically designed for dealing with
+stroke patients. It gathers real-time input from vital sign sensors and MIPAs. For instance, a rule could state that an infarct volume larger than 70 milliliters is associated
+with a poor outcome for the patient. When the DSS detects an infarct volume value of
+e.g. 80 milliliters, it will display the notification associated with this condition. The
+DSS also selects relevant information from the data generated by the MIPAs and forwards it to the audit trail and to the 3D Segmentation Renderer.
+The DSS runs on Node.js, which is a platform built on Google Chrome's JavaScript
+runtime. The DSS is deployed on Fedora, which is an operating system based on the
+Linux kernel.
+5.3
+
+3D Segmentation Renderer
+
+The 3D Segmentation Renderer by Sopheon is responsible for displaying 3D segmentations generated by the MIPAs. This application was developed by using the WebGL
+library, which enables to render 3D graphics in the browser without installing additional
+software. Figure 3 shows the GUI of this application rendering the segmentation of
+brain tissue (in green and blue) and the segmentation of the infarcted region (in red).
+
+Fig. 3. 3D segmentation renderer showing the segmentation of brain tissue (green and blue) and
+the infarction in the brain (red).
+
+--- PAGINA 9 ---
+222
+
+6
+
+R.S. Barros et al.
+
+Initial Evaluation
+
+As this is an on-going project, the discussion presented below is based upon an evaluation of the first fully-integrated prototype.
+The MSP integrates very heterogeneous applications, which run on different operational systems (Windows, Linux) and use different development technologies (Java,
+OpenCL, C#, C++). These applications are seamlessly available for the user from a
+single interface. Also, the deployment of the applications is transparently handled by
+the platform. This solution is provided in a smooth and transparent manner, hiding the
+complex details from the user.
+In the MEDUSA platform, the data and user input need to cross several software
+layers, which might introduce overheads and decrease performance. However, such
+poor performance was not noticed in the initial MSP prototype. For instance, the Advanced Medical Image Processing application, which requires data exchange between
+different architectural components, was almost instantaneously ready for use without
+noticeable interaction delays.
+The MSP implements a complete acute stroke use case, which has been demonstrated live in various occasions. Impressions have been collected informally to assess
+the potential value of this prototype system. Table 1 compares the current stroke care
+situation in the Netherlands versus the stroke care that could be supported by the
+MEDUSA platform based on the functionalities currently present in the MSP.
+Because of its complexity, a detailed and quantitative evaluation of the MEDUSA
+platform involves several software components and requires a careful planning. The
+design of this evaluation was already defined in the first year of the project. It is scheduled to take place during the last 6 months of the MEDUSA project (end of 2015).
+Table 1. Current stroke care vs. stroke care with MEDUSA.
+Data availability
+Time to access
+data
+Potential value for
+decision
+
+current
+images are not available
+transport by car of physical media
+(minutes to hours)
+automated quantitative analysis not
+used yet for clinical decision
+
+Infrastructure
+
+static, proprietary, fixed scale
+
+Remote
+collaboration
+
+by phone
+
+with MEDUSA
+images are available online
+online data transfer (few seconds)
+results of MIPAs readily available as
+decision parameters
+pay-per-use, scalable, and portable to
+different cloud providers
+by video-conference with access to the
+patient data
+
+Concerning the image processing functionality, most of the MIPAs included in the
+MSP are too computationally expensive to be executed on a local machine according
+to the time constraints of an acute stroke patient. HPC capabilities delivered by cloud
+computing were crucial to improve the processing of these algorithms from hours to
+minutes, making them suitable for acute stroke care. For instance, the time to run the
+method used to reduce noise in CTP data was reduced from more than half an hour to
+less than 2 minutes [28].
+
+--- PAGINA 10 ---
+Remote Collaboration, Decision Support, and On-Demand Medical Image Analysis
+
+7
+
+223
+
+Discussion and Conclusion
+
+The development of the MEDUSA platform started in 2013. Back then, this kind of
+cloud-based solutions was not common. Today, however, there is a clear trend in the
+healthcare industry towards the usage of cloud computing, collaboration, and automated analyses of medical data. In addition, when dealing with processing of medical
+data constrained by the requirements of acute care situations, a lot of benefits can be
+derived from the use of cloud computing: scalability, pay-per-use model, high performance computing capabilities, remote access, etc.
+There are innumerous technical challenges for enabling the execution and communication of software components in a platform like MEDUSA. Regarding stroke care,
+the software components execute in different computing devices (CPUs, GPUs, etc.)
+and based on different software platforms (web, Linux, Windows, etc.). In the
+MEDUSA platform these challenges are tackled using SOA approach and a virtualized infrastructure. Because of the variety of application types, a uniform way of
+establishing communication between the MEDUSA applications has not been developed yet. Nevertheless, the direct communication between applications based on the
+exchange of well-defined file formats through WebSockets was demonstrated to be
+effective, without a negative impact in the development and integration of these applications. The current functionalities present in the MSP have the potential to improve several aspects of current stroke care.
+The MEDUSA platform is still under development. Thus, most of the components
+to implement security are still not completely integrated in the platform yet. Defining
+and developing the security aspects of a platform like MEDUSA is also a very challenging task, since it is necessary to cope with different legal constraints, in particular
+across countries. The development process of the MEDUSA platform includes the
+implementation and validation of the platform in three different hospitals. This
+validation is currently being carried out in one hospital. Preliminary evaluation of the
+platform indicates that the solution is promising and has potential large value for
+improving treatment of these patients.
+Acknowledgments. This work has been funded by ITEA2 10004: MEDUSA.
+
+References
+1. Go, A.S., et al.: Heart disease and stroke statistics – 2013 update: a report from the American Heart Association. Circulation 127(1), e1–e240 (2013)
+2. Hallett, S., Parr, G., McClean, S., McConnell, A., Majeed, B.: Cloud-based healthcare:
+towards a SLA compliant network aware solution for medical image processing. In: Cloud
+Computing, pp. 219–223 (2012)
+3. Alonso-Calvo, R., Crespo, J., Maojo, V., Muñoz, A., García-Remesal, M., Pérez-Rey, D.:
+Cloud computing service for managing large medical image data-sets using balanced
+collaborative agents. In: Advances on Practical Applications of Agents and Multiagent
+Systems, pp. 265–270 (2011)
+
+--- PAGINA 11 ---
+224
+
+R.S. Barros et al.
+
+4. Shini, S.G., Thomas, T., Chithraranjan, K.: Cloud based medical image exchange-security
+challenges. Procedia Engineering 38, 3454–3461 (2012)
+5. Kagadis, G.C., et al.: Cloud computing in medical imaging. Medical Physics 40(7) (2013)
+6. Jeyabalaraja, V., Josephine, M.S.: Cloud Computing in Medical Diagnosis for improving
+Health Care Environment. International Journal of Computing Algorithm 2, 458–462
+(2013)
+7. Pino, C., Di Salvo, R.: A survey of cloud computing architecture and applications in
+health. In: ICCSEE (2013)
+8. Jee, K., Kim, G.H.: Potentiality of big data in the medical sector: focus on how to reshape
+the healthcare system. Healthcare Informatics Research 19(2), 79–85 (2013)
+9. Murdoch, T.B., Detsky, A.S.: The inevitable application of big data to health care. Jama
+309(13), 1351–1352 (2013)
+10. Kanagaraj, G., Sumathi, A.C.: Proposal of an open-source cloud computing system for exchanging medical images of a hospital information system. In: TISC, pp. 144–149 (2011)
+11. Yang, C.T., Chen, L.T., Chou, W.L., Wang, K.C.: Implementation of a medical image file
+accessing system on cloud computing. In: CSE, pp. 321–326 (2010)
+12. Koufi, V., Malamateniou, F., Vassilacopoulos, G.: Ubiquitous access to cloud emergency
+medical services. In: ITAB, pp. 1–4 (2010)
+13. Zhuang, Y., Jiang, N., Wu, Z., Li, Q., Chiu, D.K., Hu, H.: Efficient and robust large medical image retrieval in mobile cloud computing environment. Information Sciences 263,
+60–86 (2014)
+14. Hua, G., Lei, H., Bei, X.: A cloud computing based collaborative service pattern of medical association for stroke prevention and treatment. In: MID, pp. 345–349 (2014)
+15. Sharieh, S., Franek, F., Ferworn, A.: Using cloud computing for medical applications. In:
+Proceedings of the 15th Communications and Networking Simulation Symposium,
+pp. 15:1–15:7 (2012)
+16. Parsonson, L., Grimm, S., Bajwa, A., Bourn, L., Bai, L.: A cloud computing medical image analysis and collaboration platform. In: Cloud Computing and Services Science,
+pp. 207–224 (2012)
+17. Dorn, K., Ukis, V., Friese, T.: A cloud-deployed 3D medical imaging system with dynamically optimized scalability and cloud costs. In: SEAA, pp. 155–158 (2011)
+18. Chiang, W.C., Lin, H.H., Wu, T.S., Chen, C.F.: Bulding a cloud service for medical image
+processing based on service-orient architecture. BMEI 3, 1459–1465 (2011)
+19. Huang, Q., Ye, L., Yu, M., Wu, F., Liang, R.: Medical information integration based cloud
+computing. NCIS 1, 79–83 (2011)
+20. Ojog, I., Arias-Estrada, M., Gonzalez, J., Flores, B.: A cloud scalable platform for DICOM
+image analysis as a tool for remote medical support. In: eTELEMED, pp. 246–249 (2013)
+21. Ahn, Y.W., Cheng, A.M.K.: Autonomic computing architecture for real-time medical application running on virtual private cloud infrastructures. ACM SIGBED Review 10(2), 15
+(2013)
+22. Holtmann, C., Müller-Gorchs, M., Rashid, A., Weidenhaupt, K., Ziegler, V., Griewing, B.,
+Weinhardt, C.: Medical opportunities by mobile IT usage–a case study in the stroke chain
+of survival. In: European Conf. eHealth (2007)
+23. Joveski, B., Mitrea, M., Simoens, P., Marshall, I.J., Prêteux, F., Dhoedt, B.: Semantic multimedia remote display for mobile thin clients. Multimedia systems 19(5), 455–474 (2013)
+24. Joveski, B., Mitrea, M., Ganji, R. R.: MPEG-4 solutions for virtualizing RDP-based applications. In: IS&T/SPIE Electronic Imaging (2014)
+
+--- PAGINA 12 ---
+Remote Collaboration, Decision Support, and On-Demand Medical Image Analysis
+
+225
+
+25. Boers, A.M., Zijlstra, I.A., Gathier, C.S., van den Berg, R., Slump, C.H., Marquering, H.A.,
+Majoie, C.B.: Automatic Quantification of Subarachnoid Hemorrhage on Noncontrast CT.
+American Journal of Neuroradiology 35(12), 2279–2286 (2014)
+26. Santos, E.M., et al.: Development and validation of intracranial thrombus segmentation on
+CT angiography in patients with acute ischemic stroke. PloS One 9(7) (2014)
+27. Boers, A.M., et al.: Automated cerebral infarct volume measurement in follow-up noncontrast CT scans of patients with acute ischemic stroke. American Journal of Neuroradiology
+34(8), 1522–1527 (2013)
+28. Barros, R.S., et al.: High Performance Image Analysis of Compressed Dynamic CT Perfusion Data of Patients with Acute Ischemic Stroke. Submitted to MICCAI HPC Workshop
+(2015)

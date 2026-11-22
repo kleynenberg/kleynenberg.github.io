@@ -1,0 +1,50 @@
+Steven Kleynenberg
+
+
+
+
+System/Platform/Device programming skills
+unix, linux, qnx, blackberry, android, nexus, nokia, iphone, ipad, ipod, ios, ps3, psp, pdp, amiga, dec, vax, amdahl, connection machine
+
+Database technology skills
+Oracle, mysql, postgreSQL, SciDB, Sybase, sqlserver, jdbc, odbc, hsqldb, derby, google cloud-sql, bigquery, sql azure
+
+Computing technology skills
+Massively Parallel Computing, Chaotic Computational Systems, Vision, Neural Networks, Neuro simulators, Non Conventional Computer Architectures, Grid computing, Cloud based systems, Cuda, Scada, WebGL, OpenGL, Google App Engine, TTS, STT, ldap, xml, xslt, qt
+
+Computing language skills
+asm, c, unified parallel c, objective-c, cpp, c#, lisp, prolog, postscript, jsp, java (+dalvik), perl, ruby, php, python, smalltalk, eiffel, forth, sql, tcl, nodejs, Google AppsScript, javascript, HTML(5), CSS(3)
+
+Web technology skills
+Ajax, jQuery, Backbase, ExtJS, DoJo, Flash, Gnash, Silverlight, WebRTC, 
+
+Statistics/Math computing skills
+Mathematica, Matlab, Maple, Octave, SPSS, SAS, R, PARI/GP
+
+IDE’s
+Eclipse, Netbeans
+
+Miscellaneous skills
+VMware, LAMP, Networking, DNS/Bind, TCP/IP, Apache, systems maintenance & security, Google API programming, Android SDK programming, iOS SDK programming, Blackberry SDK programming, Chrome extensions, Apache Hadoop
+
+
+
+
+
+
+Selected Publications/Conference Proceedings
+* J.M.J. Murre, S.E. Kleynenberg (1991) Extending the MetaNet Network Environment: process control and machine independence, 545 - 550. In Artificial Neural Networks. Proceedings of the ICANN-91-Helsinki..
+* J.M.J. Murre, J.N.H. Heemskerk, S.E. Kleynenberg et al. (1991) Integrating the BSP400 neurocomputer with the MetaNet network environment, 1476-1480. In [Proceedings] 1991 IEEE International Joint Conference on Neural Networks. http://ieeexplore.ieee.org/lpdocs/epic03/wrapper.htm?arnumber=170608
+* J.M.J. Murre, S.E. Kleynenberg (1990) The MetaNet network environment for the development of modular neural networks, 717 - 720. In Proceedings of the International Neural Network Conference, Paris, 1990.
+
+
+Selected academic projects
+* Model based reasoning, diagnostic expert system for Abrams main battle tank (MBT). RUL/Ministry of Defence.
+* Air Traffic collision avoidance system (TCAS) radar display interface design and software algorithms. RUL/Civil Aviation Authority.
+* Cellular automata simulation, Agent based distributed simulation model for future traffic control systems TU-DELFT/RUL/Ministry of transport.
+* Object-Oriented Framework for the Simulation of Neural Networks. RUL/Mathematical Institute Bonn Germany.
+
+
+Selected Sopheon projects
+   * LORE ( Leveraging Operational Resource Expertise ) IST-1999-12645 http://cordis.europa.eu/search/index.cfm?fuseaction=proj.document&PJ_RCN=5049270
+   * Edafmis (Embedded Decision and Data Fusion for Medical Intervention Support) http://www.edafmis.org/

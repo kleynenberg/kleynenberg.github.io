@@ -1,0 +1,336 @@
+# steven.kleynenberg.com — Complete Chronological Knowledge Base
+
+> AI-distilled factual corpus of Steven Kleynenberg (born 1958-05-13, Delft, The Netherlands). Generated via deterministic source deduplication and Vertex AI Gemini extraction from curated archival texts, patents, peer-reviewed papers, and R&D records.
+
+## 1. Identity, Attribution & Evidence Separation
+- Full Name: Steven Kleynenberg (also published as S. E. Kleynenberg).
+- Publishing Imprint: Kleynenberg Publishers (https://kleynenberg.com).
+- Canonical Web Portal: https://steven.kleynenberg.com/ (https://kleynenberg.github.io/).
+- Podcast Series: The Kleynenberg Perspective (https://www.youtube.com/playlist?list=PLAN7_k5CM5ZY).
+- Direct Authorship & Inventorship: Co-inventor of international patent WO2014003543A1 (PCT/NL2012/050463) alongside Huub Rutten and Elsemiek ten Pas; co-author of peer-reviewed neural network papers (MetaNet / BSP400, 1990–1991) and acute stroke clinical workflow publication (MEDUSA, ESOCC 2015).
+- Organizational & Consortium Roles: Former software/IP architect at Sopheon and contributor within European ITEA / Eureka R&D consortia (distinguished strictly from personal authorship).
+
+## 2. Technical Domains & Competencies
+- Distilled Topics: 80x86 assembly, AI, ANSI C, Abrams MBT, Accolade, Acute Stroke Care, Archival Metadata, Art Monograph, Artificial Intelligence, Azure Cloud, BSP400, Browser-Native AI, C, C++, CALM, Cellular Automata, Clinical Workflows, Cloud Architecture, Cloud Computing, Complex Systems, Computer Science, Computer Vision, Connection Machine, Connectionist neural architectures, Custom Software, Data Fusion, Data-parallel abstractions, Decision Support, Decision Support System, Decision Support Systems, Defence, Deterministic Parsing, Device Drivers, Distributed Services, Document Clustering, Edge-AI, Electronic Patient Records, Enterprise Innovation Management, Enterprise-RAG, European Commission, Expert Systems, Fault-isolation models, Google Apps Script, Graphical Editor, Healthcare Systems, Information Retrieval, Innopheon, IoT Endpoints, Kleynenberg Publishers, Knowledge Management, Knowledge Systems, LORE, Linguistic indexing, Linguistics, Logic, MEDUSA, Machine Independence, Medical Image Analysis, Medical Intervention Support, Medical Interventions, Medical Telemetry, Medolution, MetaNet, Model-Based Reasoning, Modular Neural Networks, Modular cognitive modeling, NLP, Natural Language Processing, Neural Networks, Neurocomputer, Neurosimulator, Parallel Computing, Parallel Hardware, Parallel Processing, Parallel execution topologies, Part-of-Speech Tagging, Patient Care, Podcast, Process Control, Project UnLinked, Protocol Management, SME Solutions, Simulation, Software Architecture, Sovereign AI, SteveOS, Supercomputing, System Development, T800 Transputers, TCAS, Taksie.ai, Technology, Transputer, Typography, Unsupervised Latent Space Clustering, Vector hardware, Wearable Sensors, WebGPU, dBase
+- Languages & Systems: C, C++, C#, x86 Assembly, Java, JavaScript, Python, Perl, PHP, Lisp, Prolog, Lean 4, Swift, Bash, Forth, SQL, YAML, Linux/Fedora, Apache C-modules, WebGL, WebGPU, WebAudio, MCP.
+
+## 3. Direct Archival Files Hosted on steven.kleynenberg.com
+- WO2014003543A1.pdf: https://steven.kleynenberg.com/papers/WO2014003543A1.pdf (1170319 bytes)
+- WO2014003543A1.xml: https://steven.kleynenberg.com/papers/WO2014003543A1.xml (61747 bytes)
+- murre-et-al-1991-bsp400-metanet-ijcnn.pdf: https://steven.kleynenberg.com/papers/murre-et-al-1991-bsp400-metanet-ijcnn.pdf (381567 bytes)
+- murre-kleynenberg-1990-metanet-innc.pdf: https://steven.kleynenberg.com/papers/murre-kleynenberg-1990-metanet-innc.pdf (650002 bytes)
+- murre-kleynenberg-1991-extending-metanet-icann.pdf: https://steven.kleynenberg.com/papers/murre-kleynenberg-1991-extending-metanet-icann.pdf (15209644 bytes)
+- sales-barros-et-al-2015-medusa-acute-stroke-esocc.pdf: https://steven.kleynenberg.com/papers/sales-barros-et-al-2015-medusa-acute-stroke-esocc.pdf (435063 bytes)
+
+## 4. Complete Facts on a Timeline
+
+### 1. [1985 - 1993] Co-founder and Software Developer at Kleynenberg & Kleynenberg
+- Category: Career / Organization
+- Attribution / Role: Co-founder & Software Developer
+- Summary (EN): Co-founded and operated a custom software consultancy alongside his father, engineering bespoke business applications and relational database systems for SMEs.
+- Samenvatting (NL): Mede-oprichter en softwareontwikkelaar van een adviesbureau voor maatwerksoftware samen met zijn vader, gericht op bedrijfskritische toepassingen en relationele databasesystemen voor het MKB.
+- Topics: Custom Software, SME Solutions, dBase, ANSI C, 80x86 assembly
+- Verified URLs: https://kleynenberg.com
+
+### 2. [1986 – 1991] Academic specialization — computer science, AI and complex systems
+- Category: Career / Organization
+- Attribution / Role: Student / Academic researcher
+- Summary (EN): Specialized in computer science, artificial intelligence, theoretical psychology, and complex dynamical systems at Leiden University and Delft University of Technology.
+- Samenvatting (NL): Studeerde informatica, kunstmatige intelligentie, theoretische psychologie en complexe dynamische systemen aan de Universiteit Leiden en de TU Delft.
+- Topics: Computer Science, Artificial Intelligence, Complex Systems, Connectionist neural architectures, Modular cognitive modeling, Parallel execution topologies
+- Verified URLs: https://www.tudelft.nl, https://www.universiteitleiden.nl
+
+### 3. [1988 – 1991] Architect — CALM development system and MetaNet network environment
+- Category: Software / Architecture
+- Attribution / Role: Architect and developer (in collaboration with Jacob M. J. Murre)
+- Summary (EN): Designed and implemented MetaNet, a machine-independent, modular software environment for specifying, compiling, and simulating neural networks.
+- Samenvatting (NL): Ontwierp en implementeerde MetaNet, een machine-onafhankelijke, modulaire softwareomgeving voor het specificeren, compileren en simuleren van neurale netwerken.
+- Topics: Neural Networks, MetaNet, CALM, Software Architecture, T800 Transputers, Vector hardware
+- Verified DOIs: https://doi.org/10.1007/978-94-009-0643-3_59
+- Verified URLs: https://www.aalto.fi
+
+### 4. [July 1990] The MetaNet Network Environment for the Development of Modular Neural Networks
+- Category: Peer-Reviewed Paper
+- Attribution / Role: Co-author
+- Summary (EN): Introduces the MetaNet network environment, a graphical editor, compiler, and specification language for building modular neural networks, presented at INNC-90 in Paris.
+- Samenvatting (NL): Introduceert de MetaNet-netwerkomgeving, een grafische editor, compiler en specificatietaal voor het bouwen van modulaire neurale netwerken, gepresenteerd op de INNC-90 in Parijs.
+- Topics: Neural Networks, MetaNet, CALM, Modular Neural Networks, Graphical Editor
+- Verified DOIs: https://doi.org/10.1007/978-94-009-0643-3_59
+- Verified URLs: http://www.mendeley.com/research/the-metanet-network-environment-for-the-development-of-modular-neural-networks/, https://link.springer.com/chapter/10.1007/978-94-009-0643-3_59, https://steven.kleynenberg.com/papers/murre-kleynenberg-1990-metanet-innc.pdf
+- BibTeX:
+```bibtex
+@inproceedings{murre1990metanet,
+ author = {Murre, Jacob M. J. and Kleynenberg, Steven E.},
+ title = {The MetaNet Network Environment for the Development of Modular Neural Networks},
+ booktitle = {Proceedings of the International Neural Network Conference (INNC-90-Paris)},
+ pages = {717--720},
+ publisher = {Springer Science+Business Media Dordrecht},
+ year = {1990},
+ address = {Paris, France},
+ doi = {10.1007/978-94-009-0643-3_59}
+}
+```
+
+### 5. [1991] Extending the MetaNet Network Environment: process control and machine independence
+- Category: Peer-Reviewed Paper
+- Attribution / Role: Co-author
+- Summary (EN): Presents a general, parallel neurosimulator (GPN) designed to be extensible with novel network paradigms and parallel hardware, presented at ICANN-91 in Helsinki.
+- Samenvatting (NL): Presenteert een algemene, parallelle neurosimulator (GPN) die is ontworpen om uitbreidbaar te zijn met nieuwe netwerkparadigma's en parallelle hardware, gepresenteerd op ICANN-91 in Helsinki.
+- Topics: Neurosimulator, Parallel Hardware, Process Control, Machine Independence, MetaNet, Transputer
+- Verified URLs: http://www.mendeley.com/research/extending-the-metanet-network-environment-process-control-and-machine-independence/, https://steven.kleynenberg.com/papers/murre-kleynenberg-1991-extending-metanet-icann.pdf, https://www.aalto.fi
+- BibTeX:
+```bibtex
+@inproceedings{murre1991extending,
+ author = {Murre, Jacob M. J. and Kleynenberg, Steven E.},
+ title = {Extending the MetaNet Network Environment: process control and machine independence},
+ booktitle = {Proceedings of the International Conference on Artificial Neural Networks (ICANN-91)},
+ pages = {545--550},
+ year = {1991},
+ address = {Espoo / Helsinki, Finland}
+}
+```
+
+### 6. [1991 - 1996] High-Security Simulations for Defense, Aviation, and Infrastructure
+- Category: Software / Architecture
+- Attribution / Role: Lead Architect / Developer
+- Summary (EN): Designed diagnostic expert systems for the Abrams tank, real-time algorithms for TCAS air traffic control, and agent-based traffic simulation models.
+- Samenvatting (NL): Ontwierp diagnostische expertsystemen voor de Abrams tank, real-time algoritmen voor TCAS-luchtverkeersleiding en agent-based verkeerssimulatiemodellen.
+- Topics: Model-Based Reasoning, TCAS, Cellular Automata, Simulation
+
+### 7. [1991 – 1994] Lead systems architect — Abrams Main Battle Tank (MBT) diagnostic expert system
+- Category: Software / Architecture
+- Attribution / Role: Lead systems architect
+- Summary (EN): Designed and delivered a Model-Based Reasoning diagnostic expert system for the Abrams Main Battle Tank for the Netherlands Ministry of Defence.
+- Samenvatting (NL): Ontwierp en leverde een op modellen gebaseerd diagnostisch expertsysteem voor de Abrams gevechtstank voor het Nederlandse Ministerie van Defensie.
+- Topics: Model-Based Reasoning, Expert Systems, Abrams MBT, Defence, Fault-isolation models
+- Verified URLs: https://www.defensie.nl
+
+### 8. [1991 – 1993] Visiting researcher — massively parallel Connection Machine supercomputing
+- Category: Career / Organization
+- Attribution / Role: Visiting researcher
+- Summary (EN): Developed an object-oriented neural network simulation framework executing on the Connection Machine supercomputer at the University of Bonn.
+- Samenvatting (NL): Ontwikkelde een objectgeoriënteerd simulatieraamwerk voor neurale netwerken op de Connection Machine supercomputer aan de Universiteit van Bonn.
+- Topics: Supercomputing, Connection Machine, Neural Networks, Parallel Computing, Data-parallel abstractions
+- Verified URLs: https://www.uni-bonn.de
+
+### 9. [November 1991] Integrating the BSP400 neurocomputer with the MetaNet Network Environment
+- Category: Peer-Reviewed Paper
+- Attribution / Role: Co-author
+- Summary (EN): Describes the integration of the Brain Style Processor (BSP400), a massively parallel 400-processor neurocomputer, with the MetaNet Network Environment using modular interrupt-driven device drivers.
+- Samenvatting (NL): Beschrijft de integratie van de Brain Style Processor (BSP400), een massaal parallelle 400-processor neurocomputer, met de MetaNet-netwerkomgeving via modulaire interrupt-gestuurde apparaatstuurprogramma's.
+- Topics: BSP400, Neurocomputer, Parallel Processing, Device Drivers, MetaNet
+- Verified DOIs: https://doi.org/10.1109/IJCNN.1991.170608
+- Verified URLs: https://ieeexplore.ieee.org/document/170608/, https://openalex.org/W1835238853, https://steven.kleynenberg.com/papers/murre-et-al-1991-bsp400-metanet-ijcnn.pdf, https://www.researchgate.net/profile/Steven-Kleynenberg
+- BibTeX:
+```bibtex
+@inproceedings{murre1991bsp400,
+ author = {Murre, Jacob M. J. and Heemskerk, Jan N. H. and Kleynenberg, Steven E. and Hudson, Patrick T. W.},
+ title = {Integrating the BSP400 neurocomputer with the MetaNet Network Environment},
+ booktitle = {Proceedings of the 1991 IEEE International Joint Conference on Neural Networks (IJCNN 1991)},
+ pages = {1476--1480},
+ year = {1991},
+ address = {Singapore},
+ note = {IEEE Cat. No. CH 3065-0/91/0000-1476}
+}
+```
+
+### 10. [1993 - 1996] Software Developer at Rijnhaave Automatisering
+- Category: Career / Organization
+- Attribution / Role: Software Developer
+- Summary (EN): Worked as a software developer specializing in C and C++ systems development and business-critical software architecture.
+- Samenvatting (NL): Werkzaam als softwareontwikkelaar gespecialiseerd in C- en C++-systeemontwikkeling en bedrijfskritische software-architectuur.
+- Topics: C, C++, System Development, Software Architecture
+
+### 11. [October 1996 – December 2020] Principal Architect & AI/NLP Lead at Sopheon N.V.
+- Category: Career / Organization
+- Attribution / Role: Principal Architect & AI/NLP Lead
+- Summary (EN): Led the long-term technological vision, software architecture, and AI/NLP retrieval engines for enterprise innovation management and decision support systems.
+- Samenvatting (NL): Verantwoordelijk voor de technologische langetermijnvisie, software-architectuur en AI/NLP-zoekmachines voor enterprise-innovatiemanagement en beslissingsondersteunende systemen.
+- Topics: Enterprise Innovation Management, Knowledge Systems, Decision Support, NLP, Information Retrieval, Linguistic indexing
+- Verified URLs: https://innopheon.com, https://www.sopheon.com
+
+### 12. [February 2000 - November 2002] LORE (Leveraging Operational Resource Expertise) Project (IST-1999-12645)
+- Category: ITEA / European R&D
+- Attribution / Role: Technical Lead & Coordinator
+- Summary (EN): Provided technical leadership and cross-border coordination for the LORE project, a large-scale IT initiative funded by the European Commission's FP5 program.
+- Samenvatting (NL): Verzorgde de technische leiding en grensoverschrijdende coördinatie binnen het LORE-project, een grootschalig IT-initiatief gefinancierd door het FP5-programma van de Europese Commissie.
+- Topics: LORE, European Commission, Knowledge Management, Information Retrieval, Linguistics
+- Verified URLs: http://cordis.europa.eu/search/index.cfm?fuseaction=proj.document&PJ_RCN=5049270, https://cordis.europa.eu/project/id/IST-1999-12645
+
+### 13. [January 2009 - December 2011] EDAFMIS (ITEA 2 07011) — Embedded Decision and Data Fusion for Medical Intervention Support
+- Category: ITEA / European R&D
+- Attribution / Role: Architectural Leader / Contributor
+- Summary (EN): Contributed architectural leadership to the EDAFMIS project, focusing on embedded decision and data fusion for medical intervention support.
+- Samenvatting (NL): Bijgedragen aan het EDAFMIS-onderzoeksproject gericht op ingebedde beslissings- en datafusie voor medische interventieondersteuning.
+- Topics: Medical Intervention Support, Data Fusion, Decision Support, Clinical Workflows
+- Verified URLs: https://itea4.org
+
+### 14. [June 2011] EDAFMIS Deliverable D1.3: Integrated Reference Model
+- Category: ITEA / European R&D
+- Attribution / Role: Contributor (on behalf of Sopheon)
+- Summary (EN): Contributed on behalf of Sopheon to deliverable D1.3 (Integrated Reference Model) of the EDAFMIS ITEA project, addressing protocol management and real-time decision support.
+- Samenvatting (NL): Droeg namens Sopheon bij aan deliverable D1.3 (Integrated Reference Model) van het EDAFMIS ITEA-project, gericht op protocolmanagement en realtime beslisondersteuning.
+- Topics: Medical Interventions, Protocol Management, Decision Support Systems, Electronic Patient Records
+- Verified URLs: https://itea4.org/project/edafmis.html, https://itea4.org/project/workpackage/document/download/316/D1.3.%20Edafmis%20-%20Integrated%20Reference%20Model.pdf
+
+### 15. [June 29, 2012] Patent WO 2014/003543 A1: Method, system and computer program for generating a query representation of a document
+- Category: Patent / IP
+- Attribution / Role: Co-inventor
+- Summary (EN): Co-invented an international patent describing a computer-implemented method to generate a query representation of an electronic document using part-of-speech (POS) sequences.
+- Samenvatting (NL): Mede-uitvinder van een internationale octrooiaanvraag die een computergeïmplementeerde methode beschrijft om een query-representatie van een elektronisch document te genereren met behulp van part-of-speech (POS) sequenties.
+- Topics: Natural Language Processing, Information Retrieval, Part-of-Speech Tagging, Document Clustering
+- Verified URLs: https://patents.google.com/patent/WO2014003543A1/en, https://patentscope.wipo.int/search/en/result.jsf?query=WO2014003543, https://steven.kleynenberg.com/papers/WO2014003543A1.pdf, https://steven.kleynenberg.com/papers/WO2014003543A1.xml
+- BibTeX:
+```bibtex
+@patent{WO2014003543A1,
+  author = {Rutten, Hubert Joseph Marie and Kleynenberg, Steven Ernst and ten Pas, Elsemiek},
+  title = {Method, system and computer program for generating a query representation of a document, and querying a document retrieval system using said query representation},
+  year = {2014},
+  month = {Jan},
+  number = {WO2014003543A1},
+  type = {Patent}
+}
+```
+
+### 16. [January 2013 - December 2015] MEDUSA (ITEA 2 10004) — Medical Distributed Utilization of Services & Applications
+- Category: ITEA / European R&D
+- Attribution / Role: Architect and Consortium Participant
+- Summary (EN): Architectural and consortium work on a cloud-based platform for medical distributed services and applications, focusing on remote collaboration and acute stroke care.
+- Samenvatting (NL): Architectuur- en consortiumwerk aan een cloudgebaseerd platform voor gedistribueerde medische diensten en applicaties, gericht op samenwerking op afstand en acute beroertezorg.
+- Topics: Cloud Architecture, Acute Stroke Care, Distributed Services, Decision Support
+- Verified URLs: https://itea4.org/project/medusa.html, https://steven.kleynenberg.com/papers/sales-barros-et-al-2015-medusa-acute-stroke-esocc.pdf
+
+### 17. [2014] Medolution (ITEA 3 14003) Project Participation
+- Category: ITEA / European R&D
+- Attribution / Role: Architectural Leader / Contributor
+- Summary (EN): Contributed architectural leadership to the Medolution project, focusing on connected medical infrastructure, real-time telemetry, and clinical decision support.
+- Samenvatting (NL): Droeg bij met architectonisch leiderschap aan het Medolution-project, gericht op verbonden medische infrastructuur, real-time telemetrie en klinische beslissingsondersteuning.
+- Topics: Healthcare Systems, Medolution, Decision Support Systems, Medical Telemetry
+- Verified URLs: https://itea4.org
+
+### 18. [September 2015] Remote Collaboration, Decision Support, and On-Demand Medical Image Analysis for Acute Stroke Care
+- Category: Peer-Reviewed Paper
+- Attribution / Role: Co-author
+- Summary (EN): Presents the cloud-based MEDUSA platform Acute Stroke Prototype, combining GPU-accelerated medical image processing and Sopheon's Node.js rule-based Decision Support System.
+- Samenvatting (NL): Presenteert het cloudgebaseerde MEDUSA-platform Acute Stroke Prototype, dat GPU-versnelde medische beeldverwerking combineert met Sopheons op Node.js gebaseerde beslissingsondersteunende systeem.
+- Topics: MEDUSA, Acute Stroke Care, Decision Support System, Medical Image Analysis, Cloud Computing
+- Verified DOIs: https://doi.org/10.1007/978-3-319-24072-5_15
+- Verified URLs: https://link.springer.com/chapter/10.1007/978-3-319-24072-5_15, https://pure.amsterdamumc.nl/en/publications/remote-collaboration-decision-support-and-on-demand-medical-image/, https://pure.uva.nl/ws/files/2813051/178006_Borst_Thesis_complete_via_promovendus.pdf, https://steven.kleynenberg.com/papers/sales-barros-et-al-2015-medusa-acute-stroke-esocc.pdf
+- BibTeX:
+```bibtex
+@inproceedings{salesbarros2015medusa,
+  author    = {Sales Barros, Renan and Borst, Jordi and Kleynenberg, Steven and Badr, C{\'e}line and Ganji, Rama-Rao and de Bliek, Hubrecht and Zeng-Eyindanga, Landry-St{\'e}phane and van den Brink, Henk and Majoie, Charles and Marquering, Henk and Delgado Olabarriaga, S{\'\i}lvia},
+  title     = {Remote Collaboration, Decision Support, and On-Demand Medical Image Analysis for Acute Stroke Care},
+  booktitle = {Service-Oriented and Cloud Computing (ESOCC 2015)},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {9306},
+  pages     = {214--225},
+  publisher = {Springer},
+  year      = {2015},
+  doi       = {10.1007/978-3-319-24072-5_15}
+}
+```
+
+### 19. [October 2017 – December 2020] PARTNER (ITEA 3 16017) — Patient-care Advancement with Responsive Technologies aNd Engagement togetheR
+- Category: ITEA / European R&D
+- Attribution / Role: Architect / Consortium Member
+- Summary (EN): Developed interoperable architecture and real-time decision support integrating Accolade with Azure for wearable sensor interpretation, winning the 2021 ITEA Award of Excellence.
+- Samenvatting (NL): Ontwikkeling van interoperabele architectuur en real-time beslissingsondersteuning waarbij Accolade werd geïntegreerd met Azure voor de interpretatie van wearables, bekroond met de 2021 ITEA Award of Excellence.
+- Topics: Patient Care, Decision Support, Wearable Sensors, Accolade, Azure Cloud
+- Verified URLs: https://itea4.org
+
+### 20. [2018 – 2026] Project UnLinked & Sovereign AI Ecosystems
+- Category: Software / Architecture
+- Attribution / Role: Lead Architect / Developer
+- Summary (EN): Development of independent, self-hosted knowledge and AI architectures, Google Apps Script endpoints, and distributed applications.
+- Samenvatting (NL): Ontwikkeling van onafhankelijke, zelfgehoste kennis- en AI-architecturen, Google Apps Script-endpoints en gedistribueerde toepassingen.
+- Topics: Sovereign AI, Google Apps Script, Project UnLinked, IoT Endpoints
+
+### 21. [2020 - Present] Living R&D Sandbox and Active Software Ecosystems
+- Category: Software / Architecture
+- Attribution / Role: Lead Developer / Architect
+- Summary (EN): Actively develops browser-native AI, edge hardware, and autonomous software architectures, including Taksie.ai, Innopheon, SteveOS, and Synaptix Studio.
+- Samenvatting (NL): Actieve ontwikkeling van browser-native AI, edge-hardware en autonome software-architecturen, waaronder Taksie.ai, Innopheon, SteveOS en Synaptix Studio.
+- Topics: Browser-Native AI, WebGPU, Edge-AI, Taksie.ai, Innopheon, SteveOS
+- Verified URLs: https://innopheon.com, https://kleynenberg.com, https://kleynenberg.github.io, https://taksie.ai
+
+### 22. [Present] Principal AI & Systems Architect at Kleynenberg Software Ontwikkeling (KSO)
+- Category: Career / Organization
+- Attribution / Role: Principal AI & Systems Architect
+- Summary (EN): Steven E. Kleynenberg leads KSO, a specialized Dutch R&D SME focusing on sovereign, privacy-by-design AI, hybrid Enterprise-RAG, and browser-native architectures.
+- Samenvatting (NL): Steven E. Kleynenberg leidt KSO, een gespecialiseerde Nederlandse R&D-mkb gericht op soevereine, privacy-by-design AI, hybride Enterprise-RAG en browser-native architecturen.
+- Topics: Sovereign AI, Enterprise-RAG, Edge-AI, WebGPU
+
+### 23. [2024] The Kleynenberg Perspective
+- Category: Podcast / Media
+- Attribution / Role: Producer & Host
+- Summary (EN): Producer and host of a tech podcast and Substack newsletter focusing on AI, logic, and technology trends.
+- Samenvatting (NL): Producer en host van een tech-podcast en Substack-nieuwsbrief gericht op AI, logica en technologische trends.
+- Topics: AI, Technology, Logic, Podcast
+
+### 24. [July 2026] Published art monograph: 'GIGA! Une Étude en Ordure et Lumière'
+- Category: Book / Publication
+- Attribution / Role: Publisher
+- Summary (EN): Published an art monograph through Kleynenberg Publishers using deterministic typographic and archival metadata workflows.
+- Samenvatting (NL): Publiceerde een kunstmonografie via Kleynenberg Publishers met behulp van deterministische typografische en archiveringsworkflows.
+- Topics: Art Monograph, Kleynenberg Publishers, Typography, Archival Metadata
+- Verified URLs: https://kleynenberg.com
+
+### 25. [August 2026] Algorithmic versus Neural Typographic Taxonomy: A Comprehensive Comparative Evaluation of Deterministic Heuristics and Unsupervised Latent Space Clustering for Automated Font Hierarchy Classification
+- Category: Book / Publication
+- Attribution / Role: Co-authored by Steven Kleynenberg (Kleynenberg Publishers) and Google Gemini v3.5
+- Summary (EN): A comprehensive comparative preprint analyzing deterministic metadata parsing versus deep neural network visual classification for automated font hierarchy organization.
+- Samenvatting (NL): Een uitgebreide vergelijkende preprint die deterministische metadata-analyse analyseert tegenover visuele classificatie met diepe neurale netwerken voor geautomatiseerde lettertype-organisatie.
+- Topics: Typography, Computer Vision, Unsupervised Latent Space Clustering, Deterministic Parsing, Neural Networks
+- BibTeX:
+```bibtex
+@unpublished{kleynenberg2026algorithmic,
+  author = {Kleynenberg, Steven and {Google Gemini v3.5}},
+  title = {Algorithmic versus Neural Typographic Taxonomy: A Comprehensive Comparative Evaluation of Deterministic Heuristics and Unsupervised Latent Space Clustering for Automated Font Hierarchy Classification},
+  note = {Preprint, Kleynenberg Publishers},
+  year = {2026},
+  month = {August}
+}
+```
+
+## 5. Master Index of Verified DOIs & External Links
+- DOI: https://doi.org/10.1007/978-3-319-24072-5_15
+- DOI: https://doi.org/10.1007/978-94-009-0643-3_59
+- DOI: https://doi.org/10.1109/IJCNN.1991.170608
+- URL: http://cordis.europa.eu/search/index.cfm?fuseaction=proj.document&PJ_RCN=5049270
+- URL: http://www.mendeley.com/research/extending-the-metanet-network-environment-process-control-and-machine-independence/
+- URL: http://www.mendeley.com/research/the-metanet-network-environment-for-the-development-of-modular-neural-networks/
+- URL: https://cordis.europa.eu/project/id/IST-1999-12645
+- URL: https://ieeexplore.ieee.org/document/170608/
+- URL: https://innopheon.com
+- URL: https://itea4.org
+- URL: https://itea4.org/project/edafmis.html
+- URL: https://itea4.org/project/medusa.html
+- URL: https://itea4.org/project/workpackage/document/download/316/D1.3.%20Edafmis%20-%20Integrated%20Reference%20Model.pdf
+- URL: https://kleynenberg.com
+- URL: https://kleynenberg.github.io
+- URL: https://link.springer.com/chapter/10.1007/978-3-319-24072-5_15
+- URL: https://link.springer.com/chapter/10.1007/978-94-009-0643-3_59
+- URL: https://openalex.org/W1835238853
+- URL: https://patents.google.com/patent/WO2014003543A1/en
+- URL: https://patentscope.wipo.int/search/en/result.jsf?query=WO2014003543
+- URL: https://pure.amsterdamumc.nl/en/publications/remote-collaboration-decision-support-and-on-demand-medical-image/
+- URL: https://pure.uva.nl/ws/files/2813051/178006_Borst_Thesis_complete_via_promovendus.pdf
+- URL: https://steven.kleynenberg.com/papers/WO2014003543A1.pdf
+- URL: https://steven.kleynenberg.com/papers/WO2014003543A1.xml
+- URL: https://steven.kleynenberg.com/papers/murre-et-al-1991-bsp400-metanet-ijcnn.pdf
+- URL: https://steven.kleynenberg.com/papers/murre-kleynenberg-1990-metanet-innc.pdf
+- URL: https://steven.kleynenberg.com/papers/murre-kleynenberg-1991-extending-metanet-icann.pdf
+- URL: https://steven.kleynenberg.com/papers/sales-barros-et-al-2015-medusa-acute-stroke-esocc.pdf
+- URL: https://taksie.ai
+- URL: https://www.aalto.fi
+- URL: https://www.defensie.nl
+- URL: https://www.researchgate.net/profile/Steven-Kleynenberg
+- URL: https://www.sopheon.com
+- URL: https://www.tudelft.nl
+- URL: https://www.uni-bonn.de
+- URL: https://www.universiteitleiden.nl
+
+## 6. Corpus Provenance Summary
+- Unique deduplicated input documents distilled: 32
+- Total chronological timeline milestones published: 25

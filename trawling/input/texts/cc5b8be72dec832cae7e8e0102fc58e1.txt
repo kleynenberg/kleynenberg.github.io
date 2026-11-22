@@ -1,0 +1,4508 @@
+--- PAGINA 1 ---
+EXTENDING THE METANET NETWORK ENVIRO
+
+PROCESS CONTROL AND MACHINE INDEPENDENCE
+Jacob MJ. Murre and Steven E. Kleynenberg
+Leiden
+
+University,
+
+Unit
+
+of Experimental
+
+and
+
+P.O.Box 9555, 2300 RB Leiden, The Netherlands, E-ma
+
+Psycholo
+
+Abstract This study reporton
+s a project to build a
+
+general,
+
+Theoretical
+
+il: MURRE@HLERUL 55.Bitnet
+
+parallel
+
+imul
+
+(GPN), Le, a simulator that is consistently extensible vith novel latwork vaadigihe pr
+
+parallel hardware. Our system is called the MetaNet Network Environment [16]. Four
+problems in the construction of a GPN are discussed. They concern the representation
+of objects and object interdependencies, concurrent process control, and machine
+
+independence. The current state of the MetaNet system is described, followed by a
+
+discussion of an extended version based on four levels of description. We introduce a
+low-level process description that is to be viewed as instructions for an ideal, virtual,
+
+parallel machine.
+
+N
+O
+I
+T
+C
+U
+D
+O
+R
+T
+N
+I
+1.
+
+In 1988, the predecessor of the MetaNet Network
+Environment was developed [16], because no
+existing neurosimulator could adequately handle
+the modular type of neural networks developed
+
+by our group (ie, Categorizing And Learning
+Module, see [18], [19]). The development of
+
+many neurosimulators seems to have been
+motivated by similar reasons. An informal search
+through the literature revealed no less than 45
+neurosimulators (listed in [17]), but only a small
+number of these
+supports
+many different
+paradigms and many types of parallel hardware.
+Few neurosimulators (mostly commercial systems)
+allow the user to extend the system in a
+
+consistent manner, for example, by adding a new
+neural network paradigm or parallel hardware to
+
+the
+
+available
+
+range.
+
+In
+
+the
+
+few
+
+consistently
+
+extensible neurosimulators, added paradigms often
+
+lack the (graphical) interaction possibilities of the
+
+Standard’
+
+internals
+
+paradigms,
+
+of a
+
+model
+
+such
+
+(eg.
+
+as
+
+see
+
+revealing
+
+review
+
+the
+
+of three
+
+Important commercial systems by [2]).
+
+The MetaNet Network Environment [16] was
+
+Conceived
+
+as
+
+a
+
+general,
+
+parallel
+
+neurosimulator.
+
+Such a system is faced with a demanding set of
+
+problems, because the neural network family
+
+andes paradigms
+
+with
+
+a
+
+wide
+
+variety
+
+of
+
+haacteristics, and, in addition to this, parallel
+owate „exhibits a
+similar
+range
+of
+ot avis tales. Mapping a certain neural network
+ros Some type of parallel hardware can,
+
+Bet
+
+take
+
+many
+
+different
+
+forms.
+
+The
+
+kanes IS aggravated by the fact that users of
+ei
+
+imulators may range from relative novices
+
+followin users. In particular, we believe that the
+
+ke
+
+ac, pd problems are major obstacles for
+
+neurosim,= —s
+
+of
+
+a
+
+general,
+
+parallel
+
+mie representation problem. How can a
+into a
+
+Ge, a neural network) be decomposed
+
+representation that
+
+is both manageable
+
+and consistent? In our original approach to this
+problem, MetaNet was structured using a fixed
+object hierarchy (ie, MODEL -> MODULE
+-> GROUP, etc., see next section). Most recent
+neurosimulators have adopted a comparable,
+
+object-oriented strategy.
+(2) The dependency problem. How can relations
+problem
+a
+of
+parts
+constituent
+between
+representation
+be
+made
+explicit?
+The
+interdependencies between
+objects
+in
+most
+existing simulators
+are
+not
+handled
+in
+a
+consistent manner. Most systems allow for
+specific connections to be constructed (eg,
+between any two nodes and between layers).
+Some offer a range of connection schemes that
+can be applied to only a single kind of object.
+These connections are of the type typically found
+in neural networks (i.e, directed connections that
+have an adaptable, real weight as attribute). In
+MetaNet, any two objects of the same type can
+
+be connected by generalized connections called
+TRACTs
+
+(explained below).
+
+(3) The control problem. How can a problem
+process
+a
+to
+converted
+representation be
+
+description without losing potential parallelism?
+Some readers might wonder whether the control
+problem applies at all to neural networks. After
+
+all, they are neurally inspired structures and
+l
+ra
+nt
+ce
+of
+pe
+ty
+me
+so
+to
+t
+ec
+bj
+su
+be
+t
+no
+ld
+shou
+e
+ar
+ks
+or
+tw
+ne
+ny
+ma
+r,
+ve
+we
+ho
+y,
+lit
+rea
+In
+l.
+ro
+nt
+co
+e,
+pl
+am
+ex
+r
+Fo
+d.
+re
+si
+de
+be
+to
+is
+as
+l’
+ra
+not as ‘neu
+a
+s
+ha
+2]
+[2
+l
+de
+mo
+n
+io
+at
+ag
+op
+pr
+ck
+the popular ba
+a
+In
+e.
+ur
+ct
+ru
+st
+l
+ro
+nt
+co
+l’
+ra
+eu
+-n
+on
+’n
+definitely
+
+l
+al
+e,
+ur
+ct
+ru
+st
+l
+ro
+nt
+co
+l’
+ra
+eu
+‘n
+y
+ll
+fu
+a
+th
+model wi
+,
+el
+ll
+ra
+pa
+in
+s
+on
+ti
+va
+ti
+ac
+r
+ei
+th
+s
+es
+oc
+pr
+nodes
+it
+ic
+pl
+ex
+r
+he
+ot
+or
+’
+ps
+ee
+sw
+y
+an
+without
+synchronization.
+
+e
+il
+wh
+m,
+le
+ob
+pr
+l
+ro
+nt
+co
+e
+th
+on
+ed
+We stumbl
+s
+er
+us
+h
+ic
+wh
+in
+t
+en
+nm
+ro
+vi
+en
+an
+se
+vi
+de
+trying to
+,
+es
+gi
+lo
+po
+to
+l
+ve
+no
+th
+wi
+ks
+or
+tw
+can define ne
+
+.
+cs
+mi
+na
+dy
+ng
+ni
+ar
+le
+d
+an
+on
+ti
+va
+ti
+ac
+d
+parameters, an
+
+to
+s
+nt
+wa
+so
+al
+er
+us
+e
+th
+en
+wh
+rs
+cu
+oc
+m
+le
+The prob
+
+d
+he
+is
+gu
+in
+st
+di
+e
+th
+h
+ic
+wh
+in
+r
+de
+or
+e
+th
+constrain
+
+--- PAGINA 2 ---
+546
+
+@
+n
+i
+s
+r
+e
+y
+a
+l
+(cf.
+rocessed b
+o
+t
+n
+o
+i
+t
+u
+l
+o
+s
+e
+
+e
+e
+e
+Dn
+j
+
+d
+
+s
+n
+o
+i
+t
+u
+a
+c
+e
+r
+p
+l
+a
+i
+c
+e
+p
+s
+o
+n
+f
+I
+.
+r
+e
+d
+r
+o
+n
+De such a
+linear orderin,
+pro
+
+this
+
+)
+
+a
+h
+c
+u
+s
+,
+r
+e
+v
+e
+w
+o
+are take: n, h 4
+
+f
+
+p
+
+P
+of
+s
+s
+o
+l
+l
+a
+t
+o
+t
+r
+o
+result in partial
+user write out the
+
+e
+h
+t
+e
+v
+a
+h
+o
+t
+s
+i
+n
+o
+i
+t
+Another op
+g
+n
+i
+m
+m
+a
+r
+g
+o
+r
+p
+f
+o
+d
+n
+i
+k
+control structure in some
+e,
+pl
+am
+ex
+r
+fo
+m,
+is
+el
+ll
+ra
+pa
+ts
+or
+pp
+su
+language that
+ncurrent C. For ea
+o
+c
+f
+o
+m
+r
+o
+f
+e
+m
+o
+s
+g
+n
+i
+s
+u
+bu
+,
+te
+ua
+eq
+ad
+be
+y
+a
+m
+ch
+oa
+pr
+ap
+purposes this
+osimulator -
+
+supports scrolling and zooming facilities, allowin
+
+i
+ta
+de
+y
+an
+in
+e
+ac
+sp
+rk
+wo
+e
+th
+ew
+vi
+to
+er
+us
+e
+th
+oe
+
+from rd baht nem
+In
+
+the
+
+current
+
+implementation,
+
+>
+
+mM
+
+imposes a fixed object hierarchy on a en
+topology. Four levels are distinguished. Th
+
+e
+h
+T
+.
+S
+E
+D
+O
+N
+by
+ed
+rm
+fo
+is
+lowest level
+combine into GROUPS, which assemble me
+©
+.
+LS
+DE
+MO
+rm
+fo
+rn
+tu
+in
+e
+es
+Th
+S.
+LE
+MODU
+
+Constructing a network in MetaNet is done .
+
+a top-down fashion,
+
+starting at the highest
+
+r
+u
+e
+n
+a
+f
+o
+a
+e
+d
+i
+l
+a
+p
+i
+c
+n
+i
+r
+p
+because the
+e
+h
+t
+ee
+fr
+to
+s
+1
+r
+e
+t
+t
+a
+m
+at
+th
+r
+or any simulator fo
+,
+le
+ib
+ss
+po
+as
+s
+il
+ta
+de
+g
+in
+ct
+ra
+st
+di
+y
+user Ke as mane a general solution. Specifying
+this can never b
+n
+a
+e
+b
+ll
+wi
+e
+r
+u
+t
+c
+u
+r
+t
+s
+l
+o
+r
+t
+n
+o
+c
+an explicitly parallel
+e
+h
+t
+to
+n
+ie
+al
+1s
+at
+th
+s,
+er
+us
+t
+s
+extra burden for mo
+
+to
+wn
+do
+g
+in
+rk
+wo
+ly
+te
+ua
+ad
+gr
+d
+an
+el
+lev
+L
+DE
+MO
+the NODE level. The user first marks a
+rectangular area of arbitrary size in the
+workspace. This area becomes a new MODEL
+MetaNet allows for the construction and running
+of multiple models simultaneously, so the user
+can start by setting up more than one MODEL,
+
+concurrent process description. This code, in
+turn, is translated into an intermediate code, that
+
+important anchoring ge in MetaNet. At this
+level the user can select from standard network
+,
+LM
+CA
+n,
+io
+at
+ag
+op
+pr
+ck
+ba
+.
+.g
+(e
+s
+re
+tu
+ec
+it
+arch
+Hopfield, etc.) along with learning and control
+
+n
+i
+s
+u
+m
+e
+l
+b
+o
+r
+p
+n
+ai
+rt
+ce
+a
+g
+actual task: solvin
+d.
+de
+oi
+av
+e
+b
+e,
+or
+ef
+er
+th
+,
+ld
+ou
+sh
+It
+neural networks.
+d
+se
+ba
+is
+m
+le
+ob
+pr
+is
+th
+to
+on
+ti
+lu
+so
+Our proposed
+of
+ls
+ve
+le
+l
+ra
+ve
+se
+of
+on
+ti
+uc
+od
+on the intr
+a
+om
+fr
+d
+te
+er
+nv
+co
+is
+k
+or
+tw
+ne
+A
+n.
+descriptio
+problem oriented description into a high-level
+
+is a low-level description of concurrent processes.
+
+(See Section 3.2 for a more detailed exposition).
+
+(4) The machine problem. How can a process
+
+description (ie, of a certain simulation) be
+optimally mapped onto a parallel machine? Most
+parallel neurosimulators deal with machine
+dependencies in an ad hoc manner. This means
+implementing each specific type of network (e.g.,
+type
+backpropagation) on each available specific
+
+of Sail hardware (e.g., a transputer network),
+
+so that the user is still forced to explicitly map
+a novel type of network onto the supported
+parallel hardware. Indeed, at present it does not
+seem feasible to completely shield the user from
+the machine level, especially if a wide range of
+parallel machines is to be used. If the
+concurrency in the
+process description of a
+certain model is specified in a sufficiently general
+format, however, it seems possible to convert
+(automatically) such intermediate code into a
+low-level machine dependent code for many
+
+different machines (eg, into Occam for a
+transputer network). In Section 3.2, we will
+propose using a concurrent process description of
+
+neural
+
+networks
+
+as
+
+intermediate
+
+code.
+
+The
+
+intermediate code is viewed as an ideal, virtual
+machine, that is emulated by the host hardware.
+
+Interpretation of the intermediate code is done
+by hardware drivers.
+Before
+discussing
+a
+novel
+approach
+to
+
+problems (3) and (4) by the extended MetaNet
+
+Network
+
+Environment,
+
+we
+
+will
+
+first
+
+briefly
+
+describe the current state of the system.
+
+Having defined one or more (empty) MODELs
+in the workspace, MODULES can be placed
+inside the MODELs. The MODULE forms an
+
+paradigms. If a standard te, a is chosen, the
+
+MODULE will be automatically filled with a
+standard configuration of GROUPs. In all cases,
+however, the user may change this configuration
+(e.g., by deleting GROUPs) or define completely
+
+new MODULEs.
+
+A GROUP consists of NODEs which have to
+be of the same type, and can be arranged in an
+nx m matrix (ie, a GROUP may be a column,
+row, or full matrix). By superimposing a GRID
+upon the screen, where each of its pomts
+indicate a NODE postition, precise control over
+the size and the location of the GROUPs is
+obtained. Once a number of GROUPs is in
+place, they can be connected by using the mouse
+
+to indicate source and target groups. The set of
+all NODE-to-NODE CONNECTIONSs between
+two GROUPs is called a TRACT. TRACTs are
+generalized connections, and actions taken upon
+TRACTs
+affect
+all
+its
+constituent
+
+CONNECTIONS in an uniform way. By default,
+the system displays TRACTs, suppressing the
+multitude of underlaying CONNECTIONs. The
+
+individual CONNECTIONS can easily be made
+
+visible
+
+and
+
+may
+
+be
+
+modified,
+
+deleted,
+
+etc.
+
+TRACTs may be formed with different wiringschemes, to be selected from a menu, such as as
+
+One-To-One,
+
+All-To-All,
+
+and
+
+more
+
+complex
+
+nodes in
+
+the same
+
+forms. Because it is possible to connect a NODE
+in
+
+a
+
+GROUP
+
+to
+
+other
+
+GROUP (eg, connecting each node to ls
+
+adjacent
+
+ones),
+
+incorporated
+
+that
+
+several
+
+wiring-schemes are
+
+particularly
+
+facilitate
+
+the
+
+creation of cellular automata, such as the Vos
+
+Neumann and Moore neigbourhoods. In a similar
+
+2. The METANET Network Environment
+
+fashion, lateral inhibition can be specified.
+
+The principal objects in MetaNet form two
+
+two
+
+different classes: the Unit and the Connector
+
+graphics oriented. Interaction with the syst
+em is
+
+t
+tha
+s
+on
+ti
+Ac
+s.
+DE
+NO
+d
+an
+,
+Ps
+OU
+GR
+s,
+LE
+DU
+MO
+
+The MetaNet
+
+user
+
+interface
+
+is
+
+based
+
+on
+
+familiar design concepts, it is menu-driven and
+carried
+
+out by
+
+use
+
+of
+
+a
+
+mouse.
+
+The
+
+MetaNet
+
+screen is divided into three se
+ctions (see
+a
+
+menu
+
+section
+
+on
+
+the
+
+right
+
+section at the bottom, and a
+or
+network
+editing.
+The
+viewport
+
+on
+
+ne
+Orks
+
+an
+
+can
+
+be
+
+a
+
+message
+
+large central section
+
+essentially
+
+underlaying
+
+side,
+
+Fig. 1):
+
+edit
+
+section
+
+unbounded
+
+workspace,
+
+constructed.
+
+The
+
+in
+
+is
+
+a
+
+two-
+
+which
+
+interface
+
+class. The Unit class consists of MODELS,
+ar
+s
+as
+cl
+a
+of
+s
+er
+mb
+me
+e
+th
+all
+to
+d
+ie
+pl
+ap
+be
+n
+ca
+
+called its General actions, for the
+
+--- PAGINA 3 ---
+Create
+
+Connact
+
+Mai ght
+Activate
+Nove
+
+Delete
+Sever
+
+Cucha
+Step
+
+Drau
+Place
+Load
+
+Save
+
+Update Rules
+Fire
+
+Rul es
+
+Conn
+
+Rules
+
+Learn
+
+Rules
+
+Options
+
+I
+A
+To
+I
+RI
+t
+ec
+nn
+Co
+ar
+ne
+Ai
+a!
+ne
+iret Update Li
+
+.
+n
+e
+e
+r
+c
+s
+t
+e
+N
+a
+t
+Fig]. The Me
+
+,
+te
+le
+de
+,
+te
+ea
+cr
+e:
+ud
+cl
+in
+s
+on
+ti
+ac
+e
+es
+th
+s
+as
+Unit cl
+
+3. DISCUSSION
+
+The Connector-class, consisting of TRACTs and
+
+3.1 Evaluation of MetaNet
+
+following General actions: connect, sever, modify,
+
+The UNIT hierarchy in MetaNet functions well,
+and so does the option to connect UNITs with
+TRACTs. Starting from scratch, it is possible to
+
+modify, move, COpy, clamp, reset, load, and save.
+
+CONNECTIONS, can be manipulated through the
+
+copy, clamp, and reset. In contrast to General
+actions, a Specific action is only applicable to an
+individual member of a class. An example of a
+Specific action would be activating a NODE.
+Together these
+define any
+
+functions
+
+enable
+
+two-dimensional
+
+the
+
+network
+
+user
+
+to
+
+topology,
+
+limited only by the amount of memory available
+to the system.
+Due to its modular structure, apart from saving
+an entire
+
+network,
+
+parts
+
+of
+
+it
+
+can
+
+be
+
+saved
+
+separately. In this way, libraries of user-defined
+network components can be constructed, which
+
+can be loaded into the system at any time.
+
+dl objects carrying parameters, like the weight
+
+Nor NNECTION
+ir
+
+can
+
+be
+
+or
+
+inspected
+
+the
+
+activation
+
+and
+
+of a
+
+modified.
+
+By
+
+—
+
+object with the mouse, all relevant
+
+scales. (or
+
+cy modifiable. MetaNet uses color-
+
+i Saga displayed in a popup window,
+displa
+
+.gray-scales, depending on the video
+
+dynamics
+
+‘aia
+
+CONNECHY to indicate NODE activations or
+
+weights.
+
+In
+
+this
+
+way,
+
+the
+
+visible, Ot % - ‚running network become clearly
+
+lopological r display options are weight matrices,
+thermore
+
+LO indy
+
+he” and state graphs. The system,
+» : Jas options such as the possibility
+
+o
+e
+nois
+E
+‚UC
+ac
+n connection
+
+As cROUPs of NODEs
+
+© renee
+
+be Saved am Ove, networks or parts of it can
+Network
+
+later
+
+use.
+
+MetaNet
+
+stores
+
+a
+
+be Written o
+
+F has an ASCII format and may
+
+(NDR) pplueprint in a Network Description File
+NDF can
+
+ve Fead by other programs. Also, the
+
+‘Ome standar d ranslated into source code for
+fur Ct, only t Programming languages. At the
+ture
+
+; cd ranslation into C is supported, but
+
+S Will also include C+ + and LISP.
+
+rapidly
+
+create
+
+networks
+
+with
+
+complicated
+
+topological structures. This is particularly true for
+
+modular neural networks. The ability to zoom in
+
+on any part of the (essentially infinite) work
+space and drag around (and delete, ’click open’,
+etc.) anything in view allows for a flexible
+interaction. The option to suppress detail (e.g.,
+by showing TRACTs rather than the individual
+connections) further supports easy handling of
+networks. Because we have reduced the use of
+circles, text, and dotted lines in the graphical
+editor, and because we use a very fast graphics
+kernel, the current implementation of the
+graphical editor (written in C) gives a fast
+response, even on modest PCs.
+
+Extending the system with totally novel types of
+networks, however, presents problems. This is
+
+e
+th
+n
+ai
+tr
+ns
+co
+at
+th
+ls
+de
+mo
+r
+fo
+ue
+tr
+ly
+especial
+such
+order in which objects are to be processed,
+a
+ch
+su
+ng
+di
+Ad
+n.
+io
+at
+ag
+op
+pr
+ck
+ba
+as layers in
+c
+ho
+ad
+me
+so
+es
+lv
+vo
+in
+y,
+tl
+en
+rr
+cu
+control structure,
+
+e
+th
+g
+in
+us
+ks
+or
+tw
+ne
+ng
+yi
+if
+ec
+Sp
+programming.
+t
+e
+N
+a
+t
+e
+M
+in
+ge
+ua
+ng
+la
+on
+ti
+ni
+fi
+de
+k
+textual networ
+n
+io
+at
+er
+op
+e
+th
+th
+wi
+d
+n
+e
+l
+b
+y
+l
+h
+t
+o
+[16] does not smo
+
+l
+ca
+hi
+ap
+gr
+e
+h
+T
+e.
+ac
+rf
+te
+in
+l
+of the graphica
+of
+n
+io
+at
+ic
+if
+ec
+sp
+w
+o
+l
+l
+a
+t
+o
+n
+s
+e
+o
+d
+interface, however,
+d
+r
+a
+d
+n
+a
+t
+s
+n
+o
+n
+s
+a
+h
+c
+low-level details, su
+ll
+wi
+s
+A
+s.
+le
+ru
+n
+o
+i
+t
+a
+v
+i
+t
+c
+convergence checks or a
+,
+
+s
+k
+c
+a
+b
+w
+a
+r
+d
+e
+es
+th
+f
+o
+e
+s
+u
+a
+c
+e
+be described below, b
+a textual
+
+g
+n
+i
+p
+o
+l
+e
+v
+e
+d
+r
+e
+h
+t
+r
+u
+f
+r
+e
+g
+n
+o
+l
+we are no
+m
+ai
+w
+no
+we
+d,
+ea
+st
+In
+.
+ge
+ua
+ng
+la
+on
+ti
+ni
+fi
+network de
+gh
+hi
+a
+th
+wi
+,
+em
+st
+sy
+l
+ca
+hi
+ap
+gr
+ly
+nt
+te
+at a consis
+uage.
+g
+n
+a
+l
+g
+n
+i
+m
+m
+a
+r
+g
+o
+r
+p
+l
+level graphica
+
+r
+o
+t
+a
+l
+u
+m
+i
+s
+o
+r
+u
+e
+n
+l
+e
+l
+l
+a
+r
+a
+p
+,
+l
+a
+r
+e
+n
+e
+g
+a
+d
+r
+a
+3.2 Tow
+
+d
+e
+h
+s
+i
+u
+g
+n
+i
+t
+s
+i
+d
+e
+w
+h
+c
+a
+o
+r
+p
+p
+a
+l
+a
+n
+i
+g
+i
+r
+o
+In our
+4
+(
+:
+n
+o
+i
+t
+p
+i
+r
+c
+s
+e
+d
+f
+o
+s
+l
+e
+v
+e
+l
+e
+e
+r
+h
+t
+n
+e
+e
+w
+bet
+ee
+
+id
+
+h
+t
+i
+w
+d
+e
+d
+i
+c
+n
+i
+o
+c
+h
+c
+i
+h
+w
+,
+l
+e
+v
+e
+l
+n
+o
+i
+t
+i
+n
+i
+f
+e
+d
+network
+
+--- PAGINA 4 ---
+k
+r
+o
+w
+t
+e
+n
+l
+a
+u
+t
+x
+e
+t
+e
+h
+t
+d
+n
+a
+r
+o
+t
+i
+d
+e
+l
+a
+c
+i
+h
+p
+a
+r
+g
+both the
+,
+e
+d
+o
+c
+e
+t
+a
+i
+d
+e
+m
+r
+e
+t
+n
+i
+e
+h
+t
+)
+(2
+,
+e
+g
+a
+u
+g
+n
+a
+l
+definition
+s
+a
+w
+h
+c
+a
+o
+r
+p
+p
+a
+s
+i
+h
+T
+a
+e
+n
+i
+h
+c
+a
+m
+e
+h
+t
+)
+3
+(
+d
+aonund to restrict easy extensibility with novel
+f
+l
+e
+l
+l
+a
+r
+a
+e
+h
+t
+s
+a
+e
+wher
+
+,
+s
+m
+g
+i
+d
+a
+r
+a
+p
+k
+r
+o
+w
+t
+e
+n
+c
+o
+h
+c
+a
+h
+c
+u
+m
+d
+e
+v
+l
+o
+v
+n
+i
+s
+r
+e
+v
+i
+r
+d
+e
+r
+hardwa
+h
+t
+i
+w
+y
+l
+i
+r
+a
+m
+i
+r
+p
+d
+e
+r
+r
+u
+c
+c
+o
+r
+e
+t
+t
+a
+l
+e
+h
+T
+.
+g
+n
+i
+m
+m
+a
+r
+g
+pro
+s
+e
+r
+u
+t
+c
+u
+r
+t
+s
+l
+o
+r
+t
+n
+o
+c
+’
+l
+non-neura
+
+models that had ’
+.
+y
+a
+w
+r
+a
+l
+u
+g
+e
+r
+r
+i
+n
+a
+n
+i
+m
+s
+i
+l
+e
+l
+l
+a
+r
+a
+p
+t
+c
+i
+r
+t
+s
+e
+r
+,
+s
+u
+h
+t
+and,
+es mentioned in
+
+n
+o
+e
+h
+t
+d
+n
+a
+,
+s
+n
+o
+i
+t
+a
+r
+e
+d
+i
+s
+n
+These co
+n
+I
+.
+m
+e
+t
+s
+y
+s
+e
+r
+i
+t
+n
+e
+e
+h
+t
+e
+s
+i
+v
+e
+r
+o
+t
+s
+u
+d
+e
+l
+,
+1
+.
+3
+n
+o
+i
+t
+c
+e
+S
+e
+h
+t
+n
+e
+e
+w
+t
+e
+b
+h
+s
+i
+u
+g
+n
+i
+t
+s
+i
+our novel approach we d
+.
+n
+o
+i
+t
+p
+i
+r
+c
+s
+e
+d
+f
+o
+ls
+ve
+le
+r
+following fou
+
+i
+r
+o
+m
+e
+l
+b
+o
+r
+p
+e
+r
+a
+s
+t
+c
+e
+j
+b
+o
+a level at which all
+
+n
+o
+l
+e
+s
+o
+h
+t
+o
+t
+r
+a
+l
+i
+m
+i
+s
+e
+r
+a
+)
+1
+(
+l
+e
+v
+e
+l
+t
+a
+s
+t
+c
+e
+Obj
+n
+i
+(
+t
+e
+N
+a
+t
+e
+M
+f
+o
+ion
+t
+a
+t
+n
+e
+m
+e
+l
+p
+m
+i
+t
+n
+e
+r
+the cur
+
+n
+e
+r
+e
+v
+e
+w
+o
+h
+,
+h
+c
+a
+o
+r
+p
+p
+a
+w
+e
+n
+e
+h
+t
+n
+I
+.
+)
+2
+n
+o
+i
+t
+Sec
+)
+e
+t
+e
+i
+b
+e
+h
+t
+n
+o
+w
+e
+i
+v
+f
+o
+s
+t
+n
+i
+o
+p
+s
+a
+n
+e
+e
+should be s
+:
+m
+a
+x
+e
+r
+o
+F
+.
+n
+o
+i
+t
+p
+i
+r
+c
+s
+e
+d
+s
+s
+e
+c
+o
+r
+p
+t
+n
+e
+r
+r
+u
+c
+n
+o
+level c
+S
+E
+r
+e
+y
+a
+l
+t
+u
+p
+t
+u
+o
+e
+h
+t
+’
+n
+e
+p
+o
+g
+n
+i
+k
+clic
+
+}
+sa
+le
+ch
+su
+al
+ve
+re
+d
+ul
+co
+k
+or
+tw
+ne
+n
+io
+backpropagat
+s
+e
+d
+o
+n
+t
+u
+p
+t
+u
+o
+f
+o
+P
+U
+O
+(2) objects as a GR
+:
+,
+r
+a
+t
+f
+o
+P
+U
+O
+R
+G
+a
+,
+s
+e
+d
+o
+n
+a
+t
+l
+e
+d
+GROUP of
+
+e
+d
+e
+th
+e,
+(i
+ns
+io
+ct
+ne
+on
+rc
+te
+in
+r
+ei
+th
+d
+an
+nodes,
+2
+.
+)
+3
+e
+r
+u
+g
+i
+F
+e
+e
+s
+o
+s
+l
+a
+,
+dependencies
+BP Output Layer
+
+n
+o
+i
+t
+p
+i
+r
+c
+s
+e
+d
+d
+e
+t
+n
+e
+i
+r
+o
+m
+(1) Proble
+
+n
+io
+pt
+ri
+sc
+de
+s
+s
+e
+c
+o
+r
+p
+t
+n
+e
+r
+r
+(2) High-level concu
+n
+io
+pt
+ri
+sc
+de
+s
+es
+oc
+pr
+nt
+re
+ur
+nc
+co
+(3) Low-level
+
+Pattern
+
+(intermediate code)
+
+n
+io
+pt
+ri
+sc
+de
+t
+en
+nd
+pe
+de
+e
+in
+ch
+Ma
+)
+(4
+
+[
+
+Graphical
+
+sd hate
+
+Editor
+
+Intermediate
+Code
+
+Hidden
+
+Weights
+
+ee aes ]
+
+ee
+
+Se. ee
+
+Input/
+
+Output
+
+Fig.3. A POINT, clicked open to reveal level (2)
+internal objects.
+
+At level (1) we provide for a set of Problem
+Oriented INteraction Tools (abbreviated to
+
+translation
+
+Communication
+
+High-level
+
+Routines
+
+Language
+
+conversion
+
+POINTs, i.e., points of view on the lower levels).
+New POINTs may be defined in terms of level
+(2)
+objects,
+so
+that
+the system can be
+consistently extended with novel paradigms.
+Levels @ and (3) are based on a concurrent
+aes
+escription. There exists an extensive
+terature on concurrent processes, and several
+formal
+methods
+have
+been
+proposed for
+representing concurrency problems, for example,
+Petri-nets [20], [21], dependency graphs, and
+trace theory [13], [1]. It has been proved that all
+of these theories can be expressed within the
+more general framework of process algebra [14].
+An example of a dependence graph is shown In
+
+Figure 4. If two processes are connected by an
+
+arrow, for example,
+
+4 -> B, this means that
+
+process B cannot start until
+
+Fig.2. Overview of the extended system.
+Levels (1) to (3) are handled by a graphical
+editor (also see Figure 2), so that all levels of
+description can be approached in single style of
+interaction,
+
+closely
+
+approximating
+
+_direct-
+
+manipulation (es, (24), [25]). The intermediate
+code allows
+for a
+pese We,
+8
+urren
+
+rigorous specification of a
+simulation)
+in
+terms
+of
+
+ow-level
+
+or
+
+atomic
+
+rOCesses,
+
+Specifying detailed low-level code is shay done
+" irectly,
+aoe
+
+some
+
+we have opted for
+
+eh age
+
+ti
+
+through
+
+(see
+
+below),
+
+level
+
+language.
+
+a graphical higher level
+
+Because
+
+even
+
+a
+
+rijn, process description con
+
+Ee Erin that are
+
+e
+
+higher
+
+irrelevant
+
+for the
+
+4
+
+yi
+
+higher
+
+tains too
+problem
+
+(Ge, getting a neural netw
+ork to run on
+
+me possibly parallel m
+achine), we have add
+ed
+
+in \
+
+ei
+
+:it Pp Nn
+
+Dr
+
+bh cei
+
+ee
+
+Fig.S.
+
+Fig.4.
+
+e
+l
+p
+m
+i
+s
+s
+i
+h
+Based on t
+
+process A has finished.
+t
+a
+c
+m
+e
+l
+b
+principle, a representation of any pro
+Bi tial
+
+e
+
+made
+
+parallelism.
+
+that
+
+fully
+
+captures
+
+the pole
+
+losely
+
+A computing principle that rather pea
+
+follows this approach to representing concur
+
+e
+vi
+re
+r
+fo
+[7]
+d
+an
+,
+[8]
+,
+[3]
+a
+i
+ow
+fl
+ta
+da
+is
+
+5.
+
+--- PAGINA 5 ---
+ams
+
+Here,
+
+are
+
+represented
+
+as
+
+directed
+
+in which the nodes (also called actors)
+
+grapbe
+gtructiOns
+and
+the
+arcs
+are
+data
+at
+dencies. Data is input in one side
+
+depe®
+
+grap
+
+l
+ib
+ss
+ce
+ac
+ly
+ful
+e
+ar
+)
+(3
+to
+)
+(1
+h
+ug
+ro
+th
+le
+ib
+ss
+ce
+ac
+y
+t
+edi
+l
+ca
+hi
+ap
+the gr
+
+of the
+
+a POLNT edge or (eg by repeatedly clicking
+
+flows through to the output side of
+
+(see Figure 5). In principle, each node is
+
+at
+
+graph ecuted once. If loops (ie, iterations) are
+only ai however, the pure dataflow principle
+
+eg aompromised;
+
+nodes
+
+may be
+
+the
+
+level
+
+(3)
+
+components
+
+atomic
+
+definition of new POI
+NT
+
+one
+
+finally
+
+arrives
+
+processes). ,Through
+
+be added to the systemn
+in a
+a conv
+oenrient and
+
+executed
+
+i gms
+
+can
+
+consistent manner.
+
+must than once. Several ways of ’controlled
+
+een of the dataflow principle ar
+e possible,
+
+vol
+tance, by only allowing the next iteration
+start if all processes In the loop have finished,
+
+4, CONCLUSION
+
+his excludes Ps of iteratio
+ns).
+
+We believe that the modular approach to ne
+ural
+
+Cheese neural networks are ’non-recursive’
+structures (ie, a network does not take another
+network as
+
+input), conversion
+
+to
+
+a
+
+networks will gain importance in the near futu
+re,
+
+if only because it offers a way to achieve better
+
+low-level
+
+learning times and generalization capabilities. We
+
+process description in terms of a dependency
+
+graph
+
+is
+
+straightforward.
+
+The
+
+agree with the conclusion of [2], that no available
+neurosimulator offers sufficient support for this
+approach. The only other neurosimulator that we
+are aware of, that fully supports the construction
+
+resulting
+
+an
+as
+ed
+ew
+vi
+be
+n
+ca
+3)
+el
+ev
+(l
+de
+co
+te
+ia
+intermed
+
+ideal, virtual machine. That is, we suppose that
+some parallel machine exists that precisely fits
+
+of
+
+the process description of the intermediate code.
+
+Such
+
+an
+
+approach
+
+has
+
+been
+
+called
+
+Direct
+
+intermediate code can be characterized as
+oriented towards the high level description,
+rather than to the particularities of some
+destination machine.
+
+closer to the ’ideal neurocomputer’.
+
+As described above, an important task for the
+high-level drivers is to optimize the interpreted
+level (3) code for processmg and communication
+loadbalancing. Part of this problem can be
+reduced to a graph K-partitioning problem.
+Recently, a number of authors have applied
+neural networks to the problems of graph
+pao [27] and direct loadbalancing [23]. A
+
+may be a parallel system with a complicated
+
+interprocessor communication, the interpretation
+can take many forms. There may also be an
+
+optimization stage in which processor loads and
+
+ogical step would, thus, be to implement the
+high-level driver as a neural network, in this way
+achieving something of a ’neural bootstrap’.
+Similarly, the user interface itself could be
+implemented in terms of fine-grained parallel
+
+that
+
+total iteration time is minimized. For example, on
+
+a transputer network with known topology, the
+
+interpretation
+assignment
+
+roughly
+
+of level
+
+(3)
+
+corresponds
+
+processes
+
+to
+
+to
+
+an
+
+transputers.
+
+structures (see for instance [26]), some of which
+could well be neural networks used to assist the
+user in certain tasks (e.g., predicting the next
+chosen menu item). Finally, the conversion,
+
+For modular neural networks (but not for fully
+Connected
+
+networks,
+
+see
+
+[15]),
+
+it
+
+may
+
+be
+
+overhead
+
+is
+
+advantageous to position the processes in such a
+
+Manner,
+
+mmmized
+
+communication
+
+that
+
+(eg,
+
+every
+
+node
+
+could
+
+represent
+
+be
+d
+ul
+co
+on
+ti
+ta
+re
+rp
+te
+in
+d
+an
+n,
+io
+at
+sl
+tran
+r
+to
+m,
+is
+el
+ll
+ra
+pa
+ed
+in
+ra
+-g
+ne
+fi
+in
+d
+te
+en
+em
+pl
+im
+g.
+in
+it
+wr
+re
+h
+ap
+gr
+el
+ll
+ra
+pa
+h
+ug
+ro
+th
+e,
+pl
+am
+ex
+a
+r
+he
+et
+wh
+er
+nd
+wo
+ll
+we
+t
+gh
+mi
+we
+gh
+ou
+Th
+
+a
+
+Process). This problem is in fact a graph K-
+
+paittoning problem. For the case where we had
+
+Only tWo transputers, the problem would be to
+
+y,
+it
+il
+ib
+ss
+po
+a
+is
+)
+NC
+(G
+r
+te
+pu
+om
+oc
+ur
+Ne
+l
+ra
+Gene
+er
+us
+to
+ch
+oa
+pr
+ap
+d
+ie
+if
+un
+a
+ly
+on
+we feel that
+l
+na
+io
+at
+ut
+mp
+co
+of
+n
+io
+at
+gr
+te
+in
+d
+an
+interaction
+
+vide the neural network into two equal parts
+
+s
+n
+o
+i
+t
+c
+e
+n
+n
+o
+c
+r
+e
+t
+n
+i
+f
+o
+r
+= that the naurmebeminimized. This class of
+s
+rt
+pa
+e
+th
+n
+e
+e
+w
+Problems
+that
+
+resources
+
+is well known to be NP-complete, so
+
+t
+s
+o
+h
+n
+i
+a
+t
+r
+e
+c
+a
+r
+o
+f
+d
+e
+z
+i
+m
+~tpreted and opti
+
+n
+io
+at
+ic
+un
+mm
+Co
+).
+er
+iv
+dr
+el
+ev
+-l
+gh
+hi
+vith ine (bhoy sta is maintained
+f
+Oo
+t
+se
+a
+h
+ug
+ro
+th
+d
+ne
+ai
+a
+S
+Co
+.
+)
+r
+e
+v
+i
+r
+d
+l
+e
+v
+e
+l
+w
+o
+l
+a
+(
+poop eaten routines
+ization is handled
+m
+
+2
+
+n
+o
+r
+h
+c
+n
+y
+s
+d
+n
+a
+g
+n
+i
+l
+u
+d
+e
+by the mascchh ine controller. Further details on the
+
+towards
+
+such
+
+a goal.
+
+r
+fo
+es
+in
+ch
+ma
+l
+ea
+id
+as
+e
+be designed to serv
+neurosimulators.
+
+l
+e
+d
+o
+m
+k
+r
+o
+w
+t
+e
+n
+A
+)
+(1
+.
+2)
+e
+is in (also see Figur
+f
+o
+r
+e
+b
+m
+u
+n
+a
+m
+o
+r
+f
+r
+e
+s
+u
+POINT oled by the
+sl
+an
+tr
+is
+n
+io
+pt
+ri
+sc
+de
+e
+Th
+)
+(3
+,
+n
+e
+E
+to
+in
+de
+co
+is
+Th
+)
+(4
+.
+de
+co
+te
+ia
+ed
+rm
+te
+in
+,
+vel
+Is int “le
+
+will
+
+lead
+
+st
+mu
+rs
+te
+pu
+om
+oc
+ur
+ne
+at
+th
+s
+ie
+pl
+im
+is
+Ultimately, th
+
+.
+ed
+us
+e
+b
+t
+s
+u
+m
+m
+th
+ri
+go
+al
+l
+ma
+some sub-opti
+a
+h
+c
+i
+h
+w
+h
+g
+u
+o
+r
+h
+t
+es
+ag
+st
+e
+th
+e
+z
+i
+a. “eg Summar
+t
+e
+N
+a
+t
+e
+M
+ed
+nd
+te
+ex
+e
+th
+in
+es
+ss
+le model pa
+
+gh
+hi
+a
+to
+in
+d
+te
+er
+nv
+co
+is
+l
+e
+d
+o
+m
+e
+h
+T
+level q S. (2)
+ated
+
+modular
+
+processor neurocomputer, that is based on the
+principle of modularity [9]. We have recently
+started a new project, aimed at developing an
+extended version of this machine, that comes
+
+At the machine level (4), the ideal, virtual
+machine must: be emulated by some available
+hardware. This means that the level (3) code
+must be interpreted for some host machine (e.g.,
+a transputer network). Because the host machine
+
+so
+
+smaller
+
+This is indeed our intention. At the moment we
+are interfacing MetaNet with a dedicated 400
+
+to the DEL at level (3) is simple, so that the
+
+adjusted,
+
+of
+
+step would be to develop a machine that
+approximates this ideal as closely as possible.
+
+be viewed as a Directly Executed Language
+(DEL). Translation from the level (2) description
+
+are
+
+out
+
+_ The extended MetaNet system is based on the
+idea of an ideal, virtual machine. A natural next
+
+The intermediate, level (3) code in MetaNet can
+
+overhead
+
+networks
+
+structures is the NN3 system [12].
+
+Correspondence Architecture ((4], [5], [10], [28]).
+
+communication
+
+large
+
+References
+
+.
+8)
+98
+(1
+g
+r
+e
+b
+n
+e
+z
+o
+R
+G.
+&
+,
+J
+I
+,
+rg
+be
+gs
+er
+lb
+Aa
+[1]
+e,
+nc
+ie
+Sc
+r
+e
+t
+u
+p
+m
+o
+C
+l
+ca
+ti
+re
+eo
+Theory of traces. Th
+60, 1-82.
+al
+ur
+ne
+t
+en
+rr
+cu
+e
+ar
+ul
+ef
+us
+w
+Cohen, H. (ae), Ho
+[2]
+
+,
+ew
+vi
+Re
+k
+r
+o
+w
+t
+e
+N
+al
+ur
+Ne
+s?
+ol
+to
+network software
+
+3, 102-113.
+
+.
+ow
+fl
+ta
+da
+on
+e
+su
+is
+l
+ia
+ec
+Sp
+.
+2)
+98
+(1
+er
+ut
+mp
+Co
+[3]
+
+--- PAGINA 6 ---
+:
+
+:
+
+_
+
+IEEE Computer, 15(2).
+
+in
+es
+su
+is
+d
+n
+a
+ns
+io
+ct
+re
+Di
+.
+0)
+[4] Flynn, M.J. (198
+>
+e
+g
+a
+u
+g
+n
+a
+L
+:
+ge
+ua
+ng
+la
+d
+architecture an
+,
+r
+e
+t
+u
+p
+m
+o
+C
+E
+E
+E
+I
+.
+e
+n
+i
+h
+c
+a
+M
+Architecture ->
+13 (10), 5-22.
+
+A
+.
+9)
+97
+(1
+el
+ev
+Ho
+W.
+L.
+&
+,
+J
+M
+[5] Flynn,
+
+l
+ea
+Id
+s:
+re
+tu
+ec
+it
+ch
+ar
+ve
+ti
+re
+rp
+te
+in
+theory of
+0,
+17
+rt
+po
+Re
+l
+ca
+ni
+ch
+Te
+.
+es
+in
+ch
+ma
+language
+Stanford University.
+
+:
+In
+.
+es
+in
+ch
+ma
+ow
+fl
+ta
+Da
+.
+9)
+98
+(1
+Gaudiot, J.L.
+
+[7]
+
+ge
+ua
+ng
+la
+el
+ev
+-l
+gh
+Hi
+),
+d.
+(E
+c
+vi
+no
+V.M. Miluti
+e
+nc
+ie
+Sc
+er
+ut
+mp
+Co
+,
+re
+tu
+ec
+it
+ch
+ar
+computer
+Press.
+
+[8] Gurd,.
+
+JR...
+
+and
+
+GP.
+
+Fundamentals
+
+(1984).
+
+dataflow. In: F.B.
+
+Jones
+
+of
+
+Chambers, D.A. Duce,
+
+Distributed
+
+(Eds),
+
+s.
+es
+Pr
+ic
+em
+ad
+Ac
+:
+on
+nd
+Lo
+g,
+in
+ut
+mp
+Co
+Heemskerk, J.N.H, J.M.J., Murre, & P.T.W.
+Hudson (1991). The BSP400: a modular
+neurocomputer, assembled from 400 lowcost microcomputers. Proceedings of the
+
+[9]
+
+ICANN-91-Helsinki.
+
+[10] Hoch, J. & C. Bauer (1989). The DELtran
+Project. In: V.M. Milutinovic (Ed.), HighLevel
+Language
+Computer
+Computer Science Press.
+
+Architecture.
+
+[11] Kennaway, J.R., & M.R. Sleep (1984). The
+"language first’ approach. In: F.B. Chambers,
+D.A. Duce, & G.P. Jones (Eds.), Distributed
+Computing. London: Academic Press.
+(12) landen, A,.&
+
+Research
+
+Ch. Tietz (1991, in prep.)
+
+and
+
+development __ software
+
+environment for modular adaptive systems.
+
+Technical
+
+Report
+
+NN3-1.
+
+GMD
+
+Birlinghoven, Sankt Augustin, Germany.
+[13] Mazurkiewitz, A. (1977). Concurrent program
+schemes and their interpretations. DAIMI
+Rept. PB-78, Aarhus University, Aarhus.
+
+[14] Mazurkiewitz, A. (1984). Traces, histories,
+graphs: instances of a process monoid.
+Lecture Notes in Computer Science, 176, 115133.
+
+Transputer
+(990).
+J.M.J.
+[15] Murre,
+implementations of neural networks: an
+analysis. Proceedings of the ICANN-9IHelsinki.
+
+[16] Murre, J.M.J., & S.E. Kleynenberg (1990).
+The MetaNet Network Environmnent for
+the
+development
+of
+modular
+neural
+networks. Proceedings of the INNC-90-Paris,
+
+717-720.
+
+[17] Murre,
+
+JMJ,
+
+&
+
+SE.
+
+Kleynenberg
+
+prep.).
+Process
+control
+and
+management
+in
+general,
+_
+
+(in
+
+simulation
+parallel
+
+neurosimulators.
+
+[18] Murre, JMJ, RH. Phaf, & G. Wolters
+(1989).
+CALM
+networks:
+a
+modular
+approach
+
+to
+
+supervised
+
+learning.
+
+Proceedings
+
+and
+
+of
+
+unsupervised
+
+the
+
+IJCNN-89-
+
+_ Washington, 1, 649-656.
+[19] Murre, JMJ, RH. Phaf, & G. Wolters
+(submitted).
+CALM:
+Categorizing
+And
+Learning
+Module.
+Leiden
+Psychological
+Reports, ETP 02-90,
+Leiden
+University,
+Leiden.
+[20] Petri,
+C.A,
+(1962).
+Kommunikation
+mit
+Automaten,
+
+Schriften
+
+des
+
+Institutes
+
+Instrumentelle Mathematik, Bonn.
+
+[21] Reisig.
+W.
+(1982).
+Perrinetze:
+Einführung. Berlin: Springer-Verlag.
+
+[22] Rumelhart,
+Williams
+
+DE,
+
+— (1986).
+
+representations
+
+by
+
+Eine
+
+G.E.
+
+Hinton,
+
+error
+
+propagation.
+
+Learning
+
+für
+
+&
+
+RJ.
+
+internal
+In:
+
+Rumelhart, D.E., & J.L. McClelland n(Eds
+e ),
+
+n
+o
+V
+n
+E
+d
+e
+t
+u
+Parallel distrib
+MIT Press.
+:
+A
+M
+,
+e
+g
+d
+i
+r
+b
+m
+a
+C
+.
+Foundations
+
+[23] Schmid, P. (1990). The mapping problem:
+
+neural
+
+network
+
+approach. Proceedings
+
+INNC-90-Paris, 274-271.
+
+[24] ee Ganges
+a step
+
+beyond
+
+:
+
+of
+
+(1983). nas manipulation:
+
+programming
+
+Compicer, 16, 57-65.
+
+es ee
+
+languages.
+
+>
+
+[25] Shneiderman, B. (1987). Designing the user
+interface: strategies for effective human-computer
+interaction. Reading, MA: Addison-Wesley,
+
+[26] Van den Bos, J. (i988). Abstract Interaction
+
+Tools:
+A
+language
+for
+user interface
+management systems. ACM Transactions oy
+
+Programming Languages and Systems, 10, 215.
+247.
+
+[27] Van den Bout, D.E., & T.K. Miller III (1999),
+Graph partitioning using annealed
+networks. IEEE Transactions on
+Networks, 1, 192-203.
+
+neural
+Neural
+
+[28] Wedig, R.G. (1989). Direct correspondence
+architectures: principles, architectures, and
+design. In: V.M. Milutinovic (Ed.), High-level
+language
+
+computer
+
+Science Press.
+
+architecture.
+
+Computer

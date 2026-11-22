@@ -1,0 +1,332 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://github.io",
+      "url": "https://github.io",
+      "name": "Steven Kleynenberg — Project UnLinked | Sovereign R&D & Architecture Portal",
+      "inLanguage": "en-US",
+      "publisher": {
+        "@id": "https://kleynenberg.com"
+      },
+      "about": {
+        "@id": "https://github.io#person"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://github.io#person",
+      "name": "Steven Kleynenberg",
+      "alternateName": [
+        "S.E. Kleynenberg",
+        "Steven Ernst Kleynenberg"
+      ],
+      "givenName": "Steven",
+      "familyName": "Kleynenberg",
+      "jobTitle": "Principal Enterprise and AI Architect",
+      "description": "Principal enterprise and AI architect, parallel computing researcher, co-inventor of PCT application WO 2014/003543 A1, and independent publisher.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Delft",
+        "addressRegion": "South Holland",
+        "addressCountry": "NL"
+      },
+      "url": "https://github.io",
+      "sameAs": [
+        "https://github.com",
+        "https://researchgate.net",
+        "https://google.com",
+        "https://taksie.ai",
+        "https://innopheon.com",
+        "https://kleynenberg.com",
+        "https://naaap.io"
+      ],
+      "affiliation": [
+        {
+          "@id": "https://kleynenberg.com"
+        }
+      ],
+      "alumniOf": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Leiden University",
+          "url": "https://universiteitleiden.nl"
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Delft University of Technology",
+          "url": "https://tudelft.nl"
+        }
+      ],
+      "knowsAbout": [
+        "Enterprise Architecture",
+        "Artificial Intelligence",
+        "Natural Language Processing",
+        "Part-of-Speech Tagging",
+        "Information Retrieval",
+        "Retrieval-Augmented Generation (RAG)",
+        "Modular Neural Networks",
+        "Massively Parallel Computing",
+        "WebGPU",
+        "Clinical Decision Support Systems",
+        "Biometric Sensor Telemetry"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://kleynenberg.com",
+      "name": "Kleynenberg Publishers",
+      "url": "https://kleynenberg.com",
+      "founder": {
+        "@id": "https://github.io#person"
+      },
+      "location": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Delft",
+          "addressCountry": "NL"
+        }
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://itea4.org",
+      "name": "Sopheon N.V.",
+      "url": "https://sopheon.com",
+      "sameAs": "https://itea4.org"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://google.com#patent",
+      "additionalType": "https://schema.org",
+      "name": "Method, system and computer program for generating a query representation of a document, and querying a document retrieval system using said query representation",
+      "identifier": "WO 2014/003543 A1",
+      "dateCreated": "2012-06-29",
+      "datePublished": "2014-01-03",
+      "url": "https://google.com",
+      "creator": [
+        {
+          "@type": "Person",
+          "name": "Hubert Joseph Marie Rutten"
+        },
+        {
+          "@id": "https://github.io#person"
+        },
+        {
+          "@type": "Person",
+          "name": "Elsemiek ten Pas"
+        }
+      ],
+      "copyrightHolder": {
+        "@id": "https://itea4.org"
+      },
+      "abstract": "Linguistic query construction and document clustering method using Part-of-Speech (POS) category sequences to query document retrieval systems."
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://doi.org",
+      "name": "The MetaNet Network Environment for the Development of Modular Neural Networks",
+      "identifier": "doi:10.1007/978-94-009-0643-3_59",
+      "datePublished": "1990",
+      "url": "https://doi.org",
+      "encoding": {
+        "@type": "MediaObject",
+        "contentUrl": "https://github.iopapers/murre-kleynenberg-1990-metanet-innc.pdf",
+        "encodingFormat": "application/pdf"
+      },
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Jacob M. J. Murre"
+        },
+        {
+          "@id": "https://github.io#person"
+        }
+      ],
+      "isPartOf": {
+        "@type": "PublicationEvent",
+        "name": "International Neural Network Conference (INNC-90-Paris)"
+      }
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://github.iopapers/murre-kleynenberg-1991-extending-metanet-icann.pdf#article",
+      "name": "Extending the MetaNet Network Environment: process control and machine independence",
+      "datePublished": "1991",
+      "url": "https://github.iopapers/murre-kleynenberg-1991-extending-metanet-icann.pdf",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Jacob M. J. Murre"
+        },
+        {
+          "@id": "https://github.io#person"
+        }
+      ],
+      "isPartOf": {
+        "@type": "PublicationEvent",
+        "name": "International Conference on Artificial Neural Networks (ICANN-91)"
+      }
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://doi.org",
+      "name": "Integrating the BSP400 neurocomputer with the MetaNet Network Environment",
+      "identifier": "doi:10.1109/IJCNN.1991.170608",
+      "datePublished": "1991",
+      "url": "https://doi.org",
+      "encoding": {
+        "@type": "MediaObject",
+        "contentUrl": "https://github.iopapers/murre-et-al-1991-bsp400-metanet-ijcnn.pdf",
+        "encodingFormat": "application/pdf"
+      },
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Jacob M. J. Murre"
+        },
+        {
+          "@type": "Person",
+          "name": "Jan N. H. Heemskerk"
+        },
+        {
+          "@id": "https://github.io#person"
+        },
+        {
+          "@type": "Person",
+          "name": "Patrick T. W. Hudson"
+        }
+      ],
+      "isPartOf": {
+        "@type": "PublicationEvent",
+        "name": "1991 IEEE International Joint Conference on Neural Networks (IJCNN)"
+      }
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://doi.org",
+      "name": "Remote Collaboration, Decision Support, and On-Demand Medical Image Analysis for Acute Stroke Care",
+      "identifier": "doi:10.1007/978-3-319-24072-5_15",
+      "datePublished": "2015",
+      "url": "https://doi.org",
+      "encoding": {
+        "@type": "MediaObject",
+        "contentUrl": "https://github.iopapers/sales-barros-et-al-2015-medusa-acute-stroke-esocc.pdf",
+        "encodingFormat": "application/pdf"
+      },
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Renan Sales Barros"
+        },
+        {
+          "@type": "Person",
+          "name": "Jordi Borst"
+        },
+        {
+          "@id": "https://github.io#person"
+        }
+      ],
+      "about": {
+        "@id": "https://itea4.org"
+      },
+      "isPartOf": {
+        "@type": "PublicationEvent",
+        "name": "European Conference on Service-Oriented and Cloud Computing (ESOCC 2015)"
+      }
+    },
+    {
+      "@type": "ResearchProject",
+      "@id": "https://itea4.org",
+      "name": "EDAFMIS — Embedded Decision and Data Fusion for Medical Intervention Support",
+      "identifier": "ITEA 07011",
+      "startDate": "2009-01",
+      "endDate": "2011-12",
+      "url": "https://itea4.org",
+      "member": {
+        "@id": "https://itea4.org"
+      },
+      "contributor": {
+        "@id": "https://github.io#person"
+      }
+    },
+    {
+      "@type": "ResearchProject",
+      "@id": "https://itea4.org",
+      "name": "MEDUSA — Medical Distributed Utilization of Services & Applications",
+      "identifier": "ITEA2 10004",
+      "startDate": "2013-01",
+      "endDate": "2015-12",
+      "url": "https://itea4.org",
+      "member": {
+        "@id": "https://itea4.org"
+      },
+      "contributor": {
+        "@id": "https://github.io#person"
+      }
+    },
+    {
+      "@type": "ResearchProject",
+      "@id": "https://itea4.org",
+      "name": "PARTNER — Patient-care Advancement with Responsive Technologies aNd Engagement togetheR",
+      "identifier": "ITEA3 Call 3",
+      "startDate": "2017",
+      "endDate": "2020",
+      "url": "https://itea4.org",
+      "award": "2021 ITEA Award of Excellence for Exploitation",
+      "member": {
+        "@id": "https://itea4.org"
+      }
+    },
+    {
+      "@type": "ResearchProject",
+      "@id": "https://europa.eu",
+      "name": "LORE — Leveraging Operational Resource Expertise",
+      "identifier": "IST-1999-12645",
+      "startDate": "2000-02-01",
+"endDate": "2002-11-30",
+"url": "europa.eu",
+"member": {
+"@id": "itea4.org"
+}
+},
+{
+"@type": "SoftwareApplication",
+"@id": "taksie.ai",
+"name": "taksie.ai",
+"applicationCategory": "FinanceApplication",
+"operatingSystem": "Web",
+"url": "https://taksie.ai",
+"author": {
+"@id": "github.io"
+},
+"description": "AI-driven fiscal pre-processor and structured tax optimization engine for Dutch income tax workflows."
+},
+{
+"@type": "SoftwareApplication",
+"@id": "innopheon.com",
+"name": "innopheon",
+"applicationCategory": "BusinessApplication",
+"operatingSystem": "Web",
+"url": "https://innopheon.com",
+"author": {
+"@id": "github.io"
+},
+"description": "Next-generation patent intelligence, POS-tagging natural language query workspace, and innovation monitoring platform."
+},
+{
+"@type": "SoftwareApplication",
+"@id": "demetro.nl",
+"name": "MetroMoo",
+"applicationCategory": "GameApplication",
+"operatingSystem": "Web",
+"url": "demetro.nl",
+"author": {
+"@id": "github.io"
+},
+"description": "Serverless cloud-native re-engineering of LambdaMOO with WebSockets, BigQuery event sourcing, and WebGL cartography."
+}
+]
+}

@@ -1,0 +1,2544 @@
+{
+  "schema_version": "3.1.1",
+  "generated_at": "2026-11-20T12:48:26.101827+01:00",
+  "run_id": "run_20261120_124155",
+  "run_dir": "/home/steve/gemini/trawler/results/local_projects_corpus/run_20261120_124155",
+  "ai_synthesis_enabled": true,
+  "ai_backend": "vertex_ai_oauth",
+  "gcp_project_id": "gemini-development-hub-2026",
+  "gcp_location": "global",
+  "gemini_model": "gemini-3.5-flash",
+  "input_roots": [
+    {
+      "label": "custom_1_Gemini",
+      "path": "/mnt/fedora44/home/steve/Gemini"
+    }
+  ],
+  "total_items": 44,
+  "projects": [
+    {
+      "source_root": "custom_1_Gemini",
+      "name": "audiotap",
+      "kind": "directory",
+      "path": "/mnt/fedora44/home/steve/Gemini/audiotap",
+      "last_modified": "2026-10-09",
+      "inspected_files": 48,
+      "languages": {
+        "Python": 15,
+        "Java": 12,
+        "HTML5": 1
+      },
+      "asset_summary": {
+        ".apk": 3,
+        ".svg": 2,
+        ".dex": 1,
+        ".jar": 1
+      },
+      "detected_tech": [
+        "Android SDK / WebView",
+        "Web Audio / DSP"
+      ],
+      "synthesized_topic": "Android: com.kleynenberg.audiotap | UI Title: 'AudioTap' | Symbols: CustomWebViewClient extends WebViewClient, CustomWebChromeClient extends WebChromeClient, PermissionGrantRunnable, MainActivity extends Activity, AudioServiceConnection, WebAppInterface | Stack: Android SDK / WebView, Web Audio / DSP",
+      "project_dna": {
+        "android": {
+          "android_package": "com.kleynenberg.audiotap",
+          "activities": [
+            "MainActivity"
+          ],
+          "services": [
+            "AudioService"
+          ],
+          "permissions": [
+            "READ_EXTERNAL_STORAGE",
+            "VIBRATE",
+            "FOREGROUND_SERVICE",
+            "FOREGROUND_SERVICE_MEDIA_PLAYBACK"
+          ]
+        },
+        "html_ui": [
+          {
+            "title": "AudioTap",
+            "ui_labels": [
+              "TAPE LOAD",
+              "BAL: NORMAL"
+            ],
+            "file": "assets/www/index.html"
+          }
+        ],
+        "code_symbols": [
+          "CustomWebViewClient extends WebViewClient",
+          "CustomWebChromeClient extends WebChromeClient",
+          "PermissionGrantRunnable",
+          "MainActivity extends Activity",
+          "AudioServiceConnection",
+          "WebAppInterface",
+          "JavascriptToggleRunnable",
+          "AudioService extends Service",
+          "AudioSessionCallbackImpl extends MediaSession.Callback",
+          "AudioServiceBinder extends Binder",
+          "PlaybackToggleCallback",
+          "create_project_structure()",
+          "create_files()",
+          "run_cmd()",
+          "scaffold()"
+        ],
+        "python_imports": [
+          "zipfile"
+        ]
+      },
+      "active_code_files": [
+        "assets/www/index.html",
+        "src_audiotap/java/com/kleynenberg/audiotap/CustomWebViewClient.java",
+        "src_audiotap/java/com/kleynenberg/audiotap/CustomWebChromeClient.java",
+        "src_audiotap/java/com/kleynenberg/audiotap/PermissionGrantRunnable.java",
+        "src_audiotap/java/com/kleynenberg/audiotap/MainActivity.java",
+        "src_audiotap/java/com/kleynenberg/audiotap/AudioServiceConnection.java",
+        "src_audiotap/java/com/kleynenberg/audiotap/WebAppInterface.java",
+        "src_audiotap/java/com/kleynenberg/audiotap/JavascriptToggleRunnable.java",
+        "src_audiotap/java/com/kleynenberg/audiotap/AudioService.java",
+        "src_audiotap/java/com/kleynenberg/audiotap/AudioSessionCallbackImpl.java",
+        "src_audiotap/java/com/kleynenberg/audiotap/AudioServiceBinder.java",
+        "src_audiotap/java/com/kleynenberg/audiotap/PlaybackToggleCallback.java"
+      ],
+      "pruned_subtrees": [
+        {
+          "subpath": "bin/com/kleynenberg/audiotap",
+          "reason": "asset_sink (16 files, 16 binary/media/font assets)"
+        }
+      ],
+      "ai_synthesis": {
+        "onderwerp_kort": "Een Android-applicatie die een HTML5-gebruikersinterface in een WebView combineert met een achtergrond-audioservice voor audio-afspelen.",
+        "architectuur_samenvatting": "De architectuur maakt gebruik van een Android MainActivity met een WebView die via een WebAppInterface communiceert met een Java-gebaseerde AudioService. Deze service maakt gebruik van MediaSession-callbacks en ondersteunt Web Audio en DSP-functionaliteiten.",
+        "domein_categorie": "Audio DSP, edge-AI and telemetry",
+        "geschikt_voor_publiek_portaal": true
+      }
+    },
+    {
+      "source_root": "custom_1_Gemini",
+      "name": "bernardus",
+      "kind": "directory",
+      "path": "/mnt/fedora44/home/steve/Gemini/bernardus",
+      "last_modified": "2026-08-20",
+      "inspected_files": 21,
+      "languages": {
+        "Python": 7,
+        "Shell/Bash": 1,
+        "YAML": 1
+      },
+      "asset_summary": {
+        ".jpg": 2
+      },
+      "detected_tech": [
+        "PDF / Typography Pipeline"
+      ],
+      "synthesized_topic": "Symbols: read_paths(), compute_features(), compare_images(), get_sliding_color(), short_path(), format_img_uri() | Stack: PDF / Typography Pipeline",
+      "project_dna": {
+        "code_symbols": [
+          "read_paths()",
+          "compute_features()",
+          "compare_images()",
+          "get_sliding_color()",
+          "short_path()",
+          "format_img_uri()",
+          "find_highest_item_number()",
+          "main()",
+          "compute_hashes()",
+          "calc_certainty()",
+          "calc_uncertainty()",
+          "get_color()",
+          "App",
+          "load_and_hash()",
+          "open_image()"
+        ],
+        "python_imports": [
+          "platform",
+          "tkinter"
+        ]
+      },
+      "active_code_files": [
+        "report/supersift.py",
+        "report/sift.py",
+        "report/report2.py",
+        "report/report.py",
+        "reverse/gui.py",
+        "matchup/gui.py",
+        "matchup/vergelijk.py",
+        "batch_verrijk.sh",
+        "metadata.yaml"
+      ],
+      "pruned_subtrees": [
+        {
+          "subpath": "onedrive",
+          "reason": "asset_sink (70 files, 70 binary/media/font assets)"
+        }
+      ],
+      "ai_synthesis": {
+        "onderwerp_kort": "Dit project vergelijkt afbeeldingen en berekent visuele kenmerken om rapportages te genereren binnen een PDF- en typografie-pijplijn.",
+        "architectuur_samenvatting": "De applicatie is opgebouwd in Python met een Tkinter-GUI en maakt gebruik van modules voor kenmerkberekening, hash-vergelijkingen en beeldverwerking. Een Bash-script faciliteert de batch-verwerking van de gegevens voor rapportage-doeleinden.",
+        "domein_categorie": "Publishing and typographic pipelines",
+        "geschikt_voor_publiek_portaal": true
+      }
+    },
+    {
+      "source_root": "custom_1_Gemini",
+      "name": "bookmarks",
+      "kind": "directory",
+      "path": "/mnt/fedora44/home/steve/Gemini/bookmarks",
+      "last_modified": "2026-09-05",
+      "inspected_files": 14,
+      "languages": {
+        "Python": 6,
+        "HTML5": 2,
+        "YAML": 1
+      },
+      "asset_summary": {},
+      "detected_tech": [],
+      "synthesized_topic": "Kosten- en Billing-analyse: Bookmark Clustering via Gemini 1.5 Pro Deze analyse beschrijft de verwachte kosten voor het geautomatiseerd herordenen van de bookmarks via de moderne `google-genai` SDK met het Gemini 1.5 Pro model. [REDACTED_SENSITIVE_LINE] - **Aantal unieke bookmarks**: 2.158 [REDACTED_SENSITIVE_LINE] [REDACTED_SENSITIVE_LINE] 2. Prijsstelling Gemini 1.5 Pro (Vertex AI / Enterprise) [REDACTED_SENSITIVE_LINE] [REDACTED_SENSITIVE_LINE | Langs: Python, HTML5, YAML",
+      "project_dna": {
+        "readme_summary": "Kosten- en Billing-analyse: Bookmark Clustering via Gemini 1.5 Pro Deze analyse beschrijft de verwachte kosten voor het geautomatiseerd herordenen van de bookmarks via de moderne `google-genai` SDK met het Gemini 1.5 Pro model. [REDACTED_SENSITIVE_LINE] - **Aantal unieke bookmarks**: 2.158 [REDACTED_SENSITIVE_LINE] [REDACTED_SENSITIVE_LINE] 2. Prijsstelling Gemini 1.5 Pro (Vertex AI / Enterprise) [REDACTED_SENSITIVE_LINE] [REDACTED_SENSITIVE_LINE"
+      },
+      "active_code_files": [
+        "scan_keys_to_tsv.py",
+        "scan_keys_apis.py",
+        "scan_keys.py",
+        "TEST.html",
+        "cluster_bookmarks.py",
+        "list_model.py",
+        "metadata.yaml",
+        "03_schrijf_voorwoord_bijschriften_en_nawoord_met_gemini.py",
+        "README.md",
+        "Makefile",
+        "bookmarks_9_5_26.html"
+      ],
+      "pruned_subtrees": [],
+      "ai_synthesis": {
+        "onderwerp_kort": "Dit project analyseert de kosten en voert het geautomatiseerd clusteren van bookmarks uit met behulp van de Gemini 1.5 Pro API.",
+        "architectuur_samenvatting": "Het project maakt gebruik van Python-scripts en de google-genai SDK om bookmarks te clusteren en API-sleutels te scannen. De architectuur omvat tevens kostenberekeningen voor het gebruik van het Gemini 1.5 Pro-model via Vertex AI.",
+        "domein_categorie": "Internal utility / maintenance",
+        "geschikt_voor_publiek_portaal": false
+      }
+    },
+    {
+      "source_root": "custom_1_Gemini",
+      "name": "build",
+      "kind": "directory",
+      "path": "/mnt/fedora44/home/steve/Gemini/build",
+      "last_modified": "2026-10-09",
+      "inspected_files": 12,
+      "languages": {},
+      "asset_summary": {
+        ".class": 8,
+        ".zip": 1,
+        ".apk": 1,
+        ".dex": 1
+      },
+      "detected_tech": [],
+      "synthesized_topic": "build",
+      "project_dna": {},
+      "active_code_files": [],
+      "pruned_subtrees": [],
+      "ai_synthesis": {
+        "onderwerp_kort": "Dit project genaamd 'build' bevat geen actieve codebestanden of gedetecteerde technologieën.",
+        "architectuur_samenvatting": "Er is geen actieve softwarearchitectuur of technologie gedetecteerd binnen dit project. De metadata wijst op een lege projectstructuur met de naam 'build'.",
+        "domein_categorie": "Internal utility / maintenance",
+        "geschikt_voor_publiek_portaal": false
+      }
+    },
+    {
+      "source_root": "custom_1_Gemini",
+      "name": "c",
+      "kind": "directory",
+      "path": "/mnt/fedora44/home/steve/Gemini/c",
+      "last_modified": "2026-02-15",
+      "inspected_files": 2,
+      "languages": {
+        "C": 1
+      },
+      "asset_summary": {},
+      "detected_tech": [],
+      "synthesized_topic": "Langs: C",
+      "project_dna": {},
+      "active_code_files": [
+        "helloworld.c"
+      ],
+      "pruned_subtrees": [],
+      "ai_synthesis": {
+        "onderwerp_kort": "Dit project is een eenvoudige Hello World-applicatie geschreven in de programmeertaal C.",
+        "architectuur_samenvatting": "De applicatie bestaat uit een enkel C-bronbestand zonder verdere externe afhankelijkheden of complexe architectuur. Het dient als een minimale implementatie voor testdoeleinden.",
+        "domein_categorie": "Internal utility / maintenance",
+        "geschikt_voor_publiek_portaal": false
+      }
+    },
+    {
+      "source_root": "custom_1_Gemini",
+      "name": "cli",
+      "kind": "directory",
+      "path": "/mnt/fedora44/home/steve/Gemini/cli",
+      "last_modified": "2026-03-05",
+      "inspected_files": 9,
+      "languages": {},
+      "asset_summary": {},
+      "detected_tech": [],
+      "synthesized_topic": "cli",
+      "project_dna": {},
+      "active_code_files": [
+        "youtube/Makefile"
+      ],
+      "pruned_subtrees": [],
+      "ai_synthesis": {
+        "onderwerp_kort": "Dit project biedt een command-line interface via een Makefile voor YouTube-gerelateerde taken.",
+        "architectuur_samenvatting": "De architectuur is minimaal en bestaat uit een Makefile die CLI-commando's aanstuurt voor YouTube-interactie. Er zijn geen aanvullende programmeertalen of software-architecturen gedocumenteerd.",
+        "domein_categorie": "Internal utility / maintenance",
+        "geschikt_voor_publiek_portaal": false
+      }
+    },
+    {
+      "source_root": "custom_1_Gemini",
+      "name": "elro",
+      "kind": "directory",
+      "path": "/mnt/fedora44/home/steve/Gemini/elro",
+      "last_modified": "2026-08-24",
+      "inspected_files": 5,
+      "languages": {
+        "Python": 2
+      },
+      "asset_summary": {
+        ".mp4": 1
+      },
+      "detected_tech": [],
+      "synthesized_topic": "ffmpeg_elro.py: ELRO MJPEG to MP4 Converter ------------------------------------------------------------------------- Leest 20 seconden de live stream uit via aiohttp en pipe't de frames rechtstreeks naar ffmpeg om een MP4-bestand te genereren. | Symbols: record_stream_to_mp4(), test_stream() | Langs: Python",
+      "project_dna": {
+        "code_symbols": [
+          "record_stream_to_mp4()",
+          "test_stream()"
+        ],
+        "python_imports": [
+          "aiohttp",
+          "asyncio"
+        ],
+        "python_docstrings": [
+          "ffmpeg_elro.py: ELRO MJPEG to MP4 Converter ------------------------------------------------------------------------- Leest 20 seconden de live stream uit via aiohttp en pipe't de frames rechtstreeks naar ffmpeg om een MP4-bestand te genereren."
+        ]
+      },
+      "active_code_files": [
+        "ffmpeg_elro.py",
+        "test_elro.py"
+      ],
+      "pruned_subtrees": [],
+      "ai_synthesis": {
+        "onderwerp_kort": "Dit project converteert een live MJPEG-stream van een ELRO-camera naar een MP4-bestand.",
+        "architectuur_samenvatting": "De Python-applicatie gebruikt asyncio en aiohttp om de live stream asynchroon te consumeren. De ontvangen frames worden direct naar een ffmpeg-subproces gepijpt om het MP4-bestand te genereren.",
+        "domein_categorie": "Audio DSP, edge-AI and telemetry",
+        "geschikt_voor_publiek_portaal": false
+      }
+    },
+    {
+      "source_root": "custom_1_Gemini",
+      "name": "eneco",
+      "kind": "directory",
+      "path": "/mnt/fedora44/home/steve/Gemini/eneco",
+      "last_modified": "2026-08-12",
+      "inspected_files": 161,
+      "languages": {
+        "Python": 6,
+        "HTML5": 1
+      },
+      "asset_summary": {
+        ".png": 17
+      },
+      "detected_tech": [
+        "PDF / Typography Pipeline"
+      ],
+      "synthesized_topic": "UI Title: 'Gmail - Jouw kopie van het chatgesprek met Eneco' | Symbols: clean_text(), parse_pdf_data(), parse_excel_data(), main(), parse_all_eneco_pdfs(), parse_eneco_pdfs() | Stack: PDF / Typography Pipeline",
+      "project_dna": {
+        "html_ui": [
+          {
+            "title": "Gmail - Jouw kopie van het chatgesprek met Eneco",
+            "file": "archief/2023-2024/kopie-chatg-Eneco-24012024-18.37.html"
+          }
+        ],
+        "code_symbols": [
+          "clean_text()",
+          "parse_pdf_data()",
+          "parse_excel_data()",
+          "main()",
+          "parse_all_eneco_pdfs()",
+          "parse_eneco_pdfs()",
+          "maak_strikt_gefilterde_tsv()"
+        ],
+        "python_imports": [
+          "matplotlib",
+          "pandas",
+          "pypdf"
+        ]
+      },
+      "active_code_files": [
+        "archief/eneco_totaal_script.py",
+        "archief/plotje.py",
+        "archief/eneco_pdf_naar_tsv_v2.py",
+        "archief/eneco_pdf_naar_tsv.py",
+        "archief/eneco_to_tsv.py",
+        "archief/make_tsv.py",
+        "archief/2023-2024/kopie-chatg-Eneco-24012024-18.37.html"
+      ],
+      "pruned_subtrees": [],
+      "ai_synthesis": {
+        "onderwerp_kort": "Dit project verwerkt en analyseert Eneco PDF- en Excel-documenten om gefilterde TSV-bestanden en visualisaties te genereren.",
+        "architectuur_samenvatting": "De applicatie maakt gebruik van Python-scripts met pypdf en pandas om data uit documenten te extraheren, op te schonen en te exporteren naar TSV-formaat. Visualisaties worden gegenereerd met behulp van matplotlib.",
+        "domein_categorie": "Internal utility / maintenance",
+        "geschikt_voor_publiek_portaal": false
+      }
+    },
+    {
+      "source_root": "custom_1_Gemini",
+      "name": "eurostars",
+      "kind": "directory",
+      "path": "/mnt/fedora44/home/steve/Gemini/eurostars",
+      "last_modified": "2026-09-11",
+      "inspected_files": 18,
+      "languages": {
+        "JavaScript": 4,
+        "Python": 3,
+        "HTML5": 3,
+        "Shell/Bash": 1
+      },
+      "asset_summary": {
+        ".svg": 2
+      },
+      "detected_tech": [
+        "Web Audio / DSP"
+      ],
+      "synthesized_topic": "UI Title: 'Four-Dimensional Scatter Plot - demo #1' | Symbols: query_sumobrain_facets(), playAudioTick, loadSession, saveSession, showToast, buildLegend | Stack: Web Audio / DSP",
+      "project_dna": {
+        "manifest": {
+          "name": "Four-Dimensional Scatter Plot - demo #1"
+        },
+        "html_ui": [
+          {
+            "title": "Four-Dimensional Scatter Plot - demo #1",
+            "headings": [
+              "About this Demo",
+              "Four-Dimensional Scatter Plot - demo #1",
+              "Country Inspection"
+            ],
+            "ui_labels": [
+              "Start Explorer",
+              "X-Axis Metric",
+              "Y-Axis Metric",
+              "Bubble Size",
+              "Axis Scaling (Anti-shock)",
+              "Search Country",
+              "Speed / Year",
+              "Run",
+              "Europe",
+              "Asia"
+            ],
+            "file": "euro-scatter/index.html"
+          },
+          {
+            "title": "Generated widgets",
+            "file": "scripts/original_gaominder.html"
+          }
+        ],
+        "code_symbols": [
+          "query_sumobrain_facets()",
+          "playAudioTick",
+          "loadSession",
+          "saveSession",
+          "showToast",
+          "buildLegend",
+          "getYearData",
+          "updateChart",
+          "updateInfoPanel"
+        ],
+        "python_imports": [
+          "requests"
+        ]
+      },
+      "active_code_files": [
+        "facets.py",
+        "euro-scatter/index.html",
+        "euro-scatter/sw.js",
+        "euro-scatter/manifest.json",
+        "euro-scatter/generate_data.py",
+        "euro-scatter/app.js",
+        "scripts/build_pwa.sh",
+        "scripts/original_gaominder.html"
+      ],
+      "pruned_subtrees": [],
+      "ai_synthesis": {
+        "onderwerp_kort": "Dit project is een interactieve webapplicatie voor het visualiseren van landengegevens in een vierdimensionale scatterplot met audio-ondersteuning.",
+        "architectuur_samenvatting": "De applicatie is gestructureerd als een Progressive Web App met een HTML5- en JavaScript-frontend die gebruikmaakt van Web Audio DSP voor audio-interactie. Python-scripts ondersteunen de data-generatie en het ophalen van externe gegevens via API-verzoeken.",
+        "domein_categorie": "Audio DSP, edge-AI and telemetry",
+        "geschikt_voor_publiek_portaal": true
+      }
+    },
+    {
+      "source_root": "custom_1_Gemini",
+      "name": "fenix",
+      "kind": "directory",
+      "path": "/mnt/fedora44/home/steve/Gemini/fenix",
+      "last_modified": "2026-09-04",
+      "inspected_files": 49,
+      "languages": {
+        "Python": 15,
+        "YAML": 4,
+        "Shell/Bash": 1
+      },
+      "asset_summary": {
+        ".jpg": 4,
+        ".svg": 3,
+        ".zip": 3
+      },
+      "detected_tech": [
+        "Apache Solr / Lucene",
+        "GTK4 / Libadwaita"
+      ],
+      "synthesized_topic": "eagle045.py: ========================================================================================= 🔥 PROJECT FENIX (v45) - MATRIX UX, OPERATOR PRESERVER & SAFE RANGES ========================================================================================= ANTI-LITE MANIFEST (DE HEILIGE WETTEN VAN DIT SCRIPT | Symbols: TraceWindow, MatrixWindow, FenixQueryApp, bind_field_value(), generate_help_docs() | Stack: Apache Solr / Lucene, GTK4 / Libadwaita",
+      "project_dna": {
+        "code_symbols": [
+          "TraceWindow",
+          "MatrixWindow",
+          "FenixQueryApp",
+          "bind_field_value()",
+          "generate_help_docs()"
+        ],
+        "python_imports": [
+          "gi",
+          "requests"
+        ],
+        "python_docstrings": [
+          "eagle045.py: ========================================================================================= 🔥 PROJECT FENIX (v45) - MATRIX UX, OPERATOR PRESERVER & SAFE RANGES ========================================================================================= ANTI-LITE MANIFEST (DE HEILIGE WETTEN VAN DIT SCRIPT",
+          "part1.py: ========================================================================================= 🔥 PROJECT FENIX (v44) - VERBOSE MATRIX ENGINE & DISCOVERY LAUNCHER ========================================================================================= ANTI-LITE MANIFEST (DE HEILIGE WETTEN VAN DIT SCRIPT)"
+        ]
+      },
+      "active_code_files": [
+        "new/eagle045.py",
+        "yamls/Béatrice_Daille_minimal_pos_sequence_filter.yaml",
+        "yamls/Rutten_Pas_Kleynenberg_pos_sequence_filter.yaml",
+        "yamls/EN_Béatrice_Daille_sliding_window_pos_sequence_filter.yaml",
+        "yamls/NL_Béatrice_Daille_sliding_window_pos_sequence_filter.yaml",
+        "clean/fork/FINAL.py",
+        "clean/fork/part3_6.py",
+        "clean/fork/part3_5.py",
+        "clean/fork/part3_4.py",
+        "clean/fork/part3_3.py",
+        "clean/fork/part3_2.py",
+        "clean/fork/part3_1.py"
+      ],
+      "pruned_subtrees": [],
+      "ai_synthesis": {
+        "onderwerp_kort": "Dit project is een Python-applicatie met een GTK4-gebruikersinterface voor het bevragen van gegevens met Apache Solr en het toepassen van taalkundige POS-sequentiefilters.",
+        "architectuur_samenvatting": "De applicatie maakt gebruik van een GTK4/Libadwaita-frontend gekoppeld aan een Apache Solr-zoekbackend via Python. De verwerking wordt ondersteund door YAML-geconfigureerde filters voor het analyseren van POS-sequenties.",
+        "domein_categorie": "Enterprise intelligence and fiscal AI",
+        "geschikt_voor_publiek_portaal": true
+      }
+    },
+    {
+      "source_root": "custom_1_Gemini",
+      "name": "firestore",
+      "kind": "directory",
+      "path": "/mnt/fedora44/home/steve/Gemini/firestore",
+      "last_modified": "2026-08-18",
+      "inspected_files": 10,
+      "languages": {
+        "Python": 2,
+        "YAML": 1,
+        "HTML5": 1
+      },
+      "asset_summary": {
+        ".ico": 2,
+        ".png": 2
+      },
+      "detected_tech": [
+        "Docker / Podman",
+        "Google Cloud / BigQuery"
+      ],
+      "synthesized_topic": "UI Title: 'Peek Matrix 2026 - Energy & Automation Dashboard' | Symbols: get_db_connection(), sanitize_value(), serve_index(), get_status(), get_sqlite_data(), verwerk_tabel() | Stack: Docker / Podman, Google Cloud / BigQuery",
+      "project_dna": {
+        "html_ui": [
+          {
+            "title": "Peek Matrix 2026 - Energy & Automation Dashboard",
+            "headings": [
+              "Laatste 100 SQLite Metingen",
+              "Systeem & Firestore Events"
+            ],
+            "ui_labels": [
+              "1. Overzicht",
+              "2. Zonne-energie (Growatt)",
+              "3. Net & P1 Meter",
+              "4. Verlichting (Hue)",
+              "5. Weer & Prognose",
+              "6. SQLite Historie",
+              "7. Systeem Logs"
+            ],
+            "file": "public/index.html"
+          }
+        ],
+        "code_symbols": [
+          "get_db_connection()",
+          "sanitize_value()",
+          "serve_index()",
+          "get_status()",
+          "get_sqlite_data()",
+          "verwerk_tabel()"
+        ],
+        "python_imports": [
+          "firebase_admin",
+          "flask",
+          "sqlite3"
+        ]
+      },
+      "active_code_files": [
+        "server_paddel.py",
+        "public/index.html",
+        "migreer.py",
+        "config.yaml"
+      ],
+      "pruned_subtrees": [],
+      "ai_synthesis": {
+        "onderwerp_kort": "Een Flask-gebaseerd dashboard voor het monitoren en visualiseren van energie- en automatiseringsgegevens uit diverse bronnen met behulp van SQLite en Firestore.",
+        "architectuur_samenvatting": "De architectuur bestaat uit een Python Flask-backend die gegevens uit een lokale SQLite-database en Firebase Firestore ontsluit via een HTML5-gebruikersinterface. Het systeem is gecentraliseerd rondom Docker en verwerkt telemetriegegevens van onder andere zonne-energie, P1-meters en slimme verlichting.",
+        "domein_categorie": "Audio DSP, edge-AI and telemetry",
+        "geschikt_voor_publiek_portaal": true
+      }
+    },
+    {
+      "source_root": "custom_1_Gemini",
+      "name": "fontfilm",
+      "kind": "directory",
+      "path": "/mnt/fedora44/home/steve/Gemini/fontfilm",
+      "last_modified": "2026-09-12",
+      "inspected_files": 6108,
+      "languages": {
+        "Python": 14,
+        "YAML": 5
+      },
+      "asset_summary": {
+        ".ttf": 189,
+        ".otf": 12,
+        ".zip": 5,
+        ".jpg": 2,
+        ".png": 2,
+        ".jpeg": 1
+      },
+      "detected_tech": [
+        "Docker / Podman",
+        "PDF / Typography Pipeline"
+      ],
+      "synthesized_topic": "Scanner_by_Lite.py: Scanner for Fontbook based on YAML configuration and SQLite metadata database. Inclusief automatische database-synchronisatie, robuuste duplicaat-check en permissieherstel. | Symbols: get_time_str(), draw_clock_dial(), parse_font_worker(), process_font_with_timeout(), main(), sanitize_str() | Stack: Docker / Podman, PDF / Typography Pipeline",
+      "project_dna": {
+        "code_symbols": [
+          "get_time_str()",
+          "draw_clock_dial()",
+          "parse_font_worker()",
+          "process_font_with_timeout()",
+          "main()",
+          "sanitize_str()",
+          "get_file_hash()",
+          "analyze_font()",
+          "setup_db()",
+          "cleanup_stale_records()",
+          "fix_permissions()",
+          "run_integrity_check()",
+          "process_fonts()",
+          "load_yaml_config()",
+          "get_db_connection()"
+        ],
+        "python_imports": [
+          "PIL",
+          "fontTools",
+          "fontforge",
+          "reportlab",
+          "sqlite3",
+          "weasyprint",
+          "yaml"
+        ],
+        "python_docstrings": [
+          "Scanner_by_Lite.py: Scanner for Fontbook based on YAML configuration and SQLite metadata database. Inclusief automatische database-synchronisatie, robuuste duplicaat-check en permissieherstel.",
+          "Compiler_by_lite.py: Compiler for Fontbook based on YAML configuration and SQLite metadata database. Geoptimaliseerde versie met strak begrensde tekstwrapping voor sectiecovers."
+        ]
+      },
+      "active_code_files": [
+        "A_lite.py",
+        "A.py",
+        "fontbook.yaml",
+        "metric_trawler.py",
+        "Scanner_by_Lite.py",
+        "Compiler_by_lite.py",
+        "import/make_font_pdf_catalogus.py",
+        "import/rescue_PRIMAFONT_fonts.py",
+        "import/rescue_linotype_fonts.py",
+        "import/font_converter.py",
+        "yaml/OK.fontbook.yaml",
+        "exper/make_fontbook_pdf.py"
+      ],
+      "pruned_subtrees": [
+        {
+          "subpath": "fonts_lib",
+          "reason": "high_fanout_no_code (13 subdirs: Adobe, Alfabetisch, Apple, Bitstream, Corrupt, Dalton_Maag, Google, ITC...)"
+        },
+        {
+          "subpath": "import/Another_Fonts.2",
+          "reason": "high_fanout_no_code (13 subdirs: Adobe, Alfabetisch, Apple, Bitstream, Corrupt, Dalton_Maag, Google, ITC...)"
+        },
+        {
+          "subpath": "import/Another_Fonts.3",
+          "reason": "asset_sink (4189 files, 4189 binary/media/font assets)"
+        },
+        {
+          "subpath": "import/Another_Fonts.1/LinoType",
+          "reason": "asset_sink (4186 files, 4186 binary/media/font assets)"
+        },
+        {
+          "subpath": "import/Another_Fonts.1/PrimaFont/Classic-Collection Type1",
+          "reason": "high_fanout_no_code (184 subdirs: AME, ANT, ARK, AVA, BAS, BAU, BEG, BEI...)"
+        },
+        {
+          "subpath": "import/Another_Fonts.1/PrimaFont/Display-Collection Type1",
+          "reason": "high_fanout_no_code (152 subdirs: AAR, ADE, ALG, ALH, ALO, AMH, ANY, ARA...)"
+        },
+        {
+          "subpath": "import/Another_Fonts.1/PrimaFont/Modern-Collection Type1",
+          "reason": "high_fanout_no_code (73 subdirs: AAL, AND, BAN, BAO, BBA, BBS, BNK, BOI...)"
+        },
+        {
+          "subpath": "old_build/frames",
+          "reason": "asset_sink (2476 files, 2476 binary/media/font assets)"
+        }
+      ],
+      "ai_synthesis": {
+        "onderwerp_kort": "Dit project scant en compileert lettertypebestanden naar een Fontbook-catalogus op basis van YAML-configuraties en een SQLite-database.",
+        "architectuur_samenvatting": "De architectuur combineert Python-bibliotheken zoals fontTools, fontforge, reportlab en weasyprint voor de analyse en PDF-generatie van lettertypen. Een SQLite-database fungeert als metadata-opslag voor synchronisatie en integriteitscontroles.",
+        "domein_categorie": "Publishing and typographic pipelines",
+        "geschikt_voor_publiek_portaal": true
+      }
+    },
+    {
+      "source_root": "custom_1_Gemini",
+      "name": "fonthack",
+      "kind": "directory",
+      "path": "/mnt/fedora44/home/steve/Gemini/fonthack",
+      "last_modified": "2026-08-23",
+      "inspected_files": 7,
+      "languages": {},
+      "asset_summary": {
+        ".ttf": 4
+      },
+      "detected_tech": [],
+      "synthesized_topic": "fonthack",
+      "project_dna": {},
+      "active_code_files": [],
+      "pruned_subtrees": [],
+      "ai_synthesis": {
+        "onderwerp_kort": "Het project Fonthack is een initiatief dat zich richt op het bewerken of aanpassen van lettertypes.",
+        "architectuur_samenvatting": "Er is geen technische architectuur gedocumenteerd omdat het project geen actieve broncodebestanden of gedetecteerde technologieën bevat. De huidige status is beperkt tot de initiële projectstructuur.",
+        "domein_categorie": "Publishing and typographic pipelines",
+        "geschikt_voor_publiek_portaal": false
+      }
+    },
+    {
+      "source_root": "custom_1_Gemini",
+      "name": "gemomni",
+      "kind": "directory",
+      "path": "/mnt/fedora44/home/steve/Gemini/gemomni",
+      "last_modified": "2026-09-06",
+      "inspected_files": 90,
+      "languages": {
+        "Kotlin": 4,
+        "Python": 4,
+        "Shell/Bash": 3
+      },
+      "asset_summary": {
+        ".png": 43,
+        ".jpg": 6,
+        ".jpeg": 2,
+        ".jar": 1
+      },
+      "detected_tech": [
+        "Android SDK / WebView",
+        "Google Cloud / BigQuery"
+      ],
+      "synthesized_topic": "GemOmni GemOmni is a productivity extension for Google Chrome that seamlessly integrates Google Gemini into your browsing experience. Features - **Send Text to Gemini**: Simply select any text on a webpage, right-click, and choose \"Send to Gemini\" from the context menu to instantly process the text. - **Analyze URLs**: Click the GemOmni extension icon in your toolbar to send the current page's URL to Gemini for summarization or analysis. | Symbols: main(), parse_playstore_md(), list_tracks(), GeminiActivity, val | Stack: Android SDK / WebView, Google Cloud / BigQuery",
+      "project_dna": {
+        "readme_summary": "GemOmni GemOmni is a productivity extension for Google Chrome that seamlessly integrates Google Gemini into your browsing experience. Features - **Send Text to Gemini**: Simply select any text on a webpage, right-click, and choose \"Send to Gemini\" from the context menu to instantly process the text. - **Analyze URLs**: Click the GemOmni extension icon in your toolbar to send the current page's URL to Gemini for summarization or analysis.",
+        "android": {
+          "activities": [
+            "GeminiActivity"
+          ],
+          "permissions": [
+            "INTERNET"
+          ]
+        },
+        "code_symbols": [
+          "main()",
+          "parse_playstore_md()",
+          "list_tracks()",
+          "GeminiActivity",
+          "val"
+        ],
+        "python_imports": [
+          "google",
+          "googleapiclient"
+        ]
+      },
+      "active_code_files": [
+        "GemOmni/Makefile",
+        "GemOmni/upload_to_procuction_track.py",
+        "GemOmni/app/build.gradle.kts",
+        "GemOmni/upload_store_listing.py",
+        "GemOmni/upload_to_test_track.py",
+        "GemOmni/check_tracks.py",
+        "gclouder.sh",
+        "GemOmni/store/resmaker.sh",
+        "GemOmni/store/Makefile",
+        "treefind.sh",
+        "GemOmni/store/README.md",
+        "GemOmni/build.gradle.kts"
+      ],
+      "pruned_subtrees": [],
+      "ai_synthesis": {
+        "onderwerp_kort": "Dit project is een productiviteitstool die Google Gemini integreert in de browse-ervaring via een Android-applicatie en geautomatiseerde deployment-scripts.",
+        "architectuur_samenvatting": "De codebase combineert een Kotlin Android-applicatie met een GeminiActivity en WebView, ondersteund door Python-scripts voor geautomatiseerd beheer van Google Play Store-tracks. De deployment-pijplijn maakt gebruik van de Google API Client en Shell-scripts voor build- en releasebeheer.",
+        "domein_categorie": "Browser-native AI and WebGPU engines",
+        "geschikt_voor_publiek_portaal": true
+      }
+    },
+    {
+      "source_root": "custom_1_Gemini",
+      "name": "home_matrix",
+      "kind": "directory",
+      "path": "/mnt/fedora44/home/steve/Gemini/home_matrix",
+      "last_modified": "2026-08-09",
+      "inspected_files": 125,
+      "languages": {
+        "Python": 45,
+        "Shell/Bash": 2,
+        "HTML5": 1
+      },
+      "asset_summary": {
+        ".tar": 1,
+        ".apk": 1
+      },
+      "detected_tech": [
+        "Docker / Podman"
+      ],
+      "synthesized_topic": "Home-Matrix & P1 Dashboard Een gecentraliseerd, lokaal smart home-monitoringssysteem op basis van een Python Flask-webserver en een supervisor-patroon dat zelfstandig achtergronddaemons aanstuurt. Het systeem verzamelt en visualiseert real-time energieverbruik (P1), zonne-energie (Growatt), Philips Hue-gebeurtenissen en weerdata (IDELFT55). 1. Architectuur & Componenten Het systeem werkt volgens een supervisor-patroon waarbij de hoofdapplicatie ( | Symbols: test_hue_live_polling(), check_ip(), scan_network(), log_p1_measurement(), fetch_p1_data(), process_mailbox() | Stack: Docker / Podman",
+      "project_dna": {
+        "readme_summary": "Home-Matrix & P1 Dashboard Een gecentraliseerd, lokaal smart home-monitoringssysteem op basis van een Python Flask-webserver en een supervisor-patroon dat zelfstandig achtergronddaemons aanstuurt. Het systeem verzamelt en visualiseert real-time energieverbruik (P1), zonne-energie (Growatt), Philips Hue-gebeurtenissen en weerdata (IDELFT55). 1. Architectuur & Componenten Het systeem werkt volgens een supervisor-patroon waarbij de hoofdapplicatie (",
+        "code_symbols": [
+          "test_hue_live_polling()",
+          "check_ip()",
+          "scan_network()",
+          "log_p1_measurement()",
+          "fetch_p1_data()",
+          "process_mailbox()",
+          "log_hue_event()",
+          "get_or_create_username()",
+          "init_db()",
+          "log_weather_measurement()",
+          "fetch_weather_data()"
+        ],
+        "python_imports": [
+          "concurrent",
+          "requests",
+          "sqlite3",
+          "ssl"
+        ]
+      },
+      "active_code_files": [
+        "home_matrix.py",
+        "backup6/home_matrix.py",
+        "backup6/test_hue.py",
+        "backup6/test_growatt_api.py",
+        "backup6/scan_netwerk.py",
+        "backup6/test_p1.py",
+        "backup6/deamon_hue.py",
+        "backup6/deamon_weather.py",
+        "backup6/deamon_p1.py",
+        "test_growatt_api.py",
+        "README2.md",
+        "backup5/home_matrix.py"
+      ],
+      "pruned_subtrees": [],
+      "ai_synthesis": {
+        "onderwerp_kort": "Een gecentraliseerd, lokaal smart home-monitoringssysteem dat real-time energieverbruik, zonne-energie, Philips Hue-gebeurtenissen en weerdata verzamelt en visualiseert.",
+        "architectuur_samenvatting": "De applicatie maakt gebruik van een Python Flask-webserver en een supervisor-patroon om achtergronddaemons aan te sturen voor data-acquisitie. Gegevens worden opgeslagen in een SQLite-database en het systeem is ontworpen om te draaien in Docker- of Podman-containers.",
+        "domein_categorie": "Audio DSP, edge-AI and telemetry",
+        "geschikt_voor_publiek_portaal": true
+      }
+    },
+    {
+      "source_root": "custom_1_Gemini",
+      "name": "html",
+      "kind": "directory",
+      "path": "/mnt/fedora44/home/steve/Gemini/html",
+      "last_modified": "2026-04-07",
+      "inspected_files": 69,
+      "languages": {
+        "HTML5": 32,
+        "JavaScript": 4,
+        "CSS3": 1
+      },
+      "asset_summary": {
+        ".wav": 12,
+        ".png": 9,
+        ".ico": 1,
+        ".zip": 1,
+        ".apk": 1
+      },
+      "detected_tech": [
+        "Web Audio / DSP"
+      ],
+      "synthesized_topic": "UI Title: 'Sitar Workbench v33 - Pure Path' | https://fantastic-crostata-2de698.netlify.app/ https://docs.pwabuilder.com/#/builder/android?id=publish | Symbols: playSound | Stack: Web Audio / DSP",
+      "project_dna": {
+        "readme_summary": "https://fantastic-crostata-2de698.netlify.app/ https://docs.pwabuilder.com/#/builder/android?id=publish",
+        "manifest": {
+          "name": "Synaptix Studio v1.1.7",
+          "description": "Spartan Neural Network Designer"
+        },
+        "html_ui": [
+          {
+            "title": "Sitar Workbench v33 - Pure Path",
+            "ui_labels": [
+              "START ENGINE (v33)",
+              "Upper Octave",
+              "Sub Octave",
+              "ACTIVE",
+              "Buzz Amount",
+              "Time (ms)",
+              "Dry/Wet Mix",
+              "Volume"
+            ],
+            "file": "netlify/Metheny/index.html"
+          },
+          {
+            "title": "Sitar Engine v31 - Professional Control",
+            "ui_labels": [
+              "START AUDIO ENGINE (v31)",
+              "Sustain",
+              "Threshold",
+              "ACTIVE",
+              "Bite / Grit",
+              "Zing (Highs)",
+              "Time (ms)",
+              "Mix",
+              "Width",
+              "Volume"
+            ],
+            "file": "netlify/Metheny/index32.html"
+          },
+          {
+            "title": "Sitar Engine v30 - LAST TRAIN HOME (FINAL)",
+            "ui_labels": [
+              "KLIK HIER VOOR GELUID (START v30)",
+              "Sustain",
+              "Master Vol",
+              "Treble/Zing",
+              "Drive",
+              "Width",
+              "Speed",
+              "Decay",
+              "Mix"
+            ],
+            "file": "netlify/Metheny/index30.html"
+          }
+        ],
+        "code_symbols": [
+          "playSound"
+        ]
+      },
+      "active_code_files": [
+        "netlify/Metheny/index.html",
+        "netlify/Metheny/index32.html",
+        "netlify/Metheny/index30.html",
+        "netlify/Metheny/index28.html",
+        "netlify/Metheny/index27.html",
+        "netlify/Metheny/index26.html",
+        "netlify/Metheny/index25.html",
+        "netlify/Metheny/index24.html",
+        "netlify/Metheny/index23.html",
+        "netlify/Metheny/index21.html",
+        "netlify/Metheny/index20.html",
+        "netlify/Metheny/index18.html"
+      ],
+      "pruned_subtrees": [],
+      "ai_synthesis": {
+        "onderwerp_kort": "Een webgebaseerde applicatie genaamd Synaptix Studio die fungeert als een Spartan Neural Network Designer en beschikt over interactieve Sitar audio-engines.",
+        "architectuur_samenvatting": "De applicatie is gebouwd met HTML5, JavaScript en CSS3 en maakt gebruik van Web Audio en DSP-technologieën voor realtime geluidsverwerking in de browser. De frontend bestaat uit diverse HTML-interfaces die direct audio-effecten en -synthese aansturen via functies zoals playSound.",
+        "domein_categorie": "Audio DSP, edge-AI and telemetry",
+        "geschikt_voor_publiek_portaal": true
+      }
+    },
+    {
+      "source_root": "custom_1_Gemini",
+      "name": "instagrid",
+      "kind": "directory",
+      "path": "/mnt/fedora44/home/steve/Gemini/instagrid",
+      "last_modified": "2026-10-04",
+      "inspected_files": 10,
+      "languages": {
+        "Python": 2
+      },
+      "asset_summary": {
+        ".png": 7,
+        ".svg": 1
+      },
+      "detected_tech": [],
+      "synthesized_topic": "Symbols: genereer_definitieve_instagram_tegels() | Langs: Python",
+      "project_dna": {
+        "code_symbols": [
+          "genereer_definitieve_instagram_tegels()"
+        ],
+        "python_imports": [
+          "PIL",
+          "cairosvg"
+        ]
+      },
+      "active_code_files": [
+        "upload_tegels.py",
+        "build_grid_final.py"
+      ],
+      "pruned_subtrees": [],
+      "ai_synthesis": {
+        "onderwerp_kort": "Dit project genereert en uploadt Instagram-afbeeldingstegels met behulp van PIL en cairosvg.",
+        "architectuur_samenvatting": "Een Python-gebaseerde pipeline die PIL en cairosvg gebruikt voor het renderen en samenstellen van afbeeldingstegels. De scripts build_grid_final.py en upload_tegels.py verzorgen respectievelijk de generatie en de upload van de resulterende media.",
+        "domein_categorie": "Publishing and typographic pipelines",
+        "geschikt_voor_publiek_portaal": false
+      }
+    },
+    {
+      "source_root": "custom_1_Gemini",
+      "name": "ircopter",
+      "kind": "directory",
+      "path": "/mnt/fedora44/home/steve/Gemini/ircopter",
+      "last_modified": "2026-09-04",
+      "inspected_files": 2,
+      "languages": {
+        "Python": 1
+      },
+      "asset_summary": {
+        ".jpg": 1
+      },
+      "detected_tech": [],
+      "synthesized_topic": "Symbols: main() | Langs: Python",
+      "project_dna": {
+        "code_symbols": [
+          "main()"
+        ]
+      },
+      "active_code_files": [
+        "sniff01.py"
+      ],
+      "pruned_subtrees": [],
+      "ai_synthesis": {
+        "onderwerp_kort": "Een Python-project genaamd ircopter dat een sniffer-script bevat.",
+        "architectuur_samenvatting": "De applicatie is opgebouwd rond een enkel Python-script met een basale main-functie. Er zijn geen aanvullende bibliotheken of frameworks gedetecteerd.",
+        "domein_categorie": "Low-level OS, flashing and forensics",
+        "geschikt_voor_publiek_portaal": false
+      }
+    },
+    {
+      "source_root": "custom_1_Gemini",
+      "name": "kobo",
+      "kind": "directory",
+      "path": "/mnt/fedora44/home/steve/Gemini/kobo",
+      "last_modified": "2026-08-27",
+      "inspected_files": 455,
+      "languages": {
+        "Python": 2,
+        "Shell/Bash": 1
+      },
+      "asset_summary": {
+        ".png": 19,
+        ".jpg": 11,
+        ".otf": 6,
+        ".ttf": 3
+      },
+      "detected_tech": [
+        "Docker / Podman"
+      ],
+      "synthesized_topic": "Symbols: format_size(), main(), DeviceDetectWorker, FileScanWorker, MigrationWorker, KoboManagerApp | Stack: Docker / Podman",
+      "project_dna": {
+        "code_symbols": [
+          "format_size()",
+          "main()",
+          "DeviceDetectWorker",
+          "FileScanWorker",
+          "MigrationWorker",
+          "KoboManagerApp"
+        ],
+        "python_imports": [
+          "PyQt6",
+          "sqlite3"
+        ]
+      },
+      "active_code_files": [
+        "images/merge_old_to_new.py",
+        "images/compare.sh",
+        "kobo_manager.py"
+      ],
+      "pruned_subtrees": [
+        {
+          "subpath": "Kobo_Aura_Edition_2_2016/AntiGravity/Calibre Library",
+          "reason": "high_fanout_no_code (13 subdirs: C.E.S. Arps, Dan Brown, Darwin, Dennis Taylor, Gerard Reve, Hans Rosling, J.K. Rowling, J.R.R. Tolkien...)"
+        },
+        {
+          "subpath": "Kobo_Aura_Edition_2_2016/Digital Editions/Annotations/Dennis Taylor",
+          "reason": "empty_dir"
+        },
+        {
+          "subpath": "Kobo_Aura_Edition_2_2016/Digital Editions/Annotations/Gerard Reve",
+          "reason": "empty_dir"
+        },
+        {
+          "subpath": "Kobo_Aura_Edition_2_2016/Digital Editions/Annotations/AntiGravity/Stevens",
+          "reason": "empty_dir"
+        },
+        {
+          "subpath": "Kobo_Aura_Edition_2_2016/Digital Editions/Annotations/Calibre Library/J.R.R. Tolkien",
+          "reason": "empty_dir"
+        },
+        {
+          "subpath": "Kobo_Aura_Edition_2_2016/Digital Editions/Annotations/Calibre Library/Hans Rosling/Factfulness (24)",
+          "reason": "empty_dir"
+        },
+        {
+          "subpath": "Kobo_Aura_Edition_2_2016/Digital Editions/Annotations/Calibre Library/J.K. Rowling/Harry Potter en de Halfbloed Prins (232)",
+          "reason": "empty_dir"
+        },
+        {
+          "subpath": "Kobo_Aura_Edition_2_2016/Digital Editions/Annotations/Calibre Library/J.K. Rowling/Harry Potter en de geheime kamer (235)",
+          "reason": "empty_dir"
+        },
+        {
+          "subpath": "Kobo_Aura_Edition_2_2016/Digital Editions/Annotations/Calibre Library/J.K. Rowling/Harry Potter en de gevangene van Azkaban (230)",
+          "reason": "empty_dir"
+        },
+        {
+          "subpath": "Kobo_Aura_Edition_2_2016/Digital Editions/Annotations/Calibre Library/J.K. Rowling/Harry Potter en de orde van de Feniks (229)",
+          "reason": "empty_dir"
+        },
+        {
+          "subpath": "Kobo_Aura_Edition_2_2016/Digital Editions/Annotations/Calibre Library/J.K. Rowling/Harry Potter en de relieken van de dood (234)",
+          "reason": "empty_dir"
+        },
+        {
+          "subpath": "Kobo_Aura_Edition_2_2016/Digital Editions/Annotations/Calibre Library/J.K. Rowling/Harry Potter en de steen der wijzen (233)",
+          "reason": "empty_dir"
+        },
+        {
+          "subpath": "Kobo_Aura_Edition_2_2016/Digital Editions/Annotations/Calibre Library/J.K. Rowling/Harry Potter en de vuurbeker (231)",
+          "reason": "empty_dir"
+        },
+        {
+          "subpath": "Kobo_Aura_Edition_2_2016/Digital Editions/Annotations/Calibre Library/Nassim Nicholas Taleb/Antifragile_ Things That Gain from Disorder (8)",
+          "reason": "empty_dir"
+        },
+        {
+          "subpath": "Kobo_Aura_Edition_2_2016/Digital Editions/Annotations/Calibre Library/Patrick Rothfuss/De naam van de wind (28)",
+          "reason": "empty_dir"
+        },
+        {
+          "subpath": "Kobo_Aura_Edition_2_2016/Digital Editions/Annotations/Calibre Library/Stephen Hawking/Brief Answers to the Big Questions (20)",
+          "reason": "empty_dir"
+        },
+        {
+          "subpath": "Kobo_Aura_Edition_2_2016/Digital Editions/Annotations/Calibre Library/Unknown/De_boeken_vd_zieners_dl2 (25)",
+          "reason": "empty_dir"
+        },
+        {
+          "subpath": "Kobo_Aura_Edition_2_2016/Digital Editions/Annotations/Calibre Library/Yuval Noah Harari/Homo Deus Intl (31)",
+          "reason": "empty_dir"
+        },
+        {
+          "subpath": "Kobo_Aura_Edition_2_2016/Digital Editions/Annotations/Darwin/The Voyage of the Beagle",
+          "reason": "empty_dir"
+        },
+        {
+          "subpath": "images/Kobo_Aura_H20_2014/Digital Editions/Thumbnails",
+          "reason": "asset_sink (33 files, 33 binary/media/font assets)"
+        }
+      ],
+      "ai_synthesis": {
+        "onderwerp_kort": "Een PyQt6-desktopapplicatie voor het beheren van Kobo-apparaten, inclusief apparaatdetectie, bestandsscanning en datamigratie.",
+        "architectuur_samenvatting": "De applicatie maakt gebruik van een PyQt6-interface met asynchrone worker-threads voor apparaatdetectie, bestandsscans en migraties, ondersteund door een SQLite-database. Docker en aanvullende Python- en Shell-scripts ondersteunen de deployment en het beheer van afbeeldingen.",
+        "domein_categorie": "Low-level OS, flashing and forensics",
+        "geschikt_voor_publiek_portaal": true
+      }
+    },
+    {
+      "source_root": "custom_1_Gemini",
+      "name": "logitech",
+      "kind": "directory",
+      "path": "/mnt/fedora44/home/steve/Gemini/logitech",
+      "last_modified": "2026-08-30",
+      "inspected_files": 3,
+      "languages": {
+        "Shell/Bash": 2
+      },
+      "asset_summary": {},
+      "detected_tech": [
+        "PipeWire / Audio DSP"
+      ],
+      "synthesized_topic": "Logitech sound keep-alive hack [tomsguide-url]: https://forums.tomsguide.com/threads/prevent-speakers-standby-mode.375550/#post-1650702 Dit project bevat een script dat voorkomt dat Logitech computerluidsprekers automatisch in een energiebesparende stand-by-modus (ErP) springen door op de achtergrond periodiek een onhoorbare 10Hz toon af te spelen via PipeWire. Install ```bash ./install_logitech_keepalive.sh Uninstall ```bash | Stack: PipeWire / Audio DSP",
+      "project_dna": {
+        "readme_summary": "Logitech sound keep-alive hack [tomsguide-url]: https://forums.tomsguide.com/threads/prevent-speakers-standby-mode.375550/#post-1650702 Dit project bevat een script dat voorkomt dat Logitech computerluidsprekers automatisch in een energiebesparende stand-by-modus (ErP) springen door op de achtergrond periodiek een onhoorbare 10Hz toon af te spelen via PipeWire. Install ```bash ./install_logitech_keepalive.sh Uninstall ```bash"
+      },
+      "active_code_files": [
+        "README.md",
+        "uninstall_logitech_keepalive.sh",
+        "install_logitech_keepalive.sh"
+      ],
+      "pruned_subtrees": [],
+      "ai_synthesis": {
+        "onderwerp_kort": "Dit project voorkomt dat Logitech-luidsprekers in stand-by gaan door periodiek een onhoorbare toon af te spelen via PipeWire.",
+        "architectuur_samenvatting": "Het project maakt gebruik van Bash-scripts om een achtergrondtaak te configureren die via PipeWire een onhoorbare 10Hz-toon genereert. Dit voorkomt dat aangesloten audioapparatuur in de energiebesparende stand-by-modus gaat.",
+        "domein_categorie": "Audio DSP, edge-AI and telemetry",
+        "geschikt_voor_publiek_portaal": false
+      }
+    },
+    {
+      "source_root": "custom_1_Gemini",
+      "name": "louter",
+      "kind": "directory",
+      "path": "/mnt/fedora44/home/steve/Gemini/louter",
+      "last_modified": "2026-08-26",
+      "inspected_files": 15,
+      "languages": {
+        "Python": 1
+      },
+      "asset_summary": {
+        ".png": 5,
+        ".mp4": 3,
+        ".jpg": 3,
+        ".ttf": 1
+      },
+      "detected_tech": [],
+      "synthesized_topic": "Symbols: laad_font(), maak_high_end_profiel(), maak_high_end_omslag() | Langs: Python",
+      "project_dna": {
+        "code_symbols": [
+          "laad_font()",
+          "maak_high_end_profiel()",
+          "maak_high_end_omslag()"
+        ],
+        "python_imports": [
+          "PIL"
+        ]
+      },
+      "active_code_files": [
+        "generate_2026.py"
+      ],
+      "pruned_subtrees": [],
+      "ai_synthesis": {
+        "onderwerp_kort": "Dit project genereert hoogwaardige profielen en omslagen met behulp van de Python Imaging Library.",
+        "architectuur_samenvatting": "Het project is opgebouwd als een Python-script dat de PIL-bibliotheek aanroept voor beeldverwerking en font-manipulatie. De uitvoering is gecentreerd rond specifieke functies voor het laden van lettertypen en het genereren van visuele profielen en omslagen.",
+        "domein_categorie": "Publishing and typographic pipelines",
+        "geschikt_voor_publiek_portaal": false
+      }
+    },
+    {
+      "source_root": "custom_1_Gemini",
+      "name": "marvin",
+      "kind": "directory",
+      "path": "/mnt/fedora44/home/steve/Gemini/marvin",
+      "last_modified": "2026-09-05",
+      "inspected_files": 43,
+      "languages": {
+        "Arduino/Embedded C++": 14,
+        "C/C++ Header": 5,
+        "C++": 4,
+        "Python": 2,
+        "Shell/Bash": 1
+      },
+      "asset_summary": {},
+      "detected_tech": [
+        "LoRa / IoT"
+      ],
+      "synthesized_topic": "Adafruit Unified Sensor Driver # Many small embedded systems exist to collect data from sensors, analyse the data, and either take an appropriate action or send that sensor data to another system for processing. One of the many challenges of embedded systems design is the fact that parts you used today may be out of production tomorrow, or system requirements may change and you may need to choose a different sensor down the road. | Symbols: get_term_size(), add_log(), dashboard_worker(), set_progress(), enqueue_output(), run_in_isolated_process_group_with_queue() | Stack: LoRa / IoT",
+      "project_dna": {
+        "readme_summary": "Adafruit Unified Sensor Driver # Many small embedded systems exist to collect data from sensors, analyse the data, and either take an appropriate action or send that sensor data to another system for processing. One of the many challenges of embedded systems design is the fact that parts you used today may be out of production tomorrow, or system requirements may change and you may need to choose a different sensor down the road.",
+        "code_symbols": [
+          "get_term_size()",
+          "add_log()",
+          "dashboard_worker()",
+          "set_progress()",
+          "enqueue_output()",
+          "run_in_isolated_process_group_with_queue()",
+          "wait_with_container_watchdog()",
+          "get_ports()",
+          "find_board()",
+          "stop_modem_manager()"
+        ],
+        "python_imports": [
+          "queue",
+          "signal"
+        ]
+      },
+      "active_code_files": [
+        "marvin_auto_detect_grove/marvin_auto_detect_grove.ino",
+        "08backup/marvin_auto_detect_grove.ino",
+        "07backup/marvin_auto_detect_grove.ino",
+        "07backup/make.py",
+        "make.py",
+        "06backup.still.lying/marvin_auto_detect_grove.ino",
+        "06backup.still.lying/Makefile",
+        "05backup.still.sucks/Makefile",
+        "05backup.still.sucks/marvin_auto_detect_grove.ino",
+        "04backup.still.sucks/Makefile",
+        "04backup.still.sucks/marvin_auto_detect_grove.ino",
+        "03backup/marvin_auto_detect_grove.ino"
+      ],
+      "pruned_subtrees": [],
+      "ai_synthesis": {
+        "onderwerp_kort": "Dit project is ontworpen voor de automatische detectie van Grove-sensoren op een embedded Arduino-platform met LoRa-connectiviteit.",
+        "architectuur_samenvatting": "De architectuur combineert embedded C++ firmware voor sensoruitlezing via de Adafruit Unified Sensor Driver met Python-scripts voor boarddetectie en procesbeheer. Het systeem is ontworpen voor IoT-telemetrie via LoRa-netwerken.",
+        "domein_categorie": "Audio DSP, edge-AI and telemetry",
+        "geschikt_voor_publiek_portaal": false
+      }
+    },
+    {
+      "source_root": "custom_1_Gemini",
+      "name": "metromoo",
+      "kind": "directory",
+      "path": "/mnt/fedora44/home/steve/Gemini/metromoo",
+      "last_modified": "2026-09-14",
+      "inspected_files": 29,
+      "languages": {
+        "Python": 11,
+        "HTML5": 5,
+        "JavaScript": 4
+      },
+      "asset_summary": {},
+      "detected_tech": [
+        "Docker / Podman"
+      ],
+      "synthesized_topic": "UI Title: 'moo.demetro.nl - Standalone PWA' | Stack: Docker / Podman",
+      "project_dna": {
+        "manifest": {
+          "name": "MetroMoo PWA"
+        },
+        "html_ui": [
+          {
+            "title": "moo.demetro.nl - Standalone PWA",
+            "headings": [
+              "moo.demetro.nl Inloggen"
+            ],
+            "ui_labels": [
+              "Gebruikersnaam",
+              "Wachtwoord",
+              "Verbind met Metro",
+              "Verstuur"
+            ],
+            "file": "work/websitebuid/metro_pwa/index.html"
+          },
+          {
+            "title": "MetroMoo - Cloudflare Pages Standalone PWA",
+            "headings": [
+              "MetroMoo Cloudflare Pages"
+            ],
+            "ui_labels": [
+              "LambdaMOO Gebruikersnaam",
+              "Wachtwoord",
+              "Instappen bij de Metro",
+              "Verstuur"
+            ],
+            "file": "work/websitebuid/OLD.mediro_cloudflare_pages/index.html"
+          },
+          {
+            "title": "LambdaMOO Programmer's Manual",
+            "headings": [
+              "LambdaMOO Programmer's Manual",
+              "Introduction",
+              "The LambdaMOO Database",
+              "MOO Value Types",
+              "Objects in the MOO Database",
+              "Fundamental Object Attributes"
+            ],
+            "file": "ProgrammersManual.html"
+          }
+        ]
+      },
+      "active_code_files": [
+        "work/websitebuid/metro_pwa/index.html",
+        "work/websitebuid/metro_pwa/sw.js",
+        "work/websitebuid/metro_pwa/manifest.json",
+        "work/websitebuid/makemock.py",
+        "work/websitebuid/OLD.mediro_cloudflare_pages/index.html",
+        "work/websitebuid/OLD.mediro_cloudflare_pages/sw.js",
+        "work/websitebuid/OLD.mediro_cloudflare_pages/manifest.json",
+        "work/websitebuid/metrogames_server.py",
+        "work/metrogames_server.py",
+        "work/07backup.macOS/metrogames_server.py",
+        "work/06backup.pre_multi_tab/metrogames_server.py",
+        "work/05backup/metrogames_server.py"
+      ],
+      "pruned_subtrees": [],
+      "ai_synthesis": {
+        "onderwerp_kort": "Dit project is een Progressive Web Application die dient als client voor een LambdaMOO-omgeving, ondersteund door een Python-backend.",
+        "architectuur_samenvatting": "De architectuur bestaat uit een HTML5 en JavaScript Progressive Web Application met service workers, die verbinding maakt met een Python-gebaseerde backend server. De frontend is ontworpen om standalone of via Cloudflare Pages te worden gehost.",
+        "domein_categorie": "Cloud-native virtual worlds",
+        "geschikt_voor_publiek_portaal": true
+      }
+    },
+    {
+      "source_root": "custom_1_Gemini",
+      "name": "miband2",
+      "kind": "directory",
+      "path": "/mnt/fedora44/home/steve/Gemini/miband2",
+      "last_modified": "2026-08-21",
+      "inspected_files": 9,
+      "languages": {
+        "HTML5": 4,
+        "JavaScript": 1
+      },
+      "asset_summary": {
+        ".ico": 1,
+        ".jpg": 1
+      },
+      "detected_tech": [
+        "Bluetooth Classic / BLE"
+      ],
+      "synthesized_topic": "UI Title: 'Gemini MiBand2 Multi-Streamer' | Stack: Bluetooth Classic / BLE",
+      "project_dna": {
+        "manifest": {
+          "name": "Gemini USB PWA"
+        },
+        "html_ui": [
+          {
+            "title": "Gemini MiBand2 Multi-Streamer",
+            "headings": [
+              "MiBand 2 Byte Streamer 📡"
+            ],
+            "ui_labels": [
+              "Start Multi-Channel Interception 🚀"
+            ],
+            "file": "bluetooth_pwa/index.html"
+          },
+          {
+            "title": "Gemini MiBand2 Hardware Commander",
+            "headings": [
+              "MiBand 2 Hardware Commander 🎮"
+            ],
+            "ui_labels": [
+              "1. Maak Bluetooth Connectie",
+              "Zachte Vibratie 📳",
+              "Harde Vibratie 🚨",
+              "Stop Acties 🛑"
+            ],
+            "file": "bluetooth_pwa/tril.html"
+          },
+          {
+            "title": "Gemini MiBand2 Forensisch Dashboard",
+            "headings": [
+              "Gemini MiBand 2 Deep Extractor 🔍",
+              "Stappenteller 🏃‍♂️",
+              "Afstand 🗺️",
+              "Calorieën 🔥",
+              "Batterij Status 🔋",
+              "Apparaat Informatie ℹ️"
+            ],
+            "ui_labels": [
+              "1. Maak Hardware Verbinding",
+              "2. Start Volledige Data Dump"
+            ],
+            "file": "bluetooth_pwa/larger.html"
+          }
+        ]
+      },
+      "active_code_files": [
+        "bluetooth_pwa/index.html",
+        "bluetooth_pwa/tril.html",
+        "bluetooth_pwa/larger.html",
+        "bluetooth_pwa/small.html",
+        "bluetooth_pwa/sw.js",
+        "bluetooth_pwa/manifest.json"
+      ],
+      "pruned_subtrees": [],
+      "ai_synthesis": {
+        "onderwerp_kort": "Dit project is een Progressive Web App die via Bluetooth Low Energy verbinding maakt met een MiBand 2-wearable om telemetriedata te streamen, hardwarefuncties aan te sturen en apparaatgegevens uit te lezen.",
+        "architectuur_samenvatting": "De applicatie is ontworpen als een offline-first Progressive Web App die via de Web Bluetooth API rechtstreeks communiceert met de MiBand 2-hardware. De architectuur maakt gebruik van een service worker voor offline beschikbaarheid en bevat specifieke modules voor data-extractie en hardware-aansturing.",
+        "domein_categorie": "Audio DSP, edge-AI and telemetry",
+        "geschikt_voor_publiek_portaal": true
+      }
+    },
+    {
+      "source_root": "custom_1_Gemini",
+      "name": "nautilus",
+      "kind": "directory",
+      "path": "/mnt/fedora44/home/steve/Gemini/nautilus",
+      "last_modified": "2026-10-06",
+      "inspected_files": 1,
+      "languages": {},
+      "asset_summary": {
+        ".tar": 1
+      },
+      "detected_tech": [],
+      "synthesized_topic": "nautilus",
+      "project_dna": {},
+      "active_code_files": [],
+      "pruned_subtrees": [],
+      "ai_synthesis": {
+        "onderwerp_kort": "Dit project, genaamd nautilus, bevat momenteel geen actieve codebestanden of gedetecteerde technologieën.",
+        "architectuur_samenvatting": "De technische architectuur kan niet worden vastgesteld door het ontbreken van broncode en gedetecteerde componenten. Het project bevindt zich in een lege of initiële staat.",
+        "domein_categorie": "Internal utility / maintenance",
+        "geschikt_voor_publiek_portaal": false
+      }
+    },
+    {
+      "source_root": "custom_1_Gemini",
+      "name": "nexus",
+      "kind": "directory",
+      "path": "/mnt/fedora44/home/steve/Gemini/nexus",
+      "last_modified": "unknown",
+      "inspected_files": 0,
+      "languages": {},
+      "asset_summary": {},
+      "detected_tech": [],
+      "synthesized_topic": "nexus",
+      "project_dna": {},
+      "active_code_files": [],
+      "pruned_subtrees": [],
+      "ai_synthesis": {
+        "onderwerp_kort": "Dit project, genaamd \"nexus\", bevat momenteel geen actieve code of gedetecteerde technologieën.",
+        "architectuur_samenvatting": "De technische architectuur is onbepaald vanwege het ontbreken van actieve codebestanden en gedetecteerde technologieën in de metadata. Het project bevindt zich in een lege of niet-geïnitialiseerde staat.",
+        "domein_categorie": "Internal utility / maintenance",
+        "geschikt_voor_publiek_portaal": false
+      }
+    },
+    {
+      "source_root": "custom_1_Gemini",
+      "name": "nvidia",
+      "kind": "directory",
+      "path": "/mnt/fedora44/home/steve/Gemini/nvidia",
+      "last_modified": "2026-09-10",
+      "inspected_files": 73,
+      "languages": {
+        "Python": 15,
+        "HTML5": 8,
+        "C": 7,
+        "JavaScript": 4,
+        "YAML": 2
+      },
+      "asset_summary": {
+        ".png": 9,
+        ".svg": 4,
+        ".mp4": 3,
+        ".mov": 1
+      },
+      "detected_tech": [
+        "Docker / Podman",
+        "Web Audio / DSP",
+        "WebGL"
+      ],
+      "synthesized_topic": "UI Title: '3D Fractal Multiverse PWA' | fractal_server.py: Multi-user Fractal Multiverse PWA Draait via Python aiohttp op poort 31415. Bevat: Toast tekstballon notificatie voor Share, Ingangspunt URL behoud, Semi-transparante HUD, Universe-specifieke Warp Home, SVG Infinity Favicon (/favicon.svg), Vloeiende demping en Default Connected mode. | Symbols: handle_index(), websocket_handler(), serve_static_root_files(), init_app(), DesktopMonitorOverlay, get_running_pids() | Stack: Docker / Podman, Web Audio / DSP, WebGL",
+      "project_dna": {
+        "manifest": {
+          "name": "Fractal Multiverse"
+        },
+        "html_ui": [
+          {
+            "title": "3D Fractal Multiverse PWA",
+            "ui_labels": [
+              "Audio Volume:",
+              "Multi-User: Verbinden...",
+              "Full",
+              "Home",
+              "Save",
+              "Share",
+              "Clr"
+            ],
+            "file": "kleynenberg-hrd/index.html"
+          },
+          {
+            "title": "3D Fractal Multiverse PWA",
+            "ui_labels": [
+              "Audio Volume:",
+              "Full",
+              "Home",
+              "Save",
+              "Share",
+              "Clr"
+            ],
+            "file": "31415/pwa/index.html"
+          },
+          {
+            "title": "3D Fractal Multiverse PWA",
+            "ui_labels": [
+              "Audio Volume:",
+              "Full",
+              "Home",
+              "Save",
+              "Share",
+              "Clr"
+            ],
+            "file": "31415/server/10backup/index.html"
+          }
+        ],
+        "code_symbols": [
+          "handle_index()",
+          "websocket_handler()",
+          "serve_static_root_files()",
+          "init_app()",
+          "DesktopMonitorOverlay",
+          "get_running_pids()",
+          "kill_existing_instances()",
+          "daemonize_and_start()",
+          "stop_daemon()",
+          "run_gui()",
+          "find_nouveau_hwmon()",
+          "get_temperature()",
+          "main()",
+          "handle_favicon()",
+          "parse_user_agent()"
+        ],
+        "python_imports": [
+          "PyQt6",
+          "aiohttp",
+          "asyncio",
+          "signal"
+        ],
+        "python_docstrings": [
+          "fractal_server.py: Multi-user Fractal Multiverse PWA Draait via Python aiohttp op poort 31415. Bevat: Toast tekstballon notificatie voor Share, Ingangspunt URL behoud, Semi-transparante HUD, Universe-specifieke Warp Home, SVG Infinity Favicon (/favicon.svg), Vloeiende demping en Default Connected mode.",
+          "fractal_server.py: Multi-user Fractal Multiverse PWA Draait via Python aiohttp op poort 31415. Bevat: Subtiele copyright footer naar kleynenberg.com, afgeschermde UI events, Tap/Click zoom-in, Gegenereerde SVG Favicon, Fullscreen mode, Vloeiende demping, Default Connected mode."
+        ]
+      },
+      "active_code_files": [
+        "kleynenberg-hrd/Makefile",
+        "googledrive/Makefile",
+        "kleynenberg-hrd/main.py",
+        "kleynenberg-hrd/Dockerfile",
+        "kleynenberg-hrd/index.html",
+        "kleynenberg-hrd/app.yaml",
+        "kleynenberg-hrd/sw.js",
+        "kleynenberg-hrd/manifest.json",
+        "31415/pwa/index.html",
+        "31415/pwa/sw.js",
+        "31415/pwa/manifest.json",
+        "31415/server/10backup/index.html"
+      ],
+      "pruned_subtrees": [],
+      "ai_synthesis": {
+        "onderwerp_kort": "Dit project is een multi-user 3D Fractal Multiverse Progressive Web App (PWA) die wordt aangedreven door een Python aiohttp-server en beschikt over WebGL- en audio-integratie.",
+        "architectuur_samenvatting": "De applicatie combineert een Python aiohttp-backend voor websockets en statische bestandsservering met een frontend PWA die gebruikmaakt van WebGL en Web Audio DSP. Daarnaast bevat het systeem een PyQt6-gebaseerde desktop overlay en systeemmonitoringfuncties voor hardware-telemetrie.",
+        "domein_categorie": "Cloud-native virtual worlds",
+        "geschikt_voor_publiek_portaal": true
+      }
+    },
+    {
+      "source_root": "custom_1_Gemini",
+      "name": "nxt",
+      "kind": "directory",
+      "path": "/mnt/fedora44/home/steve/Gemini/nxt",
+      "last_modified": "2026-09-04",
+      "inspected_files": 527,
+      "languages": {
+        "Python": 443,
+        "JavaScript": 1
+      },
+      "asset_summary": {
+        ".tar": 1,
+        ".jpg": 1
+      },
+      "detected_tech": [
+        "Bluetooth Classic / BLE",
+        "PDF / Typography Pipeline"
+      ],
+      "synthesized_topic": "generic.py: The :mod:`nxt.sensor.generic` module supports the sensors manufactured by LEGO. | Symbols: create_documentation_pdf(), NXTControllerApp, log(), run_probe(), test_connection(), Opcode | Stack: Bluetooth Classic / BLE, PDF / Typography Pipeline",
+      "project_dna": {
+        "code_symbols": [
+          "create_documentation_pdf()",
+          "NXTControllerApp",
+          "log()",
+          "run_probe()",
+          "test_connection()",
+          "Opcode",
+          "Telegram",
+          "SumoEyes",
+          "Compassv2",
+          "DIST",
+          "RTC",
+          "ACCL",
+          "MTRMUX",
+          "LineLeader",
+          "Servo"
+        ],
+        "python_imports": [
+          "PIL",
+          "array",
+          "configparser",
+          "ctypes",
+          "dataclasses",
+          "enum",
+          "errno",
+          "importlib",
+          "nxt",
+          "operator",
+          "platform",
+          "pytest"
+        ],
+        "python_docstrings": [
+          "generic.py: The :mod:`nxt.sensor.generic` module supports the sensors manufactured by LEGO.",
+          "locator.py: The :mod:`.locator` module allows to detect connected NXT bricks and to create corresponding :class:`~nxt.brick.Brick` objects. The :func:`find` function is your main starting point to create a NXT-Python program. If you want to make a command line tool, :func:`add_arguments` and :func:`find_with_op"
+        ]
+      },
+      "active_code_files": [
+        "nxt_app_swapper/generate_pdf.py",
+        "nxt_gui.py",
+        "test_licht.py",
+        "nxt_test_drukker.py",
+        "nxt_probe.py",
+        "v1_nxt_gui.py",
+        "test_find.py",
+        "test_nxt.py",
+        "nxt_env/lib/python3.14/site-packages/nxt/telegram.py",
+        "nxt_env/lib/python3.14/site-packages/nxt/sensor/mindsensors.py",
+        "nxt_env/lib/python3.14/site-packages/nxt/sensor/hitechnic.py",
+        "nxt_env/lib/python3.14/site-packages/nxt/sensor/generic.py"
+      ],
+      "pruned_subtrees": [
+        {
+          "subpath": "nxt_env/include",
+          "reason": "empty_dir"
+        },
+        {
+          "subpath": "nxt_env/lib/python3.14/site-packages/pip-26.2.1.dist-info/licenses/src/pip/_vendor",
+          "reason": "high_fanout_no_code (18 subdirs: cachecontrol, certifi, distlib, distro, idna, msgpack, packaging, pkg_resources...)"
+        }
+      ],
+      "ai_synthesis": {
+        "onderwerp_kort": "Dit project maakt verbinding met LEGO Mindstorms NXT-stenen en sensoren om deze aan te sturen en uit te lezen via een Python-interface.",
+        "architectuur_samenvatting": "De architectuur is opgebouwd rond de nxt-python bibliotheek voor hardware-interactie via Bluetooth of USB, gecombineerd met een GUI en een PDF-rapportagecomponent. Het systeem ondersteunt diverse sensoren en motoren via specifieke hardware-protocollen en opcodes.",
+        "domein_categorie": "Audio DSP, edge-AI and telemetry",
+        "geschikt_voor_publiek_portaal": true
+      }
+    },
+    {
+      "source_root": "custom_1_Gemini",
+      "name": "ollama",
+      "kind": "directory",
+      "path": "/mnt/fedora44/home/steve/Gemini/ollama",
+      "last_modified": "unknown",
+      "inspected_files": 0,
+      "languages": {},
+      "asset_summary": {},
+      "detected_tech": [],
+      "synthesized_topic": "ollama",
+      "project_dna": {},
+      "active_code_files": [],
+      "pruned_subtrees": [],
+      "ai_synthesis": {
+        "onderwerp_kort": "Dit project betreft de initialisatie of configuratie van Ollama, maar bevat momenteel geen actieve codebestanden of gedetecteerde technologieën.",
+        "architectuur_samenvatting": "Vanwege het ontbreken van actieve bronbestanden en gedetecteerde technologieën is er geen specifieke technische architectuur gedefinieerd. Het project bevindt zich in een lege of niet-geconfigureerde staat.",
+        "domein_categorie": "Internal utility / maintenance",
+        "geschikt_voor_publiek_portaal": false
+      }
+    },
+    {
+      "source_root": "custom_1_Gemini",
+      "name": "osint",
+      "kind": "directory",
+      "path": "/mnt/fedora44/home/steve/Gemini/osint",
+      "last_modified": "2026-08-28",
+      "inspected_files": 7,
+      "languages": {
+        "Python": 1
+      },
+      "asset_summary": {
+        ".mp4": 5,
+        ".wav": 1
+      },
+      "detected_tech": [],
+      "synthesized_topic": "Symbols: moving_average(), smooth() | Langs: Python",
+      "project_dna": {
+        "code_symbols": [
+          "moving_average()",
+          "smooth()"
+        ],
+        "python_imports": [
+          "cv2",
+          "numpy"
+        ]
+      },
+      "active_code_files": [
+        "flash_stabiel.py"
+      ],
+      "pruned_subtrees": [],
+      "ai_synthesis": {
+        "onderwerp_kort": "Dit Python-project stabiliseert en verzacht beeldsignalen of videoframes met behulp van OpenCV en NumPy.",
+        "architectuur_samenvatting": "De applicatie maakt gebruik van OpenCV en NumPy om beeldbewerking en signaalstabilisatie uit te voeren. Via functies voor voortschrijdende gemiddelden en smoothing worden frames of datapunten vloeiender gemaakt.",
+        "domein_categorie": "Audio DSP, edge-AI and telemetry",
+        "geschikt_voor_publiek_portaal": false
+      }
+    },
+    {
+      "source_root": "custom_1_Gemini",
+      "name": "pdfguru",
+      "kind": "directory",
+      "path": "/mnt/fedora44/home/steve/Gemini/pdfguru",
+      "last_modified": "2026-08-27",
+      "inspected_files": 20,
+      "languages": {
+        "Python": 1
+      },
+      "asset_summary": {
+        ".jpg": 2,
+        ".png": 1
+      },
+      "detected_tech": [
+        "PDF / Typography Pipeline"
+      ],
+      "synthesized_topic": "disfunctional_make_report.py: Generate an exhaustive, professional English fraud analysis report (PDF) for ICS Risk/Fraud Department and Law Enforcement regarding PDF Guru / LOPOFIST LIMITED, including full company details, the complete chronolocial EVID timeline, and embedded screenshots. | Symbols: build_pdf() | Stack: PDF / Typography Pipeline",
+      "project_dna": {
+        "code_symbols": [
+          "build_pdf()"
+        ],
+        "python_imports": [
+          "reportlab"
+        ],
+        "python_docstrings": [
+          "disfunctional_make_report.py: Generate an exhaustive, professional English fraud analysis report (PDF) for ICS Risk/Fraud Department and Law Enforcement regarding PDF Guru / LOPOFIST LIMITED, including full company details, the complete chronolocial EVID timeline, and embedded screenshots."
+        ]
+      },
+      "active_code_files": [
+        "disfunctional_make_report.py"
+      ],
+      "pruned_subtrees": [],
+      "ai_synthesis": {
+        "onderwerp_kort": "Dit project genereert een gedetailleerd frauderapport in PDF-formaat ten behoeve van de ICS Risk/Fraud-afdeling en wetshandhaving.",
+        "architectuur_samenvatting": "Het project maakt gebruik van Python en de ReportLab-bibliotheek om programmatisch PDF-documenten te genereren. De architectuur is ontworpen om gestructureerde gegevens, zoals chronologische tijdlijnen en afbeeldingen, samen te voegen in een rapport.",
+        "domein_categorie": "Publishing and typographic pipelines",
+        "geschikt_voor_publiek_portaal": false
+      }
+    },
+    {
+      "source_root": "custom_1_Gemini",
+      "name": "peek",
+      "kind": "directory",
+      "path": "/mnt/fedora44/home/steve/Gemini/peek",
+      "last_modified": "2026-08-31",
+      "inspected_files": 33,
+      "languages": {
+        "Python": 9,
+        "HTML5": 7,
+        "Shell/Bash": 2,
+        "Google Apps Script": 1,
+        "YAML": 1
+      },
+      "asset_summary": {
+        ".jpg": 3,
+        ".png": 3,
+        ".ico": 1
+      },
+      "detected_tech": [
+        "Bluetooth Classic / BLE",
+        "Google Cloud / BigQuery",
+        "LoRa / IoT"
+      ],
+      "synthesized_topic": "UI Title: '[PEEK MONITOR] // Live Matrix Cockpit' | Symbols: NXTControllerApp, log() | Stack: Bluetooth Classic / BLE, Google Cloud / BigQuery, LoRa / IoT",
+      "project_dna": {
+        "html_ui": [
+          {
+            "title": "[PEEK MONITOR] // Live Matrix Cockpit",
+            "headings": [
+              "[PEEK MONITOR]",
+              "[ENERGIE BALANS]",
+              "[GROWATT & VERBRUIK]",
+              "[GASVERBRUIK]",
+              "[WEER & KLIMAAT]",
+              "[BUIENRADAR VERWACHTING]"
+            ],
+            "ui_labels": [
+              "1. Energie",
+              "2. Gas",
+              "3. Weer & Buien",
+              "4. Hue & Log",
+              "5. ELRO",
+              "6. Systeem",
+              "7. Bluetooth",
+              "8. Biometrie",
+              "9. Marvin LoRa"
+            ],
+            "file": "public/index.html"
+          },
+          {
+            "title": "[PEEK MONITOR] // Live Matrix Cockpit",
+            "headings": [
+              "[PEEK MONITOR]",
+              "[ENERGIE BALANS]",
+              "[GROWATT & VERBRUIK]",
+              "[GASVERBRUIK]",
+              "[WEER & KLIMAAT]",
+              "[BUIENRADAR VERWACHTING]"
+            ],
+            "ui_labels": [
+              "1. Energie",
+              "2. Gas",
+              "3. Weer & Buien",
+              "4. Hue & Log",
+              "5. ELRO",
+              "6. Systeem",
+              "7. Bluetooth",
+              "8. Biometrie",
+              "9. Marvin LoRa"
+            ],
+            "file": "06backup/index.html"
+          },
+          {
+            "title": "[PEEK MONITOR] // Live Matrix Cockpit",
+            "headings": [
+              "[PEEK MONITOR]",
+              "[ENERGIE BALANS]",
+              "[GROWATT & VERBRUIK]",
+              "[GASVERBRUIK]",
+              "[WEER & KLIMAAT]",
+              "[BUIENRADAR VERWACHTING]"
+            ],
+            "ui_labels": [
+              "1. Energie",
+              "2. Gas",
+              "3. Weer & Buien",
+              "4. Hue & Log",
+              "5. ELRO",
+              "6. Systeem",
+              "7. Bluetooth",
+              "8. Biometrie"
+            ],
+            "file": "05backup/index.html"
+          }
+        ],
+        "code_symbols": [
+          "NXTControllerApp",
+          "log()"
+        ],
+        "python_imports": [
+          "nxt",
+          "tkinter"
+        ]
+      },
+      "active_code_files": [
+        "server_LG.py",
+        "public/index.html",
+        "06backup/index.html",
+        "06backup/server_LG.py",
+        "SCRIPT TTN Marvin Lora.gs",
+        "config.yaml",
+        "05backup/index.html",
+        "05backup/server_LG.py",
+        "04backup/index.html",
+        "04backup/server_LG.py",
+        "03backup/index.html",
+        "03backup/server_LG.py"
+      ],
+      "pruned_subtrees": [],
+      "ai_synthesis": {
+        "onderwerp_kort": "Dit project is een live monitoringdashboard dat energieverbruik, gasverbruik, weersgegevens en diverse IoT- en Bluetooth-sensoren visualiseert.",
+        "architectuur_samenvatting": "De architectuur bestaat uit een Python-backend die sensorgegevens van Bluetooth, LoRa en slimme meters verzamelt en opslaat in Google Cloud BigQuery. De frontend is een HTML5-gebaseerd live dashboard dat deze telemetriegegevens visualiseert in een matrix-cockpit.",
+        "domein_categorie": "Audio DSP, edge-AI and telemetry",
+        "geschikt_voor_publiek_portaal": true
+      }
+    },
+    {
+      "source_root": "custom_1_Gemini",
+      "name": "polar",
+      "kind": "directory",
+      "path": "/mnt/fedora44/home/steve/Gemini/polar",
+      "last_modified": "2026-08-20",
+      "inspected_files": 2,
+      "languages": {
+        "Python": 2
+      },
+      "asset_summary": {},
+      "detected_tech": [
+        "Bluetooth Classic / BLE"
+      ],
+      "synthesized_topic": "Symbols: BLEWorker, PolarGUI, hr_data_handler(), read_device_info(), connect_and_listen() | Stack: Bluetooth Classic / BLE",
+      "project_dna": {
+        "code_symbols": [
+          "BLEWorker",
+          "PolarGUI",
+          "hr_data_handler()",
+          "read_device_info()",
+          "connect_and_listen()"
+        ],
+        "python_imports": [
+          "PyQt6",
+          "asyncio",
+          "bleak",
+          "numpy",
+          "pyqtgraph"
+        ]
+      },
+      "active_code_files": [
+        "polar_gui.py",
+        "polar_reader.py"
+      ],
+      "pruned_subtrees": [],
+      "ai_synthesis": {
+        "onderwerp_kort": "[API fout: The read operation timed out]",
+        "architectuur_samenvatting": "",
+        "domein_categorie": "Internal utility / maintenance",
+        "geschikt_voor_publiek_portaal": false
+      }
+    },
+    {
+      "source_root": "custom_1_Gemini",
+      "name": "sammy",
+      "kind": "directory",
+      "path": "/mnt/fedora44/home/steve/Gemini/sammy",
+      "last_modified": "2026-08-01",
+      "inspected_files": 1,
+      "languages": {},
+      "asset_summary": {},
+      "detected_tech": [],
+      "synthesized_topic": "sammy",
+      "project_dna": {},
+      "active_code_files": [],
+      "pruned_subtrees": [],
+      "ai_synthesis": {
+        "onderwerp_kort": "Dit project, genaamd sammy, is een lege repository zonder actieve codebestanden of gedetecteerde technologieën.",
+        "architectuur_samenvatting": "Er is geen softwarearchitectuur of actieve broncode aanwezig in dit project. Er zijn geen programmeertalen of specifieke technologieën gedetecteerd.",
+        "domein_categorie": "Internal utility / maintenance",
+        "geschikt_voor_publiek_portaal": false
+      }
+    },
+    {
+      "source_root": "custom_1_Gemini",
+      "name": "sat",
+      "kind": "directory",
+      "path": "/mnt/fedora44/home/steve/Gemini/sat",
+      "last_modified": "2026-09-28",
+      "inspected_files": 11,
+      "languages": {
+        "JavaScript": 3,
+        "Python": 1,
+        "HTML5": 1,
+        "Shell/Bash": 1,
+        "CSS3": 1
+      },
+      "asset_summary": {
+        ".png": 2,
+        ".svg": 1
+      },
+      "detected_tech": [],
+      "synthesized_topic": "UI Title: 'Gemini SAT - AR Tracker' | Symbols: initCamera, eulerToQuaternion, multiplyQuat, getScreenQuat, slerp, initSensors | Langs: JavaScript, Python, HTML5, Shell/Bash",
+      "project_dna": {
+        "manifest": {
+          "name": "Gemini SAT - AR Tracker"
+        },
+        "html_ui": [
+          {
+            "title": "Gemini SAT - AR Tracker",
+            "ui_labels": [
+              "NACHT MODUS"
+            ],
+            "file": "index.html"
+          }
+        ],
+        "code_symbols": [
+          "initCamera",
+          "eulerToQuaternion",
+          "multiplyQuat",
+          "getScreenQuat",
+          "slerp",
+          "initSensors",
+          "rotateVector",
+          "getWorldVector",
+          "project3D",
+          "getLST",
+          "raDecToAzEl",
+          "azElToRaDec",
+          "draw3DPath",
+          "renderTextWithShadow",
+          "formatRA"
+        ],
+        "python_imports": [
+          "socketserver"
+        ]
+      },
+      "active_code_files": [
+        "app.js",
+        "index.html",
+        "manifest.json",
+        "sw.js",
+        "astro.js",
+        "style.css",
+        "py.sh",
+        "genesis.py"
+      ],
+      "pruned_subtrees": [],
+      "ai_synthesis": {
+        "onderwerp_kort": "Dit project is een webgebaseerde Augmented Reality tracker die camera- en sensorgegevens gebruikt om astronomische coördinaten in 3D te visualiseren.",
+        "architectuur_samenvatting": "De frontend is een webapplicatie met service worker-ondersteuning die apparaatsensoren en camera-inputs combineert met astronomische berekeningen voor 3D-visualisatie. De backend maakt gebruik van een Python-socketserver voor netwerkcommunicatie.",
+        "domein_categorie": "Cloud-native virtual worlds",
+        "geschikt_voor_publiek_portaal": true
+      }
+    },
+    {
+      "source_root": "custom_1_Gemini",
+      "name": "skyrex",
+      "kind": "directory",
+      "path": "/mnt/fedora44/home/steve/Gemini/skyrex",
+      "last_modified": "2026-09-05",
+      "inspected_files": 2,
+      "languages": {},
+      "asset_summary": {},
+      "detected_tech": [],
+      "synthesized_topic": "Apps https://play.google.com/store/apps/details?id=com.cooingdv.kyufo&pcampaignid=web_share https://play.google.com/store/apps/details?id=com.lewei.jyufo&pcampaignid=web_share https://play.google.com/store/apps/details?id=com.lewei.jyufo&pcampaignid=web_share https://play.google.com/store/apps/details?id=com.cooingdv.kyfpv&pcampaignid=web_share https://play.google.com/store/apps/details?id=com.yls.skydrone&pcampaignid=web_share",
+      "project_dna": {
+        "readme_summary": "Apps https://play.google.com/store/apps/details?id=com.cooingdv.kyufo&pcampaignid=web_share https://play.google.com/store/apps/details?id=com.lewei.jyufo&pcampaignid=web_share https://play.google.com/store/apps/details?id=com.lewei.jyufo&pcampaignid=web_share https://play.google.com/store/apps/details?id=com.cooingdv.kyfpv&pcampaignid=web_share https://play.google.com/store/apps/details?id=com.yls.skydrone&pcampaignid=web_share"
+      },
+      "active_code_files": [
+        "README.md"
+      ],
+      "pruned_subtrees": [],
+      "ai_synthesis": {
+        "onderwerp_kort": "Dit project documenteert een verzameling links naar mobiele applicaties in de Google Play Store voor het besturen van drones.",
+        "architectuur_samenvatting": "De repository bevat geen actieve broncode en bestaat uitsluitend uit een README-bestand met externe links. Er is geen software-architectuur aanwezig.",
+        "domein_categorie": "Internal utility / maintenance",
+        "geschikt_voor_publiek_portaal": false
+      }
+    },
+    {
+      "source_root": "custom_1_Gemini",
+      "name": "solr",
+      "kind": "directory",
+      "path": "/mnt/fedora44/home/steve/Gemini/solr",
+      "last_modified": "2026-09-02",
+      "inspected_files": 1489,
+      "languages": {
+        "JavaScript": 49,
+        "CSS3": 35,
+        "HTML5": 32,
+        "Python": 7,
+        "Shell/Bash": 5
+      },
+      "asset_summary": {
+        ".png": 93,
+        ".jar": 14,
+        ".svg": 5,
+        ".gif": 4,
+        ".ico": 1
+      },
+      "detected_tech": [
+        "Apache Solr / Lucene"
+      ],
+      "synthesized_topic": "v2_api V2Api - JavaScript client for v2_api OpenAPI spec for Solr's v2 API endpoints This SDK is automatically generated by the [OpenAPI Generator](https://openapi-generator.tech) project: - API version: 10.0.0 - Package version: 10.0.0 - Generator version: 7.14.0 - Build package: org.openapitools.codegen.languages.JavascriptClientCodegen Installation For [Node.js](https://nodejs.org/) npm To publish the library as a [npm](https://www.npmjs.com/) | Symbols: d3_class, d3_arrayCopy, d3_arraySlice, d3_Map, d3_this, d3_rebind | Stack: Apache Solr / Lucene",
+      "project_dna": {
+        "readme_summary": "v2_api V2Api - JavaScript client for v2_api OpenAPI spec for Solr's v2 API endpoints This SDK is automatically generated by the [OpenAPI Generator](https://openapi-generator.tech) project: - API version: 10.0.0 - Package version: 10.0.0 - Generator version: 7.14.0 - Build package: org.openapitools.codegen.languages.JavascriptClientCodegen Installation For [Node.js](https://nodejs.org/) npm To publish the library as a [npm](https://www.npmjs.com/)",
+        "html_ui": [
+          {
+            "ui_labels": [
+              "New Schema",
+              "Add Field",
+              "Add Field Type",
+              "name:",
+              "field type:",
+              "class:",
+              "default:",
+              "stored",
+              "indexed",
+              "uninvertible"
+            ],
+            "file": "apache/solr-10.0.0-slim/server/solr-webapp/webapp/partials/schema-designer.html"
+          },
+          {
+            "ui_labels": [
+              "Request-Handler (qt)",
+              "q.op",
+              "fq",
+              "sort",
+              "start, rows",
+              "fl",
+              "df",
+              "paramset(s)",
+              "wt",
+              "indent on"
+            ],
+            "file": "apache/solr-10.0.0-slim/server/solr-webapp/webapp/partials/query.html"
+          },
+          {
+            "headings": [
+              "{{selectedType}}: {{name}}"
+            ],
+            "ui_labels": [
+              "Add Field",
+              "Add Dynamic Field",
+              "Add Copy Field",
+              "Manipulate Field Type",
+              "name:",
+              "field type:",
+              "default:",
+              "stored",
+              "indexed",
+              "uninvertible"
+            ],
+            "file": "apache/solr-10.0.0-slim/server/solr-webapp/webapp/partials/schema.html"
+          }
+        ],
+        "code_symbols": [
+          "d3_class",
+          "d3_arrayCopy",
+          "d3_arraySlice",
+          "d3_Map",
+          "d3_this",
+          "d3_rebind",
+          "d3_number",
+          "d3_zipLength",
+          "map",
+          "entries",
+          "d3_splitter",
+          "d3_collapse",
+          "d3_range_integerScale",
+          "ready",
+          "d3_dispatch"
+        ]
+      },
+      "active_code_files": [
+        "complex.py",
+        "50_xml.py",
+        "50.py",
+        "example.api.py",
+        "apache/solr-10.0.0-slim/server/solr-webapp/webapp/ui/composeApp.js",
+        "apache/solr-10.0.0-slim/server/solr-webapp/webapp/libs/solr/index.js",
+        "apache/solr-10.0.0-slim/server/solr-webapp/webapp/libs/ui-grid.min.js",
+        "apache/solr-10.0.0-slim/server/solr-webapp/webapp/libs/d3.js",
+        "apache/solr-10.0.0-slim/server/solr-webapp/webapp/libs/angular.min.js",
+        "apache/solr-10.0.0-slim/server/solr-webapp/webapp/libs/jstree.min.js",
+        "apache/solr-10.0.0-slim/server/solr-webapp/webapp/libs/jquery-3.5.1.min.js",
+        "apache/solr-10.0.0-slim/server/solr-webapp/webapp/partials/schema-designer.html"
+      ],
+      "pruned_subtrees": [
+        {
+          "subpath": "apache/solr-10.0.0-slim/server/lib/ext",
+          "reason": "asset_sink (17 files, 17 binary/media/font assets)"
+        },
+        {
+          "subpath": "apache/solr-10.0.0-slim/server/solr-webapp/webapp/WEB-INF/lib",
+          "reason": "asset_sink (115 files, 115 binary/media/font assets)"
+        },
+        {
+          "subpath": "apache/solr-10.0.0-slim/server/solr-webapp/webapp/img/ico",
+          "reason": "asset_sink (126 files, 126 binary/media/font assets)"
+        },
+        {
+          "subpath": "apache/solr-10.0.0-slim/server/solr-webapp/webapp/ui/composeResources/com.arkivanov.decompose.extensions_compose.generated.resources",
+          "reason": "empty_dir"
+        },
+        {
+          "subpath": "apache/solr-10.0.0-slim/server/solr-webapp/webapp/ui/composeResources/components.resources.library.generated.resources",
+          "reason": "empty_dir"
+        }
+      ],
+      "ai_synthesis": {
+        "onderwerp_kort": "Dit project omvat een automatisch gegenereerde JavaScript-client SDK voor de Apache Solr v2 API en bijbehorende webinterface-componenten voor het beheren en bevragen van zoekindexen.",
+        "architectuur_samenvatting": "De frontend maakt gebruik van AngularJS, D3.js en jQuery om een beheerinterface te bieden voor Solr-schema's en queries, terwijl de API-interactie verloopt via een OpenAPI-gegenereerde JavaScript SDK. Ondersteunende Python-scripts faciliteren aanvullende dataverwerking en API-aanroepen.",
+        "domein_categorie": "Enterprise intelligence and fiscal AI",
+        "geschikt_voor_publiek_portaal": true
+      }
+    },
+    {
+      "source_root": "custom_1_Gemini",
+      "name": "stanford",
+      "kind": "directory",
+      "path": "/mnt/fedora44/home/steve/Gemini/stanford",
+      "last_modified": "2026-09-04",
+      "inspected_files": 28,
+      "languages": {
+        "Python": 5,
+        "PHP": 3,
+        "JavaScript": 1,
+        "Google Apps Script": 1
+      },
+      "asset_summary": {
+        ".png": 3,
+        ".svg": 1
+      },
+      "detected_tech": [
+        "Google Cloud / BigQuery"
+      ],
+      "synthesized_topic": "High-Performance Apache-WSGI NLP Pipeline with Stanford POS Tagger An enterprise-grade, blazing-fast NLP extraction pipeline designed to overcome strict web server permissions (such as SELinux or systemd sandboxing in Apache) and maximize performance through system-level service isolation. Co-authored & engineered by Steve (HP Server Architect) & AI Assistant. 🚀 The Architecture Challenge & Breakthrough The Problem Web applications running under  | Symbols: helloPOSTERMPLURAL | Stack: Google Cloud / BigQuery",
+      "project_dna": {
+        "readme_summary": "High-Performance Apache-WSGI NLP Pipeline with Stanford POS Tagger An enterprise-grade, blazing-fast NLP extraction pipeline designed to overcome strict web server permissions (such as SELinux or systemd sandboxing in Apache) and maximize performance through system-level service isolation. Co-authored & engineered by Steve (HP Server Architect) & AI Assistant. 🚀 The Architecture Challenge & Breakthrough The Problem Web applications running under ",
+        "code_symbols": [
+          "helloPOSTERMPLURAL"
+        ],
+        "python_imports": [
+          "zipfile"
+        ]
+      },
+      "active_code_files": [
+        "example_from_nodejs.js",
+        "Makefile",
+        "stanford_wsgi_pipeline_VERBOSE.py",
+        "stanford_wsgi_pipeline.py",
+        "README.md",
+        "history/phoenix/make_strict_phoenix.py",
+        "README_HTTPS_Fedora_kleynenberg_net.pdf",
+        "history/patent_ingestor/php/convert_text_to_json_query.php",
+        "history/patent_ingestor/php/searchjson.php",
+        "history/patent_ingestor/fetch_max_50000_from_sumobrain.py",
+        "history/patent_ingestor/fetch_historical_start.py",
+        "history/patent_ingestor/oldcode/searchjson.php"
+      ],
+      "pruned_subtrees": [],
+      "ai_synthesis": {
+        "onderwerp_kort": "Een high-performance Apache-WSGI NLP-pijplijn met de Stanford POS Tagger die webserverrestricties omzeilt via systeemservice-isolatie.",
+        "architectuur_samenvatting": "De architectuur maakt gebruik van een Apache-WSGI-pijplijn voor NLP-extractie, waarbij systeem-level service-isolatie wordt ingezet om restricties zoals SELinux of systemd-sandboxing te omzeilen. De implementatie omvat Python-scripts voor de WSGI-pijplijn en ondersteunende PHP- en JavaScript-componenten voor data-ingestie en -verwerking.",
+        "domein_categorie": "Enterprise intelligence and fiscal AI",
+        "geschikt_voor_publiek_portaal": true
+      }
+    },
+    {
+      "source_root": "custom_1_Gemini",
+      "name": "suno",
+      "kind": "directory",
+      "path": "/mnt/fedora44/home/steve/Gemini/suno",
+      "last_modified": "2026-08-25",
+      "inspected_files": 20,
+      "languages": {},
+      "asset_summary": {
+        ".jpg": 4,
+        ".mp4": 3,
+        ".png": 3,
+        ".mp3": 3,
+        ".jpeg": 1
+      },
+      "detected_tech": [],
+      "synthesized_topic": "suno",
+      "project_dna": {},
+      "active_code_files": [],
+      "pruned_subtrees": [],
+      "ai_synthesis": {
+        "onderwerp_kort": "Dit project, genaamd suno, bevat op basis van de metadata geen actieve codebestanden of gedetecteerde technologieën.",
+        "architectuur_samenvatting": "Er is geen technische architectuur beschikbaar omdat het project geen actieve broncode of gedetecteerde componenten bevat. Het project bevindt zich in een lege of initiële staat.",
+        "domein_categorie": "Internal utility / maintenance",
+        "geschikt_voor_publiek_portaal": false
+      }
+    },
+    {
+      "source_root": "custom_1_Gemini",
+      "name": "taks",
+      "kind": "directory",
+      "path": "/mnt/fedora44/home/steve/Gemini/taks",
+      "last_modified": "2026-10-06",
+      "inspected_files": 254,
+      "languages": {
+        "HTML5": 5
+      },
+      "asset_summary": {},
+      "detected_tech": [],
+      "synthesized_topic": "UI Title: 'Index of /nt21/bd/20261209.b/validation' | https://www.nltaxonomie.nl/nt21/bd/20261209.b/entrypoints/bd-rpt-ihz-aangifte-2026.xsd | Langs: HTML5",
+      "project_dna": {
+        "readme_summary": "https://www.nltaxonomie.nl/nt21/bd/20261209.b/entrypoints/bd-rpt-ihz-aangifte-2026.xsd",
+        "html_ui": [
+          {
+            "title": "Index of /nt21/bd/20261209.b/validation",
+            "file": "taxonomie/nt21/bd/20261209.b/validation/index.html"
+          },
+          {
+            "title": "Index of /nt21/bd/20261209.b/presentation",
+            "file": "taxonomie/nt21/bd/20261209.b/presentation/index.html"
+          },
+          {
+            "title": "Index of /nt21/bd/20261209.b/entrypoints",
+            "file": "taxonomie/nt21/bd/20261209.b/entrypoints/index.html"
+          }
+        ]
+      },
+      "active_code_files": [
+        "README.md",
+        "taxonomie/nt21/bd/20261209.b/validation/index.html",
+        "taxonomie/nt21/bd/20261209.b/presentation/index.html",
+        "taxonomie/nt21/bd/20261209.b/entrypoints/index.html",
+        "taxonomie/nt21/bd/20261209.b/dictionary/index.html",
+        "taxonomie/nt21/bd/20261209.b/index.html"
+      ],
+      "pruned_subtrees": [],
+      "ai_synthesis": {
+        "onderwerp_kort": "Dit project indexeert en presenteert de Nederlandse Taxonomie (NT21) XML-schema's en entrypoints voor de inkomstenbelastingaangifte van 2026.",
+        "architectuur_samenvatting": "De architectuur is opgebouwd uit statische HTML5-indexbestanden die dienen als navigatie- en presentatielaag voor de lokale XML-taxonomiestructuur. Het project bevat mappen voor validatie, presentatie en entrypoints van de Belastingdienst-aangifte.",
+        "domein_categorie": "Enterprise intelligence and fiscal AI",
+        "geschikt_voor_publiek_portaal": false
+      }
+    },
+    {
+      "source_root": "custom_1_Gemini",
+      "name": "totem",
+      "kind": "directory",
+      "path": "/mnt/fedora44/home/steve/Gemini/totem",
+      "last_modified": "2026-08-13",
+      "inspected_files": 1,
+      "languages": {},
+      "asset_summary": {},
+      "detected_tech": [],
+      "synthesized_topic": "totem",
+      "project_dna": {},
+      "active_code_files": [],
+      "pruned_subtrees": [],
+      "ai_synthesis": {
+        "onderwerp_kort": "Dit project, genaamd totem, bevat momenteel geen actieve codebestanden of gedetecteerde functionaliteit.",
+        "architectuur_samenvatting": "De technische architectuur is niet gedefinieerd vanwege het ontbreken van broncode en gedetecteerde technologieën. Het project bevindt zich in een lege of niet-geïmplementeerde staat.",
+        "domein_categorie": "Internal utility / maintenance",
+        "geschikt_voor_publiek_portaal": false
+      }
+    },
+    {
+      "source_root": "custom_1_Gemini",
+      "name": "vodafone",
+      "kind": "directory",
+      "path": "/mnt/fedora44/home/steve/Gemini/vodafone",
+      "last_modified": "2026-10-02",
+      "inspected_files": 1,
+      "languages": {},
+      "asset_summary": {},
+      "detected_tech": [],
+      "synthesized_topic": "vodafone",
+      "project_dna": {},
+      "active_code_files": [],
+      "pruned_subtrees": [],
+      "ai_synthesis": {
+        "onderwerp_kort": "Dit project is een lege repository of placeholder genaamd vodafone zonder actieve codebestanden of gedetecteerde technologieën.",
+        "architectuur_samenvatting": "Er is geen technische architectuur of actieve code aanwezig in deze repository. Het project bevat momenteel geen gedetecteerde technologieën of programmabestanden.",
+        "domein_categorie": "Internal utility / maintenance",
+        "geschikt_voor_publiek_portaal": false
+      }
+    },
+    {
+      "source_root": "custom_1_Gemini",
+      "name": "youtube",
+      "kind": "directory",
+      "path": "/mnt/fedora44/home/steve/Gemini/youtube",
+      "last_modified": "2026-09-07",
+      "inspected_files": 8,
+      "languages": {
+        "Python": 4
+      },
+      "asset_summary": {},
+      "detected_tech": [],
+      "synthesized_topic": "Symbols: clean_title(), main() | Langs: Python",
+      "project_dna": {
+        "code_symbols": [
+          "clean_title()",
+          "main()"
+        ],
+        "python_imports": [
+          "pandas",
+          "sklearn"
+        ]
+      },
+      "active_code_files": [
+        "music/02_cluster_results.py",
+        "video/02_cluster_results.py",
+        "video/01_get_youtube_video_playlists.py",
+        "music/01_get_youtube_music_playlists.py"
+      ],
+      "pruned_subtrees": [],
+      "ai_synthesis": {
+        "onderwerp_kort": "Dit project haalt YouTube-video- en muziekplaylists op, schoont de titels op en clustert de resultaten.",
+        "architectuur_samenvatting": "Het project bestaat uit Python-scripts die YouTube-playlistgegevens ophalen en verwerken. De data wordt opgeschoond en vervolgens geanalyseerd met behulp van pandas en scikit-learn voor clustering.",
+        "domein_categorie": "Internal utility / maintenance",
+        "geschikt_voor_publiek_portaal": false
+      }
+    },
+    {
+      "source_root": "custom_1_Gemini",
+      "name": "zephyr",
+      "kind": "directory",
+      "path": "/mnt/fedora44/home/steve/Gemini/zephyr",
+      "last_modified": "2026-08-20",
+      "inspected_files": 42,
+      "languages": {
+        "Python": 4,
+        "Java": 4,
+        "Shell/Bash": 1
+      },
+      "asset_summary": {
+        ".png": 15,
+        ".jar": 3,
+        ".tar": 1,
+        ".apk": 1,
+        ".dex": 1
+      },
+      "detected_tech": [
+        "Android SDK / WebView",
+        "Bluetooth Classic / BLE",
+        "GTK4 / Libadwaita"
+      ],
+      "synthesized_topic": "Android: com.NewApp | zephyr_gui.py: Zephyr CardioVision - Native GNOME ECG & Telemetry Patient Monitor Built with GTK 4, Libadwaita, and Cairo. Usage: python3 zephyr_gui.py --demo python3 zephyr_gui.py --mac C8:3E:99:0D:9A:67 | Symbols: SyntheticEcgGenerator, EcgCanvas, EcgFilter, TelemetryPanel, MainWindow, CardioVisionApp | Stack: Android SDK / WebView, Bluetooth Classic / BLE, GTK4 / Libadwaita",
+      "project_dna": {
+        "android": {
+          "android_package": "com.NewApp",
+          "activities": [
+            "MainActivity"
+          ],
+          "permissions": [
+            "BLUETOOTH",
+            "BLUETOOTH_ADMIN",
+            "GET_ACCOUNTS",
+            "ACCESS_COARSE_LOCATION",
+            "ACCESS_FINE_LOCATION",
+            "WRITE_EXTERNAL_STORAGE",
+            "INTERNET",
+            "READ_EXTERNAL_STORAGE"
+          ]
+        },
+        "code_symbols": [
+          "SyntheticEcgGenerator",
+          "EcgCanvas",
+          "EcgFilter",
+          "TelemetryPanel",
+          "MainWindow",
+          "CardioVisionApp",
+          "main()",
+          "GeneralDataPacket",
+          "ZephyrPacketParser",
+          "BioHarnessBluetoothClient",
+          "crc8()",
+          "build_packet()",
+          "parse_general_data_packet()",
+          "parse_ecg_wave_packet()",
+          "parse_r_to_r_packet()"
+        ],
+        "python_imports": [
+          "cairo",
+          "dataclasses",
+          "gi",
+          "zephyr_bioharness"
+        ],
+        "python_docstrings": [
+          "zephyr_gui.py: Zephyr CardioVision - Native GNOME ECG & Telemetry Patient Monitor Built with GTK 4, Libadwaita, and Cairo. Usage: python3 zephyr_gui.py --demo python3 zephyr_gui.py --mac C8:3E:99:0D:9A:67",
+          "zephyr_bioharness.py: Zephyr BioHarness 2.0 / 3.0 Communication & Telemetry Library Provides CRC-8 calculation, packet building, stream parsing, and Bluetooth RFCOMM / Serial USB connectivity with auto-pairing support."
+        ]
+      },
+      "active_code_files": [
+        "zephyr_gui.py",
+        "keep/zephyr_gui.py",
+        "tryme.sh",
+        "zephyr_bioharness.py",
+        "zephyr.py",
+        "spieken/src/com/NewApp/NewConnectedListener.java",
+        "spieken/bin/AndroidManifest.xml",
+        "spieken/gen/com/NewApp/BuildConfig.java",
+        "spieken/src/com/NewApp/MainActivity.java",
+        "spieken/AndroidManifest.xml"
+      ],
+      "pruned_subtrees": [
+        {
+          "subpath": "spieken/assets",
+          "reason": "empty_dir"
+        },
+        {
+          "subpath": "spieken/bin/classes/com/NewApp",
+          "reason": "asset_sink (17 files, 17 binary/media/font assets)"
+        }
+      ],
+      "ai_synthesis": {
+        "onderwerp_kort": "[API fout: The read operation timed out]",
+        "architectuur_samenvatting": "",
+        "domein_categorie": "Internal utility / maintenance",
+        "geschikt_voor_publiek_portaal": false
+      }
+    }
+  ]
+}
