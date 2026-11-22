@@ -1,8 +1,8 @@
 {
-  "_integrity": "Project UnLinked W3C Web Application Manifest v1.1.0 — Zero-Tracker Sovereign PWA",
-  "name": "Steven Kleynenberg — Project UnLinked | Sovereign R&D & Architecture Portal",
-  "short_name": "UnLinked",
-  "description": "Architecting sovereign AI systems, patented NLP retrieval engines (WO2014003543A1), and massively parallel software — without platform lock-in or algorithmic noise.",
+  "_integrity": "Steven Kleynenberg Sovereign Portal W3C Web Application Manifest v2.0.0 — Zero-Tracker PWA",
+  "name": "Steven Kleynenberg — Sovereign AI, Systems & Publishing Portal",
+  "short_name": "Kleynenberg",
+  "description": "Artificial Intelligence, Systems Architecture (KSO), Academic & Patent Archive, Independent Publishing (KP), and Broadcast (TKP) — Delft, The Netherlands.",
   "id": "/",
   "start_url": "./index.html?source=pwa",
   "scope": "./",
@@ -13,8 +13,8 @@
     "minimal-ui"
   ],
   "orientation": "any",
-  "background_color": "#f4f2ee",
-  "theme_color": "#0a66c2",
+  "background_color": "#ffffff",
+  "theme_color": "#111111",
   "lang": "en",
   "dir": "ltr",
   "categories": [
@@ -57,23 +57,10 @@
   ],
   "shortcuts": [
     {
-      "name": "Pillar #1: 1985–2020 Foundation",
-      "short_name": "Timeline",
-      "description": "Chronological academic, defence and enterprise R&D timeline",
-      "url": "./index.html#pillar-1-timeline",
-      "icons": [
-        {
-          "src": "./icons/icon-192.png",
-          "sizes": "192x192",
-          "type": "image/png"
-        }
-      ]
-    },
-    {
-      "name": "Scientific Publications Archive",
+      "name": "Papers, Patents & Broadsheet",
       "short_name": "Papers",
-      "description": "Peer-reviewed proceedings, abstracts, PDFs and BibTeX",
-      "url": "./index.html#scientific-papers",
+      "description": "Peer-reviewed neural network papers (MetaNet, BSP400, MEDUSA), WO 2014/003543 A1 & De Nederlandsche Courant",
+      "url": "./papers/index.html",
       "icons": [
         {
           "src": "./icons/icon-192.png",
@@ -83,10 +70,10 @@
       ]
     },
     {
-      "name": "Public GitHub Repositories",
-      "short_name": "GitHub",
-      "description": "Live public repositories under github.com/kleynenberg",
-      "url": "./index.html#github-repositories",
+      "name": "KSO — ITEA 4 SME Profile",
+      "short_name": "KSO",
+      "description": "Kleynenberg Software Ontwikkeling — AI & Systems Architecture",
+      "url": "./kso/index.html",
       "icons": [
         {
           "src": "./icons/icon-192.png",
@@ -96,10 +83,36 @@
       ]
     },
     {
-      "name": "Pillar #2: Living R&D Sandbox",
-      "short_name": "R&D Sandbox",
-      "description": "Active AI systems and the 20 KSA architectural codenames",
-      "url": "./index.html#pillar-2-sandbox",
+      "name": "Personal Projects Workbench",
+      "short_name": "PP Workbench",
+      "description": "AudioTap v18a WebAudio DSP, Local Project Trawler & Sovereign Tooling",
+      "url": "./pp/index.html",
+      "icons": [
+        {
+          "src": "./icons/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Kleynenberg Publishers (KP)",
+      "short_name": "Publishers",
+      "description": "Books, monographs, broadsheets and algorithmic media",
+      "url": "./kp/index.html",
+      "icons": [
+        {
+          "src": "./icons/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "The Kleynenberg Perspective",
+      "short_name": "TKP Podcast",
+      "description": "Pure signal. Zero static. Sovereign audio broadcast",
+      "url": "./tkp/index.html",
       "icons": [
         {
           "src": "./icons/icon-192.png",

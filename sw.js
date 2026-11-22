@@ -1,32 +1,53 @@
 /* ==============================================================================
  * INTEGRITY & METADATA HEADER
  * File:           sw.js
- * Project:        Project UnLinked — Offline-First Service Worker
- * Host Target:    https://kleynenberg.com (GitHub Pages)
- * Build Hash:     583016a9d6a9-v4
+ * Project:        Steven Kleynenberg Sovereign Portal — Offline-First Service Worker
+ * Host Target:    https://steven.kleynenberg.com (GitHub Pages)
+ * Build Version:  v5-2026-11-22
  * Standard:       W3C Service Workers / MDN Service Worker & Cache API
  * Integrity Rule: Zero tracking, deterministic offline shell, runtime PDF/API cache.
  * ============================================================================== */
 
-const CACHE_VERSION = "unlinked-sovereign-v4-583016a9d6a9";
-const RUNTIME_CACHE = "unlinked-runtime-v4-583016a9d6a9";
+const CACHE_VERSION = "kleynenberg-sovereign-v5-20261122";
+const RUNTIME_CACHE = "kleynenberg-runtime-v5-20261122";
 
 const PRECACHE_URLS = [
   "./",
   "./index.html",
-  "./krant.html",
-  "./papers/De-Nederlandsche-Courant-Steven-Kleynenberg-2026-11-19.pdf",
-  "./manifest.webmanifest",
   "./llms.txt",
   "./llms-full.txt",
+  "./manifest.webmanifest",
   "./favicon.ico",
   "./apple-touch-icon.png",
-  "./google_logo_image_of_steven_kleynenberg_at_gmail_dot_com.svg",
   "./icons/icon.svg",
   "./icons/icon-192.png",
   "./icons/icon-512.png",
   "./icons/icon-192-maskable.png",
-  "./icons/icon-512-maskable.png"
+  "./icons/icon-512-maskable.png",
+  "./papers/",
+  "./papers/index.html",
+  "./papers/llms.txt",
+  "./papers/llms-full.txt",
+  "./papers/De-Nederlandsche-Courant-Steven-Kleynenberg-2026-11-19.pdf",
+  "./kso/",
+  "./kso/index.html",
+  "./kso/llms.txt",
+  "./kso/llms-full.txt",
+  "./kso/KSO_logo.jpg",
+  "./pp/",
+  "./pp/index.html",
+  "./pp/llms.txt",
+  "./pp/llms-full.txt",
+  "./kp/",
+  "./kp/index.html",
+  "./kp/llms.txt",
+  "./kp/llms-full.txt",
+  "./kp/logo_2.svg",
+  "./tkp/",
+  "./tkp/index.html",
+  "./tkp/llms.txt",
+  "./tkp/llms-full.txt",
+  "./tkp/tkp_logo.svg"
 ];
 
 self.addEventListener("install", (event) => {
@@ -36,7 +57,7 @@ self.addEventListener("install", (event) => {
         try {
           await cache.add(url);
         } catch (err) {
-          console.warn("[UnLinked SW] Precache skipped optional asset:", url);
+          console.warn("[Kleynenberg SW] Precache skipped optional asset:", url);
         }
       }
     }).then(() => self.skipWaiting())
@@ -61,7 +82,7 @@ self.addEventListener("fetch", (event) => {
 
   const url = new URL(request.url);
 
-  if (url.hostname === "://github.com") {
+  if (url.hostname === "github.com") {
     event.respondWith(
       fetch(request)
         .then((networkResp) => {
