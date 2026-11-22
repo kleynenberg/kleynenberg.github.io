@@ -11,6 +11,8 @@
     <title>Steven Kleynenberg — Delft, The Netherlands</title>
     <meta name="description" content="Steven Kleynenberg (Delft, The Netherlands): Founder & Principal AI Architect at Kleynenberg Software Ontwikkeling (KSO), Publisher at Kleynenberg Publishers (KP), Host of The Kleynenberg Perspective (TKP), and Co-Inventor of PCT Patent WO 2014/003543 A1.">
     <link rel="canonical" href="https://steven.kleynenberg.com/">
+    <link rel="icon" type="image/svg+xml" href="./google_logo_image_of_steven_kleynenberg_at_gmail_dot_com.svg">
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png">
     <link rel="manifest" href="./manifest.webmanifest">
     <link rel="alternate" type="text/plain" title="LLM Summary" href="https://steven.kleynenberg.com/llms.txt">
     <link rel="alternate" type="text/plain" title="LLM Full Corpus" href="https://steven.kleynenberg.com/llms-full.txt">
@@ -27,6 +29,8 @@
           "name": "Steven Kleynenberg",
           "alternateName": ["Steve Kleynenberg", "S.E. Kleynenberg"],
           "jobTitle": "Founder & Principal AI Architect",
+          "email": "mailto:steven@kleynenberg.com",
+          "image": "https://steven.kleynenberg.com/google_logo_image_of_steven_kleynenberg_at_gmail_dot_com.svg",
           "address": {
             "@type": "PostalAddress",
             "addressLocality": "Delft",
@@ -92,122 +96,11 @@
             font-family: 'Atkinson Hyperlegible Next', -apple-system, BlinkMacSystemFont, sans-serif;
             line-height: 1.65;
             transition: background-color 0.2s ease, color 0.2s ease;
-            padding: 3rem 1.5rem 5rem;
+            padding: 0 1.5rem 4rem;
             max-width: 980px;
             margin: 0 auto;
         }
-        .top-bar {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-            gap: 1rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid var(--border-color);
-            margin-bottom: 2.5rem;
-            font-family: 'Atkinson Hyperlegible Mono', monospace;
-            font-size: 0.78rem;
-            letter-spacing: 0.04em;
-        }
-        .nav-group { display: flex; flex-wrap: wrap; gap: 0.85rem; align-items: center; }
-        .top-bar a { color: var(--text-primary); text-decoration: none; border-bottom: 1px solid transparent; }
-        .top-bar a:hover, .top-bar a.active { border-bottom-color: var(--border-strong); font-weight: 700; }
-        .mode-btn {
-            background: transparent;
-            border: 1px solid var(--border-color);
-            color: var(--text-secondary);
-            font-family: 'Atkinson Hyperlegible Mono', monospace;
-            font-size: 0.72rem;
-            padding: 0.25rem 0.6rem;
-            cursor: pointer;
-            text-transform: uppercase;
-        }
-        .mode-btn:hover { border-color: var(--border-strong); color: var(--text-primary); }
-        header.hero { margin-bottom: 3rem; }
-        .eyebrow {
-            font-family: 'Atkinson Hyperlegible Mono', monospace;
-            font-size: 0.78rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--text-muted);
-            margin-bottom: 0.5rem;
-        }
-        .hero-header-row {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-between;
-            gap: 1.5rem;
-        }
-        .brand-logo {
-            max-height: 64px;
-            width: auto;
-            display: block;
-            border: 1px solid var(--border-color);
-            padding: 4px;
-            background: #ffffff;
-        }
-        h1 { font-size: clamp(1.85rem, 3.8vw, 2.6rem); font-weight: 700; line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 0.75rem; }
-        .lead { font-size: 1.08rem; color: var(--text-secondary); max-width: 780px; }
-        .meta-strip {
-            display: flex; flex-wrap: wrap; gap: 1.5rem; margin-top: 1.25rem;
-            font-family: 'Atkinson Hyperlegible Mono', monospace; font-size: 0.78rem; color: var(--text-muted);
-        }
-        h2.section-title {
-            font-family: 'Atkinson Hyperlegible Mono', monospace;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: var(--text-primary);
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--border-strong);
-            margin: 2.75rem 0 1.25rem;
-        }
-        .grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; }
-        article.card {
-            border: 1px solid var(--border-color);
-            background: var(--bg-surface);
-            padding: 1.4rem 1.5rem;
-        }
-        .card-header { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 0.5rem; margin-bottom: 0.45rem; }
-        .card-tag { font-family: 'Atkinson Hyperlegible Mono', monospace; font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; }
-        article.card h3 { font-size: 1.22rem; font-weight: 700; margin-bottom: 0.45rem; }
-        article.card p { color: var(--text-secondary); font-size: 0.98rem; margin-bottom: 0.75rem; }
-        article.card ul { margin: 0.4rem 0 0.85rem 1.25rem; color: var(--text-secondary); font-size: 0.95rem; }
-        article.card li { margin-bottom: 0.3rem; }
-        .url-list {
-            font-family: 'Atkinson Hyperlegible Mono', monospace;
-            font-size: 0.78rem;
-            display: flex;
-            flex-direction: column;
-            gap: 0.3rem;
-            margin-top: 0.65rem;
-            padding-top: 0.65rem;
-            border-top: 1px dashed var(--border-color);
-        }
-        .url-list a { color: var(--accent); text-decoration: none; word-break: break-all; }
-        .url-list a:hover { text-decoration: underline; }
-        table.manifest-table {
-            width: 100%; border-collapse: collapse; font-family: 'Atkinson Hyperlegible Mono', monospace; font-size: 0.8rem; margin-top: 0.75rem;
-        }
-        table.manifest-table th, table.manifest-table td {
-            text-align: left; padding: 0.65rem 0.5rem; border-bottom: 1px solid var(--border-color); vertical-align: top;
-        }
-        table.manifest-table th { color: var(--text-muted); font-weight: 700; text-transform: uppercase; font-size: 0.72rem; }
-        table.manifest-table a { color: var(--accent); text-decoration: none; word-break: break-all; }
-        table.manifest-table a:hover { text-decoration: underline; }
-        footer.colophon {
-            margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color);
-            font-family: 'Atkinson Hyperlegible Mono', monospace; font-size: 0.76rem; color: var(--text-muted);
-            display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem;
-        }
-        footer.colophon a { color: var(--text-primary); text-decoration: none; }
-        footer.colophon a:hover { text-decoration: underline; }
-
-        body {
-            padding: 0 1.5rem 4rem;
-        }
-        .honeypot-viewport {
+        header.honeypot-viewport {
             min-height: 100dvh;
             display: flex;
             flex-direction: column;
@@ -217,9 +110,37 @@
             margin: 0 auto;
             padding: 2rem 0;
         }
-        .honeypot-viewport h1 {
+        .eyebrow {
+            font-family: 'Atkinson Hyperlegible Mono', monospace;
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+            margin-bottom: 0.85rem;
+        }
+        .identity-mark {
+            display: flex;
+            align-items: center;
+            gap: 1.15rem;
+            margin-bottom: 0.75rem;
+        }
+        .identity-logo {
+            width: 58px;
+            height: 58px;
+            flex-shrink: 0;
+            display: block;
+            border-radius: 50%;
+            background: #ffffff;
+            transition: filter 0.2s ease;
+        }
+        html.reverse-mode .identity-logo {
+            filter: invert(1);
+        }
+        h1 {
             font-size: clamp(2rem, 4.5vw, 3rem);
-            margin-bottom: 0.6rem;
+            font-weight: 700;
+            line-height: 1.12;
+            letter-spacing: -0.02em;
         }
         .honeypot-tagline {
             font-family: 'Atkinson Hyperlegible Mono', monospace;
@@ -227,30 +148,48 @@
             color: var(--text-secondary);
             margin-bottom: 1.75rem;
         }
-        .honeypot-links {
+        nav.honeypot-links {
             display: flex;
             flex-wrap: wrap;
             gap: 1.1rem;
             font-family: 'Atkinson Hyperlegible Mono', monospace;
             font-size: 0.85rem;
-            margin-bottom: 2.25rem;
+            margin-bottom: 1.5rem;
         }
-        .honeypot-links a {
+        nav.honeypot-links a {
             color: var(--text-primary);
             text-decoration: none;
             border-bottom: 1px solid var(--border-strong);
             padding-bottom: 2px;
         }
-        .honeypot-links a:hover {
+        nav.honeypot-links a:hover {
             color: var(--accent);
             border-bottom-color: var(--accent);
+        }
+        address.contact-line {
+            font-style: normal;
+            font-family: 'Atkinson Hyperlegible Mono', monospace;
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.75rem;
+        }
+        address.contact-line a {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px dashed var(--accent);
+        }
+        address.contact-line a:hover {
+            border-bottom-style: solid;
         }
         .honeypot-cue {
             font-family: 'Atkinson Hyperlegible Mono', monospace;
             font-size: 0.74rem;
             color: var(--text-muted);
         }
-        .dossier-wrapper {
+        .honeypot-cue a {
+            color: inherit;
+        }
+        details.semantic-dossier {
             max-width: 980px;
             margin: 0 auto;
             padding-top: 2rem;
@@ -274,12 +213,77 @@
             border-color: var(--border-strong);
             color: var(--text-primary);
         }
+        h2.section-title {
+            font-family: 'Atkinson Hyperlegible Mono', monospace;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-primary);
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border-strong);
+            margin: 2.75rem 0 1.25rem;
+        }
+        section.portal-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.25rem;
+        }
+        article.card {
+            border: 1px solid var(--border-color);
+            background: var(--bg-surface);
+            padding: 1.4rem 1.5rem;
+        }
+        header.card-header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 0.5rem;
+            margin-bottom: 0.45rem;
+        }
+        .card-tag {
+            font-family: 'Atkinson Hyperlegible Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+        }
+        article.card h3 { font-size: 1.22rem; font-weight: 700; margin-bottom: 0.45rem; }
+        article.card p { color: var(--text-secondary); font-size: 0.98rem; margin-bottom: 0.75rem; }
+        nav.url-list {
+            font-family: 'Atkinson Hyperlegible Mono', monospace;
+            font-size: 0.78rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+            margin-top: 0.65rem;
+            padding-top: 0.65rem;
+            border-top: 1px dashed var(--border-color);
+        }
+        nav.url-list a { color: var(--accent); text-decoration: none; word-break: break-all; }
+        nav.url-list a:hover { text-decoration: underline; }
+        footer.colophon {
+            margin-top: 4rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-color);
+            font-family: 'Atkinson Hyperlegible Mono', monospace;
+            font-size: 0.76rem;
+            color: var(--text-muted);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+        footer.colophon a { color: var(--text-primary); text-decoration: none; }
+        footer.colophon a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
-    <section class="honeypot-viewport" aria-label="Identity Card">
-        <div class="eyebrow">52.00827&deg; N, 4.33846&deg; E // DELFT, THE NETHERLANDS</div>
-        <h1>Steven Kleynenberg</h1>
+    <header class="honeypot-viewport">
+        <p class="eyebrow">52.00827&deg; N, 4.33846&deg; E // DELFT, THE NETHERLANDS</p>
+        <figure class="identity-mark">
+            <img src="./google_logo_image_of_steven_kleynenberg_at_gmail_dot_com.svg" alt="Steven Kleynenberg logo" class="identity-logo" width="58" height="58">
+            <figcaption><h1>Steven Kleynenberg</h1></figcaption>
+        </figure>
         <p class="honeypot-tagline">Pure signal. Zero static. Artificial Intelligence, Systems Architecture, Publishing &amp; Broadcast.</p>
         <nav class="honeypot-links" aria-label="Domain Portals">
             <a href="https://steven.kleynenberg.com/papers/">/papers/</a>
@@ -288,120 +292,123 @@
             <a href="https://steven.kleynenberg.com/kp/">/kp/</a>
             <a href="https://tkp.kleynenberg.com/">/tkp/</a>
         </nav>
-        <div class="honeypot-cue">Scroll down for the complete semantic knowledge index, or inspect <a href="https://steven.kleynenberg.com/llms.txt" style="color:inherit;">https://steven.kleynenberg.com/llms.txt</a>.</div>
-    </section>
+        <address class="contact-line">
+            Direct contact: <a href="mailto:steven@kleynenberg.com" aria-label="Email Steven Kleynenberg">steven@kleynenberg.com</a>
+        </address>
+        <p class="honeypot-cue">Scroll down for the complete semantic knowledge index, or inspect <a href="https://steven.kleynenberg.com/llms.txt">https://steven.kleynenberg.com/llms.txt</a>.</p>
+    </header>
 
-    <div class="dossier-wrapper">
-        <details class="semantic-dossier" open>
-            <summary>[ + ] Complete Semantic Knowledge Index &amp; Sub-Portal Directory (Steven Kleynenberg)</summary>
-            <main>
-                <h2 class="section-title">01 // Biographical &amp; Technical Identity</h2>
-                <div class="grid">
-                    <article class="card">
-                        <div class="card-header">
-                            <span class="card-tag">Principal AI &amp; Systems Architect // Delft, NL</span>
-                            <span class="card-tag">1985 &ndash; 2026</span>
-                        </div>
-                        <h3>Steven Kleynenberg (S.E. Kleynenberg)</h3>
-                        <p>Dutch AI &amp; Systems Architect, inventor, publisher, and podcaster based in Delft, The Netherlands, with over 30 years of hands-on research and engineering experience in Artificial Intelligence, massively parallel neurocomputing (MetaNet / BSP400 / Connection Machine), computational linguistics, and distributed enterprise and clinical architectures.</p>
-                        <p>Co-inventor of international PCT patent application <strong>WO 2014/003543 A1</strong> (automated linguistic sequence filtering and patent search) and architect across multiple European ITEA and EU research consortia (EDAFMIS, MEDUSA, Medolution, PARTNER, LORE).</p>
-                        <div class="url-list">
-                            <a href="https://steven.kleynenberg.com/">https://steven.kleynenberg.com/</a>
-                            <a href="https://patents.google.com/patent/WO2014003543A1/en">https://patents.google.com/patent/WO2014003543A1/en</a>
-                            <a href="https://itea4.org/community/contact/profile/my.html">https://itea4.org/community/contact/profile/my.html</a>
-                        </div>
-                    </article>
-                </div>
+    <details class="semantic-dossier" open>
+        <summary>[ + ] Complete Semantic Knowledge Index &amp; Sub-Portal Directory (Steven Kleynenberg)</summary>
+        <main>
+            <h2 class="section-title">01 // Biographical &amp; Technical Identity</h2>
+            <section class="portal-grid" aria-label="Biographical and Technical Identity">
+                <article class="card">
+                    <header class="card-header">
+                        <span class="card-tag">Principal AI &amp; Systems Architect // Delft, NL</span>
+                        <time class="card-tag" datetime="1985/2026">1985 &ndash; 2026</time>
+                    </header>
+                    <h3>Steven Kleynenberg (S.E. Kleynenberg)</h3>
+                    <p>Dutch AI &amp; Systems Architect, inventor, publisher, and podcaster based in Delft, The Netherlands, with over 30 years of hands-on research and engineering experience in Artificial Intelligence, massively parallel neurocomputing (MetaNet / BSP400 / Connection Machine), computational linguistics, and distributed enterprise and clinical architectures.</p>
+                    <p>Co-inventor of international PCT patent application <strong>WO 2014/003543 A1</strong> (automated linguistic sequence filtering and patent search) and architect across multiple European ITEA and EU research consortia (EDAFMIS, MEDUSA, Medolution, PARTNER, LORE).</p>
+                    <nav class="url-list" aria-label="Identity and Patent Links">
+                        <a href="https://steven.kleynenberg.com/">https://steven.kleynenberg.com/</a>
+                        <a href="mailto:steven@kleynenberg.com">mailto:steven@kleynenberg.com</a>
+                        <a href="https://patents.google.com/patent/WO2014003543A1/en">https://patents.google.com/patent/WO2014003543A1/en</a>
+                        <a href="https://itea4.org/community/contact/profile/my.html">https://itea4.org/community/contact/profile/my.html</a>
+                    </nav>
+                </article>
+            </section>
 
-                <h2 class="section-title">02 // Sub-Portals &amp; Domain Architecture</h2>
-                <div class="grid">
-                    <article class="card">
-                        <div class="card-header">
-                            <span class="card-tag">Academic &amp; Patent Archive</span>
-                            <span class="card-tag">/papers/</span>
-                        </div>
-                        <h3>Curated Academic Papers, Patents &amp; Broadsheet</h3>
-                        <p>Six verified publications and primary artefacts spanning 1990 to 2026: foundational neural network papers on MetaNet and BSP400 (INNC 1990, IJCNN 1991, ICANN 1991), international patent WO 2014/003543 A1, the ESOCC 2015 MEDUSA acute stroke workflow paper, and the 2026 broadsheet edition of De Nederlandsche Courant.</p>
-                        <div class="url-list">
-                            <a href="https://steven.kleynenberg.com/papers/">https://steven.kleynenberg.com/papers/</a>
-                            <a href="https://steven.kleynenberg.com/papers/llms.txt">https://steven.kleynenberg.com/papers/llms.txt</a>
-                            <a href="https://steven.kleynenberg.com/papers/llms-full.txt">https://steven.kleynenberg.com/papers/llms-full.txt</a>
-                        </div>
-                    </article>
+            <h2 class="section-title">02 // Sub-Portals &amp; Domain Architecture</h2>
+            <section class="portal-grid" aria-label="Sub-Portals and Domain Architecture">
+                <article class="card">
+                    <header class="card-header">
+                        <span class="card-tag">Academic &amp; Patent Archive</span>
+                        <span class="card-tag">/papers/</span>
+                    </header>
+                    <h3>Curated Academic Papers, Patents &amp; Broadsheet</h3>
+                    <p>Six verified publications and primary artefacts spanning 1990 to 2026: foundational neural network papers on MetaNet and BSP400 (INNC 1990, IJCNN 1991, ICANN 1991), international patent WO 2014/003543 A1, the ESOCC 2015 MEDUSA acute stroke workflow paper, and the 2026 broadsheet edition of De Nederlandsche Courant.</p>
+                    <nav class="url-list" aria-label="Academic and Patent Archive Links">
+                        <a href="https://steven.kleynenberg.com/papers/">https://steven.kleynenberg.com/papers/</a>
+                        <a href="https://steven.kleynenberg.com/papers/llms.txt">https://steven.kleynenberg.com/papers/llms.txt</a>
+                        <a href="https://steven.kleynenberg.com/papers/llms-full.txt">https://steven.kleynenberg.com/papers/llms-full.txt</a>
+                    </nav>
+                </article>
 
-                    <article class="card">
-                        <div class="card-header">
-                            <span class="card-tag">ITEA 4 R&amp;D SME Profile</span>
-                            <span class="card-tag">/kso/ &rarr; kso.kleynenberg.com</span>
-                        </div>
-                        <h3>Kleynenberg Software Ontwikkeling (KSO)</h3>
-                        <p>Dutch R&amp;D SME in the Delft/The Hague technology corridor led by Founder &amp; Principal AI Architect Steven Kleynenberg. Specializes in Sovereign AI &amp; Hybrid Enterprise-RAG, Browser-Native AI &amp; WebGPU Compute, Real-Time Sensor Telemetry &amp; Clinical/Operational Decision Support (DSS), and Mission-Critical Linux Systems Engineering for European ITEA 4 consortia.</p>
-                        <div class="url-list">
-                            <a href="https://kso.kleynenberg.com/">https://kso.kleynenberg.com/</a>
-                            <a href="https://steven.kleynenberg.com/kso/">https://steven.kleynenberg.com/kso/</a>
-                            <a href="https://kso.kleynenberg.com/llms.txt">https://kso.kleynenberg.com/llms.txt</a>
-                            <a href="https://kso.kleynenberg.com/llms-full.txt">https://kso.kleynenberg.com/llms-full.txt</a>
-                        </div>
-                    </article>
+                <article class="card">
+                    <header class="card-header">
+                        <span class="card-tag">ITEA 4 R&amp;D SME Profile</span>
+                        <span class="card-tag">/kso/ &rarr; kso.kleynenberg.com</span>
+                    </header>
+                    <h3>Kleynenberg Software Ontwikkeling (KSO)</h3>
+                    <p>Dutch R&amp;D SME in the Delft/The Hague technology corridor led by Founder &amp; Principal AI Architect Steven Kleynenberg. Specializes in Sovereign AI &amp; Hybrid Enterprise-RAG, Browser-Native AI &amp; WebGPU Compute, Real-Time Sensor Telemetry &amp; Clinical/Operational Decision Support (DSS), and Mission-Critical Linux Systems Engineering for European ITEA 4 consortia.</p>
+                    <nav class="url-list" aria-label="KSO Links">
+                        <a href="https://kso.kleynenberg.com/">https://kso.kleynenberg.com/</a>
+                        <a href="https://steven.kleynenberg.com/kso/">https://steven.kleynenberg.com/kso/</a>
+                        <a href="https://kso.kleynenberg.com/llms.txt">https://kso.kleynenberg.com/llms.txt</a>
+                        <a href="https://kso.kleynenberg.com/llms-full.txt">https://kso.kleynenberg.com/llms-full.txt</a>
+                    </nav>
+                </article>
 
-                    <article class="card">
-                        <div class="card-header">
-                            <span class="card-tag">R&amp;D Workbench &amp; Prototypes</span>
-                            <span class="card-tag">/pp/</span>
-                        </div>
-                        <h3>Personal Projects — Sovereign Software &amp; DSP Workbench</h3>
-                        <p>Engineering workbench documenting experimental and internal systems: the deterministic AST/DNA project synthesis pipeline (local_project_trawler.py v3.1.1), AudioTap v18a (zero-AndroidX Java 17 / SDK 34 player with 10-band Biquad Homeostasis WebAudio DSP and thermal Technics VU physics), and automated EPUB/video compilers.</p>
-                        <div class="url-list">
-                            <a href="https://steven.kleynenberg.com/pp/">https://steven.kleynenberg.com/pp/</a>
-                            <a href="https://steven.kleynenberg.com/pp/llms.txt">https://steven.kleynenberg.com/pp/llms.txt</a>
-                            <a href="https://steven.kleynenberg.com/pp/llms-full.txt">https://steven.kleynenberg.com/pp/llms-full.txt</a>
-                        </div>
-                    </article>
+                <article class="card">
+                    <header class="card-header">
+                        <span class="card-tag">R&amp;D Workbench &amp; Prototypes</span>
+                        <span class="card-tag">/pp/</span>
+                    </header>
+                    <h3>Personal Projects — Sovereign Software &amp; DSP Workbench</h3>
+                    <p>Engineering workbench documenting experimental and internal systems: the deterministic AST/DNA project synthesis pipeline (local_project_trawler.py v3.1.1), AudioTap v18a (zero-AndroidX Java 17 / SDK 34 player with 10-band Biquad Homeostasis WebAudio DSP and thermal Technics VU physics), and automated EPUB/video compilers.</p>
+                    <nav class="url-list" aria-label="Personal Projects Links">
+                        <a href="https://steven.kleynenberg.com/pp/">https://steven.kleynenberg.com/pp/</a>
+                        <a href="https://steven.kleynenberg.com/pp/llms.txt">https://steven.kleynenberg.com/pp/llms.txt</a>
+                        <a href="https://steven.kleynenberg.com/pp/llms-full.txt">https://steven.kleynenberg.com/pp/llms-full.txt</a>
+                    </nav>
+                </article>
 
-                    <article class="card">
-                        <div class="card-header">
-                            <span class="card-tag">Independent Publishing &amp; Algorithmic Media</span>
-                            <span class="card-tag">/kp/ &rarr; naaap.io</span>
-                        </div>
-                        <h3>Kleynenberg Publishers (KP)</h3>
-                        <p>Independent digital publishing house producing illustrated historical monographs, visual satire, algorithmic music, and algorithmic cinema. Publishes digital editions on Google Play Books (Arps Fotoalbum, Bernardus Arps, Niet van Herg&eacute;, GIGA!) and algorithmic compositions on Suno.</p>
-                        <div class="url-list">
-                            <a href="https://steven.kleynenberg.com/kp/">https://steven.kleynenberg.com/kp/</a>
-                            <a href="https://steven.kleynenberg.com/kp/llms.txt">https://steven.kleynenberg.com/kp/llms.txt</a>
-                            <a href="https://steven.kleynenberg.com/kp/llms-full.txt">https://steven.kleynenberg.com/kp/llms-full.txt</a>
-                        </div>
-                    </article>
+                <article class="card">
+                    <header class="card-header">
+                        <span class="card-tag">Independent Publishing &amp; Algorithmic Media</span>
+                        <span class="card-tag">/kp/ &rarr; naaap.io</span>
+                    </header>
+                    <h3>Kleynenberg Publishers (KP)</h3>
+                    <p>Independent digital publishing house producing illustrated historical monographs, visual satire, algorithmic music, and algorithmic cinema. Publishes digital editions on Google Play Books (Arps Fotoalbum, Bernardus Arps, Niet van Herg&eacute;, GIGA!) and algorithmic compositions on Suno.</p>
+                    <nav class="url-list" aria-label="Kleynenberg Publishers Links">
+                        <a href="https://steven.kleynenberg.com/kp/">https://steven.kleynenberg.com/kp/</a>
+                        <a href="https://steven.kleynenberg.com/kp/llms.txt">https://steven.kleynenberg.com/kp/llms.txt</a>
+                        <a href="https://steven.kleynenberg.com/kp/llms-full.txt">https://steven.kleynenberg.com/kp/llms-full.txt</a>
+                    </nav>
+                </article>
 
-                    <article class="card">
-                        <div class="card-header">
-                            <span class="card-tag">Independent Audio Broadcast</span>
-                            <span class="card-tag">/tkp/ &rarr; tkp.kleynenberg.com</span>
-                        </div>
-                        <h3>The Kleynenberg Perspective (TKP)</h3>
-                        <p>Ad-free, self-hosted audio broadcast exploring AI architectures, computational linguistics, cognitive systems, and digital sovereignty. Automated via self-hosted podsync v2.8.0 into a static RSS 2.0 feed.</p>
-                        <div class="url-list">
-                            <a href="https://tkp.kleynenberg.com/">https://tkp.kleynenberg.com/</a>
-                            <a href="https://steven.kleynenberg.com/tkp/">https://steven.kleynenberg.com/tkp/</a>
-                            <a href="https://tkp.kleynenberg.com/llms.txt">https://tkp.kleynenberg.com/llms.txt</a>
-                            <a href="https://tkp.kleynenberg.com/llms-full.txt">https://tkp.kleynenberg.com/llms-full.txt</a>
-                        </div>
-                    </article>
-                </div>
-            </main>
-                <footer class="colophon">
-        <div>&copy; mmxxvi kleynenberg publishers &mdash; <a href="https://kleynenberg.com">https://kleynenberg.com</a></div>
-        <div>
-            <a href="https://steven.kleynenberg.com/">https://steven.kleynenberg.com/</a> &middot;
-            <a href="./llms.txt">./llms.txt</a> &middot;
-            <a href="./llms-full.txt">./llms-full.txt</a>
-        </div>
-    </footer>
-        </details>
-    </div>
+                <article class="card">
+                    <header class="card-header">
+                        <span class="card-tag">Independent Audio Broadcast</span>
+                        <span class="card-tag">/tkp/ &rarr; tkp.kleynenberg.com</span>
+                    </header>
+                    <h3>The Kleynenberg Perspective (TKP)</h3>
+                    <p>Ad-free, self-hosted audio broadcast exploring AI architectures, computational linguistics, cognitive systems, and digital sovereignty. Automated via self-hosted podsync v2.8.0 into a static RSS 2.0 feed.</p>
+                    <nav class="url-list" aria-label="The Kleynenberg Perspective Links">
+                        <a href="https://tkp.kleynenberg.com/">https://tkp.kleynenberg.com/</a>
+                        <a href="https://steven.kleynenberg.com/tkp/">https://steven.kleynenberg.com/tkp/</a>
+                        <a href="https://tkp.kleynenberg.com/llms.txt">https://tkp.kleynenberg.com/llms.txt</a>
+                        <a href="https://tkp.kleynenberg.com/llms-full.txt">https://tkp.kleynenberg.com/llms-full.txt</a>
+                    </nav>
+                </article>
+            </section>
+        </main>
+
+        <footer class="colophon">
+            <p>&copy; mmxxvi kleynenberg publishers &mdash; <a href="https://kleynenberg.com">https://kleynenberg.com</a> &middot; <a href="mailto:steven@kleynenberg.com">steven@kleynenberg.com</a></p>
+            <nav aria-label="Corpus and Canonical Links">
+                <a href="https://steven.kleynenberg.com/">https://steven.kleynenberg.com/</a> &middot;
+                <a href="./llms.txt">./llms.txt</a> &middot;
+                <a href="./llms-full.txt">./llms-full.txt</a>
+            </nav>
+        </footer>
+    </details>
+
     <script>
         (function() {
             const root = document.documentElement;
-            const btn = document.getElementById('theme-toggle');
             if (localStorage.getItem('sk_reverse_mode') === '1') {
                 root.classList.add('reverse-mode');
             }
@@ -409,7 +416,6 @@
                 root.classList.toggle('reverse-mode');
                 localStorage.setItem('sk_reverse_mode', root.classList.contains('reverse-mode') ? '1' : '0');
             }
-            if (btn) btn.addEventListener('click', toggleMode);
             let lastTap = 0;
             document.addEventListener('dblclick', function(e) {
                 if (!e.target.closest('a, button, summary')) toggleMode();
