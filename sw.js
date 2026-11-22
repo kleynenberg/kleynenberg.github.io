@@ -8,7 +8,7 @@
  * Integrity Rule: Zero tracking, deterministic offline shell, runtime PDF/API cache.
  * ============================================================================== */
 
-const CACHE_VERSION = "kleynenberg-sovereign-v5-20261122";
+const CACHE_VERSION = "kleynenberg-sovereign-v6-20261122";
 const RUNTIME_CACHE = "kleynenberg-runtime-v5-20261122";
 
 const PRECACHE_URLS = [
@@ -42,12 +42,15 @@ const PRECACHE_URLS = [
   "./kp/index.html",
   "./kp/llms.txt",
   "./kp/llms-full.txt",
-  "./kp/logo_2.svg",
+  "./kp/logo.svg",
   "./tkp/",
   "./tkp/index.html",
   "./tkp/llms.txt",
   "./tkp/llms-full.txt",
-  "./tkp/tkp_logo.svg"
+  "./tkp/tkp_logo.svg",
+  './papers/font_taxonomy.pdf',
+  './papers/font_taxonomy.tex',
+  './CITATION.cff'
 ];
 
 self.addEventListener("install", (event) => {
