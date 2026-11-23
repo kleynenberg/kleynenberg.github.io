@@ -1,0 +1,123 @@
+cd /home/steve/gemini/github.io
+
+# Indien qrencode nog niet is geïnstalleerd:
+# sudo dnf install -y qrencode
+
+python3 - <<'EOF'
+# ==============================================================================
+# INTEGRITY HEADER — Verified Font + Real QR OG PNG Builder (800x418)
+# ==============================================================================
+from pathlib import Path
+import shutil
+import subprocess
+import xml.etree.ElementTree as ET
+
+SVG_SOURCE = Path("google_logo_image_of_steven_kleynenberg_at_gmail_dot_com.svg")
+OG_PNG = Path("og-image.png")
+TEMP_SVG = Path("_og_compose_tmp.svg")
+TEMP_QR_SVG = Path("_og_qr_tmp.svg")
+
+QR_TARGET_URL = "https://steven.kleynenberg.com/"
+TITLE_QUERY = "Atkinson Hyperlegible:bold"
+SUBTITLE_QUERY = "Adwaita Mono"
+
+
+def resolve_font(pattern: str) -> tuple[str, str]:
+    """Query fc-match for exact file path and resolved family/style."""
+    if shutil.which("fc-match") is None:
+        raise RuntimeError("fc-match not found; install fontconfig via dnf.")
+    proc = subprocess.run(
+        ["fc-match", "-f", "%{file}\t%{family} [%{style}]", pattern],
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+    parts = proc.stdout.strip().split("\t", 1)
+    font_file = parts[0] if len(parts) > 0 else ""
+    font_desc = parts[1] if len(parts) > 1 else ""
+    if not font_file or not Path(font_file).exists():
+        raise RuntimeError(f"Resolved font file missing for '{pattern}': {proc.stdout!r}")
+    return font_file, font_desc
+
+
+def extract_svg_body(svg_path: Path) -> str:
+    """Parse SVG XML and serialize inner elements cleanly for embedding."""
+    root = ET.parse(svg_path).getroot()
+    parts = [ET.tostring(child, encoding="unicode") for child in root]
+    return "\n    ".join(parts)
+
+
+def generate_qr_svg(url: str, qr_svg_path: Path) -> tuple[str, str]:
+    """Generate a real SVG QR code via qrencode and return (viewBox, inner_xml)."""
+    if shutil.which("qrencode") is None:
+        raise RuntimeError(
+            "qrencode not found; install it with 'sudo dnf install -y qrencode'."
+        )
+    subprocess.run(
+        ["qrencode", "-t", "SVG", "-m", "2", "-s", "4", "-o", str(qr_svg_path), url],
+        check=True,
+    )
+    root = ET.parse(qr_svg_path).getroot()
+    view_box = root.attrib.get("viewBox")
+    if not view_box:
+        width = root.attrib.get("width", "100")
+        height = root.attrib.get("height", "100")
+        view_box = f"0 0 {width} {height}"
+    inner_xml = "\n      ".join(ET.tostring(child, encoding="unicode") for child in root)
+    return view_box, inner_xml
+
+
+def build_og_png_with_qr() -> None:
+    """Verify fonts, build real QR SVG, render 800x418 PNG, and clean up temp files."""
+    if not SVG_SOURCE.exists():
+        raise FileNotFoundError(f"Missing SVG source: {SVG_SOURCE}")
+    if shutil.which("rsvg-convert") is None:
+        raise RuntimeError("rsvg-convert not found; install librsvg2-tools via dnf.")
+
+    title_file, title_desc = resolve_font(TITLE_QUERY)
+    sub_file, sub_desc = resolve_font(SUBTITLE_QUERY)
+    print(f"VERIFIED TITLE FONT   : {title_file} -> {title_desc}")
+    print(f"VERIFIED SUBTITLE FONT: {sub_file} -> {sub_desc}")
+
+    embedded_logo = extract_svg_body(SVG_SOURCE)
+    qr_viewbox, qr_inner = generate_qr_svg(QR_TARGET_URL, TEMP_QR_SVG)
+    print(f"VERIFIED QR TARGET    : {QR_TARGET_URL} (viewBox={qr_viewbox})")
+
+    composed = f"""<svg xmlns="http://www.w3.org/2000/svg" width="800" height="418" viewBox="0 0 800 418">
+  <rect width="800" height="418" fill="#ffffff"/>
+  <rect x="24" y="24" width="752" height="370" fill="#fafafa" stroke="#e0e0e0" stroke-width="2"/>
+  <svg x="56" y="113" width="192" height="192" viewBox="0 0 3000 3000">
+    {embedded_logo}
+  </svg>
+  <text x="355" y="192" font-family="'Atkinson Hyperlegible', sans-serif" font-size="34" font-weight="700" fill="#111111">Steven Kleynenberg</text>
+  <text x="355" y="236" font-family="'Adwaita Mono', 'Liberation Mono', monospace" font-size="22" fill="#0056b3">steven.kleynenberg.com</text>
+  <rect x="628" y="244" width="116" height="116" fill="#ffffff" stroke="#e0e0e0" stroke-width="1.5"/>
+  <svg x="634" y="250" width="104" height="104" viewBox="{qr_viewbox}">
+    {qr_inner}
+  </svg>
+</svg>
+"""
+    TEMP_SVG.write_text(composed, encoding="utf-8")
+    try:
+        subprocess.run(
+            ["rsvg-convert", "-w", "800", "-h", "418", "-o", str(OG_PNG), str(TEMP_SVG)],
+            check=True,
+        )
+    finally:
+        for tmp in (TEMP_SVG, TEMP_QR_SVG):
+            if tmp.exists():
+                tmp.unlink()
+
+    size_kb = OG_PNG.stat().st_size / 1024.0
+    print(f"CREATED PNG           : {OG_PNG} ({size_kb:.1f} KB, 800x418)")
+
+
+if __name__ == "__main__":
+    build_og_png_with_qr()
+EOF
+
+git add og-image.png
+if ! git diff --cached --quiet; then
+    git commit -m "Add QR code for steven.kleynenberg.com to og-image.png"
+    git push
+fi

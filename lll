@@ -1,0 +1,21 @@
+cd /home/steve/gemini/github.io
+
+if [ -f hhhh ]; then
+    rm -f hhhh
+    echo "Removed stray file: hhhh"
+fi
+
+echo "--- GIT STATUS BEFORE COMMIT ---"
+git status -s
+
+git add -A
+if ! git diff --cached --quiet; then
+    git commit -m "Publish updated site assets and og-image.png with QR code"
+    git push origin main
+fi
+
+echo "--- LIVE CHECK: https://steven.kleynenberg.com/og-image.png ---"
+curl -sIL "https://steven.kleynenberg.com/og-image.png?v=$(date +%s)" | grep -iE "^HTTP/|^content-type:|^content-length:|^last-modified:"
+
+echo "--- LIVE CHECK: OG TAGS ON https://steven.kleynenberg.com/ ---"
+curl -sL "https://steven.kleynenberg.com/" | grep -iE "property=[\"']og:|name=[\"']twitter:" | head -n 20
