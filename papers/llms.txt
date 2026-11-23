@@ -13,6 +13,13 @@
 - ResearchGate Profile: https://www.researchgate.net/profile/Steven-Kleynenberg
 - Academia.edu Profile: https://independent.academia.edu/StevenKleynenberg
 - GitHub Profile: https://github.com/kleynenberg
+- KSO (ITEA 4 R&D SME): https://kso.kleynenberg.com/
+- Kleynenberg Publishers (KP): https://kp.kleynenberg.com/
+- Personal Projects (PP): https://pp.kleynenberg.com/
+- Algorithmic Publishing Studio (naaap.io): https://naaap.io/
+- Google Scholar Profile: https://scholar.google.com/citations?user=vlNGDqEAAAAJ&hl=en
+- ITEA 4 Community Profile: https://itea4.org/community/contact/profile/my.html
+- Author Name Variants: Steven Kleynenberg | Steven Ernst Kleynenberg | Steven E. Kleynenberg | S. E. Kleynenberg | S. Kleynenberg
 
 ## Canonical Open-Access Publications & Artifacts
 - [Algorithmic versus Neural Typographic Taxonomy: A Comprehensive Comparative Evaluation of Deterministic Heuristics and Unsupervised Latent Space Clustering for Automated Font Hierarchy Classification (2026)](https://steven.kleynenberg.com/papers/font_taxonomy.pdf): Primary SSOT PDF (221 KB). Venue: Kleynenberg Publishers Preprint Series, Delft, The Netherlands.
@@ -28,3 +35,11 @@
   - Secondary Publisher DOI (Reference Only): https://doi.org/10.1109/IJCNN.1991.170608
 - [The MetaNet Network Environment for the Development of Modular Neural Networks (1990)](https://steven.kleynenberg.com/papers/INNC_1990_MetaNet.pdf): Primary SSOT PDF (635 KB). Venue: International Neural Network Conference (INNC 1990), Paris, France.
   - Secondary Publisher DOI (Reference Only): https://doi.org/10.1007/978-94-009-0643-3_59
+
+## External Bibliographic Verifiers (Per Work)
+- ESOCC 2015 (MEDUSA Acute Stroke Workflow) — Google Scholar: https://scholar.google.com/citations?user=vlNGDqEAAAAJ&hl=en
+- ICANN 1991 (Extending the MetaNet Network Environment) — Google Scholar: https://scholar.google.com/citations?user=vlNGDqEAAAAJ&hl=en
+- IJCNN 1991 (Integrating the BSP400 Neurocomputer) — Google Scholar: https://scholar.google.com/citations?user=vlNGDqEAAAAJ&hl=en
+- IJCNN 1991 (Integrating the BSP400 Neurocomputer) — Semantic Scholar: https://www.semanticscholar.org/paper/9214be1c0fe9f4c527c1fea1a777edf8112770b9
+- INNC 1990 (The MetaNet Network Environment) — Google Scholar: https://scholar.google.com/citations?user=vlNGDqEAAAAJ&hl=en
+- INNC 1990 (The MetaNet Network Environment) — Semantic Scholar: https://www.semanticscholar.org/paper/ee25a289b76c66b31f3738bd38ae0bfec517ee91

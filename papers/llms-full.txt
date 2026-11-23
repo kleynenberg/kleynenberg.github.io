@@ -1,3 +1,7 @@
+Google Scholar Author Profile: https://scholar.google.com/citations?user=vlNGDqEAAAAJ&hl=en
+ITEA 4 Community Profile: https://itea4.org/community/contact/profile/my.html
+Author Name Variants: Steven Kleynenberg | Steven Ernst Kleynenberg | Steven E. Kleynenberg | S. E. Kleynenberg | S. Kleynenberg
+
 # Steven Kleynenberg — Complete Bibliographic & BibTeX SSOT Corpus
 
 SSOT Canonical Root: https://steven.kleynenberg.com/papers/
@@ -104,6 +108,7 @@ SN  - 978-3-319-24071-8
 DO  - 10.1007/978-3-319-24072-5_15
 UR  - https://steven.kleynenberg.com/papers/ESOCC_2015_MEDUSA.pdf
 ER  -
+SECONDARY GOOGLE SCHOLAR PROFILE: https://scholar.google.com/citations?user=vlNGDqEAAAAJ&hl=en
 
 ==============================================================================
 TITLE: Method and System for Automated Linguistic Sequence Filtering and Patent Whitespace Search (WO 2014/003543 A1 / PCT/NL2012/050463)
@@ -173,6 +178,7 @@ EP  - 1534
 SN  - 978-0-444-89178-5
 UR  - https://steven.kleynenberg.com/papers/ICANN_1991_BSP400.pdf
 ER  -
+SECONDARY GOOGLE SCHOLAR PROFILE: https://scholar.google.com/citations?user=vlNGDqEAAAAJ&hl=en
 
 ==============================================================================
 TITLE: Integrating the BSP400 Neurocomputer with the MetaNet Network Environment
@@ -214,6 +220,8 @@ SN  - 0-7803-0227-3
 DO  - 10.1109/IJCNN.1991.170608
 UR  - https://steven.kleynenberg.com/papers/IJCNN_1991_MetaNet.pdf
 ER  -
+SECONDARY GOOGLE SCHOLAR PROFILE: https://scholar.google.com/citations?user=vlNGDqEAAAAJ&hl=en
+SECONDARY SEMANTIC SCHOLAR MIRROR: https://www.semanticscholar.org/paper/9214be1c0fe9f4c527c1fea1a777edf8112770b9
 
 ==============================================================================
 TITLE: The MetaNet Network Environment for the Development of Modular Neural Networks
@@ -253,4 +261,6 @@ SN  - 978-94-009-0643-3
 DO  - 10.1007/978-94-009-0643-3_59
 UR  - https://steven.kleynenberg.com/papers/INNC_1990_MetaNet.pdf
 ER  -
+SECONDARY GOOGLE SCHOLAR PROFILE: https://scholar.google.com/citations?user=vlNGDqEAAAAJ&hl=en
+SECONDARY SEMANTIC SCHOLAR MIRROR: https://www.semanticscholar.org/paper/ee25a289b76c66b31f3738bd38ae0bfec517ee91
 
