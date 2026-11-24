@@ -1,0 +1,14 @@
+# ==============================================================================
+# INTEGRITY HEADER
+# File:        robots.txt
+# Host:        https://steven.kleynenberg.com/
+# Protocol:    RFC 9309 (https://www.rfc-editor.org/rfc/rfc9309.html)
+# ==============================================================================
+User-agent: *
+Allow: /
+
+Sitemap: https://steven.kleynenberg.com/sitemap.xml
+Sitemap: https://pp.kleynenberg.com/sitemap.xml
+Sitemap: https://kp.kleynenberg.com/sitemap.xml
+Sitemap: https://kso.kleynenberg.com/sitemap.xml
+Sitemap: https://tkp.kleynenberg.com/sitemap.xml

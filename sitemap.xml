@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ============================================================================ -->
+<!-- INTEGRITY HEADER                                                             -->
+<!-- File:        sitemap.xml                                                  -->
+<!-- Host:        https://steven.kleynenberg.com/                                                  -->
+<!-- Protocol:    Sitemaps.org 0.9 (https://www.sitemaps.org/protocol.html)       -->
+<!-- ============================================================================ -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://steven.kleynenberg.com/</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://steven.kleynenberg.com/llms.txt</loc>
+    <lastmod>2026-11-22</lastmod>
+  </url>
+  <url>
+    <loc>https://steven.kleynenberg.com/llms-full.txt</loc>
+    <lastmod>2026-11-22</lastmod>
+  </url>
+  <url>
+    <loc>https://steven.kleynenberg.com/CITATION.cff</loc>
+    <lastmod>2026-11-22</lastmod>
+  </url>
+  <url>
+    <loc>https://steven.kleynenberg.com/steven-kleynenberg-identity.jsonld</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://steven.kleynenberg.com/papers/</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://steven.kleynenberg.com/papers/llms.txt</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://steven.kleynenberg.com/papers/llms-full.txt</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://steven.kleynenberg.com/papers/De-Nederlandsche-Courant-Steven-Kleynenberg-2026-11-19.pdf</loc>
+    <lastmod>2026-11-21</lastmod>
+  </url>
+  <url>
+    <loc>https://steven.kleynenberg.com/papers/ESOCC_2015_MEDUSA_lncs_9306_remote_collaboration_decision_support_and_on_demand_medical_image_analysis_for_acute_stroke_care.pdf</loc>
+    <lastmod>2026-11-18</lastmod>
+  </url>
+  <url>
+    <loc>https://steven.kleynenberg.com/papers/ICANN_1991_BSP400_extending_the_metanet_network_environment_process_control_and_machine_independence.pdf</loc>
+    <lastmod>2026-11-19</lastmod>
+  </url>
+  <url>
+    <loc>https://steven.kleynenberg.com/papers/IJCNN_1991_MetaNet_integrating_the_bsp400_neurocomputer_with_the_metanet_network_environment_neural_networks_1991_1991_ieee_international_joint_conference_on.pdf</loc>
+    <lastmod>2026-11-19</lastmod>
+  </url>
+  <url>
+    <loc>https://steven.kleynenberg.com/papers/INNC_1990_MetaNet_the_metanet_network_environment_for_the_development_of_modular_neural_networks.pdf</loc>
+    <lastmod>2026-11-19</lastmod>
+  </url>
+  <url>
+    <loc>https://steven.kleynenberg.com/papers/WO2014003543A1_method_and_system_for_automated_linguistic_sequence_filtering_and_patent_whitespace_search_wo_2014_003543_a1_pct_nl2012_050463.pdf</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://steven.kleynenberg.com/papers/algorithmic_versus_neural_typographic_taxonomy_a_comprehensive_comparative_evaluation_of_deterministic_heuristics_and_unsupervised_latent_space.pdf</loc>
+    <lastmod>2026-11-22</lastmod>
+  </url>
+  <url>
+    <loc>https://steven.kleynenberg.com/papers/extending_the_metanet_network_environment_process_control_and_machine_independence_ai_reconstructed.pdf</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://steven.kleynenberg.com/papers/monolithic_pwa_architectures_for_real_time_fractal_rendering_perturbation_theory_and_sub_pixel_temporal_filtering_in_webgl_2.pdf</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+</urlset>
