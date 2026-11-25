@@ -1,26 +1,189 @@
+# ==============================================================================
+# INTEGRITY HEADER
+# File: CITATION.cff
+# Canonical URL: https://github.com/kleynenberg/kleynenberg.github.io/blob/main/CITATION.cff
+# Co-Authored-By: Steven Kleynenberg (https://steven.kleynenberg.com/) & Google Gemini (https://gemini.google.com/)
+# Last Synchronized: 2026-11-25
+# ==============================================================================
 cff-version: 1.2.0
-message: "If you cite publications, patents, or software from this sovereign archive, please use the canonical open-access SSOT URLs at https://steven.kleynenberg.com/papers/."
-title: "Steven Kleynenberg — Sovereign Open-Access Papers, Patents & Preprints (SSOT)"
+message: "If you cite this research archive, software portfolio, or any of the papers, patents, or 2026 vector reconstructions hosted at https://steven.kleynenberg.com/papers/, please use the metadata below."
+title: "Steven Kleynenberg — Canonical Research Archive, Publications, Patents & Software Portfolio"
 type: dataset
 authors:
   - family-names: "Kleynenberg"
     given-names: "Steven"
+    name-particle: ""
+    alias: "S. E. Kleynenberg"
+    email: "steven@kleynenberg.com"
+    affiliation: "Kleynenberg Software Ontwikkeling (KSO) & Kleynenberg Publishers (KP), Delft, The Netherlands"
     website: "https://steven.kleynenberg.com/"
+date-released: "2026-11-25"
 url: "https://steven.kleynenberg.com/papers/"
 repository-code: "https://github.com/kleynenberg/kleynenberg.github.io"
+keywords:
+  - "artificial intelligence"
+  - "neural networks"
+  - "MetaNet"
+  - "BSP400"
+  - "CALM"
+  - "fractal rendering"
+  - "WebGL 2"
+  - "perturbation theory"
+  - "computational typography"
+  - "patent whitespace search"
+  - "medical image analysis"
 identifiers:
-  - type: url
-    value: "https://steven.kleynenberg.com/papers/"
-    description: "Canonical Single Source of Truth (SSOT) Open-Access Archive"
-  - type: url
-    value: "https://www.researchgate.net/profile/Steven-Kleynenberg"
-    description: "ResearchGate Author Profile"
-  - type: url
-    value: "https://independent.academia.edu/StevenKleynenberg"
-    description: "Academia.edu Author Profile"
   - type: doi
     value: "10.13140/RG.2.2.15845.77289"
-    description: "ResearchGate Preprint DOI — Monolithic PWA Architectures for Real-Time Fractal Rendering (v1.0)"
+    description: "Monolithic PWA Architectures for Real-Time Fractal Rendering (2026 Preprint)"
   - type: url
-    value: "https://www.researchgate.net/publication/418309542_Monolithic_PWA_Architectures_for_Real-Time_Fractal_Rendering_Perturbation_Theory_and_Sub-Pixel_Temporal_Filtering_in_WebGL_20"
-    description: "ResearchGate Preprint Record — Monolithic PWA Architectures for Real-Time Fractal Rendering"
+    value: "https://steven.kleynenberg.com/papers/"
+    description: "Canonical Single Source of Truth (SSOT) Publications Archive"
+references:
+  - type: article
+    title: "Monolithic PWA Architectures for Real-Time Fractal Rendering: Perturbation Theory and Sub-Pixel Temporal Filtering in WebGL 2"
+    authors:
+      - family-names: "Kleynenberg"
+        given-names: "Steven"
+      - name: "Google Gemini"
+    year: 2026
+    month: 11
+    doi: "10.13140/RG.2.2.15845.77289"
+    url: "https://steven.kleynenberg.com/papers/monolithic_pwa_architectures_for_real_time_fractal_rendering_perturbation_theory_and_sub_pixel_temporal_filtering_in_webgl_2.pdf"
+
+  - type: conference-paper
+    title: "Integrating the BSP400 neurocomputer with the MetaNet Network Environment (Author's Re-Typeset Archival Edition — 2026 Vector Reconstruction)"
+    authors:
+      - family-names: "Murre"
+        given-names: "Jacob M. J."
+      - family-names: "Heemskerk"
+        given-names: "Jan N. H."
+      - family-names: "Kleynenberg"
+        given-names: "Steven E."
+      - family-names: "Hudson"
+        given-names: "Patrick T. W."
+    collection-title: "Proceedings of the 1991 IEEE International Joint Conference on Neural Networks (IJCNN '91)"
+    volume: 2
+    start: 1476
+    end: 1480
+    year: 1991
+    doi: "10.1109/IJCNN.1991.170608"
+    url: "https://steven.kleynenberg.com/papers/integrating_the_bsp400_neurocomputer_with_the_metanet_network_environment_ai_reconstructed.pdf"
+
+  - type: conference-paper
+    title: "The MetaNet Network Environment for the development of modular neural networks (Author's Re-Typeset Archival Edition — 2026 Vector Reconstruction)"
+    authors:
+      - family-names: "Murre"
+        given-names: "Jacob M. J."
+      - family-names: "Kleynenberg"
+        given-names: "Steven E."
+    collection-title: "International Neural Network Conference (INNC 90 Paris)"
+    volume: 2
+    start: 717
+    end: 720
+    year: 1990
+    doi: "10.1007/978-94-009-0643-3_59"
+    url: "https://steven.kleynenberg.com/papers/the_metanet_network_environment_for_the_development_of_modular_neural_networks_ai_reconstructed.pdf"
+
+  - type: conference-paper
+    title: "Extending the MetaNet Network Environment: Process Control and Machine Independence (2026 Modern Vector AI Reconstruction)"
+    authors:
+      - family-names: "Murre"
+        given-names: "Jacob M. J."
+      - family-names: "Kleynenberg"
+        given-names: "Steven E."
+    collection-title: "Proceedings of the International Conference on Artificial Neural Networks (ICANN-91)"
+    start: 545
+    end: 550
+    year: 1991
+    url: "https://steven.kleynenberg.com/papers/extending_the_metanet_network_environment_process_control_and_machine_independence_ai_reconstructed.pdf"
+
+  - type: article
+    title: "Algorithmic versus Neural Typographic Taxonomy: A Comprehensive Comparative Evaluation of Deterministic Heuristics and Unsupervised Latent Space"
+    authors:
+      - family-names: "Kleynenberg"
+        given-names: "Steven"
+    year: 2026
+    month: 11
+    url: "https://steven.kleynenberg.com/papers/algorithmic_versus_neural_typographic_taxonomy_a_comprehensive_comparative_evaluation_of_deterministic_heuristics_and_unsupervised_latent_space.pdf"
+
+  - type: generic
+    title: "De Nederlandsche Courant — 19 November 2026 Special Archival Edition"
+    authors:
+      - family-names: "Kleynenberg"
+        given-names: "Steven"
+    year: 2026
+    month: 11
+    url: "https://steven.kleynenberg.com/papers/De-Nederlandsche-Courant-Steven-Kleynenberg-2026-11-19.pdf"
+
+  - type: conference-paper
+    title: "Remote Collaboration, Decision Support, and On-Demand Medical Image Analysis for Acute Stroke Care"
+    authors:
+      - family-names: "Smit"
+        given-names: "Erik J."
+      - family-names: "Kleynenberg"
+        given-names: "Steven E."
+    collection-title: "European Conference on Service-Oriented and Cloud Computing (ESOCC 2015), LNCS 9306"
+    year: 2015
+    doi: "10.1007/978-3-319-24072-5_12"
+    url: "https://steven.kleynenberg.com/papers/ESOCC_2015_MEDUSA_lncs_9306_remote_collaboration_decision_support_and_on_demand_medical_image_analysis_for_acute_stroke_care.pdf"
+
+  - type: patent
+    title: "Method and System for Automated Linguistic Sequence Filtering and Patent Whitespace Search"
+    authors:
+      - family-names: "Rutten"
+        given-names: "Huub"
+      - family-names: "Kleynenberg"
+        given-names: "Steven Ernst"
+      - family-names: "ten Pas"
+        given-names: "Elsemiek"
+    number: "WO 2014/003543 A1"
+    year: 2014
+    url: "https://steven.kleynenberg.com/papers/WO2014003543A1_method_and_system_for_automated_linguistic_sequence_filtering_and_patent_whitespace_search_wo_2014_003543_a1_pct_nl2012_050463.pdf"
+
+  - type: conference-paper
+    title: "Extending the MetaNet Network Environment: Process Control and Machine Independence"
+    authors:
+      - family-names: "Murre"
+        given-names: "Jacob M. J."
+      - family-names: "Kleynenberg"
+        given-names: "Steven E."
+    collection-title: "Proceedings of the International Conference on Artificial Neural Networks (ICANN-91)"
+    start: 545
+    end: 550
+    year: 1991
+    url: "https://steven.kleynenberg.com/papers/ICANN_1991_BSP400_extending_the_metanet_network_environment_process_control_and_machine_independence.pdf"
+
+  - type: conference-paper
+    title: "Integrating the BSP400 neurocomputer with the MetaNet Network Environment"
+    authors:
+      - family-names: "Murre"
+        given-names: "Jacob M. J."
+      - family-names: "Heemskerk"
+        given-names: "Jan N. H."
+      - family-names: "Kleynenberg"
+        given-names: "Steven E."
+      - family-names: "Hudson"
+        given-names: "Patrick T. W."
+    collection-title: "Proceedings of the 1991 IEEE International Joint Conference on Neural Networks (IJCNN '91)"
+    volume: 2
+    start: 1476
+    end: 1480
+    year: 1991
+    doi: "10.1109/IJCNN.1991.170608"
+    url: "https://steven.kleynenberg.com/papers/IJCNN_1991_MetaNet_integrating_the_bsp400_neurocomputer_with_the_metanet_network_environment_neural_networks_1991_1991_ieee_international_joint_conference_on.pdf"
+
+  - type: conference-paper
+    title: "The MetaNet Network Environment for the development of modular neural networks"
+    authors:
+      - family-names: "Murre"
+        given-names: "Jacob M. J."
+      - family-names: "Kleynenberg"
+        given-names: "Steven E."
+    collection-title: "International Neural Network Conference (INNC 90 Paris)"
+    volume: 2
+    start: 717
+    end: 720
+    year: 1990
+    doi: "10.1007/978-94-009-0643-3_59"
+    url: "https://steven.kleynenberg.com/papers/INNC_1990_MetaNet_the_metanet_network_environment_for_the_development_of_modular_neural_networks.pdf"

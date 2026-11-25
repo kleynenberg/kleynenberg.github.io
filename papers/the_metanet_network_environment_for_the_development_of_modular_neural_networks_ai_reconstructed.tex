@@ -1,0 +1,205 @@
+\documentclass[11pt, a4paper]{article}
+
+\usepackage[a4paper, top=2.2cm, bottom=2.2cm, left=2.4cm, right=2.4cm]{geometry}
+\usepackage{fontspec}
+\usepackage[english, bidi=basic, provide=*]{babel}
+\babelprovide[import, onchar=ids fonts]{english}
+\babelfont{rm}{Noto Sans}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning}
+\usepackage[
+  colorlinks=true,
+  linkcolor=navyaccent,
+  urlcolor=navyaccent,
+  citecolor=navyaccent,
+  pdftitle={The MetaNet Network Environment for the development of modular neural networks},
+  pdfauthor={Jacob M.J. Murre, Steven E. Kleynenberg},
+  pdfsubject={Author Archival Edition - INNC-90, Paris, pp. 717-720},
+  pdfkeywords={MetaNet, CALM, modular neural networks, graphical editor, compiler, device drivers, ANSI C}
+]{hyperref}
+
+\definecolor{navyaccent}{RGB}{24, 58, 96}
+\definecolor{slatemuted}{RGB}{82, 92, 104}
+\definecolor{rulegray}{RGB}{190, 198, 208}
+\definecolor{codebg}{RGB}{248, 250, 252}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55em}
+
+\begin{document}
+
+% --- Author Archival Edition Provenance Header ---
+\begin{center}
+{\small\color{slatemuted}
+\textbf{Author's Re-Typeset Archival Edition (2026 Vector Reconstruction)}\\[2pt]
+Originally published in: \textit{Proceedings of the International Neural Network Conference (INNC-90)},\\
+Paris, July 9--13, 1990, pp.~717--720 \quad|\quad Canonical SSOT Archive: \href{https://steven.kleynenberg.com/papers/}{\texttt{https://steven.kleynenberg.com/papers/}}
+}
+\end{center}
+
+\vspace{2pt}
+{\color{rulegray}\hrule height 0.8pt}
+\vspace{10pt}
+
+% --- Title & Author Block ---
+\begin{center}
+{\LARGE\bfseries\color{navyaccent} THE MetaNet NETWORK ENVIRONMENT\\[3pt] FOR THE DEVELOPMENT OF MODULAR NEURAL NETWORKS}\\[10pt]
+{\large\bfseries Jacob M.J. Murre and Steven E. Kleynenberg\textsuperscript{1}}\\[4pt]
+{\normalsize Leiden University\\
+Unit of Experimental and Theoretical Psychology\\
+P.O. Box 9555, 2300 RB Leiden\\
+The Netherlands}\\[4pt]
+{\footnotesize\color{slatemuted} \textsuperscript{1}The second author is also a partner in the Kleynenberg \& Kleynenberg Company.}
+\end{center}
+
+\vspace{6pt}
+
+% --- Abstract ---
+\begin{center}
+{\bfseries\color{navyaccent} Abstract}
+\end{center}
+\vspace{-4pt}
+\noindent The MetaNet network environment allows users to build and examine modular neural networks, and to specify and run complex simulations. It consists of a graphical editor, a network compiler and a graphical (de)compiler, a network specification language (MetaNet), and hardware drivers. Its requirements are based on experiences with a text based network environment, which has been in use at our department since early 1988. Using the environment requires minimal programming experience. Currently, the system is implemented only on PCs. Off-loading of calculation processes to other machines is achieved through hardware drivers. It is possible to convert MetaNet code into ANSI C for direct compilation to stand-alone applications on any machine.
+
+\vspace{6pt}
+
+\noindent Writing code for the implementation of large neural networks can be a tedious and time consuming process. The MetaNet network environment emerged from our efforts to provide a general environment for the development of modular neural networks. The primary aim was that users with few programming skills be able to easily specify, run, and evaluate complicated simulations. First, we shall describe MetaNet's predecessor. Then, the objectives of the current environment will be described, which were largely based on experience with the older system. Finally, we shall give a brief description of the different components of the environment.
+
+% --- Section 1 ---
+\section*{\color{navyaccent} MetaNet's predecessor: the CALM development system}
+
+The MetaNet network environment is based on almost two years of experience with a system that was developed in early 1988: the CALM development system. (CALM stands for Categorizing And Learning Module). This system was built primarily for the simulation of CALM networks. CALM networks are learning neural networks that consist of CALM modules (for a general description, see Murre, Phaf, and Wolters, 1989; Murre, Phaf, and Wolters, 1990; Murre, Phaf, and Wolters, submitted; for theoretical and practical applications, see Happel, Phaf, and Murre, 1990; Phaf, Postma, and Wolters, submitted; Phaf, Postma, and Wolters, 1990). A CALM module can categorize and learn an arbitrary activation pattern. To explain the requirements of the system we shall briefly review the network architecture of CALM. A CALM module consists of two rows of $n$ nodes, R(epresentation)-nodes and V(eto)-nodes, and two single nodes, the A(rousal)-node and the E(xternal)-node. We call $n$ the size of a CALM module. All of these nodes are connected by non-modifiable connections according to a certain wiring scheme, as a result of which learning and categorization in CALM are sensitive to the novelty of the input activation pattern. Interconnecting two CALM modules F and T means connecting all R-nodes in F to all R-nodes in T. These connections are always learning.
+
+Designing CALM networks invites thinking in terms of modules. One of the main objectives of the CALM development system, therefore, was to enable users to generate networks on the basis of high level (modular) specifications. For this purpose an interactive component was developed with a textbased user interface. Some of the features of the interactive component of the CALM development system were:
+
+\begin{itemize}
+  \item Generating a CALM network on the basis of a high level specification
+  \item Saving and loading a network, including modified connections and activations
+  \item Inspecting a network: activations, connections, modular structure, parameters, node status
+  \item Changing a network: activations, parameters, node status
+  \item Initializing a network: activations, connections, parameters
+  \item Running a network: one cycle at a time, $i$ cycles, until convergence
+\end{itemize}
+
+The interactive component was adequate for designing and testing CALM networks. It did not suffice, however, for extensive simulations of, for instance, psychological experiments. Therefore, the system was extended with a non-interactive, batch type component. Files with often used commands could be prepared in advance using a few simple syntactic rules. These command files could then be run from the interactive component. The results could be observed directly, or the file could be processed in a background process and be evaluated after the job had ended. In addition to this list of features, the non-interactive component also supported the specification of patterns (stimuli) in terms of node activations and status, as well as a variety of output formats. A minimal control structure was available for repetition of blocks of commands. The CALM development system has been used by numerous users during a two-year period. It has been implemented on VAXS (VMS), on PCs (MS-DOS), on Amiga computers (Amiga-DOS), and on T800 Transputer networks.
+
+% --- Section 2 ---
+\section*{\color{navyaccent} The MetaNet system}
+
+The CALM development system had a number of limitations: (1) It lacked graphical facilities. (2) The control structure of the non-interactive facility was very limited. (3) It could only run CALM type networks and it did not allow experimentation with other networks. (4) The system itself was very large, so that only relatively small networks could be run on a PC. (5) It was not possible to control processing in various kinds of hardware by a single system. The need for this was prompted, among others, by the development of a 400-processor network implementation of CALM (see Hoekstra, Heemskerk, Klaassen, Phaf, Knoppers, and Hudson, 1990). To overcome these limitations, the MetaNet network environment provides the following. (1) A graphical interface, which includes a graphical editor. (2) A graphical compiler and a network compiler. (3) MetaNet, a higher programming language for the specification of networks and simulations. (4) The option to convert MetaNet code to ANSI C code for compilation to stand-alone applications. (5) Hardware drivers to buffer the communication in the various processes, possibly on different machines. The MetaNet system is schematically drawn in the figure. A brief description of each component follows below.
+
+\textbf{Graphical editor.} The current implementation of the graphical editor is aimed at PCs running MS-DOS. We judged X-Windows to be too slow on a PC for our purposes. Instead, we have tried to keep the system portable by using a graphical shell with functions found in most other graphical programming environments. The editor is event driven, and it is operated more or less as a `paint' program. It enables the user to graphically edit a network. Nodes, modules, and other objects may be placed on the screen, and (generalized) connections formed. Objects are manipulated by means of a mouse. Activations, weights, thresholds, etc., can easily be adjusted. Activation, learning, and transfer functions can be chosen from a menu. Experienced users may define their own functions. Hooks with graphs or other status reports may be placed on objects, such as nodes and connections. A special feature is the possibility to automatically position objects using an `charged-particle algorithm', in which the objects mimic the motions of charged particles.
+
+% --- Figure: The MetaNet Network Environment (TikZ Vector Diagram) ---
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+  font=\sffamily\small,
+  doublebox/.style={
+    draw=black,
+    line width=0.8pt,
+    double distance=2pt,
+    fill=white,
+    align=center,
+    inner sep=5pt
+  },
+  flowarrow/.style={-{Latex[length=2.2mm, width=1.6mm]}, line width=0.8pt, draw=black}
+]
+  % Left column: Metanet Files
+  \node[doublebox, minimum width=2.4cm, minimum height=1.55cm] (files) at (-4.8, -1.6) {Metanet\\[3pt]Files};
+
+  % Upper-left column: Decompiler & Compiler
+  \node[doublebox, minimum width=3.0cm, minimum height=0.82cm] (decomp) at (-1.9, 1.85) {Decompiler};
+  \node[doublebox, minimum width=3.0cm, minimum height=0.82cm] (comp) at (-1.9, 0.25) {Compiler};
+
+  % Center column: Intermediate Code & Graphical Editor
+  \node[doublebox, minimum width=3.1cm, minimum height=1.55cm] (ic) at (2.1, 1.15) {Intermediate\\[3pt]Code};
+  \node[doublebox, minimum width=3.1cm, minimum height=1.55cm] (ge) at (2.1, -1.35) {Graphical\\[3pt]Editor};
+
+  % Right column: Optimizer & Drivers
+  \node[doublebox, minimum width=2.6cm, minimum height=0.82cm] (opt) at (5.6, 0.65) {Optimizer};
+  \node[doublebox, minimum width=2.8cm, minimum height=0.82cm] (drv) at (5.7, -1.35) {Drivers};
+
+  % Bottom row: Stand-alone Applications
+  \node[font=\sffamily\small\bfseries] at (1.1, -2.55) {Stand-alone Applications};
+  \node[doublebox, minimum width=3.4cm, minimum height=0.82cm] (pre) at (-0.6, -3.25) {Pre-processor};
+  \node[doublebox, minimum width=2.9cm, minimum height=0.82cm] (cc) at (3.4, -3.25) {C Compiler};
+
+  % Arrows: Decompiler <-> Metanet Files
+  \draw[flowarrow] (decomp.west) -- (-4.8, 1.85) -- (files.north);
+
+  % Arrows: Metanet Files -> Compiler -> Intermediate Code
+  \draw[flowarrow] (-4.3, -0.825) -- (-4.3, 0.25) -- (comp.west);
+  \draw[flowarrow] (comp.east) -- (0.15, 0.25) -- (0.15, 0.95) -- (ic.west);
+
+  % Arrows: Intermediate Code -> Decompiler
+  \draw[flowarrow] (ic.west) ++(0, 0.35) -- (-0.15, 1.5) -- (-0.15, 1.85) -- (decomp.east);
+
+  % Arrows: Intermediate Code <-> Graphical Editor
+  \draw[flowarrow] (1.45, 0.375) -- (1.45, -0.575);
+  \draw[flowarrow] (2.75, -0.575) -- (2.75, 0.375);
+
+  % Arrows: Intermediate Code -> Optimizer -> Drivers
+  \draw[flowarrow] (ic.east) ++(0, -0.5) -- (opt.west);
+  \draw[flowarrow] (opt.south) -- (5.6, -0.94);
+
+  % Feedback loop from right of Drivers/Optimizer back to Intermediate Code
+  \draw[flowarrow] (6.5, -0.94) -- (6.5, 1.45) -- (ic.east) ++(0, 0.3);
+
+  % Bottom flow: Metanet Files -> Pre-processor -> C Compiler -> Drivers
+  \draw[flowarrow] (files.south) -- (-4.8, -3.25) -- (pre.west);
+  \draw[flowarrow] (pre.east) -- (cc.west);
+  \draw[flowarrow] (cc.east) -- (5.7, -3.25) -- (drv.south);
+\end{tikzpicture}
+\caption*{\textit{The MetaNet Network Environment.}}
+\end{figure}
+
+\textbf{Compiler/Decompiler.} Networks and complete simulations may be specified in MetaNet, a high level network language (see below). Inside the MetaNet environment networks and control flow are represented in intermediate code. This code is processed by an optimizer to increase performance, and is subsequently sent to the hardware drivers, which actually run the networks. To convert a MetaNet file into intermediate code a graphical (de)compiler has been developed. Graphical compilers have been built, among others, for the purpose to directly convert logical structures into object code. An example is the GRASPL programming system, which generates code for micro controller chips based on direct compilation of state diagrams drawn by the user (Zieleman, 1988). In a similar fashion, the graphical decompiler enables the user to graphically edit networks and convert them to MetaNet files. It is also possible to go the other way. A network compiler takes MetaNet files as input and generates intermediate code. This code can be directed to the graphical editor, where it can be changed (and possibly decompiled to MetaNet again), or it can be sent directly to the optimizer and drivers. The results of the ongoing calculations can be directed to the graphical interface without enabling the editor. In this way, demos can easily be built. A version of the network compiler is implemented separately as a preprocessor, which converts MetaNet to ANSI C for compilation to stand-alone applications.
+
+\textbf{MetaNet language.} MetaNet is a simple network specification language. It is a subset of C extended with network specific syntax, which has an object-oriented flavor. Networks can be defined by using the following MetaNet objects: NODE, GROUP (of nodes), MODULE, and MODEL. Each of these types has specific properties. They form a strict hierarchy (a MODEL consists of MODULES, which consist of GROUPS, which consist of NODES). GROUPs roughly correspond to layers, such as used in back-propagation and other layered networks. MetaNet supports a recursive structure as well, the NETWORK, which may consist of NODES or other NETWORKS. MetaNet's network specific syntax focusses more on structures than on processes. The idea is that for calculations (activation and learning rules, etc.) and sequential control (iterations and conditionals) a small subset of C is more appropriate. An example of MetaNet, defining the internal wiring scheme of the CALM module, is given below. Generalized connections between objects (GROUPS, MODULES, etc.) are expressed using the symbols \texttt{->}, \texttt{-+}, and \texttt{-\textbackslash}. In this syntax, \texttt{A -> B : 1.0} means: A is connected to B in an all-to-all fashion with weights 1.0. For instance, if A and B are GROUPs, all nodes in A are connected to all nodes in B. The \texttt{-+} operator indicates one-to-one connections and the \texttt{-\textbackslash} operator all-to-all-but-one, the corresponding nodes are not connected.
+
+\begin{quote}
+\ttfamily\small
+typedef MODULE (int size) \quad /* define a new MODULE (sub)type */\\
+\{\\
+\hspace*{1.5em}GROUP \quad R[size], \qquad\qquad /* R(epresentation nodes */\\
+\hspace*{5.2em}V[size], \qquad\qquad /* V(eto) nodes */\\
+\hspace*{5.2em}A[1], \qquad\qquad\quad /* A(rousal) node */\\
+\hspace*{5.2em}E[1]; \qquad\qquad\quad /* E(xternal) node */\\
+\hspace*{1.5em}PARAMETER mu : .005; \quad /* learning parameter */\\[0.4em]
+\hspace*{1.5em}EXTERN -> R : LEARN; \quad /* learning intermodular connection */\\
+\hspace*{1.5em}R -+ V : 1.0; \qquad\qquad /* R-nodes feed V-nodes (one-to-one) */\\
+\hspace*{1.5em}V -\textbackslash\ V : -1.0; \qquad\qquad /* V-nodes inhibit each other */\\
+\hspace*{1.5em}V -\textbackslash\ R : -10.0; \qquad\quad /* V-nodes inhibit neighboring R-nodes */\\
+\hspace*{1.5em}V -+ R : -1.0; \qquad\quad /* V-nodes inhibit R-nodes */\\
+\hspace*{1.5em}V -> A : -.6; \qquad\qquad /* V-nodes inhibit A-node */\\
+\hspace*{1.5em}R -> A : .4; \qquad\qquad\ /* R-nodes excite A-node */\\
+\hspace*{1.5em}A -+ E : 1.0; \qquad\qquad /* A-node feeds E-node */\\
+\hspace*{1.5em}E -> R : RANDOM(0.0,1.0); /* random activations to R-nodes */\\
+\} CALM\_TYPE; \qquad\qquad\quad /* name of new MODULE (sub)type */\\
+...\\
+GROUP \qquad input[5]; \qquad\quad /* create GROUP */\\
+CALM\_TYPE little[10]; \quad /* create MODULE of CALM\_TYPE */\\
+...\\
+input -> little : .6; \qquad\quad /* connect with initial weight .6 */
+\end{quote}
+
+\textbf{Network drivers.} To increase machine independence hardware drivers are used. This also saves memory, because only the relevant drivers need to be loaded. The drivers buffer network calculation processes, possibly running on remote machines. Drivers may also do calculations themselves. The communication protocols with the other components of the MetaNet environment are handled by means of intermediate code used inside the MetaNet system. Networks may also be dumped directly (full dump) in a file using intermediate code.
+
+The different constituent parts work together to provide an optimal performance environment, both for inexperienced and advanced users. The MetaNet environment still has to pass several testing cycles, so that we cannot yet reach a conclusion about its range of applicability. We expect that modular, or similarly structured, neural networks will benefit most from the approach taken in MetaNet.
+
+% --- References ---
+\section*{\color{navyaccent} References}
+
+\begin{list}{}{\leftmargin=1.5em \itemsep=0.35em \parsep=0pt \small}
+  \item Happel, B.L.M, R.H. Phaf, and J.M.J. Murre (1990) Categorization in multi-module CALM networks: recognition of handwritten digits. INNC-90, Paris, July 9--13.
+  \item Murre, J.M.J., R.H. Phaf, and G. Wolters (1989) CALM networks: a modular approach to supervised and unsupervised learning. IJCNN-89, Washington D.C., June 18--22, 1, 649--656.
+  \item Murre, Phaf, and Wolters (1990) Novelty dependent categorization and learning in CALM modules. INNC-90, Paris, July 9--13.
+  \item Murre, J.M.J., R.H. Phaf, and G. Wolters (submitted) CALM: Categorizing And Learning Module.
+  \item Phaf, R.H., E.O. Postma, and G. Wolters (submitted) ELAN-1: a connectionist model for implicit and explicit memory tasks.
+  \item Phaf, R.H., E.O. Postma, and G. Wolters (1990) Connectionist simulations of the dissociation between implicit and explicit memory. INNC-90, Paris, July 9--13.
+  \item Zieleman, J.G. (1988) A graphical editor and compiler for the GRASPL programming system. Master's thesis, University of Texas, Austin, Texas.
+\end{list}
+
+\end{document}
