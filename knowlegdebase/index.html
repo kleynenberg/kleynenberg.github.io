@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fractaal Kennislandschap — Steven Kleynenberg</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f4f6f9;
+      --surface: #ffffff;
+      --surface-alt: #eef2f6;
+      --ink: #111827;
+      --muted: #4b5563;
+      --border: #cbd5e1;
+      --accent: #0f4c81;
+      --accent-soft: #e6f0fa;
+      --error-bg: #fff1f2;
+      --error-border: #be123c;
+      --error-ink: #881337;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "Atkinson Hyperlegible", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    #app-shell {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 410px;
+      width: 100%;
+      height: 100%;
+    }
+
+    #viewport-pane {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: radial-gradient(circle at 50% 22%, #f8fafc 0%, #dce6f0 58%, #c2d1e0 100%);
+    }
+
+    #gl-canvas {
+      display: block;
+      width: 100%;
+      height: 100%;
+      cursor: grab;
+    }
+
+    #gl-canvas:active {
+      cursor: grabbing;
+    }
+
+    #hud-top {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      right: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      pointer-events: none;
+    }
+
+    .hud-card {
+      pointer-events: auto;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 8px 12px;
+      box-shadow: 0 2px 10px rgba(15, 23, 42, 0.08);
+    }
+
+    .hud-title {
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--ink);
+    }
+
+    .hud-sub {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .hud-controls {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+    }
+
+    button, select, input[type="text"] {
+      font-family: inherit;
+      font-size: 14px;
+      color: var(--ink);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 6px 10px;
+    }
+
+    button {
+      cursor: pointer;
+      font-weight: 700;
+      transition: background-color 120ms ease, border-color 120ms ease;
+    }
+
+    button:hover {
+      background: var(--surface-alt);
+      border-color: #94a3b8;
+    }
+
+    button.primary {
+      background: var(--accent);
+      color: #ffffff;
+      border-color: var(--accent);
+    }
+
+    button.primary:hover {
+      background: #0b3a63;
+    }
+
+    /* Single non-overlapping hover/selection callout on the 3D pane */
+    #selection-callout {
+      position: absolute;
+      left: 14px;
+      bottom: 14px;
+      max-width: min(540px, calc(100% - 28px));
+      background: rgba(255, 255, 255, 0.96);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--accent);
+      border-radius: 8px;
+      padding: 10px 14px;
+      box-shadow: 0 6px 20px rgba(15, 23, 42, 0.14);
+      z-index: 10;
+    }
+
+    #selection-callout .meta {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 4px;
+      font-weight: 700;
+    }
+
+    #selection-callout .snippet {
+      font-size: 13.5px;
+      color: var(--ink);
+      max-height: 110px;
+      overflow-y: auto;
+      white-space: pre-wrap;
+    }
+
+    #inspector-pane {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      background: var(--surface);
+      border-left: 1px solid var(--border);
+      overflow: hidden;
+    }
+
+    .pane-section {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .pane-section h2 {
+      margin: 0 0 8px 0;
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .ask-row {
+      display: flex;
+      gap: 8px;
+    }
+
+    .ask-row input {
+      flex: 1;
+      min-width: 0;
+    }
+
+    #answer-scroll {
+      flex: 1;
+      overflow-y: auto;
+      padding: 14px 16px;
+    }
+
+    .answer-box {
+      background: var(--accent-soft);
+      border: 1px solid #b6d0ea;
+      border-radius: 8px;
+      padding: 12px;
+      margin-bottom: 14px;
+    }
+
+    .answer-heading {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    .answer-text {
+      margin: 0 0 8px 0;
+      white-space: pre-line;
+    }
+
+    .sources-list {
+      margin: 0;
+      padding-left: 18px;
+      font-size: 13px;
+    }
+
+    .sources-list li {
+      margin-bottom: 6px;
+      cursor: pointer;
+    }
+
+    .sources-list li:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    .topic-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 8px;
+    }
+
+    .topic-pill {
+      font-size: 12px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: var(--surface-alt);
+      border: 1px solid var(--border);
+      cursor: pointer;
+    }
+
+    .topic-pill.active {
+      background: var(--accent);
+      color: #ffffff;
+      border-color: var(--accent);
+    }
+
+    #fatal-error {
+      display: none;
+      margin: 14px 16px;
+      padding: 12px;
+      border-radius: 8px;
+      background: var(--error-bg);
+      border: 1px solid var(--error-border);
+      color: var(--error-ink);
+      font-size: 13.5px;
+      white-space: pre-wrap;
+    }
+
+    @media (max-width: 900px) {
+      html, body {
+        overflow: auto;
+      }
+      #app-shell {
+        grid-template-columns: 1fr;
+        grid-template-rows: 54vh auto;
+        height: auto;
+        min-height: 100%;
+      }
+      #viewport-pane {
+        height: 54vh;
+      }
+      #inspector-pane {
+        height: auto;
+        overflow: visible;
+        border-left: none;
+        border-top: 1px solid var(--border);
+      }
+      #answer-scroll {
+        overflow: visible;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="app-shell">
+    <section id="viewport-pane" aria-label="3D Fractaal Kennislandschap">
+      <canvas id="gl-canvas"></canvas>
+
+      <div id="hud-top">
+        <div class="hud-card">
+          <div class="hud-title">Fractaal Kennislandschap</div>
+          <div class="hud-sub" id="telemetry-line">Laden van chunks.jsonl…</div>
+        </div>
+
+        <div class="hud-card hud-controls">
+          <label for="topic-select" class="hud-sub">Cluster:</label>
+          <select id="topic-select" aria-label="Kenniscluster selecteren">
+            <option value="__ALL__">Alle clusters</option>
+          </select>
+          <button id="btn-reset-cam" type="button" title="Camera terugzetten">Reset zicht</button>
+          <button id="btn-refresh-cache" type="button" title="Verse chunks.jsonl ophalen">Ververs data</button>
+        </div>
+      </div>
+
+      <div id="selection-callout" role="region" aria-live="polite">
+        <div class="meta" id="callout-meta">Geen chunk geselecteerd</div>
+        <div class="snippet" id="callout-snippet">Beweeg over of klik op een piek of knooppunt in het 3D-landschap om een chunk uit chunks.jsonl te inspecteren. Slepen roteert, scrollen zoomt.</div>
+      </div>
+    </section>
+
+    <aside id="inspector-pane" aria-label="Vraag en kennisinspectie">
+      <div id="fatal-error" role="alert"></div>
+
+      <div class="pane-section">
+        <h2>Vraag stellen over de kennisbank (€0, lokaal)</h2>
+        <form id="ask-form" class="ask-row">
+          <input id="question-input" type="text" placeholder="Bijv. patent, solar, nautilus, gpuspeech of delft…" autocomplete="off" />
+          <button id="btn-ask" class="primary" type="submit">Antwoord</button>
+        </form>
+        <div class="topic-pills" id="topic-pills"></div>
+      </div>
+
+      <div id="answer-scroll">
+        <div class="answer-box" id="answer-box">
+          <div class="answer-heading">Sjabloon-antwoord (ELIZA-stijl op chunks.jsonl)</div>
+          <p class="answer-text" id="answer-text">Zodra chunks.jsonl is geladen, kun je hier een vraag stellen of op een 3D-knooppunt klikken. Antwoorden worden uitsluitend samengesteld uit de gevonden chunks in chunks.jsonl.</p>
+          <ul class="sources-list" id="sources-list"></ul>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <script>
+    // Version token bumped when chunks.jsonl structure or cache strategy changes
+    const KB_CACHE_VERSION = "v3-2026-11-24";
+    const KB_URL = "./chunks.jsonl";
+    const CACHE_NAME = "kleynenberg-kb-" + KB_CACHE_VERSION;
+
+    const state = {
+      chunks: [],
+      clusters: [],
+      selectedIndex: -1,
+      hoveredIndex: -1,
+      activeTopic: "__ALL__",
+      wasmReady: false,
+      wasmComputeLayout: null,
+      // Camera spherical parameters
+      yaw: 0.65,
+      pitch: 0.56,
+      distance: 44,
+      target: [0, 2.2, 0],
+      dragging: false,
+      lastPointerX: 0,
+      lastPointerY: 0,
+      movedDuringDrag: false
+    };
+
+    const elTelemetry = document.getElementById("telemetry-line");
+    const elFatalError = document.getElementById("fatal-error");
+    const elTopicSelect = document.getElementById("topic-select");
+    const elTopicPills = document.getElementById("topic-pills");
+    const elCalloutMeta = document.getElementById("callout-meta");
+    const elCalloutSnippet = document.getElementById("callout-snippet");
+    const elAskForm = document.getElementById("ask-form");
+    const elQuestionInput = document.getElementById("question-input");
+    const elAnswerText = document.getElementById("answer-text");
+    const elSourcesList = document.getElementById("sources-list");
+    const canvas = document.getElementById("gl-canvas");
+
+    function reportFatalError(message, detail) {
+      elFatalError.style.display = "block";
+      elFatalError.textContent = detail ? `${message}\n\n${detail}` : message;
+      elTelemetry.textContent = "Fout bij laden van kennisbank";
+    }
+
+    function clearFatalError() {
+      elFatalError.style.display = "none";
+      elFatalError.textContent = "";
+    }
+
+    window.addEventListener("error", (ev) => {
+      reportFatalError("Runtime-fout in SPA:", ev && ev.message ? ev.message : String(ev));
+    });
+
+    window.addEventListener("unhandledrejection", (ev) => {
+      const reason = ev && ev.reason ? (ev.reason.message || String(ev.reason)) : "Onbekende promise-fout";
+      reportFatalError("Async-fout bij laden van kennisbank:", reason);
+    });
+
+    // ------------------------------------------------------------------------
+    // 1. Load & Cache chunks.jsonl (strict NDJSON parsing, zero mock fallback)
+    // ------------------------------------------------------------------------
+    async function loadChunksJsonl(forceRefresh) {
+      clearFatalError();
+      const requestUrl = `${KB_URL}?cb=${encodeURIComponent(KB_CACHE_VERSION)}`;
+      let rawText = "";
+
+      if ("caches" in window) {
+        try {
+          const cache = await caches.open(CACHE_NAME);
+          if (forceRefresh) {
+            await cache.delete(requestUrl);
+          }
+          let cachedResponse = await cache.match(requestUrl);
+          if (!cachedResponse) {
+            const networkResponse = await fetch(requestUrl, { cache: forceRefresh ? "reload" : "default" });
+            if (!networkResponse.ok) {
+              throw new Error(`HTTP ${networkResponse.status} (${networkResponse.statusText}) bij ophalen van ${requestUrl}`);
+            }
+            await cache.put(requestUrl, networkResponse.clone());
+            cachedResponse = networkResponse;
+          }
+          rawText = await cachedResponse.text();
+        } catch (_cacheErr) {
+          const resp = await fetch(requestUrl, { cache: forceRefresh ? "reload" : "default" });
+          if (!resp.ok) {
+            throw new Error(`HTTP ${resp.status} (${resp.statusText}) bij ophalen van ${requestUrl}`);
+          }
+          rawText = await resp.text();
+        }
+      } else {
+        const resp = await fetch(requestUrl, { cache: forceRefresh ? "reload" : "default" });
+        if (!resp.ok) {
+          throw new Error(`HTTP ${resp.status} (${resp.statusText}) bij ophalen van ${requestUrl}`);
+        }
+        rawText = await resp.text();
+      }
+
+      if (!rawText || !rawText.trim()) {
+        throw new Error("chunks.jsonl is leeg.");
+      }
+
+      const lines = rawText.split(/\r?\n/);
+      const parsed = [];
+      const parseErrors = [];
+
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i].trim();
+        if (!line) continue;
+        try {
+          const obj = JSON.parse(line);
+          if (typeof obj !== "object" || obj === null) {
+            parseErrors.push(`Regel ${i + 1}: geen JSON-object`);
+            continue;
+          }
+          const textField =
+            typeof obj.text === "string" ? obj.text :
+            typeof obj.content === "string" ? obj.content :
+            typeof obj.chunk === "string" ? obj.chunk :
+            typeof obj.body === "string" ? obj.body : "";
+
+          if (!textField.trim()) {
+            parseErrors.push(`Regel ${i + 1}: ontbrekend tekstveld`);
+            continue;
+          }
+
+          const sourceField =
+            typeof obj.source === "string" ? obj.source :
+            typeof obj.url === "string" ? obj.url :
+            typeof obj.file === "string" ? obj.file :
+            typeof obj.title === "string" ? obj.title : "chunks.jsonl";
+
+          const topicField =
+            typeof obj.topic === "string" && obj.topic.trim() ? obj.topic.trim() :
+            typeof obj.section === "string" && obj.section.trim() ? obj.section.trim() :
+            typeof obj.category === "string" && obj.category.trim() ? obj.category.trim() :
+            deriveTopicFromChunk(sourceField, textField);
+
+          const idField =
+            obj.id !== undefined && obj.id !== null ? String(obj.id) : `chunk-${parsed.length + 1}`;
+
+          const tokens = tokenize(textField);
+          parsed.push({
+            index: parsed.length,
+            lineNumber: i + 1,
+            id: idField,
+            source: sourceField,
+            topic: topicField,
+            text: textField.trim(),
+            tokens: tokens,
+            tokenSet: new Set(tokens),
+            x: 0,
+            y: 0,
+            z: 0,
+            baseY: 0,
+            clusterId: 0,
+            color: [0.05, 0.32, 0.58]
+          });
+        } catch (err) {
+          parseErrors.push(`Regel ${i + 1}: ${err.message}`);
+        }
+      }
+
+      if (parsed.length === 0) {
+        throw new Error(`Geen geldige chunks gevonden in chunks.jsonl.\n${parseErrors.slice(0, 8).join("\n")}`);
+      }
+
+      if (parseErrors.length > 0) {
+        reportFatalError(
+          `Waarschuwing: ${parseErrors.length} regel(s) in chunks.jsonl konden niet worden geparsed (${parsed.length} geldige chunks geladen).`,
+          parseErrors.slice(0, 10).join("\n")
+        );
+      }
+
+      return parsed;
+    }
+
+    function deriveTopicFromChunk(source, text) {
+      const combined = `${source} ${text.slice(0, 180)}`.toLowerCase();
+      const rules = [
+        { topic: "AI & Agents", keys: ["ai", "llm", "mcp", "gemini", "model", "prompt", "agent", "token"] },
+        { topic: "Web & PWA", keys: ["pwa", "webgl", "wasm", "html", "css", "javascript", "browser", "service worker", "github"] },
+        { topic: "Linux & Systems", keys: ["linux", "fedora", "gnome", "nautilus", "shell", "makefile", "rclone", "kernel", "ssh"] },
+        { topic: "Patenten & NLP", keys: ["patent", "solr", "nlp", "pos", "tagger", "sopheon", "innopheon", "corpus"] },
+        { topic: "Energie & IoT", keys: ["solar", "growatt", "kwh", "watt", "p1", "lora", "arduino", "sensor", "drone"] },
+        { topic: "Muziek & Media", keys: ["guitar", "suno", "audio", "podcast", "video", "ffmpeg", "print", "font", "typography"] }
+      ];
+      let bestTopic = "Algemeen";
+      let bestScore = 0;
+      for (const r of rules) {
+        let score = 0;
+        for (const k of r.keys) {
+          if (combined.includes(k)) score++;
+        }
+        if (score > bestScore) {
+          bestScore = score;
+          bestTopic = r.topic;
+        }
+      }
+      return bestTopic;
+    }
+
+    function tokenize(str) {
+      return str
+        .toLowerCase()
+        .replace(/[^a-z0-9à-ÿ_-]+/gi, " ")
+        .split(/\s+/)
+        .filter((w) => w.length >= 2);
+    }
+
+    // ------------------------------------------------------------------------
+    // 2. Inline WebAssembly module for deterministic spatial/fractal layout
+    // ------------------------------------------------------------------------
+    const WASM_BYTES = new Uint8Array([
+      0x00, 0x61, 0x73, 0x6d,
+      0x01, 0x00, 0x00, 0x00,
+      0x01, 0x09, 0x01, 0x60, 0x03, 0x7f, 0x7f, 0x7f, 0x01, 0x7d,
+      0x03, 0x02, 0x01, 0x00,
+      0x07, 0x11, 0x01, 0x0d,
+      0x66, 0x72, 0x61, 0x63, 0x74, 0x61, 0x6c, 0x5f, 0x63, 0x6f, 0x6f, 0x72, 0x64,
+      0x00, 0x00,
+      0x0a, 0x26, 0x01, 0x24, 0x00,
+      0x20, 0x00, 0x41, 0x8d, 0x86, 0xb8, 0xa3, 0x04, 0x6c,
+      0x20, 0x01, 0x41, 0x9f, 0xf2, 0xd8, 0x09, 0x6c, 0x73,
+      0x20, 0x02, 0x41, 0xd7, 0xf3, 0x93, 0x27, 0x6c, 0x73,
+      0x41, 0xff, 0x07, 0x71,
+      0xb2,
+      0x43, 0x00, 0x00, 0x80, 0x3c,
+      0x94,
+      0x43, 0x00, 0x00, 0x00, 0x41,
+      0x93,
+      0x0b
+    ]);
+
+    async function initWasmLayout() {
+      try {
+        const mod = await WebAssembly.instantiate(WASM_BYTES);
+        state.wasmComputeLayout = mod.instance.exports.fractal_coord;
+        state.wasmReady = typeof state.wasmComputeLayout === "function";
+      } catch (_err) {
+        state.wasmReady = false;
+        state.wasmComputeLayout = null;
+      }
+    }
+
+    function buildClustersAndLayout(chunks) {
+      const topicMap = new Map();
+      for (const ch of chunks) {
+        if (!topicMap.has(ch.topic)) {
+          topicMap.set(ch.topic, []);
+        }
+        topicMap.get(ch.topic).push(ch);
+      }
+
+      // Rich, high-saturation Material colors with strong contrast against light terrain & sky
+      const palette = [
+        [0.04, 0.34, 0.66], // Deep Cobalt Blue
+        [0.03, 0.52, 0.42], // Deep Emerald Teal
+        [0.82, 0.33, 0.04], // Burnt Amber Orange
+        [0.45, 0.16, 0.68], // Royal Violet
+        [0.12, 0.54, 0.18], // Forest Green
+        [0.78, 0.11, 0.33], // Crimson Berry
+        [0.16, 0.28, 0.64]  // Indigo
+      ];
+
+      const clusters = [];
+      let cIdx = 0;
+      const totalClusters = topicMap.size;
+
+      for (const [topicName, items] of topicMap.entries()) {
+        const angle = (cIdx / Math.max(1, totalClusters)) * Math.PI * 2.0;
+        const radius = 11.5 + (cIdx % 2) * 3.5;
+        const cx = Math.cos(angle) * radius;
+        const cz = Math.sin(angle) * radius;
+        const peakHeight = 4.2 + Math.min(9.0, items.length * 0.14);
+        const col = palette[cIdx % palette.length];
+
+        clusters.push({
+          id: cIdx,
+          name: topicName,
+          count: items.length,
+          x: cx,
+          y: peakHeight,
+          z: cz,
+          color: col
+        });
+
+        for (let i = 0; i < items.length; i++) {
+          const ch = items[i];
+          const subAngle = angle + ((i / Math.max(1, items.length)) - 0.5) * 1.45;
+          const spread = 1.6 + Math.sqrt(i + 1) * 1.15;
+
+          const wasmOffsetX = state.wasmReady ? state.wasmComputeLayout(i, cIdx, ch.index) * 0.35 : Math.sin(i * 1.7 + cIdx) * 1.2;
+          const wasmOffsetZ = state.wasmReady ? state.wasmComputeLayout(i + 17, cIdx + 3, ch.index + 5) * 0.35 : Math.cos(i * 2.3 + cIdx) * 1.2;
+
+          const nx = cx + Math.cos(subAngle) * spread + wasmOffsetX;
+          const nz = cz + Math.sin(subAngle) * spread + wasmOffsetZ;
+          const groundY = fractalTerrainHeight(nx, nz);
+          const ny = groundY + 0.75 + (items.length - i) / Math.max(1, items.length) * 2.5;
+
+          ch.x = nx;
+          ch.y = ny;
+          ch.z = nz;
+          ch.baseY = groundY;
+          ch.clusterId = cIdx;
+          ch.color = col;
+        }
+        cIdx++;
+      }
+
+      state.clusters = clusters;
+    }
+
+    function fractalTerrainHeight(x, z) {
+      let amp = 4.2;
+      let freq = 0.058;
+      let sum = 0.0;
+      for (let octave = 0; octave < 4; octave++) {
+        const n = Math.sin(x * freq + octave * 1.37) * Math.cos(z * freq * 1.13 - octave * 0.91);
+        const ridge = 1.0 - Math.abs(n);
+        sum += ridge * ridge * amp;
+        amp *= 0.48;
+        freq *= 2.07;
+      }
+      return sum - 1.5;
+    }
+
+    function fractalTerrainNormal(x, z) {
+      const eps = 0.18;
+      const hL = fractalTerrainHeight(x - eps, z);
+      const hR = fractalTerrainHeight(x + eps, z);
+      const hD = fractalTerrainHeight(x, z - eps);
+      const hU = fractalTerrainHeight(x, z + eps);
+      const nx = hL - hR;
+      const ny = 2.0 * eps;
+      const nz = hD - hU;
+      const len = Math.hypot(nx, ny, nz) || 1.0;
+      return [nx / len, ny / len, nz / len];
+    }
+
+    // ------------------------------------------------------------------------
+    // 3. High-Contrast WebGL 3D Fractal Landscape + Grid + Stems + Nodes
+    // ------------------------------------------------------------------------
+    const gl = canvas.getContext("webgl", { antialias: true, alpha: true });
+    if (!gl) {
+      reportFatalError("WebGL kon niet worden geïnitialiseerd in deze browser.");
+    }
+
+    const VS_SRC = `
+      attribute vec3 aPos;
+      attribute vec3 aColor;
+      attribute vec3 aNormal;
+      uniform mat4 uMVP;
+      uniform float uPointSize;
+      varying vec3 vColor;
+      varying vec3 vNormal;
+      varying vec3 vWorldPos;
+      void main() {
+        gl_Position = uMVP * vec4(aPos, 1.0);
+        gl_PointSize = uPointSize;
+        vColor = aColor;
+        vNormal = aNormal;
+        vWorldPos = aPos;
+      }
+    `;
+
+    // uDrawMode:
+    //   0.0 = Fractal terrain mesh (directional lighting + topographic contour bands)
+    //   1.0 = High-contrast chunk nodes (white outer halo + dark charcoal ring + cluster core)
+    //   2.0 = Terrain grid lines & vertical chunk stems
+    const FS_SRC = `
+      precision mediump float;
+      varying vec3 vColor;
+      varying vec3 vNormal;
+      varying vec3 vWorldPos;
+      uniform float uDrawMode;
+      void main() {
+        if (uDrawMode > 1.5) {
+          gl_FragColor = vec4(vColor, 0.34);
+          return;
+        }
+        if (uDrawMode > 0.5) {
+          vec2 c = gl_PointCoord * 2.0 - 1.0;
+          float r = length(c);
+          if (r > 1.0) discard;
+          if (r > 0.80) {
+            gl_FragColor = vec4(1.0, 1.0, 1.0, 0.96);
+          } else if (r > 0.62) {
+            gl_FragColor = vec4(0.08, 0.11, 0.16, 0.98);
+          } else {
+            float spec = 1.0 - smoothstep(0.0, 0.55, length(c - vec2(-0.22, -0.22)));
+            vec3 core = mix(vColor, vec3(1.0), 0.32 * spec);
+            gl_FragColor = vec4(core, 1.0);
+          }
+          return;
+        }
+
+        // Directional sun + sky fill lighting for crisp 3D relief
+        vec3 n = normalize(vNormal);
+        vec3 sunDir = normalize(vec3(0.55, 0.72, 0.42));
+        float ndotl = max(dot(n, sunDir), 0.0);
+        float hemi = 0.42 + 0.58 * ndotl;
+
+        // Topographic contour lines every 0.65 world units in height
+        float hBand = abs(fract(vWorldPos.y * 1.55 + 0.5) - 0.5);
+        float contour = smoothstep(0.035, 0.085, hBand);
+
+        vec3 litColor = vColor * hemi;
+        vec3 contourColor = vec3(0.11, 0.16, 0.24);
+        vec3 finalRgb = mix(contourColor, litColor, mix(0.45, 1.0, contour));
+        gl_FragColor = vec4(finalRgb, 0.96);
+      }
+    `;
+
+    function compileShader(type, src) {
+      const sh = gl.createShader(type);
+      gl.shaderSource(sh, src);
+      gl.compileShader(sh);
+      if (!gl.getShaderParameter(sh, gl.COMPILE_STATUS)) {
+        const info = gl.getShaderInfoLog(sh);
+        gl.deleteShader(sh);
+        throw new Error(`Shader compilefout: ${info}`);
+      }
+      return sh;
+    }
+
+    let program = null;
+    let terrainPosBuf = null;
+    let terrainColBuf = null;
+    let terrainNormBuf = null;
+    let terrainVertexCount = 0;
+
+    let gridPosBuf = null;
+    let gridColBuf = null;
+    let gridNormBuf = null;
+    let gridVertexCount = 0;
+
+    let pointsPosBuf = null;
+    let pointsColBuf = null;
+    let pointsNormBuf = null;
+    let pointsCount = 0;
+
+    let stemsPosBuf = null;
+    let stemsColBuf = null;
+    let stemsNormBuf = null;
+    let stemsVertexCount = 0;
+
+    if (gl) {
+      const vs = compileShader(gl.VERTEX_SHADER, VS_SRC);
+      const fs = compileShader(gl.FRAGMENT_SHADER, FS_SRC);
+      program = gl.createProgram();
+      gl.attachShader(program, vs);
+      gl.attachShader(program, fs);
+      gl.linkProgram(program);
+      if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
+        reportFatalError("WebGL-programma kon niet worden gelinkt.", gl.getProgramInfoLog(program));
+      }
+    }
+
+    function rebuildTerrainMesh() {
+      if (!gl || !program) return;
+      const gridN = 72;
+      const span = 46.0;
+      const step = span / gridN;
+      const positions = [];
+      const colors = [];
+      const normals = [];
+
+      const gridLinePos = [];
+      const gridLineCol = [];
+      const gridLineNorm = [];
+
+      for (let gz = 0; gz < gridN; gz++) {
+        for (let gx = 0; gx < gridN; gx++) {
+          const x0 = -span * 0.5 + gx * step;
+          const z0 = -span * 0.5 + gz * step;
+          const x1 = x0 + step;
+          const z1 = z0 + step;
+
+          const corners = [
+            [x0, z0], [x1, z0], [x1, z1],
+            [x0, z0], [x1, z1], [x0, z1]
+          ];
+
+          for (const [cx, cz] of corners) {
+            const cy = fractalTerrainHeight(cx, cz);
+            const [nx, ny, nz] = fractalTerrainNormal(cx, cz);
+            positions.push(cx, cy, cz);
+            normals.push(nx, ny, nz);
+
+            // Blend deep valley slate with cluster peak hues and crisp ridge highlights
+            let cCol = [0.0, 0.0, 0.0];
+            let weightSum = 0.0001;
+            for (const cl of state.clusters) {
+              const dx = cx - cl.x;
+              const dz = cz - cl.z;
+              const d2 = dx * dx + dz * dz + 18.0;
+              const w = 1.0 / d2;
+              cCol[0] += cl.color[0] * w;
+              cCol[1] += cl.color[1] * w;
+              cCol[2] += cl.color[2] * w;
+              weightSum += w;
+            }
+            const clusterTint = [cCol[0] / weightSum, cCol[1] / weightSum, cCol[2] / weightSum];
+            const hNorm = Math.min(1.0, Math.max(0.0, (cy + 1.5) / 7.2));
+
+            // Deep slate-blue valleys -> saturated cluster mid-slopes -> crisp bright crests
+            const valley = [0.34, 0.44, 0.55];
+            const crest = [0.93, 0.96, 0.99];
+            let r, g, b;
+            if (hNorm < 0.55) {
+              const t = hNorm / 0.55;
+              r = valley[0] * (1 - t) + (0.45 + clusterTint[0] * 0.55) * t;
+              g = valley[1] * (1 - t) + (0.50 + clusterTint[1] * 0.50) * t;
+              b = valley[2] * (1 - t) + (0.58 + clusterTint[2] * 0.42) * t;
+            } else {
+              const t = (hNorm - 0.55) / 0.45;
+              const midR = 0.45 + clusterTint[0] * 0.55;
+              const midG = 0.50 + clusterTint[1] * 0.50;
+              const midB = 0.58 + clusterTint[2] * 0.42;
+              r = midR * (1 - t) + crest[0] * t;
+              g = midG * (1 - t) + crest[1] * t;
+              b = midB * (1 - t) + crest[2] * t;
+            }
+            colors.push(r, g, b);
+          }
+
+          // Subtle topographic grid lines every 3 cells
+          if (gx % 3 === 0) {
+            const yA = fractalTerrainHeight(x0, z0) + 0.02;
+            const yB = fractalTerrainHeight(x0, z1) + 0.02;
+            gridLinePos.push(x0, yA, z0, x0, yB, z1);
+            gridLineCol.push(0.10, 0.16, 0.24, 0.10, 0.16, 0.24);
+            gridLineNorm.push(0, 1, 0, 0, 1, 0);
+          }
+          if (gz % 3 === 0) {
+            const yA = fractalTerrainHeight(x0, z0) + 0.02;
+            const yB = fractalTerrainHeight(x1, z0) + 0.02;
+            gridLinePos.push(x0, yA, z0, x1, yB, z0);
+            gridLineCol.push(0.10, 0.16, 0.24, 0.10, 0.16, 0.24);
+            gridLineNorm.push(0, 1, 0, 0, 1, 0);
+          }
+        }
+      }
+
+      terrainVertexCount = positions.length / 3;
+      terrainPosBuf = terrainPosBuf || gl.createBuffer();
+      gl.bindBuffer(gl.ARRAY_BUFFER, terrainPosBuf);
+      gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(positions), gl.STATIC_DRAW);
+
+      terrainColBuf = terrainColBuf || gl.createBuffer();
+      gl.bindBuffer(gl.ARRAY_BUFFER, terrainColBuf);
+      gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(colors), gl.STATIC_DRAW);
+
+      terrainNormBuf = terrainNormBuf || gl.createBuffer();
+      gl.bindBuffer(gl.ARRAY_BUFFER, terrainNormBuf);
+      gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(normals), gl.STATIC_DRAW);
+
+      gridVertexCount = gridLinePos.length / 3;
+      gridPosBuf = gridPosBuf || gl.createBuffer();
+      gl.bindBuffer(gl.ARRAY_BUFFER, gridPosBuf);
+      gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(gridLinePos), gl.STATIC_DRAW);
+
+      gridColBuf = gridColBuf || gl.createBuffer();
+      gl.bindBuffer(gl.ARRAY_BUFFER, gridColBuf);
+      gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(gridLineCol), gl.STATIC_DRAW);
+
+      gridNormBuf = gridNormBuf || gl.createBuffer();
+      gl.bindBuffer(gl.ARRAY_BUFFER, gridNormBuf);
+      gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(gridLineNorm), gl.STATIC_DRAW);
+    }
+
+    function rebuildChunkPoints() {
+      if (!gl || !program) return;
+      const positions = [];
+      const colors = [];
+      const normals = [];
+
+      const stemPos = [];
+      const stemCol = [];
+      const stemNorm = [];
+
+      for (let i = 0; i < state.chunks.length; i++) {
+        const ch = state.chunks[i];
+        positions.push(ch.x, ch.y, ch.z);
+        normals.push(0, 1, 0);
+
+        const topicMatches = state.activeTopic === "__ALL__" || ch.topic === state.activeTopic;
+        let r, g, b;
+        if (i === state.selectedIndex) {
+          r = 0.92; g = 0.11; b = 0.24;
+        } else if (i === state.hoveredIndex) {
+          r = 0.96; g = 0.58; b = 0.04;
+        } else if (!topicMatches) {
+          r = 0.58; g = 0.64; b = 0.72;
+        } else {
+          r = ch.color[0]; g = ch.color[1]; b = ch.color[2];
+        }
+        colors.push(r, g, b);
+
+        // Vertical anchor stem from chunk node down to terrain surface
+        stemPos.push(ch.x, ch.baseY, ch.z, ch.x, ch.y, ch.z);
+        stemCol.push(r, g, b, r, g, b);
+        stemNorm.push(0, 1, 0, 0, 1, 0);
+      }
+
+      pointsCount = state.chunks.length;
+      pointsPosBuf = pointsPosBuf || gl.createBuffer();
+      gl.bindBuffer(gl.ARRAY_BUFFER, pointsPosBuf);
+      gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(positions), gl.DYNAMIC_DRAW);
+
+      pointsColBuf = pointsColBuf || gl.createBuffer();
+      gl.bindBuffer(gl.ARRAY_BUFFER, pointsColBuf);
+      gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(colors), gl.DYNAMIC_DRAW);
+
+      pointsNormBuf = pointsNormBuf || gl.createBuffer();
+      gl.bindBuffer(gl.ARRAY_BUFFER, pointsNormBuf);
+      gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(normals), gl.DYNAMIC_DRAW);
+
+      stemsVertexCount = stemPos.length / 3;
+      stemsPosBuf = stemsPosBuf || gl.createBuffer();
+      gl.bindBuffer(gl.ARRAY_BUFFER, stemsPosBuf);
+      gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(stemPos), gl.DYNAMIC_DRAW);
+
+      stemsColBuf = stemsColBuf || gl.createBuffer();
+      gl.bindBuffer(gl.ARRAY_BUFFER, stemsColBuf);
+      gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(stemCol), gl.DYNAMIC_DRAW);
+
+      stemsNormBuf = stemsNormBuf || gl.createBuffer();
+      gl.bindBuffer(gl.ARRAY_BUFFER, stemsNormBuf);
+      gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(stemNorm), gl.DYNAMIC_DRAW);
+    }
+
+    function mat4Multiply(a, b) {
+      const out = new Array(16).fill(0);
+      for (let r = 0; r < 4; r++) {
+        for (let c = 0; c < 4; c++) {
+          let sum = 0;
+          for (let k = 0; k < 4; k++) {
+            sum += a[k * 4 + r] * b[c * 4 + k];
+          }
+          out[c * 4 + r] = sum;
+        }
+      }
+      return out;
+    }
+
+    function mat4Perspective(fovRad, aspect, near, far) {
+      const f = 1.0 / Math.tan(fovRad * 0.5);
+      const nf = 1.0 / (near - far);
+      return [
+        f / aspect, 0, 0, 0,
+        0, f, 0, 0,
+        0, 0, (far + near) * nf, -1,
+        0, 0, 2 * far * near * nf, 0
+      ];
+    }
+
+    function mat4LookAt(eye, center, up) {
+      const zx = eye[0] - center[0];
+      const zy = eye[1] - center[1];
+      const zz = eye[2] - center[2];
+      let zLen = Math.hypot(zx, zy, zz) || 1;
+      const fx = zx / zLen, fy = zy / zLen, fz = zz / zLen;
+
+      const xx = up[1] * fz - up[2] * fy;
+      const xy = up[2] * fx - up[0] * fz;
+      const xz = up[0] * fy - up[1] * fx;
+      let xLen = Math.hypot(xx, xy, xz) || 1;
+      const sx = xx / xLen, sy = xy / xLen, sz = xz / xLen;
+
+      const ux = fy * sz - fz * sy;
+      const uy = fz * sx - fx * sz;
+      const uz = fx * sy - fy * sx;
+
+      return [
+        sx, ux, fx, 0,
+        sy, uy, fy, 0,
+        sz, uz, fz, 0,
+        -(sx * eye[0] + sy * eye[1] + sz * eye[2]),
+        -(ux * eye[0] + uy * eye[1] + uz * eye[2]),
+        -(fx * eye[0] + fy * eye[1] + fz * eye[2]),
+        1
+      ];
+    }
+
+    function getCameraEye() {
+      const cosP = Math.cos(state.pitch);
+      return [
+        state.target[0] + state.distance * cosP * Math.sin(state.yaw),
+        state.target[1] + state.distance * Math.sin(state.pitch),
+        state.target[2] + state.distance * cosP * Math.cos(state.yaw)
+      ];
+    }
+
+    function getMVP() {
+      const aspect = Math.max(0.2, canvas.clientWidth / Math.max(1, canvas.clientHeight));
+      const proj = mat4Perspective(0.78, aspect, 0.5, 220.0);
+      const view = mat4LookAt(getCameraEye(), state.target, [0, 1, 0]);
+      return mat4Multiply(proj, view);
+    }
+
+    function projectWorldToScreen(x, y, z, mvp) {
+      const vx = mvp[0] * x + mvp[4] * y + mvp[8] * z + mvp[12];
+      const vy = mvp[1] * x + mvp[5] * y + mvp[9] * z + mvp[13];
+      const vw = mvp[3] * x + mvp[7] * y + mvp[11] * z + mvp[15];
+      if (vw <= 0.0001) return null;
+      const ndcX = vx / vw;
+      const ndcY = vy / vw;
+      return {
+        sx: (ndcX * 0.5 + 0.5) * canvas.clientWidth,
+        sy: (-ndcY * 0.5 + 0.5) * canvas.clientHeight
+      };
+    }
+
+    function pickNearestChunk(clientX, clientY) {
+      const rect = canvas.getBoundingClientRect();
+      const px = clientX - rect.left;
+      const py = clientY - rect.top;
+      const mvp = getMVP();
+
+      let bestIdx = -1;
+      let bestDistSq = 20 * 20;
+
+      for (let i = 0; i < state.chunks.length; i++) {
+        const ch = state.chunks[i];
+        const pt = projectWorldToScreen(ch.x, ch.y, ch.z, mvp);
+        if (!pt) continue;
+        const dx = pt.sx - px;
+        const dy = pt.sy - py;
+        const d2 = dx * dx + dy * dy;
+        if (d2 < bestDistSq) {
+          bestDistSq = d2;
+          bestIdx = i;
+        }
+      }
+      return bestIdx;
+    }
+
+    function bindAttribute(loc, buf, size) {
+      if (loc < 0 || !buf) return;
+      gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+      gl.enableVertexAttribArray(loc);
+      gl.vertexAttribPointer(loc, size, gl.FLOAT, false, 0, 0);
+    }
+
+    function renderScene() {
+      if (!gl || !program) return;
+
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      const w = Math.max(1, Math.floor(canvas.clientWidth * dpr));
+      const h = Math.max(1, Math.floor(canvas.clientHeight * dpr));
+      if (canvas.width !== w || canvas.height !== h) {
+        canvas.width = w;
+        canvas.height = h;
+      }
+
+      gl.viewport(0, 0, w, h);
+      gl.clearColor(0, 0, 0, 0);
+      gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+      gl.enable(gl.DEPTH_TEST);
+      gl.enable(gl.BLEND);
+      gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
+
+      gl.useProgram(program);
+      const mvp = getMVP();
+      gl.uniformMatrix4fv(gl.getUniformLocation(program, "uMVP"), false, new Float32Array(mvp));
+
+      const aPos = gl.getAttribLocation(program, "aPos");
+      const aColor = gl.getAttribLocation(program, "aColor");
+      const aNormal = gl.getAttribLocation(program, "aNormal");
+      const uPointSize = gl.getUniformLocation(program, "uPointSize");
+      const uDrawMode = gl.getUniformLocation(program, "uDrawMode");
+
+      // 1. Fractal terrain triangles with directional lighting + contour bands
+      if (terrainVertexCount > 0 && terrainPosBuf && terrainColBuf && terrainNormBuf) {
+        gl.uniform1f(uDrawMode, 0.0);
+        gl.uniform1f(uPointSize, 1.0);
+        bindAttribute(aPos, terrainPosBuf, 3);
+        bindAttribute(aColor, terrainColBuf, 3);
+        bindAttribute(aNormal, terrainNormBuf, 3);
+        gl.drawArrays(gl.TRIANGLES, 0, terrainVertexCount);
+      }
+
+      // 2. Subtle terrain grid & vertical chunk anchor stems
+      gl.uniform1f(uDrawMode, 2.0);
+      gl.uniform1f(uPointSize, 1.0);
+      if (gridVertexCount > 0 && gridPosBuf && gridColBuf && gridNormBuf) {
+        bindAttribute(aPos, gridPosBuf, 3);
+        bindAttribute(aColor, gridColBuf, 3);
+        bindAttribute(aNormal, gridNormBuf, 3);
+        gl.drawArrays(gl.LINES, 0, gridVertexCount);
+      }
+      if (stemsVertexCount > 0 && stemsPosBuf && stemsColBuf && stemsNormBuf) {
+        bindAttribute(aPos, stemsPosBuf, 3);
+        bindAttribute(aColor, stemsColBuf, 3);
+        bindAttribute(aNormal, stemsNormBuf, 3);
+        gl.drawArrays(gl.LINES, 0, stemsVertexCount);
+      }
+
+      // 3. High-contrast chunk nodes (white halo + dark ring + saturated cluster core)
+      if (pointsCount > 0 && pointsPosBuf && pointsColBuf && pointsNormBuf) {
+        gl.uniform1f(uDrawMode, 1.0);
+        gl.uniform1f(uPointSize, 13.5 * dpr);
+        bindAttribute(aPos, pointsPosBuf, 3);
+        bindAttribute(aColor, pointsColBuf, 3);
+        bindAttribute(aNormal, pointsNormBuf, 3);
+        gl.drawArrays(gl.POINTS, 0, pointsCount);
+      }
+
+      requestAnimationFrame(renderScene);
+    }
+
+    // ------------------------------------------------------------------------
+    // 4. Inspection Callout & Template-Driven ("ELIZA"-style) Answer Composer
+    // ------------------------------------------------------------------------
+    function selectChunk(index, focusCamera) {
+      if (index < 0 || index >= state.chunks.length) {
+        state.selectedIndex = -1;
+        elCalloutMeta.textContent = "Geen chunk geselecteerd";
+        elCalloutSnippet.textContent = "Beweeg over of klik op een knooppunt in het 3D-landschap om een chunk uit chunks.jsonl te inspecteren.";
+        rebuildChunkPoints();
+        return;
+      }
+
+      state.selectedIndex = index;
+      const ch = state.chunks[index];
+      elCalloutMeta.textContent = `[#${ch.id} · regel ${ch.lineNumber} · cluster: ${ch.topic}] — ${ch.source}`;
+      elCalloutSnippet.textContent = ch.text;
+
+      if (focusCamera) {
+        state.target = [ch.x, ch.y, ch.z];
+        state.distance = Math.max(12, Math.min(24, state.distance));
+      }
+      rebuildChunkPoints();
+    }
+
+    const NL_STOPWORDS = new Set([
+      "de", "het", "een", "en", "van", "in", "op", "voor", "met", "aan", "als",
+      "dat", "die", "dit", "is", "zijn", "was", "waren", "ik", "je", "jij", "we",
+      "wij", "ze", "zij", "over", "naar", "bij", "om", "ook", "maar", "niet",
+      "wel", "wat", "wie", "waar", "hoe", "kan", "kunnen", "doen", "mijn", "jezelf"
+    ]);
+
+    function composeElizaStyleAnswer(questionRaw) {
+      const q = questionRaw.trim();
+      if (!q) {
+        return {
+          text: "Stel gerust een gerichte vraag over een onderwerp in de kennisbank (zoals een project, tool, publicatie of technisch detail).",
+          matches: []
+        };
+      }
+
+      const qTokens = tokenize(q).filter((t) => !NL_STOPWORDS.has(t));
+      const searchTokens = qTokens.length > 0 ? qTokens : tokenize(q);
+
+      const scored = [];
+      for (const ch of state.chunks) {
+        let hitCount = 0;
+        const matchedTerms = [];
+        for (const t of searchTokens) {
+          if (ch.tokenSet.has(t)) {
+            hitCount += 2;
+            matchedTerms.push(t);
+          } else if (ch.text.toLowerCase().includes(t)) {
+            hitCount += 1;
+            matchedTerms.push(t);
+          }
+        }
+        if (hitCount > 0) {
+          scored.push({ chunk: ch, score: hitCount, terms: matchedTerms });
+        }
+      }
+
+      scored.sort((a, b) => b.score - a.score || a.chunk.index - b.chunk.index);
+      const topMatches = scored.slice(0, 3);
+
+      if (topMatches.length === 0) {
+        return {
+          text: `Ik heb gezocht in alle ${state.chunks.length} chunks van chunks.jsonl op "${q}", maar daar staat geen directe match voor in deze kennisbank. Probeer andere kernwoorden of kies een cluster uit het 3D-landschap.`,
+          matches: []
+        };
+      }
+
+      const primary = topMatches[0].chunk;
+      const cleanSentence = primary.text.replace(/\s+/g, " ").trim();
+      const shortExcerpt = cleanSentence.length > 340 ? cleanSentence.slice(0, 337) + "…" : cleanSentence;
+      const uniqueTopics = [...new Set(topMatches.map((m) => m.chunk.topic))];
+
+      const openings = [
+        `Als ik kijk naar wat er in chunks.jsonl staat over "${q}", valt het cluster ${uniqueTopics.join(" / ")} het sterkst op:`,
+        `Op basis van de gevonden fragmenten in chunks.jsonl rond "${q}" kom ik uit bij ${primary.topic}:`,
+        `Volgens de opgeslagen kennisbank (bron: ${primary.source}) hangt jouw vraag over "${q}" samen met dit fragment:`
+      ];
+      const opening = openings[q.length % openings.length];
+
+      const closings = topMatches.length > 1
+        ? `Er zijn nog ${topMatches.length - 1} verwante chunk(s) gevonden; klik op een bron hieronder om direct naar het knooppunt in het 3D-landschap te gaan.`
+        : `Dit komt rechtstreeks uit chunk #${primary.id} (regel ${primary.lineNumber}) zonder aanvullende aannames.`;
+
+      return {
+        text: `${opening}\n\n"${shortExcerpt}"\n\n${closings}`,
+        matches: topMatches.map((m) => m.chunk)
+      };
+    }
+
+    function renderAnswerResult(result) {
+      elAnswerText.textContent = result.text;
+      elSourcesList.innerHTML = "";
+      for (const ch of result.matches) {
+        const li = document.createElement("li");
+        const preview = ch.text.replace(/\s+/g, " ").slice(0, 95);
+        li.textContent = `[#${ch.id} · ${ch.topic}] ${preview}${ch.text.length > 95 ? "…" : ""}`;
+        li.addEventListener("click", () => {
+          selectChunk(ch.index, true);
+        });
+        elSourcesList.appendChild(li);
+      }
+    }
+
+    function populateTopicControls() {
+      elTopicSelect.innerHTML = '<option value="__ALL__">Alle clusters (' + state.chunks.length + ')</option>';
+      elTopicPills.innerHTML = "";
+
+      const allPill = document.createElement("button");
+      allPill.type = "button";
+      allPill.className = "topic-pill" + (state.activeTopic === "__ALL__" ? " active" : "");
+      allPill.textContent = "Alle";
+      allPill.addEventListener("click", () => setActiveTopic("__ALL__"));
+      elTopicPills.appendChild(allPill);
+
+      for (const cl of state.clusters) {
+        const opt = document.createElement("option");
+        opt.value = cl.name;
+        opt.textContent = `${cl.name} (${cl.count})`;
+        elTopicSelect.appendChild(opt);
+
+        const pill = document.createElement("button");
+        pill.type = "button";
+        pill.className = "topic-pill" + (state.activeTopic === cl.name ? " active" : "");
+        pill.textContent = `${cl.name} · ${cl.count}`;
+        pill.addEventListener("click", () => setActiveTopic(cl.name));
+        elTopicPills.appendChild(pill);
+      }
+    }
+
+    function setActiveTopic(topic) {
+      state.activeTopic = topic;
+      elTopicSelect.value = topic;
+      for (const child of elTopicPills.children) {
+        const label = child.textContent || "";
+        const isAll = topic === "__ALL__" && label === "Alle";
+        const isMatch = topic !== "__ALL__" && label.startsWith(topic + " ·");
+        child.classList.toggle("active", isAll || isMatch);
+      }
+      if (topic !== "__ALL__") {
+        const cl = state.clusters.find((c) => c.name === topic);
+        if (cl) {
+          state.target = [cl.x, cl.y * 0.6, cl.z];
+          state.distance = 26;
+        }
+      }
+      rebuildChunkPoints();
+    }
+
+    // ------------------------------------------------------------------------
+    // 5. Event Listeners (Pointer Orbit, Wheel Zoom, Hover, Click, Query Form)
+    // ------------------------------------------------------------------------
+    canvas.addEventListener("pointerdown", (e) => {
+      state.dragging = true;
+      state.movedDuringDrag = false;
+      state.lastPointerX = e.clientX;
+      state.lastPointerY = e.clientY;
+      canvas.setPointerCapture(e.pointerId);
+    });
+
+    canvas.addEventListener("pointermove", (e) => {
+      if (state.dragging) {
+        const dx = e.clientX - state.lastPointerX;
+        const dy = e.clientY - state.lastPointerY;
+        if (Math.abs(dx) + Math.abs(dy) > 2) {
+          state.movedDuringDrag = true;
+        }
+        state.lastPointerX = e.clientX;
+        state.lastPointerY = e.clientY;
+
+        state.yaw -= dx * 0.008;
+        state.pitch = Math.max(0.12, Math.min(1.38, state.pitch + dy * 0.008));
+        return;
+      }
+
+      const hit = pickNearestChunk(e.clientX, e.clientY);
+      if (hit !== state.hoveredIndex) {
+        state.hoveredIndex = hit;
+        canvas.style.cursor = hit >= 0 ? "pointer" : "grab";
+        if (hit >= 0 && state.selectedIndex < 0) {
+          const ch = state.chunks[hit];
+          elCalloutMeta.textContent = `Hover [#${ch.id} · ${ch.topic}] — ${ch.source}`;
+          elCalloutSnippet.textContent = ch.text;
+        }
+        rebuildChunkPoints();
+      }
+    });
+
+    canvas.addEventListener("pointerup", (e) => {
+      if (state.dragging) {
+        state.dragging = false;
+        if (canvas.hasPointerCapture(e.pointerId)) {
+          canvas.releasePointerCapture(e.pointerId);
+        }
+        if (!state.movedDuringDrag) {
+          const hit = pickNearestChunk(e.clientX, e.clientY);
+          selectChunk(hit, hit >= 0);
+        }
+      }
+    });
+
+    canvas.addEventListener("wheel", (e) => {
+      e.preventDefault();
+      const factor = e.deltaY > 0 ? 1.1 : 0.9;
+      state.distance = Math.max(8, Math.min(95, state.distance * factor));
+    }, { passive: false });
+
+    elTopicSelect.addEventListener("change", (e) => {
+      setActiveTopic(e.target.value);
+    });
+
+    document.getElementById("btn-reset-cam").addEventListener("click", () => {
+      state.yaw = 0.65;
+      state.pitch = 0.56;
+      state.distance = 44;
+      state.target = [0, 2.2, 0];
+      setActiveTopic("__ALL__");
+      selectChunk(-1, false);
+    });
+
+    document.getElementById("btn-refresh-cache").addEventListener("click", async () => {
+      await bootstrapKnowledgeBase(true);
+    });
+
+    elAskForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      if (state.chunks.length === 0) {
+        renderAnswerResult({
+          text: "Geen chunks geladen uit chunks.jsonl; er kan geen antwoord worden opgebouwd.",
+          matches: []
+        });
+        return;
+      }
+      const res = composeElizaStyleAnswer(elQuestionInput.value);
+      renderAnswerResult(res);
+      if (res.matches.length > 0) {
+        selectChunk(res.matches[0].index, true);
+      }
+    });
+
+    async function bootstrapKnowledgeBase(forceRefresh) {
+      try {
+        await initWasmLayout();
+        const chunks = await loadChunksJsonl(forceRefresh);
+        state.chunks = chunks;
+        buildClustersAndLayout(chunks);
+        populateTopicControls();
+        rebuildTerrainMesh();
+        rebuildChunkPoints();
+        elTelemetry.textContent = `${chunks.length} chunks · ${state.clusters.length} clusters · WASM ${state.wasmReady ? "actief" : "JS-fallback"} · €0`;
+      } catch (err) {
+        state.chunks = [];
+        rebuildChunkPoints();
+        reportFatalError("Kon chunks.jsonl niet laden of verwerken.", err && err.message ? err.message : String(err));
+      }
+    }
+
+    bootstrapKnowledgeBase(false);
+    requestAnimationFrame(renderScene);
+  </script>
+</body>
+</html>

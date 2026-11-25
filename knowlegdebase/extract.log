@@ -1,0 +1,4 @@
+[extract][WARN] No text extracted (pdf) from ../papers/ICANN_1991_BSP400_extending_the_metanet_network_environment_process_control_and_machine_independence.pdf
+[extract][WARN] No text extracted (pdf) from ../papers/INNC_1990_MetaNet_the_metanet_network_environment_for_the_development_of_modular_neural_networks.pdf
+[extract][WARN] No text extracted (pdf) from ../papers/WO2014003543A1_method_and_system_for_automated_linguistic_sequence_filtering_and_patent_whitespace_search_wo_2014_003543_a1_pct_nl2012_050463.pdf
+[extract] Summary: inventory=78, processed=54, skipped=21, empty=3, errors=0, chunks=370 -> ./chunks.jsonl

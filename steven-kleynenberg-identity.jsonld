@@ -116,6 +116,41 @@
       "founder": {
         "@id": "https://steven.kleynenberg.com/#person"
       }
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://steven.kleynenberg.com/papers/#fractal-pwa-2026",
+      "name": "Monolithic PWA Architectures for Real-Time Fractal Rendering: Perturbation Theory and Sub-Pixel Temporal Filtering in WebGL 2.0",
+      "headline": "Monolithic PWA Architectures for Real-Time Fractal Rendering: Perturbation Theory and Sub-Pixel Temporal Filtering in WebGL 2.0",
+      "datePublished": "2026-11",
+      "url": "https://steven.kleynenberg.com/papers/monolithic_pwa_architectures_for_real_time_fractal_rendering_perturbation_theory_and_sub_pixel_temporal_filtering_in_webgl_2.pdf",
+      "mainEntityOfPage": "https://steven.kleynenberg.com/papers/monolithic_pwa_architectures_for_real_time_fractal_rendering_perturbation_theory_and_sub_pixel_temporal_filtering_in_webgl_2.pdf",
+      "isAccessibleForFree": true,
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "author": [
+        {
+          "@id": "https://steven.kleynenberg.com/#person"
+        },
+        {
+          "@type": "Person",
+          "name": "Google Gemini",
+          "url": "https://gemini.google.com/"
+        }
+      ],
+      "publisher": {
+        "@id": "https://steven.kleynenberg.com/kp/#organization"
+      },
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "DOI",
+        "value": "10.13140/RG.2.2.15845.77289"
+      },
+      "sameAs": [
+        "https://doi.org/10.13140/RG.2.2.15845.77289",
+        "https://www.researchgate.net/publication/418309542_Monolithic_PWA_Architectures_for_Real-Time_Fractal_Rendering_Perturbation_Theory_and_Sub-Pixel_Temporal_Filtering_in_WebGL_20",
+        "https://fract.kleynenberg.com/",
+        "https://fractinity.netlify.app/"
+      ]
     }
   ]
 }

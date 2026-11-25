@@ -15,6 +15,9 @@ AUTHORS: Steven Kleynenberg, Google Gemini
 VENUE: Kleynenberg Publishers Preprint Series, Delft, The Netherlands
 PRIMARY SSOT OPEN-ACCESS PDF: https://steven.kleynenberg.com/papers/monolithic_pwa_architectures_for_real_time_fractal_rendering_perturbation_theory_and_sub_pixel_temporal_filtering_in_webgl_2.pdf
 PRIMARY SSOT SOURCE ARTIFACT: https://steven.kleynenberg.com/papers/monolithic_pwa_architectures_for_real_time_fractal_rendering_perturbation_theory_and_sub_pixel_temporal_filtering_in_webgl_2.tex
+PREPRINT DOI: 10.13140/RG.2.2.15845.77289 (https://doi.org/10.13140/RG.2.2.15845.77289)
+RESEARCHGATE RECORD: https://www.researchgate.net/publication/418309542_Monolithic_PWA_Architectures_for_Real-Time_Fractal_Rendering_Perturbation_Theory_and_Sub-Pixel_Temporal_Filtering_in_WebGL_20
+LICENSE: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)
 RELATED LIVE IMPLEMENTATION: https://fract.kleynenberg.com/ | https://fractinity.netlify.app/
 ABSTRACT: Browser-based scientific visualization has traditionally been constrained by single-precision IEEE 754 floating-point limits, host-to-device memory transfer overhead, and spatial aliasing on high-frequency recursive boundaries. This paper formalizes a self-contained, zero-dependency monolithic Progressive Web Application (PWA) architecture for real-time fractal rendering in WebGL 2.0, instantiated in the public Fractinity system (https://fract.kleynenberg.com/ and https://fractinity.netlify.app/). By encapsulating the application shell, offline service-worker caching, and GLSL fragment shader pipelines into a single client-side bundle, the architecture eliminates server round-trips and PCIe framebuffer transfers during interactive exploration. To overcome single-precision zoom saturation beyond $10^7$, the Mandelbrot pipeline employs perturbation theory ($ _n+1 = 2z_n _n + _n^2 + _c$) around a high-precision reference orbit, enabling parallel 32-bit fragment evaluation across the viewport. In addition, the framework formulates transcendental Newton–Raphson attraction basins and dynamic M\"obius-transformed Apollonian circle packings, coupled with a two-pass separable Gaussian blur kernel and velocity-weighted exponential temporal accumulation to suppress sub-pixel aliasing during high-velocity zooming.
 
@@ -25,6 +28,7 @@ BIBTEX:
   note      = {Kleynenberg Publishers Preprint Series, Delft, The Netherlands},
   year      = {2026},
   publisher = {Kleynenberg Publishers},
+  doi       = {10.13140/RG.2.2.15845.77289},
   url       = {https://steven.kleynenberg.com/papers/monolithic_pwa_architectures_for_real_time_fractal_rendering_perturbation_theory_and_sub_pixel_temporal_filtering_in_webgl_2.pdf}
 }
 
@@ -36,6 +40,7 @@ TI  - Monolithic PWA Architectures for Real-Time Fractal Rendering: Perturbation
 T2  - Kleynenberg Publishers Preprint Series, Delft, The Netherlands
 PY  - 2026
 PB  - Kleynenberg Publishers
+DO  - 10.13140/RG.2.2.15845.77289
 UR  - https://steven.kleynenberg.com/papers/monolithic_pwa_architectures_for_real_time_fractal_rendering_perturbation_theory_and_sub_pixel_temporal_filtering_in_webgl_2.pdf
 ER  -
 
